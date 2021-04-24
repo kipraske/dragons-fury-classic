@@ -20,7 +20,7 @@
             "item_bonus": ["HP"]
         },
         "body": {
-            "item_name": "Heavy Steel Armor",
+            "item_name": "Heavy Steel Plate",
             "item_type": "heavy",
             "slot_type": "armor",
             "item_level": 1,
@@ -28,7 +28,7 @@
         },
         "accessory": {
             "item_name": "Sturdy Ring",
-            "item_type": "necklace",
+            "item_type": "ring",
             "slot_type": "accessory",
             "item_level": 1,
             "item_bonus": ["DEF", "HP"]

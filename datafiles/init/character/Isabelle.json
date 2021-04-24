@@ -15,14 +15,14 @@
         "hand2": null,
         "body": {
             "item_name": "Sturdy Leather Armor",
-            "item_type": "heavy",
+            "item_type": "medium",
             "slot_type": "armor",
             "item_level": 1,
             "item_bonus": ["DEF"]
         },
         "accessory": {
             "item_name": "Quick Ring",
-            "item_type": "necklace",
+            "item_type": "ring",
             "slot_type": "accessory",
             "item_level": 1,
             "item_bonus": ["SPD", "HP"]

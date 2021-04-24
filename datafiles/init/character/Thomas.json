@@ -21,14 +21,14 @@
         },
         "body": {
             "item_name": "Heavy Leather Armor",
-            "item_type": "light",
+            "item_type": "medium",
             "slot_type": "armor",
             "item_level": 1,
             "item_bonus": ["RES"]
         },
         "accessory": {
             "item_name": "Lucky Ring",
-            "item_type": "necklace",
+            "item_type": "ring",
             "slot_type": "accessory",
             "item_level": 1,
             "item_bonus": ["LUK", "DEF"]

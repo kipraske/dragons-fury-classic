@@ -5,12 +5,12 @@
     "xp_till_next_level": 0,
     "xp_pool": 0,
     "equipment": {
-        "hand1": {},
-        "hand2": {},
-        "body": {},
+        "hand1": null,
+        "hand2": null,
+        "body": null,
         "accessory": {
             "item_name": "Strong Ring+",
-            "item_type": "necklace",
+            "item_type": "ring",
             "slot_type": "accessory",
             "item_level": 1,
             "item_bonus": ["ATK", "HP", "SPD"]

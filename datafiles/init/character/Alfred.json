@@ -12,7 +12,7 @@
             "item_level": 1,
             "item_bonus": ["MP", "ATK"]
         },
-        "hand2": {},
+        "hand2": null,
         "body": {
             "item_name": "Magic Robe",
             "item_type": "light",
@@ -21,8 +21,8 @@
             "item_bonus": ["MP"]
         },
         "accessory": {
-            "item_name": "Magic Necklace",
-            "item_type": "necklace",
+            "item_name": "Magic Ring",
+            "item_type": "ring",
             "slot_type": "accessory",
             "item_level": 1,
             "item_bonus": ["MP", "RES"]

@@ -1,0 +1,11 @@
+{
+    "inventory": [
+        {
+            "item_name": "sample",
+            "item_type": "sample",
+            "item_level": 1,
+            "is_two_handed": false,
+            "item_bonus": []
+        }
+    ]
+}

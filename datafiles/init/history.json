@@ -1,0 +1,11 @@
+{
+    "mobs": {
+        "forest": {
+            "red_mushroom": false,
+            "purple_mushroom": false
+        }
+    },
+    "bosses": {},
+    "game_time": {},
+    "ng_plus": 0
+}

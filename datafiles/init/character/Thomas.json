@@ -1,0 +1,61 @@
+{
+    "name": "Thomas",
+    "level": 1,
+    "job": "monk",
+    "xp_till_next_level": 0,
+    "xp_pool": 0,
+    "equipment": {
+        "hand1": {
+            "item_name": "Magic Sword",
+            "item_type": "sword",
+            "slot_type": "main_hand",
+            "item_level": 1,
+            "item_bonus": ["MP"]
+        },
+        "hand2": {
+            "item_name": "Robust Dagger",
+            "item_type": "short_sword",
+            "slot_type": "off_hand",
+            "item_level": 1,
+            "item_bonus": ["HP"]
+        },
+        "body": {
+            "item_name": "Heavy Leather Armor",
+            "item_type": "light",
+            "slot_type": "armor",
+            "item_level": 1,
+            "item_bonus": ["RES"]
+        },
+        "accessory": {
+            "item_name": "Lucky Ring",
+            "item_type": "necklace",
+            "slot_type": "accessory",
+            "item_level": 1,
+            "item_bonus": ["LUK", "DEF"]
+        }
+    },
+    "equipped_skills": [
+        "Attack",
+        "Scan",
+        "Sleep",
+        "Revive",
+        "Insight"
+    ],
+    "swap_skill": "",
+    "job_skills": [
+        {
+            "name": "Flurry",
+            "level": 1
+        }
+    ],
+    "magic_skills": [
+        {
+            "name": "Poison",
+            "level": 1
+        },
+        {
+            "name": "Flood",
+            "level": 1
+        }
+    ]
+}

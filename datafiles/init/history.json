@@ -5,7 +5,10 @@
             "purple_mushroom": false
         }
     },
+    "mobs_fought": 0,
     "bosses": {},
+    "bosses_fought": 0,
     "game_time": {},
+    "init": false,
     "ng_plus": 0
 }

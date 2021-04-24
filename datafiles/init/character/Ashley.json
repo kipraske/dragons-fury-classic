@@ -1,50 +1,50 @@
 {
-    "name": "Catherine",
+    "name": "Ashley",
     "level": 1,
-    "job": "theif",
+    "job": "druid",
     "xp_till_next_level": 0,
     "xp_pool": 0,
     "equipment": {
         "hand1": {
-            "item_name": "Lucky Hammer",
-            "item_type": "hammer",
+            "item_name": "Robust Bow",
+            "item_type": "bow",
             "slot_type": "two_hands",
             "item_level": 1,
-            "item_bonus": ["LUK", "HP"]
+            "item_bonus": ["HP", "DEF"]
         },
         "hand2": {},
         "body": {
-            "item_name": "Agile Leather Armor",
+            "item_name": "Lucky Leather Armor",
             "item_type": "medium",
             "slot_type": "armor",
             "item_level": 1,
-            "item_bonus": ["SPD"]
+            "item_bonus": ["LUK"]
         },
         "accessory": {
-            "item_name": "Lucky Necklace",
+            "item_name": "Heavy Ring",
             "item_type": "necklace",
             "slot_type": "accessory",
             "item_level": 1,
-            "item_bonus": ["SPD", "LUK"]
+            "item_bonus": ["RES", "SPD"]
         }
     },
     "equipped_skills": [
         "Attack",
-        "Steal",
-        "Tornado",
+        "Mimic",
+        "Flood",
         "Heal",
-        "Gold+"
+        "HP Drain"
     ],
     "swap_skill": {},
     "job_skills": [
         {
-            "name": "Steal",
+            "name": "Mimic",
             "level": 1
         }
     ],
     "magic_skills": [
         {
-            "name": "Tornado",
+            "name": "Flood",
             "level": 1
         },
         {

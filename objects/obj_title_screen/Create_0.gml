@@ -1,2 +1,4 @@
-/// @description Renders Title Screen Menus and Assets
+/// @description Initializes Globals, then renders title_screen_menu
 // You can write your code in this editor
+init();
+load_save();

@@ -1,10 +1,3 @@
-
-/// @function get_input();
-/// @desc get keyboard input for scripts
-function get_input(){
-// TODO
-}
-
 /// @function load_json_file
 /// @param {string} filepath path to json file
 /// @return {struct}

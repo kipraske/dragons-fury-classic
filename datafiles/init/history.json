@@ -9,6 +9,6 @@
     "bosses": {},
     "bosses_fought": 0,
     "game_time": {},
-    "init": false,
+    "is_continue_game": true,
     "ng_plus": 0
 }

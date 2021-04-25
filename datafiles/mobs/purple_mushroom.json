@@ -1,0 +1,27 @@
+{
+    "name": "Purple Mushroom",
+    "skill_order": "random",
+    "base_stats": {
+        "HP": 4,
+        "MP": 5,
+        "ATK": 3,
+        "DEF": 3,
+        "RES": 3,
+        "SPD": 3,
+        "LUK": 6
+    },
+    "resists": {
+        "earth": 1,
+        "sea": 1,
+        "sky": 0,
+        "slash": -1,
+        "pierce": 1,
+        "blunt": 2,
+        "magic": -1
+    },
+    "equipped_skills": [
+        "Attack",
+        "Poison",
+        "Pain"
+    ]
+}

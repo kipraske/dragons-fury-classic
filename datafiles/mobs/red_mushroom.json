@@ -1,0 +1,27 @@
+{
+    "name": "Red Mushroom",
+    "skill_order": "random",
+    "base_stats": {
+        "HP": 5,
+        "MP": 5,
+        "ATK": 4,
+        "DEF": 5,
+        "RES": 5,
+        "SPD": 3,
+        "LUK": 3
+    },
+    "resists": {
+        "earth": 1,
+        "sea": 1,
+        "sky": -1,
+        "slash": -1,
+        "pierce": 1,
+        "blunt": 2,
+        "magic": 0
+    },
+    "equipped_skills": [
+        "Attack",
+        "Sleep",
+        "Quake"
+    ]
+}

@@ -32,7 +32,7 @@ function init(){
 		RES_up,
 		mimic,
 		hp_drain,
-		healing_up,
+		rest_up,
 		bow_up,
 		ax_up,
 		// Thief
@@ -54,7 +54,7 @@ function init(){
 		machine_gun,
 		potion,
 		elixer,
-		rest_up,
+		spear_up,
 		gun_up,
 		// Knight
 		DEF_up,
@@ -94,7 +94,7 @@ function init(){
 		job_skills.machine_gun,
 		job_skills.potion,
 		job_skills.elixer,
-		job_skills.rest_up,
+		job_skills.spear_up,
 		job_skills.gun_up
 	];
 	global.job_skills_by_type[jobs.oracle] = [
@@ -117,7 +117,7 @@ function init(){
 		job_skills.RES_up,
 		job_skills.mimic,
 		job_skills.hp_drain,
-		job_skills.healing_up,
+		job_skills.rest_up,
 		job_skills.bow_up,
 		job_skills.ax_up
 	];
@@ -226,4 +226,37 @@ function init(){
         spd,
         luk
 	}
+	
+	// slots are redundant with the type. All swords fit into the main_hand category
+	//enum equipment_slots {
+	//	main_hand,
+	//	off_hand,
+	//	two_hand,
+	//	armor,
+	//	ring
+	//}
+	
+	enum equipment_types {
+		unarmed,
+		gun,
+		dagger,
+		short_sword, //counts as a "sword" for bonus
+		book,
+		crossbow, //counts as a "bow"
+		rifle,
+		sword,
+		mace, //counts as a "hammer" for bonus
+		spear,
+		bow,
+		staff,
+		ax,
+		hammer,
+		unarmored,
+		light_armor, // all robes
+		medium_armor, // all leather
+		heavy_armor, // all steel plate
+		ring
+	}
+	
+	// TODO - create a map of these types and slot types so they are associated
 }

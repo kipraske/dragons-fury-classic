@@ -211,7 +211,11 @@ function init(){
 	global.magic_base_mp_cost = [magic_skills.poison] = 3;
 	global.magic_base_mp_cost = [magic_skills.heal] = 5;	
 
+	// Used for in battle status effects (with duration) AND for item bonus/resists (perminent levels)
 	enum status_effects {
+		earth,
+		sea,
+		sky,
 		sleep,
         freeze,
         confuse,
@@ -224,21 +228,21 @@ function init(){
         def,
         res,
         spd,
-        luk
+        luk,
 	}
 	
-	// slots are redundant with the type. All swords fit into the main_hand category
-	//enum equipment_slots {
-	//	main_hand,
-	//	off_hand,
-	//	two_hand,
-	//	armor,
-	//	ring
-	//}
+
+	enum equipment_slots {
+		main_hand,
+		off_hand,
+		two_hand,
+		armor,
+		ring
+	}
 	
 	enum equipment_types {
 		unarmed,
-		gun,
+		pistol,
 		dagger,
 		short_sword, //counts as a "sword" for bonus
 		book,
@@ -249,8 +253,9 @@ function init(){
 		spear,
 		bow,
 		staff,
-		ax,
+		axe,
 		hammer,
+		shield,
 		unarmored,
 		light_armor, // all robes
 		medium_armor, // all leather
@@ -258,5 +263,23 @@ function init(){
 		ring
 	}
 	
-	// TODO - create a map of these types and slot types so they are associated
+	global.equipment_slot_by_type[equipment_types.ring] = equipment_slots.ring;
+	global.equipment_slot_by_type[equipment_types.heavy_armor] = equipment_slots.armor;
+	global.equipment_slot_by_type[equipment_types.medium_armor] = equipment_slots.armor;
+	global.equipment_slot_by_type[equipment_types.light_armor] = equipment_slots.armor;
+	global.equipment_slot_by_type[equipment_types.unarmored] = equipment_slots.armor;
+	global.equipment_slot_by_type[equipment_types.shield] = equipment_slots.off_hand;
+	global.equipment_slot_by_type[equipment_types.hammer] = equipment_slots.two_hand;
+	global.equipment_slot_by_type[equipment_types.axe] = equipment_slots.two_hand;
+	global.equipment_slot_by_type[equipment_types.bow] = equipment_slots.two_hand;
+	global.equipment_slot_by_type[equipment_types.spear] = equipment_slots.two_hand;
+	global.equipment_slot_by_type[equipment_types.mace] = equipment_slots.main_hand;
+	global.equipment_slot_by_type[equipment_types.sword] = equipment_slots.main_hand;
+	global.equipment_slot_by_type[equipment_types.rifle] = equipment_slots.two_hand;
+	global.equipment_slot_by_type[equipment_types.crossbow] = equipment_slots.main_hand;
+	global.equipment_slot_by_type[equipment_types.book] = equipment_slots.main_hand;
+	global.equipment_slot_by_type[equipment_types.short_sword] = equipment_slots.off_hand;
+	global.equipment_slot_by_type[equipment_types.dagger] = equipment_slots.off_hand;
+	global.equipment_slot_by_type[equipment_types.pistol] = equipment_slots.main_hand;
+	global.equipment_slot_by_type[equipment_types.unarmed] = equipment_slots.off_hand;
 }

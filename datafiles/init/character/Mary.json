@@ -24,7 +24,8 @@
             "item_type": "heavy",
             "slot_type": "armor",
             "item_level": 1,
-            "item_bonus": ["RES", "-ATK"]
+            "item_penalty": ["ATK"],
+            "item_bonus": ["RES"]
         },
         "accessory": {
             "item_name": "Sturdy Ring",

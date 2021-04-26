@@ -67,13 +67,14 @@ function load_save(){
 					skills.heal,
 					skills.mp_cost_down
 			    ],
-			    swap_skill: {},
+			    swap_skill: skills.tornado,
 			    job_skills: [
 			        [ skills.double_cast, 1 ]
 			    ],
 			    magic_skills: [
 					[ skills.quake, 1 ],
-					[ skills.heal, 1 ]
+					[ skills.tornado, 1],
+					[ skills.heal, 1 ],
 			    ]
 			},
 			ashley: {
@@ -125,6 +126,8 @@ function load_save(){
 			            name: "Flood",
 			            level: 1
 			        },
+					
+					// Quake
 			        {
 			            name: "Heal",
 			            level: 1
@@ -180,6 +183,7 @@ function load_save(){
 			            name: "Tornado",
 			            level: 1
 			        },
+					// flood
 			        {
 			            name: "Heal",
 			            level: 1
@@ -189,42 +193,61 @@ function load_save(){
 			earnest: {
 			    name: "Earnest",
 			    level: 1,
-			    job: "oracle",
+			    job: jobs.oracle,
 			    xp_till_next_level: 0,
 			    xp_pool: 0,
 			    equipment: {
-			        hand1: {},
-			        hand2: {},
-			        body: {},
+			        hand1: {
+			            item_name: "Magic Sword",
+			            item_type: "sword",
+			            slot_type: "main_hand",
+			            item_level: 1,
+			            item_bonus: ["MP"]
+			        },
+			        hand2: {
+			            item_name: "Robust Dagger",
+			            item_type: "short_sword",
+			            slot_type: "off_hand",
+			            item_level: 1,
+			            item_bonus: ["HP"]
+			        },
+			        body: {
+			            item_name: "Heavy Leather Armor",
+			            item_type: "medium",
+			            slot_type: "armor",
+			            item_level: 1,
+			            item_bonus: ["RES"]
+			        },
 			        accessory: {
-			            item_name: "Strong Ring+",
+			            item_name: "Lucky Ring",
 			            item_type: "ring",
 			            slot_type: "accessory",
 			            item_level: 1,
-			            item_bonus: ["ATK", "HP", "SPD"]
+			            item_bonus: ["LUK", "DEF"]
 			        }
 			    },
 			    equipped_skills: [
 			        "Attack",
-			        "Flurry",
-			        "Heal",
-			        "Unarmored+",
-			        "Unarmed+"
+			        "Scan",
+			        "Sleep",
+			        "Revive",
+			        "Insight"
 			    ],
-			    swap_skill: "Tornado",
+			    swap_skill: skills.freeze,
 			    job_skills: [
 			        {
-			            name: "Flurry",
+			            name: "Scan",
 			            level: 1
 			        }
 			    ],
 			    magic_skills: [
 			        {
-			            name: "Tornado",
+			            name: "Poison",
 			            level: 1
 			        },
+					// tornado
 			        {
-			            name: "Heal",
+			            name: "Flood",
 			            level: 1
 			        }
 			    ]
@@ -264,9 +287,9 @@ function load_save(){
 			        "Machine Gun",
 			        "Potion",
 			        "Grenade",
-			        "Flood"
+			        ""
 			    ],
-			    swap_skill: "",
+			    swap_skill: "Flood",
 			    job_skills: [
 			        {
 			            name: "Machine Gun",
@@ -343,6 +366,7 @@ function load_save(){
 			            name: "Quake",
 			            level: 1
 			        },
+					// Flood
 			        {
 			            name: "Heal",
 			            level: 1
@@ -352,47 +376,29 @@ function load_save(){
 			thomas: {
 			    name: "Thomas",
 			    level: 1,
-			    job: "monk",
+			    job: jobs.monk,
 			    xp_till_next_level: 0,
 			    xp_pool: 0,
 			    equipment: {
-			        hand1: {
-			            item_name: "Magic Sword",
-			            item_type: "sword",
-			            slot_type: "main_hand",
-			            item_level: 1,
-			            item_bonus: ["MP"]
-			        },
-			        hand2: {
-			            item_name: "Robust Dagger",
-			            item_type: "short_sword",
-			            slot_type: "off_hand",
-			            item_level: 1,
-			            item_bonus: ["HP"]
-			        },
-			        body: {
-			            item_name: "Heavy Leather Armor",
-			            item_type: "medium",
-			            slot_type: "armor",
-			            item_level: 1,
-			            item_bonus: ["RES"]
-			        },
+			        hand1: {},
+			        hand2: {},
+			        body: {},
 			        accessory: {
-			            item_name: "Lucky Ring",
+			            item_name: "Strong Ring+",
 			            item_type: "ring",
 			            slot_type: "accessory",
 			            item_level: 1,
-			            item_bonus: ["LUK", "DEF"]
+			            item_bonus: ["ATK", "HP", "SPD"]
 			        }
 			    },
 			    equipped_skills: [
 			        "Attack",
-			        "Scan",
-			        "Sleep",
-			        "Revive",
-			        "Insight"
+			        "Flurry",
+			        "Heal",
+			        "Unarmored+",
+			        "Unarmed+"
 			    ],
-			    swap_skill: "",
+			    swap_skill: "Tornado",
 			    job_skills: [
 			        {
 			            name: "Flurry",
@@ -401,11 +407,13 @@ function load_save(){
 			    ],
 			    magic_skills: [
 			        {
-			            name: "Poison",
+			            name: "Tornado",
 			            level: 1
 			        },
+					
+					// Quake
 			        {
-			            name: "Flood",
+			            name: "Heal",
 			            level: 1
 			        }
 			    ]

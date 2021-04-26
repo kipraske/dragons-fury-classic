@@ -33,7 +33,7 @@ function load_save(){
 			alfred: {
 			    name: "Alfred",
 			    level: 1,
-			    job: "mage",
+			    job: jobs.mage,
 				battle_current_hp: 1,
 				battle_current_mp: 1,
 				battle_current_xp_gained: 0,
@@ -42,50 +42,38 @@ function load_save(){
 			    equipment: {
 			        hand1: {
 			            item_name: "Magic Staff",
-			            item_type: "staff",
-			            slot_type: "two_hands",
+			            item_type: equipment_types.staff,
 			            item_level: 1,
-			            item_bonus: ["MP", "ATK"]
+			            item_bonus: [status_effects.mp_up, status.effects.atk_up]
 			        },
 			        hand2: {},
 			        body: {
 			            item_name: "Magic Robe",
-			            item_type: "light",
-			            slot_type: "armor",
+			            item_type: equipment_types.light_armor,
 			            item_level: 1,
-			            item_bonus: ["MP"]
+			            item_bonus: [status_effects.mp_up]
 			        },
 			        accessory: {
 			            item_name: "Magic Ring",
-			            item_type: "ring",
-			            slot_type: "accessory",
+			            item_type: equipment_types.ring,
 			            item_level: 1,
-			            item_bonus: ["MP", "RES"]
+			            item_bonus: [status_effects.mp_up, status_effects.RES_up]
 			        }
 			    },
 			    equipped_skills: [
-			        "Attack",
-			        "Double Cast",
-			        "Quake",
-			        "Heal",
-			        "MP Cost Down"
+					skills.attack,
+					skills.double_cast,
+					skills.quake,
+					skills.heal,
+					skills.mp_cost_down
 			    ],
 			    swap_skill: {},
 			    job_skills: [
-			        {
-			            name: "Double Cast",
-			            level: 1
-			        }
+			        [ skills.double_cast, 1 ]
 			    ],
 			    magic_skills: [
-			        {
-			            name: "Quake",
-			            level: 1
-			        },
-			        {
-			            name: "Heal",
-			            level: 1
-			        }
+					[ skills.quake, 1 ],
+					[ skills.heal, 1 ]
 			    ]
 			},
 			ashley: {

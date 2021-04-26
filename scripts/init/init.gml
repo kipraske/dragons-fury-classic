@@ -20,131 +20,21 @@ function init(){
 		monk
 	}
 	
-	enum job_skills {
-		// Mage
-		MP_up,
-		double_cast,
-		mp_cost_down,
-		mp_turbo,
-		staff_up,
-		book_up,
-		// Druid
-		RES_up,
-		mimic,
-		hp_drain,
-		rest_up,
-		bow_up,
-		ax_up,
-		// Thief
-		SPD_up,
-		steal,
-		loot_up,
-		gold_up,
-		hammer_up,
-		accessory_up,
-		// Oracle
-		LUK_up,
-		scan,
-		insight,
-		xp_up,
-		sword_up,
-		dagger_up,
-		// Inventor
-		HP_up,
-		machine_gun,
-		potion,
-		elixer,
-		spear_up,
-		gun_up,
-		// Knight
-		DEF_up,
-		defend,
-		last_stand,
-		auto_revive,
-		heavy_armor_up,
-		shield_up,
-		// Monk
-		ATK_up,
-		flurry,
-		counter,
-		mp_drain,
-		unarmored_up,
-		unarmed_up
-	}
-	
-	// Manually sort just so we don't have to always figure this out
-	global.job_skills_by_type[jobs.monk] = [
-		job_skills.ATK_up,
-		job_skills.flurry,
-		job_skills.counter,
-		job_skills.mp_drain,
-		job_skills.unarmored_up,
-		job_skills.unarmed_up
-	];
-	global.job_skills_by_type[jobs.knight] = [
-		job_skills.DEF_up,
-		job_skills.defend,
-		job_skills.last_stand,
-		job_skills.auto_revive,
-		job_skills.heavy_armor_up,
-		job_skills.shield_up
-	];
-	global.job_skills_by_type[jobs.inventor] = [
-		job_skills.HP_up,
-		job_skills.machine_gun,
-		job_skills.potion,
-		job_skills.elixer,
-		job_skills.spear_up,
-		job_skills.gun_up
-	];
-	global.job_skills_by_type[jobs.oracle] = [
-		job_skills.LUK_up,
-		job_skills.scan,
-		job_skills.insight,
-		job_skills.xp_up,
-		job_skills.sword_up,
-		job_skills.dagger_up
-	];
-	global.job_skills_by_type[jobs.thief] = [
-		job_skills.SPD_up,
-		job_skills.steal,
-		job_skills.loot_up,
-		job_skills.gold_up,
-		job_skills.hammer_up,
-		job_skills.accessory_up
-	];
-	global.job_skills_by_type[jobs.druid] = [
-		job_skills.RES_up,
-		job_skills.mimic,
-		job_skills.hp_drain,
-		job_skills.rest_up,
-		job_skills.bow_up,
-		job_skills.ax_up
-	];
-	global.job_skills_by_type[jobs.mage] = [
-		job_skills.MP_up,
-		job_skills.double_cast,
-		job_skills.mp_cost_down,
-		job_skills.mp_turbo,
-		job_skills.staff_up,
-		job_skills.book_up
-	];
-
-	enum magic_skills {
-		// basic group
+	enum skills {
+		// basic magic group
 		heal,
 		poison,
 		quake,
 		tornado,
 		flood,
 		
-		// combo damage group
+		// combo damage magic group
 		thunder, //sea+sky
 		ice,	 //sea+earth
 		meteor,  //earth+sky
 		smite,   //earth+sea+sky
 		
-		// healing/buff group
+		// healing/buff magic group
 		DEF_up,  //light+earth
 		RES_up,  //light+sea
 		regen,   //light+sky
@@ -154,7 +44,7 @@ function init(){
 		revive,  //light+smite
 		mp_regen,//dark+light+sea
 		
-		// debuff group
+		// debuff magic group
 		DEF_down, //dark+earth
 		RES_down, //dark+sea
 		aggro,    //dark+sky
@@ -164,54 +54,171 @@ function init(){
 		plague,   //dark+smite
 		flash,    //dark+light+lightning
 		
-		// status group
+		// status magic group
 		purify,   //dark+light
 		pain,     //dark+light+earth
 		confuse,  //dark+light+sky
 		freeze,   //dark+light+ice
 		sleep,    //dark+light+meteor
 		
-		// ultimate group
-		void      //all 5
+		// ultimate magic group
+		void,     //all 5
+		
+		// basic attack
+		attack,
+		
+		// Mage
+		passive_MP_up,
+		double_cast,
+		mp_cost_down,
+		mp_turbo,
+		staff_up,
+		book_up,
+		
+		// Druid
+		passive_RES_up,
+		mimic,
+		hp_drain,
+		rest_up,
+		bow_up,
+		ax_up,
+		
+		// Thief
+		passive_SPD_up,
+		steal,
+		loot_up,
+		gold_up,
+		hammer_up,
+		accessory_up,
+		
+		// Oracle
+		passive_LUK_up,
+		scan,
+		insight,
+		xp_up,
+		sword_up,
+		dagger_up,
+		
+		// Inventor
+		passive_HP_up,
+		machine_gun,
+		potion,
+		elixer,
+		spear_up,
+		gun_up,
+		
+		// Knight
+		passive_DEF_up,
+		defend,
+		last_stand,
+		auto_revive,
+		heavy_armor_up,
+		shield_up,
+		
+		// Monk
+		passive_ATK_up,
+		flurry,
+		counter,
+		mp_drain,
+		unarmored_up,
+		unarmed_up
 	}
+	
+	// Manually sort just so we don't have to always figure this out
+	global.job_skills_by_type[jobs.monk] = [
+		skills.passive_ATK_up,
+		skills.flurry,
+		skills.counter,
+		skills.mp_drain,
+		skills.unarmored_up,
+		skills.unarmed_up
+	];
+	global.job_skills_by_type[jobs.knight] = [
+		skills.passive_DEF_up,
+		skills.defend,
+		skills.last_stand,
+		skills.auto_revive,
+		skills.heavy_armor_up,
+		skills.shield_up
+	];
+	global.job_skills_by_type[jobs.inventor] = [
+		skills.passive_HP_up,
+		skills.machine_gun,
+		skills.potion,
+		skills.elixer,
+		skills.spear_up,
+		skills.gun_up
+	];
+	global.job_skills_by_type[jobs.oracle] = [
+		skills.passive_LUK_up,
+		skills.scan,
+		skills.insight,
+		skills.xp_up,
+		skills.sword_up,
+		skills.dagger_up
+	];
+	global.job_skills_by_type[jobs.thief] = [
+		skills.passive_SPD_up,
+		skills.steal,
+		skills.loot_up,
+		skills.gold_up,
+		skills.hammer_up,
+		skills.accessory_up
+	];
+	global.job_skills_by_type[jobs.druid] = [
+		skills.passive_RES_up,
+		skills.mimic,
+		skills.hp_drain,
+		skills.rest_up,
+		skills.bow_up,
+		skills.ax_up
+	];
+	global.job_skills_by_type[jobs.mage] = [
+		skills.passive_MP_up,
+		skills.double_cast,
+		skills.mp_cost_down,
+		skills.mp_turbo,
+		skills.staff_up,
+		skills.book_up
+	];
 
-	global.magic_base_mp_cost = [magic_skills.void] = 15;
+	global.magic_base_mp_cost = [skills.void] = 15;
 	
-	global.magic_base_mp_cost = [magic_skills.sleep] = 3;
-	global.magic_base_mp_cost = [magic_skills.freeze] = 3;
-	global.magic_base_mp_cost = [magic_skills.confuse] = 3;
-	global.magic_base_mp_cost = [magic_skills.pain] = 3;
-	global.magic_base_mp_cost = [magic_skills.purify] = 4;
+	global.magic_base_mp_cost = [skills.sleep] = 3;
+	global.magic_base_mp_cost = [skills.freeze] = 3;
+	global.magic_base_mp_cost = [skills.confuse] = 3;
+	global.magic_base_mp_cost = [skills.pain] = 3;
+	global.magic_base_mp_cost = [skills.purify] = 4;
 	
-	global.magic_base_mp_cost = [magic_skills.flash] = 5;
-	global.magic_base_mp_cost = [magic_skills.plague] = 8;
-	global.magic_base_mp_cost = [magic_skills.ATK_down] = 4;
-	global.magic_base_mp_cost = [magic_skills.LUK_down] = 4;
-	global.magic_base_mp_cost = [magic_skills.SPD_down] = 4;
-	global.magic_base_mp_cost = [magic_skills.aggro] = 3;
-	global.magic_base_mp_cost = [magic_skills.RES_down] = 4;
-	global.magic_base_mp_cost = [magic_skills.DEF_down] = 4;
+	global.magic_base_mp_cost = [skills.flash] = 5;
+	global.magic_base_mp_cost = [skills.plague] = 8;
+	global.magic_base_mp_cost = [skills.ATK_down] = 4;
+	global.magic_base_mp_cost = [skills.LUK_down] = 4;
+	global.magic_base_mp_cost = [skills.SPD_down] = 4;
+	global.magic_base_mp_cost = [skills.aggro] = 3;
+	global.magic_base_mp_cost = [skills.RES_down] = 4;
+	global.magic_base_mp_cost = [skills.DEF_down] = 4;
 	
-	global.magic_base_mp_cost = [magic_skills.mp_regen] = 8;
-	global.magic_base_mp_cost = [magic_skills.revive] = 8;
-	global.magic_base_mp_cost = [magic_skills.ATK_up] = 4;
-	global.magic_base_mp_cost = [magic_skills.LUK_up] = 4;
-	global.magic_base_mp_cost = [magic_skills.SPD_up] = 4;
-	global.magic_base_mp_cost = [magic_skills.regen] = 5;
-	global.magic_base_mp_cost = [magic_skills.RES_up] = 4;
-	global.magic_base_mp_cost = [magic_skills.DEF_up] = 4;
+	global.magic_base_mp_cost = [skills.mp_regen] = 8;
+	global.magic_base_mp_cost = [skills.revive] = 8;
+	global.magic_base_mp_cost = [skills.ATK_up] = 4;
+	global.magic_base_mp_cost = [skills.LUK_up] = 4;
+	global.magic_base_mp_cost = [skills.SPD_up] = 4;
+	global.magic_base_mp_cost = [skills.regen] = 5;
+	global.magic_base_mp_cost = [skills.RES_up] = 4;
+	global.magic_base_mp_cost = [skills.DEF_up] = 4;
 	
-	global.magic_base_mp_cost = [magic_skills.smite] = 12;
-	global.magic_base_mp_cost = [magic_skills.meteor] = 8;
-	global.magic_base_mp_cost = [magic_skills.ice] = 8;
-	global.magic_base_mp_cost = [magic_skills.thunder] = 8;
-	global.magic_base_mp_cost = [magic_skills.flood] = 5;
-	global.magic_base_mp_cost = [magic_skills.tornado] = 5;
-	global.magic_base_mp_cost = [magic_skills.quake] = 5;
-	global.magic_base_mp_cost = [magic_skills.poison] = 3;
-	global.magic_base_mp_cost = [magic_skills.heal] = 5;	
+	global.magic_base_mp_cost = [skills.smite] = 12;
+	global.magic_base_mp_cost = [skills.meteor] = 8;
+	global.magic_base_mp_cost = [skills.ice] = 8;
+	global.magic_base_mp_cost = [skills.thunder] = 8;
+	global.magic_base_mp_cost = [skills.flood] = 5;
+	global.magic_base_mp_cost = [skills.tornado] = 5;
+	global.magic_base_mp_cost = [skills.quake] = 5;
+	global.magic_base_mp_cost = [skills.poison] = 3;
+	global.magic_base_mp_cost = [skills.heal] = 5;	
 
-	// Used for in battle status effects (with duration) AND for item bonus/resists (perminent levels)
+	// Used for in battle status effects (power+duration) AND for item bonus/resists (perminent levels)
 	enum status_effects {
 		earth,
 		sea,
@@ -224,11 +231,16 @@ function init(){
         poison,
         regen,
         mp_regen,
-        atk,
-        def,
-        res,
-        spd,
-        luk,
+        atk_up,
+        def_up,
+        res_up,
+        spd_up,
+        luk_up,
+		atk_down,
+        def_down,
+        res_down,
+        spd_down,
+        luk_down
 	}
 	
 

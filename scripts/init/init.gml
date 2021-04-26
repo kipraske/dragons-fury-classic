@@ -175,6 +175,42 @@ function init(){
 		void      //all 5
 	}
 
+	global.magic_base_mp_cost = [magic_skills.void] = 15;
+	
+	global.magic_base_mp_cost = [magic_skills.sleep] = 3;
+	global.magic_base_mp_cost = [magic_skills.freeze] = 3;
+	global.magic_base_mp_cost = [magic_skills.confuse] = 3;
+	global.magic_base_mp_cost = [magic_skills.pain] = 3;
+	global.magic_base_mp_cost = [magic_skills.purify] = 4;
+	
+	global.magic_base_mp_cost = [magic_skills.flash] = 5;
+	global.magic_base_mp_cost = [magic_skills.plague] = 8;
+	global.magic_base_mp_cost = [magic_skills.ATK_down] = 4;
+	global.magic_base_mp_cost = [magic_skills.LUK_down] = 4;
+	global.magic_base_mp_cost = [magic_skills.SPD_down] = 4;
+	global.magic_base_mp_cost = [magic_skills.aggro] = 3;
+	global.magic_base_mp_cost = [magic_skills.RES_down] = 4;
+	global.magic_base_mp_cost = [magic_skills.DEF_down] = 4;
+	
+	global.magic_base_mp_cost = [magic_skills.mp_regen] = 8;
+	global.magic_base_mp_cost = [magic_skills.revive] = 8;
+	global.magic_base_mp_cost = [magic_skills.ATK_up] = 4;
+	global.magic_base_mp_cost = [magic_skills.LUK_up] = 4;
+	global.magic_base_mp_cost = [magic_skills.SPD_up] = 4;
+	global.magic_base_mp_cost = [magic_skills.regen] = 5;
+	global.magic_base_mp_cost = [magic_skills.RES_up] = 4;
+	global.magic_base_mp_cost = [magic_skills.DEF_up] = 4;
+	
+	global.magic_base_mp_cost = [magic_skills.smite] = 12;
+	global.magic_base_mp_cost = [magic_skills.meteor] = 8;
+	global.magic_base_mp_cost = [magic_skills.ice] = 8;
+	global.magic_base_mp_cost = [magic_skills.thunder] = 8;
+	global.magic_base_mp_cost = [magic_skills.flood] = 5;
+	global.magic_base_mp_cost = [magic_skills.tornado] = 5;
+	global.magic_base_mp_cost = [magic_skills.quake] = 5;
+	global.magic_base_mp_cost = [magic_skills.poison] = 3;
+	global.magic_base_mp_cost = [magic_skills.heal] = 5;	
+
 	enum status_effects {
 		sleep,
         freeze,

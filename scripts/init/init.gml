@@ -229,46 +229,42 @@ function init(){
 	
 	// The elemental magic skill tree
 	// 0 - node_level - how much the skill is worth in calculating next node
-	// 1 - prerequisite_nodes, ds_list
-	var _all_magic_list = ds_list_create()
-	for (i = MAGIC_SKILLS_START_INDEX; i <= MAGIC_SKILLS_END_INDEX; i++) {
-		ds_list_add( _all_magic_list, i );
-	}
-	global.magic_learning_tree = [skills.void] = 15;
+	// 1 - base_prerequisite_nodes array - the basic spell components of this level
+	global.magic_learning_tree = [skills.void]     = [5, [skills.heal, skills.poison, skills.quake, skills.flood, skills.tornado]];
 	
-	global.magic_learning_tree = [skills.sleep] = 3;
-	global.magic_learning_tree = [skills.freeze] = 3;
-	global.magic_learning_tree = [skills.confuse] = 3;
-	global.magic_learning_tree = [skills.pain] = 3;
-	global.magic_learning_tree = [skills.purify] = 4;
+	global.magic_learning_tree = [skills.sleep]    = [4, [skills.heal, skills.poison, skills.quake, skills.tornado]];
+	global.magic_learning_tree = [skills.freeze]   = [4, [skills.heal, skills.poison, skills.quake, skills.flood]];
+	global.magic_learning_tree = [skills.confuse]  = [3, [skills.heal, skills.poison, skills.tornado]];
+	global.magic_learning_tree = [skills.pain]     = [3, [skills.heal, skills.poison, skills.quake]];
+	global.magic_learning_tree = [skills.purify]   = [2, [skills.heal, skills.poison]];
 	
-	global.magic_learning_tree = [skills.flash] = 5;
-	global.magic_learning_tree = [skills.plague] = 8;
-	global.magic_learning_tree = [skills.ATK_down] = 4;
-	global.magic_learning_tree = [skills.LUK_down] = 4;
-	global.magic_learning_tree = [skills.SPD_down] = 4;
-	global.magic_learning_tree = [skills.aggro] = 3;
-	global.magic_learning_tree = [skills.RES_down] = 4;
-	global.magic_learning_tree = [skills.DEF_down] = 4;
+	global.magic_learning_tree = [skills.flash]    = [4, [skills.heal, skills.poison, skills.flood, skills.tornado]];
+	global.magic_learning_tree = [skills.plague]   = [4, [skills.poison, skills.flood, skills.quake, skills.tornado]];
+	global.magic_learning_tree = [skills.ATK_down] = [3, [skills.poison, skills.quake, skills.tornado]];
+	global.magic_learning_tree = [skills.LUK_down] = [3, [skills.poison, skills.flood, skills.quake]];
+	global.magic_learning_tree = [skills.SPD_down] = [3, [skills.poison, skills.flood, skills.tornado]];
+	global.magic_learning_tree = [skills.aggro]    = [2, [skills.poison, skills.tornado]];
+	global.magic_learning_tree = [skills.RES_down] = [2, [skills.poison, skills.flood]];
+	global.magic_learning_tree = [skills.DEF_down] = [2, [skills.poison, skills.quake]];
 	
-	global.magic_learning_tree = [skills.mp_regen] = 8;
-	global.magic_learning_tree = [skills.revive] = 8;
-	global.magic_learning_tree = [skills.ATK_up] = 4;
-	global.magic_learning_tree = [skills.LUK_up] = 4;
-	global.magic_learning_tree = [skills.SPD_up] = 4;
-	global.magic_learning_tree = [skills.regen] = 5;
-	global.magic_learning_tree = [skills.RES_up] = 4;
-	global.magic_learning_tree = [skills.DEF_up] = 4;
+	global.magic_learning_tree = [skills.mp_regen] = [3, [skills.heal, skills.poison, skills.flood]];
+	global.magic_learning_tree = [skills.revive]   = [4, [skills.heal, skills.quake, skills.flood, skills.tornado]];
+	global.magic_learning_tree = [skills.ATK_up]   = [3, [skills.heal, skills.quake, skills.tornado]];
+	global.magic_learning_tree = [skills.LUK_up]   = [3, [skills.heal, skills.quake, skills.flood]];
+	global.magic_learning_tree = [skills.SPD_up]   = [3, [skills.heal, skills.flood, skills.tornado]];
+	global.magic_learning_tree = [skills.regen]    = [2, [skills.heal, skills.tornado]];
+	global.magic_learning_tree = [skills.RES_up]   = [2, [skills.heal, skills.flood]];
+	global.magic_learning_tree = [skills.DEF_up]   = [3, [skills.heal, skills.quake]];
 	
-	global.magic_learning_tree = [skills.smite] = 12;
-	global.magic_learning_tree = [skills.meteor] = 8;
-	global.magic_learning_tree = [skills.ice] = 8;
-	global.magic_learning_tree = [skills.thunder] = 8;
-	global.magic_learning_tree = [skills.flood] = 5;
-	global.magic_learning_tree = [skills.tornado] = 5;
-	global.magic_learning_tree = [skills.quake] = 5;
-	global.magic_learning_tree = [skills.poison] = 3;
-	global.magic_learning_tree = [skills.heal] = 5;
+	global.magic_learning_tree = [skills.smite]    = [3, [skills.quake, skills.flood, skills.tornado]];
+	global.magic_learning_tree = [skills.meteor]   = [2, [skills.quake, skills.tornado]];
+	global.magic_learning_tree = [skills.ice]      = [2, [skills.quake, skills.flood]];
+	global.magic_learning_tree = [skills.thunder]  = [2, [skills.flood, skills.tornado]];
+	global.magic_learning_tree = [skills.flood]    = [1, [skills.flood];
+	global.magic_learning_tree = [skills.tornado]  = [1, [skills.tornado];
+	global.magic_learning_tree = [skills.quake]    = [1, [skills.quake];
+	global.magic_learning_tree = [skills.poison]   = [1, [skills.poison];
+	global.magic_learning_tree = [skills.heal]     = [1, [skills.heal];
 
 	// We don't need to clean up these lists since they will be persistent for the life of the application
 

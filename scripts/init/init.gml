@@ -230,6 +230,7 @@ function init(){
 	// The elemental magic skill tree
 	// 0 - node_level - how much the skill is worth in calculating next node
 	// 1 - base_prerequisite_nodes array - the basic spell components of this level
+	// insight flips the level (5-level) for all calculations
 	global.magic_learning_tree[skills.void]     = [5, [skills.heal, skills.poison, skills.quake, skills.flood, skills.tornado]];
 	
 	global.magic_learning_tree[skills.sleep]    = [4, [skills.heal, skills.poison, skills.quake, skills.tornado]];
@@ -266,7 +267,11 @@ function init(){
 	global.magic_learning_tree[skills.poison]   = [1, [skills.poison]];
 	global.magic_learning_tree[skills.heal]     = [1, [skills.heal]];
 
-	// We don't need to clean up these lists since they will be persistent for the life of the application
+	// Node level thresholds for learning new skill
+	#macro MAGIC_LEARN_THRESHOLD_2 4
+	#macro MAGIC_LEARN_THRESHOLD_3 8
+	#macro MAGIC_LEARN_THRESHOLD_4 20
+	#macro MAGIC_LAERN_THRESHOLD_5 35
 
 	//Used for in battle status effects (power+duration) AND for item and monster bonus/resists (perminent levels)
 	enum attr {

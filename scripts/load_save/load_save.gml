@@ -4,7 +4,7 @@ function load_save(){
 
 	var _is_continue_game = load_json_file("history.json");
 	// TODO - for debugging fix to false
-	_is_continue_game = false;
+	// _is_continue_game = false;
 
 	if ( _is_continue_game){
 		global.player = {
@@ -44,20 +44,20 @@ function load_save(){
 			            item_name: "Magic Staff",
 			            item_type: equipment_types.staff,
 			            item_level: 1,
-			            item_bonus: [status_effects.mp_up, status.effects.atk_up]
+			            item_bonus: [attr.MP_up, attr.MP_up]
 			        },
 			        hand2: {},
 			        body: {
 			            item_name: "Magic Robe",
 			            item_type: equipment_types.light_armor,
 			            item_level: 1,
-			            item_bonus: [status_effects.mp_up]
+			            item_bonus: [attr.MP_up]
 			        },
 			        accessory: {
 			            item_name: "Magic Ring",
 			            item_type: equipment_types.ring,
 			            item_level: 1,
-			            item_bonus: [status_effects.mp_up, status_effects.RES_up]
+			            item_bonus: [attr.MP_up, attr.RES_up]
 			        }
 			    },
 			    equipped_skills: [
@@ -80,96 +80,86 @@ function load_save(){
 			ashley: {
 			    name: "Ashley",
 			    level: 1,
-			    job: "druid",
+			    job: jobs.druid
+				battle_current_hp: 1,
+				battle_current_mp: 1,
+				battle_current_xp_gained: 0,
 			    xp_till_next_level: 0,
 			    xp_pool: 0,
 			    equipment: {
 			        hand1: {
 			            item_name: "Robust Bow",
-			            item_type: "bow",
-			            slot_type: "two_hands",
+			            item_type: equipment_types.bow,
 			            item_level: 1,
-			            item_bonus: ["HP", "DEF"]
+			            item_bonus: [attr.HP_up, attr.DEF_up]
 			        },
 			        hand2: {},
 			        body: {
 			            item_name: "Lucky Leather Armor",
-			            item_type: "medium",
-			            slot_type: "armor",
+			            item_type: equipment_types.medium_armor,
 			            item_level: 1,
-			            item_bonus: ["LUK"]
+			            item_bonus: [attr.LUK_up]
 			        },
 			        accessory: {
 			            item_name: "Heavy Ring",
-			            item_type: "ring",
-			            slot_type: "accessory",
+			            item_type: equipmenet_types.ring,
 			            item_level: 1,
-			            item_bonus: ["RES", "SPD"]
+			            item_bonus: [attr.RES_up, attr.SPD_up]
 			        }
 			    },
 			    equipped_skills: [
-			        "Attack",
-			        "Mimic",
-			        "Flood",
-			        "Heal",
-			        "HP Drain"
+			        skills.attack,
+			        skills.mimic,
+			        skills.flood,
+			        skills.heal,
+			        skills.hp_drain,
 			    ],
-			    swap_skill: {},
+			    swap_skill: skills.quake,
 			    job_skills: [
-			        {
-			            name: "Mimic",
-			            level: 1
-			        }
+					[ skills.mimic, 1 ],
 			    ],
 			    magic_skills: [
-			        {
-			            name: "Flood",
-			            level: 1
-			        },
-					
-					// Quake
-			        {
-			            name: "Heal",
-			            level: 1
-			        }
+					[ skills.flood, 1 ],
+					[ skills.quake, 1],
+					[ skills.heal, 1 ],
 			    ]
 			},
 			catherine: {
 			    name: "Catherine",
 			    level: 1,
-			    job: "thief",
+			    job: jobs.thief,
+				battle_current_hp: 1,
+				battle_current_mp: 1,
+				battle_current_xp_gained: 0,
 			    xp_till_next_level: 0,
 			    xp_pool: 0,
 			    equipment: {
 			        hand1: {
 			            item_name: "Lucky Hammer",
-			            item_type: "hammer",
-			            slot_type: "two_hands",
+			            item_type: equipment_types.hammer,
 			            item_level: 1,
-			            item_bonus: ["LUK", "HP"]
+			            item_bonus: [attr.LUK_up,attr.HP_up]
 			        },
 			        hand2: {},
 			        body: {
 			            item_name: "Agile Leather Armor",
-			            item_type: "medium",
-			            slot_type: "armor",
+			            item_type: equipment_types.medium_armor,
 			            item_level: 1,
-			            item_bonus: ["SPD"]
+			            item_bonus: [attr.SPD_up]
 			        },
 			        accessory: {
 			            item_name: "Lucky Ring",
-			            item_type: "ring",
-			            slot_type: "accessory",
+			            item_type: equipment_types.ring,
 			            item_level: 1,
-			            item_bonus: ["SPD", "LUK"]
+			            item_bonus: [attr.LUK_up, attr.SPD_up]
 			        }
 			    },
 			    equipped_skills: [
-			        "Attack",
-			        "Steal",
-			        "Tornado",
-			        "Heal",
-			        "Gold+"
+			        skills.attack,
+			        skills.steal,
+			        skills.tornado,
+			        skills.heal,
+			        skills.gold_up
 			    ],
 			    swap_skill: {},
 			    job_skills: [

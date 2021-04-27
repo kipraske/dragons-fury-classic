@@ -1,5 +1,5 @@
 /// @function init
-/// @desc defines all global enum and macros for the application
+/// @desc defines all global enum and macros for the application, only call this once!
 function init(){
 
 	enum stats {
@@ -19,6 +19,11 @@ function init(){
 		knight,
 		monk
 	}
+	
+	#macro MAGIC_SKILLS_START_INDEX 0
+	#macro MAGIC_SKILLS_END_INDEX 30
+	#macro JOB_SKILLS_START_INDEX 32
+	#macro JOB_SKILLS_END_INDEX 74 // 42 + 32
 	
 	enum skills {
 		// basic magic group
@@ -122,6 +127,9 @@ function init(){
 		mp_drain,
 		unarmored_up,
 		unarmed_up
+		
+		// Monster only skills, normally non equippable
+		// TODO
 	}
 	
 	// Manually sort just so we don't have to always figure this out
@@ -182,6 +190,7 @@ function init(){
 		skills.book_up
 	];
 
+	// Just the base MP cost, will be multiplied each level
 	global.magic_base_mp_cost = [skills.void] = 15;
 	
 	global.magic_base_mp_cost = [skills.sleep] = 3;
@@ -216,13 +225,62 @@ function init(){
 	global.magic_base_mp_cost = [skills.tornado] = 5;
 	global.magic_base_mp_cost = [skills.quake] = 5;
 	global.magic_base_mp_cost = [skills.poison] = 3;
-	global.magic_base_mp_cost = [skills.heal] = 5;	
+	global.magic_base_mp_cost = [skills.heal] = 5;
+	
+	// The elemental magic skill tree
+	// 0 - node_level - how much the skill is worth in calculating next node
+	// 1 - prerequisite_nodes, ds_list
+	var _all_magic_list = ds_list_create()
+	for (i = MAGIC_SKILLS_START_INDEX; i <= MAGIC_SKILLS_END_INDEX; i++) {
+		ds_list_add( _all_magic_list, i );
+	}
+	global.magic_learning_tree = [skills.void] = 15;
+	
+	global.magic_learning_tree = [skills.sleep] = 3;
+	global.magic_learning_tree = [skills.freeze] = 3;
+	global.magic_learning_tree = [skills.confuse] = 3;
+	global.magic_learning_tree = [skills.pain] = 3;
+	global.magic_learning_tree = [skills.purify] = 4;
+	
+	global.magic_learning_tree = [skills.flash] = 5;
+	global.magic_learning_tree = [skills.plague] = 8;
+	global.magic_learning_tree = [skills.ATK_down] = 4;
+	global.magic_learning_tree = [skills.LUK_down] = 4;
+	global.magic_learning_tree = [skills.SPD_down] = 4;
+	global.magic_learning_tree = [skills.aggro] = 3;
+	global.magic_learning_tree = [skills.RES_down] = 4;
+	global.magic_learning_tree = [skills.DEF_down] = 4;
+	
+	global.magic_learning_tree = [skills.mp_regen] = 8;
+	global.magic_learning_tree = [skills.revive] = 8;
+	global.magic_learning_tree = [skills.ATK_up] = 4;
+	global.magic_learning_tree = [skills.LUK_up] = 4;
+	global.magic_learning_tree = [skills.SPD_up] = 4;
+	global.magic_learning_tree = [skills.regen] = 5;
+	global.magic_learning_tree = [skills.RES_up] = 4;
+	global.magic_learning_tree = [skills.DEF_up] = 4;
+	
+	global.magic_learning_tree = [skills.smite] = 12;
+	global.magic_learning_tree = [skills.meteor] = 8;
+	global.magic_learning_tree = [skills.ice] = 8;
+	global.magic_learning_tree = [skills.thunder] = 8;
+	global.magic_learning_tree = [skills.flood] = 5;
+	global.magic_learning_tree = [skills.tornado] = 5;
+	global.magic_learning_tree = [skills.quake] = 5;
+	global.magic_learning_tree = [skills.poison] = 3;
+	global.magic_learning_tree = [skills.heal] = 5;
 
-	// Used for in battle status effects (power+duration) AND for item bonus/resists (perminent levels)
-	enum status_effects {
+	// We don't need to clean up these lists since they will be persistent for the life of the application
+
+	//Used for in battle status effects (power+duration) AND for item and monster bonus/resists (perminent levels)
+	enum attr {
 		earth,
 		sea,
 		sky,
+		slash,
+		pierce,
+		blunt,
+		magic,
 		sleep,
         freeze,
         confuse,
@@ -230,19 +288,22 @@ function init(){
         aggro,
         poison,
         regen,
-        mp_regen,
-        atk_up,
-        def_up,
-        res_up,
-        spd_up,
-        luk_up,
-		atk_down,
-        def_down,
-        res_down,
-        spd_down,
-        luk_down
+        MP_regen,
+		HP_up,
+		MP_up,
+        ATK_up,
+        DEF_up,
+        RES_up,
+        SPD_up,
+        LUK_up,
+		HP_down,
+		MP_down,
+		ATK_down,
+        DEF_down,
+        RES_down,
+        SPD_down,
+        LUK_down
 	}
-	
 
 	enum equipment_slots {
 		main_hand,

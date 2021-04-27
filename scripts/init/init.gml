@@ -20,12 +20,15 @@ function init(){
 		monk
 	}
 	
-	#macro MAGIC_SKILLS_START_INDEX 0
-	#macro MAGIC_SKILLS_END_INDEX 30
-	#macro JOB_SKILLS_START_INDEX 32
-	#macro JOB_SKILLS_END_INDEX 74 // 42 + 32
+	#macro MAGIC_SKILLS_START_INDEX 2
+	#macro MAGIC_SKILLS_END_INDEX 33 // 2 + 31
+	#macro JOB_SKILLS_START_INDEX 34
+	#macro JOB_SKILLS_END_INDEX 76 // 42 + 34
 	
 	enum skills {
+		noskill,
+		attack,
+		
 		// basic magic group
 		heal,
 		poison,
@@ -69,9 +72,6 @@ function init(){
 		// ultimate magic group
 		void,     //all 5
 		
-		// basic attack
-		attack,
-		
 		// Mage
 		passive_MP_up,
 		double_cast,
@@ -108,7 +108,7 @@ function init(){
 		passive_HP_up,
 		machine_gun,
 		potion,
-		elixer,
+		grenade,
 		spear_up,
 		gun_up,
 		
@@ -153,7 +153,7 @@ function init(){
 		skills.passive_HP_up,
 		skills.machine_gun,
 		skills.potion,
-		skills.elixer,
+		skills.grenade,
 		skills.spear_up,
 		skills.gun_up
 	];

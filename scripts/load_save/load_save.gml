@@ -161,23 +161,14 @@ function load_save(){
 			        skills.heal,
 			        skills.gold_up
 			    ],
-			    swap_skill: {},
+			    swap_skill: skills.flood,
 			    job_skills: [
-			        {
-			            name: "Steal",
-			            level: 1
-			        }
+					[ skills.steal, 1 ]
 			    ],
 			    magic_skills: [
-			        {
-			            name: "Tornado",
-			            level: 1
-			        },
-					// flood
-			        {
-			            name: "Heal",
-			            level: 1
-			        }
+					[ skills.tornado, 1 ],
+					[ skills.flood, 1 ],
+					[ skills.heal, 1 ]
 			    ]
 			},
 			earnest: {
@@ -189,116 +180,88 @@ function load_save(){
 			    equipment: {
 			        hand1: {
 			            item_name: "Magic Sword",
-			            item_type: "sword",
-			            slot_type: "main_hand",
+			            item_type: equipment_types.sword,
 			            item_level: 1,
-			            item_bonus: ["MP"]
+			            item_bonus: [attr.MP_up]
 			        },
 			        hand2: {
 			            item_name: "Robust Dagger",
-			            item_type: "short_sword",
-			            slot_type: "off_hand",
+			            item_type: equipment_types.short_sword,
 			            item_level: 1,
-			            item_bonus: ["HP"]
+			            item_bonus: [attr.HP_up]
 			        },
 			        body: {
 			            item_name: "Heavy Leather Armor",
-			            item_type: "medium",
-			            slot_type: "armor",
+			            item_type: equipment_types.medium_armor,
 			            item_level: 1,
-			            item_bonus: ["RES"]
+			            item_bonus: [attr.RES_up]
 			        },
 			        accessory: {
 			            item_name: "Lucky Ring",
-			            item_type: "ring",
-			            slot_type: "accessory",
+			            item_type: equipment_types.ring,
 			            item_level: 1,
-			            item_bonus: ["LUK", "DEF"]
+			            item_bonus: [attr.LUK_up, attr.DEF_up]
 			        }
 			    },
 			    equipped_skills: [
-			        "Attack",
-			        "Scan",
-			        "Sleep",
-			        "Revive",
-			        "Insight"
+			        skills.attack,
+			        skills.scan,
+			        skills.sleep,
+			        skills.revive,
+			        skills.insight
 			    ],
-			    swap_skill: skills.freeze,
+			    swap_skill: skills.poison,
 			    job_skills: [
-			        {
-			            name: "Scan",
-			            level: 1
-			        }
+					[skills.scan, 1]
 			    ],
 			    magic_skills: [
-			        {
-			            name: "Poison",
-			            level: 1
-			        },
-					// tornado
-			        {
-			            name: "Flood",
-			            level: 1
-			        }
+					[skills.poison, 1],
+					[skills.revive, 1],
+					[skills.flood, 1]
 			    ]
 			},
 			isabelle: {
 			    name: "Isabelle",
 			    level: 1,
-			    job: "Inventor",
+			    job: jobs.inventor,
 			    xp_till_next_level: 0,
 			    xp_pool: 0,
 			    equipment: {
 			        hand1: {
 			            item_name: "Quick Rifle",
-			            item_type: "sword",
-			            slot_type: "two_hand",
+			            item_type: equipment_types.rifle,
 			            item_level: 1,
-			            item_bonus: ["SPD"]
+			            item_bonus: [attr.SPD_up]
 			        },
 			        hand2: {},
 			        body: {
 			            item_name: "Sturdy Leather Armor",
-			            item_type: "medium",
-			            slot_type: "armor",
+			            item_type: equipment_types.medium_armor,
 			            item_level: 1,
-			            item_bonus: ["DEF"]
+			            item_bonus: [attr.DEF_up]
 			        },
 			        accessory: {
 			            item_name: "Quick Ring",
-			            item_type: "ring",
-			            slot_type: "accessory",
+			            item_type: equipment_types.ring,
 			            item_level: 1,
-			            item_bonus: ["SPD", "HP"]
+			            item_bonus: [attr.SPD_up, attr.HP_up]
 			        }
 			    },
 			    equipped_skills: [
-			        "Attack",
-			        "Machine Gun",
-			        "Potion",
-			        "Grenade",
-			        ""
+			        skills.attack,
+			        skills.machine_gun,
+			        skills.potion,
+			        skills.grenade,
+			        skills.noskill,
 			    ],
-			    swap_skill: "Flood",
+			    swap_skill: skills.flood,
 			    job_skills: [
-			        {
-			            name: "Machine Gun",
-			            level: 1
-			        },
-			        {
-			            name: "Potion",
-			            level: 1
-			        },
-			        {
-			            name: "Grenade",
-			            level: 1
-			        }
+					[skills.machine_gun, 1],
+					[skills.potion, 1],
+					[skills.grenade, 1],
 			    ],
 			    magic_skills: [
-			        {
-			            name: "Flood",
-			            level: 1
-			        }
+					[skills.flood, 1]
 			    ]
 			},
 			mary: {

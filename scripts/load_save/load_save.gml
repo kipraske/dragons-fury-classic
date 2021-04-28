@@ -175,6 +175,9 @@ function load_save(){
 			    name: "Earnest",
 			    level: 1,
 			    job: jobs.oracle,
+				battle_current_hp: 1,
+				battle_current_mp: 1,
+				battle_current_xp_gained: 0,
 			    xp_till_next_level: 0,
 			    xp_pool: 0,
 			    equipment: {
@@ -224,6 +227,9 @@ function load_save(){
 			    name: "Isabelle",
 			    level: 1,
 			    job: jobs.inventor,
+				battle_current_hp: 1,
+				battle_current_mp: 1,
+				battle_current_xp_gained: 0,
 			    xp_till_next_level: 0,
 			    xp_pool: 0,
 			    equipment: {
@@ -268,6 +274,9 @@ function load_save(){
 			    name: "Mary",
 			    level: 1,
 			    job: jobs.knight,
+				battle_current_hp: 1,
+				battle_current_mp: 1,
+				battle_current_xp_gained: 0,
 			    xp_till_next_level: 0,
 			    xp_pool: 0,
 			    equipment: {
@@ -317,6 +326,9 @@ function load_save(){
 			    name: "Thomas",
 			    level: 1,
 			    job: jobs.monk,
+				battle_current_hp: 1,
+				battle_current_mp: 1,
+				battle_current_xp_gained: 0,
 			    xp_till_next_level: 0,
 			    xp_pool: 0,
 			    equipment: {

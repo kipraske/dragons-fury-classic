@@ -217,7 +217,7 @@ function load_save(){
 			    magic_skills: [
 					[skills.poison, 1],
 					[skills.revive, 1],
-					[skills.flood, 1]
+					[skills.sleep, 1]
 			    ]
 			},
 			isabelle: {
@@ -267,63 +267,50 @@ function load_save(){
 			mary: {
 			    name: "Mary",
 			    level: 1,
-			    job: "knight",
+			    job: jobs.knight,
 			    xp_till_next_level: 0,
 			    xp_pool: 0,
 			    equipment: {
 			        hand1: {
 			            item_name: "Sturdy Sword",
-			            item_type: "sword",
-			            slot_type: "main_hand",
+			            item_type: equipment_types.sword,
 			            item_level: 1,
-			            item_bonus: ["DEF"]
+			            item_bonus: [attr.DEF_up]
 			        },
 			        hand2: {
 			            item_name: "Robust Shield",
-			            item_type: "shield",
-			            slot_type: "off_hand",
+			            item_type: equipment_types.shield,
 			            item_level: 1,
-			            item_bonus: ["HP"]
+			            item_bonus: [attr.HP_up]
 			        },
 			        body: {
 			            item_name: "Heavy Steel Plate",
-			            item_type: "heavy",
-			            slot_type: "armor",
+			            item_type: equipment_types.heavy_armor,
 			            item_level: 1,
-			            item_bonus: ["RES", "-ATK"]
+			            item_bonus: [attr.RES_up, attr.ATK_down]
 			        },
 			        accessory: {
 			            item_name: "Sturdy Ring",
-			            item_type: "ring",
-			            slot_type: "accessory",
+			            item_type: equipment_types.ring,
 			            item_level: 1,
-			            item_bonus: ["DEF", "HP"]
+			            item_bonus: [attr.DEF_up, attr.HP_up]
 			        }
 			    },
 			    equipped_skills: [
-			        "Attack",
-			        "Defend",
-			        "Quake",
-			        "Heal",
-			        "Stand Ground"
+			        skills.attack,
+			        skills.defend,
+			        skills.quake,
+			        skills.heal,
+			        skills.last_stand
 			    ],
-			    swap_skill: "",
+			    swap_skill: skills.flood,
 			    job_skills: [
-			        {
-			            name: "Defend",
-			            level: 1
-			        }
+					[skills.defend, 1]
 			    ],
 			    magic_skills: [
-			        {
-			            name: "Quake",
-			            level: 1
-			        },
-					// Flood
-			        {
-			            name: "Heal",
-			            level: 1
-			        }
+					[skills.quake, 1],
+					[skills.flood, 1],
+					[skills.heal, 1]
 			    ]
 			},
 			thomas: {
@@ -338,38 +325,27 @@ function load_save(){
 			        body: {},
 			        accessory: {
 			            item_name: "Strong Ring+",
-			            item_type: "ring",
-			            slot_type: "accessory",
+			            item_type: equipment_types.ring,
 			            item_level: 1,
-			            item_bonus: ["ATK", "HP", "SPD"]
+			            item_bonus: [attr.ATK_up, attr.HP_up, attr.SPD_up]
 			        }
 			    },
 			    equipped_skills: [
-			        "Attack",
-			        "Flurry",
-			        "Heal",
-			        "Unarmored+",
-			        "Unarmed+"
+			        skills.attack,
+			        skills.flurry,
+			        skills.heal,
+			        skills.unarmored_up,
+			        skills.unarmed_up
 			    ],
-			    swap_skill: "Tornado",
+			    swap_skill: skills.tornado,
 			    job_skills: [
-			        {
-			            name: "Flurry",
-			            level: 1
-			        }
+					[skills.flurry, 1]
 			    ],
 			    magic_skills: [
-			        {
-			            name: "Tornado",
-			            level: 1
-			        },
-					
-					// Quake
-			        {
-			            name: "Heal",
-			            level: 1
-			        }
-			    ]
+					[skills.tornado, 1],
+					[skills.quake, 1],
+					[skills.heal, 1]
+				]
 			}
 		}
 		save_json_file(global.player.alfred,    "character/alfred.json");

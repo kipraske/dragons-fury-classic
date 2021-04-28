@@ -80,7 +80,7 @@ function load_save(){
 			ashley: {
 			    name: "Ashley",
 			    level: 1,
-			    job: jobs.druid
+			    job: jobs.druid,
 				battle_current_hp: 1,
 				battle_current_mp: 1,
 				battle_current_xp_gained: 0,
@@ -102,7 +102,7 @@ function load_save(){
 			        },
 			        accessory: {
 			            item_name: "Heavy Ring",
-			            item_type: equipmenet_types.ring,
+			            item_type: equipment_types.ring,
 			            item_level: 1,
 			            item_bonus: [attr.RES_up, attr.SPD_up]
 			        }
@@ -112,7 +112,7 @@ function load_save(){
 			        skills.mimic,
 			        skills.flood,
 			        skills.heal,
-			        skills.hp_drain,
+			        skills.hp_drain
 			    ],
 			    swap_skill: skills.quake,
 			    job_skills: [
@@ -121,7 +121,7 @@ function load_save(){
 			    magic_skills: [
 					[ skills.flood, 1 ],
 					[ skills.quake, 1],
-					[ skills.heal, 1 ],
+					[ skills.heal, 1 ]
 			    ]
 			},
 			catherine: {

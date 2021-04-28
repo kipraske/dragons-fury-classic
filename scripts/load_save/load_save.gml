@@ -367,5 +367,10 @@ function load_save(){
 		save_json_file(global.player.isabelle,  "character/isabelle.json");
 		save_json_file(global.player.mary,      "character/mary.json");
 		save_json_file(global.player.thomas,    "character/thomas.json");
+		
+		global.battle = {
+			is_battle: false,
+			phase: battle_phase.init,
+		}
 	}
 }

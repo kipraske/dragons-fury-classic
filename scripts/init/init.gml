@@ -356,4 +356,14 @@ function init(){
 	global.equipment_slot_by_type[equipment_types.dagger] = equipment_slots.off_hand;
 	global.equipment_slot_by_type[equipment_types.pistol] = equipment_slots.main_hand;
 	global.equipment_slot_by_type[equipment_types.unarmed] = equipment_slots.off_hand;
+	
+	//game state enums
+	enum battle_phase {
+		init,
+		waiting_for_input,
+		execute_turn,
+		win,
+		lose,
+		clean_up,
+	}
 }

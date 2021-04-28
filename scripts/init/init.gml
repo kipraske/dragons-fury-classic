@@ -303,7 +303,8 @@ function init(){
         DEF_down,
         RES_down,
         SPD_down,
-        LUK_down
+        LUK_down,
+		length
 	}
 
 	enum equipment_slots {

@@ -29,6 +29,22 @@ function load_save(){
 		}
 		save_json_file(global.history, "history.json");
 	
+		var _initial_battle_attr = [];    // status effects
+		var _initial_perminent_attr = []; // equipment, skill modifiers
+		var _initial_battle_stat = {      // stats relevant only in battle
+			current_hp: 1,
+			current_mp: 1,
+			current_level: 1,
+			xp_gained: 0,
+		}
+		
+		// 0 - status power
+		// 1 - status duration
+		for (i = attr.length -1; i >=0 ; i--){
+			_initial_battle_attr[i] = [0, 0];
+			_initial_perminent_attr = 0;
+		}
+
 		global.player = {
 			alfred: {
 			    name: "Alfred",
@@ -37,7 +53,7 @@ function load_save(){
 				battle_current_hp: 1,
 				battle_current_mp: 1,
 				battle_current_xp_gained: 0,
-			    xp_till_next_level: 0,
+			    total_xp: 0,
 			    xp_skill_pool: 0,
 			    equipment: {
 			        hand1: {
@@ -371,6 +387,9 @@ function load_save(){
 		global.battle = {
 			is_battle: false,
 			phase: battle_phase.init,
+			player_frontline: [],
+			player_backline: [],
+			monsters: [],
 		}
 	}
 }

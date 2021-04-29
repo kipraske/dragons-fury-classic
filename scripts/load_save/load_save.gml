@@ -4,7 +4,7 @@ function load_save(){
 
 	var _is_continue_game = load_json_file("history.json");
 	// TODO - for debugging fix to false
-	// _is_continue_game = false;
+	_is_continue_game = false;
 
 	if ( _is_continue_game){
 		global.player = {
@@ -29,30 +29,19 @@ function load_save(){
 		}
 		save_json_file(global.history, "history.json");
 	
-		var _initial_battle_attr = [];    // status effects
-		var _initial_perminent_attr = []; // equipment, skill modifiers
-		var _initial_battle_stat = {      // stats relevant only in battle
-			current_hp: 1,
-			current_mp: 1,
-			current_level: 1,
-			xp_gained: 0,
-		}
-		
-		// 0 - status power
-		// 1 - status duration
-		for (i = attr.length -1; i >=0 ; i--){
-			_initial_battle_attr[i] = [0, 0];
-			_initial_perminent_attr = 0;
-		}
-
 		global.player = {
 			alfred: {
 			    name: "Alfred",
 			    level: 1,
 			    job: jobs.mage,
-				battle_current_hp: 1,
-				battle_current_mp: 1,
-				battle_current_xp_gained: 0,
+				battle_attr: fill_array( attr.length, [0, 0] ), // status effects: 0-level, 1-duration
+				player_attr: fill_array( attr.length, 0 ),      // perminent effects: level
+				battle_stat: {
+					current_hp: 1,
+					current_mp: 1,
+					current_level: 1,
+					xp_gained: 0,
+				},
 			    total_xp: 0,
 			    xp_skill_pool: 0,
 			    equipment: {
@@ -97,9 +86,14 @@ function load_save(){
 			    name: "Ashley",
 			    level: 1,
 			    job: jobs.druid,
-				battle_current_hp: 1,
-				battle_current_mp: 1,
-				battle_current_xp_gained: 0,
+				battle_attr: fill_array( attr.length, [0, 0] ), // status effects: 0-level, 1-duration
+				player_attr: fill_array( attr.length, 0 ),      // perminent effects: level
+				battle_stat: {
+					current_hp: 1,
+					current_mp: 1,
+					current_level: 1,
+					xp_gained: 0,
+				},
 			    xp_till_next_level: 0,
 			    xp_pool: 0,
 			    equipment: {
@@ -144,9 +138,14 @@ function load_save(){
 			    name: "Catherine",
 			    level: 1,
 			    job: jobs.thief,
-				battle_current_hp: 1,
-				battle_current_mp: 1,
-				battle_current_xp_gained: 0,
+				battle_attr: fill_array( attr.length, [0, 0] ), // status effects: 0-level, 1-duration
+				player_attr: fill_array( attr.length, 0 ),      // perminent effects: level
+				battle_stat: {
+					current_hp: 1,
+					current_mp: 1,
+					current_level: 1,
+					xp_gained: 0,
+				},
 			    xp_till_next_level: 0,
 			    xp_pool: 0,
 			    equipment: {
@@ -191,9 +190,14 @@ function load_save(){
 			    name: "Earnest",
 			    level: 1,
 			    job: jobs.oracle,
-				battle_current_hp: 1,
-				battle_current_mp: 1,
-				battle_current_xp_gained: 0,
+				battle_attr: fill_array( attr.length, [0, 0] ), // status effects: 0-level, 1-duration
+				player_attr: fill_array( attr.length, 0 ),      // perminent effects: level
+				battle_stat: {
+					current_hp: 1,
+					current_mp: 1,
+					current_level: 1,
+					xp_gained: 0,
+				},
 			    xp_till_next_level: 0,
 			    xp_pool: 0,
 			    equipment: {
@@ -243,9 +247,14 @@ function load_save(){
 			    name: "Isabelle",
 			    level: 1,
 			    job: jobs.inventor,
-				battle_current_hp: 1,
-				battle_current_mp: 1,
-				battle_current_xp_gained: 0,
+				battle_attr: fill_array( attr.length, [0, 0] ), // status effects: 0-level, 1-duration
+				player_attr: fill_array( attr.length, 0 ),      // perminent effects: level
+				battle_stat: {
+					current_hp: 1,
+					current_mp: 1,
+					current_level: 1,
+					xp_gained: 0,
+				},
 			    xp_till_next_level: 0,
 			    xp_pool: 0,
 			    equipment: {
@@ -290,9 +299,14 @@ function load_save(){
 			    name: "Mary",
 			    level: 1,
 			    job: jobs.knight,
-				battle_current_hp: 1,
-				battle_current_mp: 1,
-				battle_current_xp_gained: 0,
+				battle_attr: fill_array( attr.length, [0, 0] ), // status effects: 0-level, 1-duration
+				player_attr: fill_array( attr.length, 0 ),      // perminent effects: level
+				battle_stat: {
+					current_hp: 1,
+					current_mp: 1,
+					current_level: 1,
+					xp_gained: 0,
+				},
 			    xp_till_next_level: 0,
 			    xp_pool: 0,
 			    equipment: {
@@ -342,9 +356,14 @@ function load_save(){
 			    name: "Thomas",
 			    level: 1,
 			    job: jobs.monk,
-				battle_current_hp: 1,
-				battle_current_mp: 1,
-				battle_current_xp_gained: 0,
+				battle_attr: fill_array( attr.length, [0, 0] ), // status effects: 0-level, 1-duration
+				player_attr: fill_array( attr.length, 0 ),      // perminent effects: level
+				battle_stat: {
+					current_hp: 1,
+					current_mp: 1,
+					current_level: 1,
+					xp_gained: 0,
+				},
 			    xp_till_next_level: 0,
 			    xp_pool: 0,
 			    equipment: {

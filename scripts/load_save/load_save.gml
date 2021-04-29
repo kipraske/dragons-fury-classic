@@ -403,6 +403,7 @@ function load_save(){
 		save_json_file(global.player.mary,      "character/mary.json");
 		save_json_file(global.player.thomas,    "character/thomas.json");
 		
+		// Battle state outside the individual players/monsters. Mostly what turn and what order
 		global.battle = {
 			is_battle: false,
 			phase: battle_phase.init,
@@ -410,5 +411,29 @@ function load_save(){
 			player_backline: [],
 			monsters: [],
 		}
+		save_json_file(global.battle,    "battle_state.json");
+		
+		// game tree - the flags which determine all content
+		global.game_tree = {
+		    primary_character: {},
+		    secondary_character: {},
+		    bad_character_1: {},
+		    bad_character_2: {},
+		    act: 0,
+		    branch: 0,
+		    focus_character: noone,
+		    branch_phase: 0,
+		    epilogue_available: false,
+		    city_government: "monarchy"
+		}
+		save_json_file(global.game_tree,    "game_tree.json");
+		
+		global.inventory = [];
+		save_json_file(global.inventory,        "inventory.json");
+		
+		global.settings = {
+			difficulty_level: 1, //Multiplier for enemy level
+		}
+		save_json_file(global.settings,        "settings.json");
 	}
 }

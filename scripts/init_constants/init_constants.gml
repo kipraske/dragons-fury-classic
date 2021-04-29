@@ -1,6 +1,6 @@
-/// @function init
+/// @function init_constants
 /// @desc defines all global enum and macros for the application, only call this once!
-function init(){
+function init_constants(){
 
 	enum stats {
 		atk,

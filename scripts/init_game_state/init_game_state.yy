@@ -6,7 +6,7 @@
     "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "load_save",
+  "name": "init_game_state",
   "tags": [],
   "resourceType": "GMScript",
 }

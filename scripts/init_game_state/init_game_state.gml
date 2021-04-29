@@ -1,12 +1,10 @@
-/// @function load_save
-//  @desc Loads Save Data if it exists, otherwise creates initial values. Note saving happens piecemeal during transitions
-function load_save(){
+/// @function init_game_state
+//  @desc Loads Save Data if it exists, otherwise creates global initial values. Note saving happens piecemeal during transitions
+function init_game_state(){
 
-	var _is_continue_game = load_json_file("history.json");
-	// TODO - for debugging fix to false
-	_is_continue_game = false;
+	global.history = load_json_file("history.json");
 
-	if ( _is_continue_game){
+	if ( global.history ){
 		global.player = {
 			alfred: load_json_file("character/alfred.json"),
 			ashley: load_json_file("character/ashley.json"),
@@ -16,6 +14,11 @@ function load_save(){
 			mary: load_json_file("character/mary.json"),
 			thomas: load_json_file("character/thomas.json")
 		}
+		
+		global.battle = load_json_file("battle_state.json");
+		global.game_tree = load_json_file("game_tree.json");
+		global.inventory = load_json_file("inventory.json");
+		global.settings = load_json_file("settings.json");	
 	}
 	else { // A new Game, create save file with initial values
 	

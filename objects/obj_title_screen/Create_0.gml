@@ -2,3 +2,4 @@
 // You can write your code in this editor
 init_constants();
 init_game_state();
+init_labels();

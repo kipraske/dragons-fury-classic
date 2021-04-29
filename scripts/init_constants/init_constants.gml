@@ -269,7 +269,7 @@ function init_constants(){
 
 	// Node level thresholds for learning new skill
 	#macro MAGIC_LEARN_THRESHOLD_2 4
-	#macro MAGIC_LEARN_THRESHOLD_3 8
+	#macro MAGIC_LEARN_THRESHOLD_3 10
 	#macro MAGIC_LEARN_THRESHOLD_4 20
 	#macro MAGIC_LAERN_THRESHOLD_5 35
 

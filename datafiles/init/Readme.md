@@ -1,1 +1,0 @@
-This file is more of a plan for the "save" file than something I will actually use. In fact, it doesn't make much sense to create the init here in JSON, so we will probably change this to a schema and remove later

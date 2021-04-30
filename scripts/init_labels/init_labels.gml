@@ -1,6 +1,8 @@
 ///@desc creates the maps for menu output and help text. Will use this later for localization
 function init_labels(){
 
+	// 0- label
+	// 1- help text
 	global.labels = {
 		stats: [
 			["ATK", "Attack determines damage for all skills"],

@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_finger_right_icon",
+    "path": "sprites/spr_finger_right_icon/spr_finger_right_icon.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -28,7 +31,7 @@
     "path": "folders/Objects/title_obj.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_title_screen",
+  "name": "obj_title_menu",
   "tags": [],
   "resourceType": "GMObject",
 }

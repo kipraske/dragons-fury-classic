@@ -47,6 +47,7 @@
     {"id":{"name":"spr_catherine_smh","path":"sprites/spr_catherine_smh/spr_catherine_smh.yy",},"order":6,},
     {"id":{"name":"spr_thomas_face","path":"sprites/spr_thomas_face/spr_thomas_face.yy",},"order":0,},
     {"id":{"name":"spr_ashley_down","path":"sprites/spr_ashley_down/spr_ashley_down.yy",},"order":1,},
+    {"id":{"name":"text_helpers","path":"scripts/text_helpers/text_helpers.yy",},"order":1,},
     {"id":{"name":"spr_catherine_up","path":"sprites/spr_catherine_up/spr_catherine_up.yy",},"order":4,},
     {"id":{"name":"spr_thomas_up","path":"sprites/spr_thomas_up/spr_thomas_up.yy",},"order":4,},
     {"id":{"name":"spr_mary_laugh","path":"sprites/spr_mary_laugh/spr_mary_laugh.yy",},"order":7,},

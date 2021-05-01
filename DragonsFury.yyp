@@ -3,6 +3,7 @@
     {"id":{"name":"spr_red_mushroom_right","path":"sprites/spr_red_mushroom_right/spr_red_mushroom_right.yy",},"order":1,},
     {"id":{"name":"spr_ashley_right","path":"sprites/spr_ashley_right/spr_ashley_right.yy",},"order":3,},
     {"id":{"name":"spr_isabelle_left","path":"sprites/spr_isabelle_left/spr_isabelle_left.yy",},"order":3,},
+    {"id":{"name":"set_display_ratio","path":"scripts/set_display_ratio/set_display_ratio.yy",},"order":3,},
     {"id":{"name":"spr_catherine_left","path":"sprites/spr_catherine_left/spr_catherine_left.yy",},"order":2,},
     {"id":{"name":"init_game_state","path":"scripts/init_game_state/init_game_state.yy",},"order":1,},
     {"id":{"name":"spr_isabelle_down","path":"sprites/spr_isabelle_down/spr_isabelle_down.yy",},"order":1,},

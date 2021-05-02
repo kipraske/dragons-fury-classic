@@ -10,8 +10,3 @@ draw_set_color(c_black);
 draw_text(room_width/2 + 3,43, "Dragon's Fury");
 draw_set_color(c_white);
 draw_text_color(room_width/2,40, "Dragon's Fury", $ffffff, $ffffff, $00cccc, $00cccc, 1);
-
-draw_set_font(dialog);
-draw_set_color(c_white);
-draw_text_shadow(room_width/2, 150, "Start Game");
-draw_text_shadow(room_width/2, 165, "The quick brown Fox jumps over the LAZY dog");

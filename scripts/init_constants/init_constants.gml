@@ -3,11 +3,18 @@
 function init_constants(){
 
 	enum stats {
-		atk,
-		def,
-		res,
-		spd,
-		luk
+		MAX_HP,
+		MAX_MP,
+		ATK,
+		DEF,
+		RES,
+		SPD,
+		LUK,
+		current_HP,
+		current_MP,
+		current_battle_level,
+		current_battle_xp,
+		length
 	}
 
 	enum jobs {

@@ -25,3 +25,40 @@
         "Pain"
     ]
 }
+
+{
+    "name": "Purple Mushroom",
+    "level": 0,
+    // job: jobs.monk,
+    "battle_attr": [], // status effects: 0-level, 1-duration
+    "perm_attr": [], //     fill_array( attr.length, 0 ),      // perminent effects: level
+    "battle_stat": {
+        "current_hp": 1,
+        "current_mp": 1,
+        "current_level": 1,
+        "xp_gained": 0,
+    },
+    // xp_till_next_level: 0,
+    // xp_pool: 0,
+    "equipment": {
+        "steal": 0,
+        "loot": 0
+    },
+    "skill_order": "random",
+    "equipped_skills": [
+        // skills.attack,
+        // skills.flurry,
+        // skills.heal,
+        // skills.unarmored_up,
+        // skills.unarmed_up
+    ],
+    // swap_skill: skills.tornado,
+    // job_skills: [
+    //     [skills.flurry, 1]
+    // ],
+    // magic_skills: [
+    //     [skills.tornado, 1],
+    //     [skills.quake, 1],
+    //     [skills.heal, 1]
+    // ]
+}

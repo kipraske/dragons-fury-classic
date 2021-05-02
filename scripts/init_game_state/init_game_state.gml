@@ -27,6 +27,7 @@ function init_game_state(){
 		global.history = {
 		    mobs: [],
 		    bosses: [],
+			map_aras: [],
 		    game_time: 0,
 		    ng_plus: 0
 		}
@@ -38,13 +39,9 @@ function init_game_state(){
 			    level: 1,
 			    job: jobs.mage,
 				battle_attr: fill_array( attr.length, [0, 0] ), // status effects: 0-level, 1-duration
-				player_attr: fill_array( attr.length, 0 ),      // perminent effects: level
-				battle_stat: {
-					current_hp: 1,
-					current_mp: 1,
-					current_level: 1,
-					xp_gained: 0,
-				},
+				perm_attr: fill_array( attr.length, 0 ),        // perminent effects: level
+				battle_stats: fill_array( stats.length, 0),     // stats adjusted from battle_attr
+				perm_stats: fill_array( stats.length, 0 ),      // calculated stats
 			    total_xp: 0,
 			    xp_skill_pool: 0,
 			    equipment: {
@@ -90,13 +87,9 @@ function init_game_state(){
 			    level: 1,
 			    job: jobs.druid,
 				battle_attr: fill_array( attr.length, [0, 0] ), // status effects: 0-level, 1-duration
-				player_attr: fill_array( attr.length, 0 ),      // perminent effects: level
-				battle_stat: {
-					current_hp: 1,
-					current_mp: 1,
-					current_level: 1,
-					xp_gained: 0,
-				},
+				perm_attr: fill_array( attr.length, 0 ),        // perminent effects: level
+				battle_stats: fill_array( stats.length, 0),     // stats adjusted from battle_attr
+				perm_stats: fill_array( stats.length, 0 ),      // calculated stats
 			    xp_till_next_level: 0,
 			    xp_pool: 0,
 			    equipment: {
@@ -142,13 +135,9 @@ function init_game_state(){
 			    level: 1,
 			    job: jobs.thief,
 				battle_attr: fill_array( attr.length, [0, 0] ), // status effects: 0-level, 1-duration
-				player_attr: fill_array( attr.length, 0 ),      // perminent effects: level
-				battle_stat: {
-					current_hp: 1,
-					current_mp: 1,
-					current_level: 1,
-					xp_gained: 0,
-				},
+				perm_attr: fill_array( attr.length, 0 ),        // perminent effects: level
+				battle_stats: fill_array( stats.length, 0),     // stats adjusted from battle_attr
+				perm_stats: fill_array( stats.length, 0 ),      // calculated stats
 			    xp_till_next_level: 0,
 			    xp_pool: 0,
 			    equipment: {
@@ -194,13 +183,9 @@ function init_game_state(){
 			    level: 1,
 			    job: jobs.oracle,
 				battle_attr: fill_array( attr.length, [0, 0] ), // status effects: 0-level, 1-duration
-				player_attr: fill_array( attr.length, 0 ),      // perminent effects: level
-				battle_stat: {
-					current_hp: 1,
-					current_mp: 1,
-					current_level: 1,
-					xp_gained: 0,
-				},
+				perm_attr: fill_array( attr.length, 0 ),        // perminent effects: level
+				battle_stats: fill_array( stats.length, 0),     // stats adjusted from battle_attr
+				perm_stats: fill_array( stats.length, 0 ),      // calculated stats
 			    xp_till_next_level: 0,
 			    xp_pool: 0,
 			    equipment: {
@@ -251,13 +236,9 @@ function init_game_state(){
 			    level: 1,
 			    job: jobs.inventor,
 				battle_attr: fill_array( attr.length, [0, 0] ), // status effects: 0-level, 1-duration
-				player_attr: fill_array( attr.length, 0 ),      // perminent effects: level
-				battle_stat: {
-					current_hp: 1,
-					current_mp: 1,
-					current_level: 1,
-					xp_gained: 0,
-				},
+				perm_attr: fill_array( attr.length, 0 ),        // perminent effects: level
+				battle_stats: fill_array( stats.length, 0),     // stats adjusted from battle_attr
+				perm_stats: fill_array( stats.length, 0 ),      // calculated stats
 			    xp_till_next_level: 0,
 			    xp_pool: 0,
 			    equipment: {
@@ -303,13 +284,9 @@ function init_game_state(){
 			    level: 1,
 			    job: jobs.knight,
 				battle_attr: fill_array( attr.length, [0, 0] ), // status effects: 0-level, 1-duration
-				player_attr: fill_array( attr.length, 0 ),      // perminent effects: level
-				battle_stat: {
-					current_hp: 1,
-					current_mp: 1,
-					current_level: 1,
-					xp_gained: 0,
-				},
+				perm_attr: fill_array( attr.length, 0 ),        // perminent effects: level
+				battle_stats: fill_array( stats.length, 0),     // stats adjusted from battle_attr
+				perm_stats: fill_array( stats.length, 0 ),      // calculated stats
 			    xp_till_next_level: 0,
 			    xp_pool: 0,
 			    equipment: {
@@ -360,13 +337,9 @@ function init_game_state(){
 			    level: 1,
 			    job: jobs.monk,
 				battle_attr: fill_array( attr.length, [0, 0] ), // status effects: 0-level, 1-duration
-				player_attr: fill_array( attr.length, 0 ),      // perminent effects: level
-				battle_stat: {
-					current_hp: 1,
-					current_mp: 1,
-					current_level: 1,
-					xp_gained: 0,
-				},
+				perm_attr: fill_array( attr.length, 0 ),        // perminent effects: level
+				battle_stats: fill_array( stats.length, 0),     // stats adjusted from battle_attr
+				perm_stats: fill_array( stats.length, 0 ),      // calculated stats
 			    xp_till_next_level: 0,
 			    xp_pool: 0,
 			    equipment: {
@@ -413,6 +386,7 @@ function init_game_state(){
 			player_frontline: [],
 			player_backline: [],
 			monsters: [],
+			menu_focus: 0, 
 		}
 		save_json_file(global.battle,    "battle_state.json");
 		

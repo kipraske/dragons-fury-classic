@@ -3,6 +3,9 @@
 function init_game_state(){
 
 	global.history = load_json_file("history.json");
+	
+	// Debugging line to reinitialize every time
+	global.history = false;
 
 	if ( global.history ){
 		global.player = {
@@ -49,7 +52,7 @@ function init_game_state(){
 			            item_name: "Magic Staff",
 			            item_type: equipment_types.staff,
 			            item_level: 1,
-			            item_bonus: [attr.MP_up, attr.MP_up]
+			            item_bonus: [attr.MP_up, attr.RES_up]
 			        },
 			        hand2: {},
 			        body: {
@@ -371,6 +374,9 @@ function init_game_state(){
 				]
 			}
 		}
+		
+		calculate_player_stats( "alfred" );
+		
 		save_json_file(global.player.alfred,    "character/alfred.json");
 		save_json_file(global.player.ashley,    "character/ashley.json");
 		save_json_file(global.player.catherine, "character/catherine.json");

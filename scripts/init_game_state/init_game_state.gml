@@ -375,7 +375,7 @@ function init_game_state(){
 			}
 		}
 		
-		calculate_player_stats( "alfred" );
+		calculate_player_stats_and_attr( "alfred" );
 		
 		save_json_file(global.player.alfred,    "character/alfred.json");
 		save_json_file(global.player.ashley,    "character/ashley.json");

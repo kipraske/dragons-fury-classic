@@ -376,6 +376,12 @@ function init_game_state(){
 		}
 		
 		calculate_player_stats_and_attr( "alfred" );
+		calculate_player_stats_and_attr( "ashley" );
+		calculate_player_stats_and_attr( "catherine" );
+		calculate_player_stats_and_attr( "earnest" );
+		calculate_player_stats_and_attr( "isabelle" );
+		calculate_player_stats_and_attr( "mary" );
+		calculate_player_stats_and_attr( "thomas" );
 		
 		save_json_file(global.player.alfred,    "character/alfred.json");
 		save_json_file(global.player.ashley,    "character/ashley.json");

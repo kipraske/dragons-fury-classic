@@ -67,5 +67,5 @@ function calculate_monster_stats() {
 // Oh dear then level 1 requires 9 XP, we need to reset level 1 to be the 0 in this formula: (lv - 1)*lv + (lv-1)*c = lv^2 + (c-1)lv - c
 // But we need to do the opposite to get level: quadratic formula time!
 function calculate_level_from_xp( xp_total ) {
-	return 0.5 * (-8 + sqrt(64 + 4*(xp_total)));
+	return floor(0.5 * (-6 + sqrt(36 + 4*(xp_total+7))));
 }

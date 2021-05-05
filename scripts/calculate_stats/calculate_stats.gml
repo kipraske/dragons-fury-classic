@@ -56,7 +56,6 @@ function calculate_player_stats_and_attr( player_name ){
 	var _has_passive_DEF_up = find_array_value(this_player.equipped_skills, skills.passive_DEF_up);
 	var _has_passive_ATK_up = find_array_value(this_player.equipped_skills, skills.passive_ATK_up);
 
-
 	this_player.perm_stats[stats.ATK] = stat_level_constant * this_player.level * (player_base_stat + (this_player.perm_attr[attr.ATK_up] - this_player.perm_attr[attr.ATK_down])) + stat_first_level_boost;
 	this_player.perm_stats[stats.DEF] = stat_level_constant * this_player.level * (player_base_stat + (this_player.perm_attr[attr.DEF_up] - this_player.perm_attr[attr.DEF_down])) + stat_first_level_boost;
 	this_player.perm_stats[stats.RES] = stat_level_constant * this_player.level * (player_base_stat + (this_player.perm_attr[attr.RES_up] - this_player.perm_attr[attr.RES_down])) + stat_first_level_boost;

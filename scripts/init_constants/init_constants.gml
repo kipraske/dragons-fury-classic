@@ -133,10 +133,12 @@ function init_constants(){
 		counter,
 		mp_drain,
 		unarmored_up,
-		unarmed_up
+		unarmed_up,
 		
 		// Monster only skills, normally non equippable
 		// TODO
+		
+		length
 	}
 	
 	// Manually sort just so we don't have to always figure this out

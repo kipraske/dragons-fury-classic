@@ -76,7 +76,7 @@ function init_game_state(){
 					skills.mp_cost_down
 			    ],
 			    swap_skill: skills.tornado,
-				available_skills: fill_array(skills.length, 0), // Value is level of skill
+				available_skills: fill_array(skills.length, 0) // Value is level of skill
 			},
 			ashley: {
 			    name: "Ashley",
@@ -117,7 +117,7 @@ function init_game_state(){
 			        skills.hp_drain
 			    ],
 			    swap_skill: skills.quake,
-				available_skills: fill_array(skills.length, 0), // Value is level of skill
+				available_skills: fill_array(skills.length, 0) // Value is level of skill
 			},
 			catherine: {
 			    name: "Catherine",
@@ -291,14 +291,7 @@ function init_game_state(){
 			        skills.last_stand
 			    ],
 			    swap_skill: skills.flood,
-			    job_skills: [
-					[skills.defend, 1]
-			    ],
-			    magic_skills: [
-					[skills.quake, 1],
-					[skills.flood, 1],
-					[skills.heal, 1]
-			    ]
+				available_skills: fill_array(skills.length, 0) // Value is level of skill
 			},
 			thomas: {
 			    name: "Thomas",
@@ -329,14 +322,7 @@ function init_game_state(){
 			        skills.unarmed_up
 			    ],
 			    swap_skill: skills.tornado,
-			    job_skills: [
-					[skills.flurry, 1]
-			    ],
-			    magic_skills: [
-					[skills.tornado, 1],
-					[skills.quake, 1],
-					[skills.heal, 1]
-				]
+				available_skills: fill_array(skills.length, 0) // Value is level of skill
 			}
 		}
 		
@@ -366,9 +352,15 @@ function init_game_state(){
 		global.player.isabelle.available_skills[skills.grenade] = 1;
 		global.player.isabelle.available_skills[skills.flood] = 1;
 		
+		global.player.mary.available_skills[skills.defend] = 1;
+		global.player.mary.available_skills[skills.quake] = 1;
 		global.player.mary.available_skills[skills.flood] = 1;
+		global.player.mary.available_skills[skills.heal] = 1;
 		
-		//here
+		global.player.thomas.available_skills[skills.flurry] = 1;
+		global.player.thomas.available_skills[skills.tornado] = 1;
+		global.player.thomas.available_skills[skills.quake] = 1;
+		global.player.thomas.available_skills[skills.heal] = 1;
 		
 		calculate_player_stats_and_attr( "alfred" );
 		calculate_player_stats_and_attr( "ashley" );

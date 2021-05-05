@@ -50,6 +50,7 @@
     {"id":{"name":"spr_thomas_nod","path":"sprites/spr_thomas_nod/spr_thomas_nod.yy",},"order":5,},
     {"id":{"name":"dialog","path":"fonts/dialog/dialog.yy",},"order":1,},
     {"id":{"name":"spr_earnest_nod","path":"sprites/spr_earnest_nod/spr_earnest_nod.yy",},"order":5,},
+    {"id":{"name":"calculate_damage","path":"scripts/calculate_damage/calculate_damage.yy",},"order":1,},
     {"id":{"name":"spr_hand_icon_right","path":"sprites/spr_hand_icon_right/spr_hand_icon_right.yy",},"order":0,},
     {"id":{"name":"spr_earnest_right","path":"sprites/spr_earnest_right/spr_earnest_right.yy",},"order":3,},
     {"id":{"name":"spr_thomas_down","path":"sprites/spr_thomas_down/spr_thomas_down.yy",},"order":1,},

@@ -66,6 +66,7 @@
     {"id":{"name":"spr_alfred_smh","path":"sprites/spr_alfred_smh/spr_alfred_smh.yy",},"order":6,},
     {"id":{"name":"spr_thomas_smh","path":"sprites/spr_thomas_smh/spr_thomas_smh.yy",},"order":6,},
     {"id":{"name":"spr_catherine_nod","path":"sprites/spr_catherine_nod/spr_catherine_nod.yy",},"order":5,},
+    {"id":{"name":"data_helpers","path":"scripts/data_helpers/data_helpers.yy",},"order":2,},
     {"id":{"name":"spr_red_mushroom_down","path":"sprites/spr_red_mushroom_down/spr_red_mushroom_down.yy",},"order":0,},
     {"id":{"name":"spr_thomas_surprise","path":"sprites/spr_thomas_surprise/spr_thomas_surprise.yy",},"order":8,},
     {"id":{"name":"spr_earnest_surprise","path":"sprites/spr_earnest_surprise/spr_earnest_surprise.yy",},"order":8,},

@@ -43,6 +43,19 @@ function calculate_player_stats_and_attr( player_name ){
 		}
 	}
 
+	// Apply stat-boost skill effects here directly to the stats
+	var _has_passive_MP_up = find_array_value(this_player.equipped_skills, skills.passive_MP_up);
+	if ( _has_passive_MP_up >= 0) {
+		
+	}
+	
+	var _has_passive_RES_up = find_array_value(this_player.equipped_skills, skills.passive_RES_up);
+	var _has_passive_SPD_up = find_array_value(this_player.equipped_skills, skills.passive_SPD_up);
+	var _has_passive_LUK_up = find_array_value(this_player.equipped_skills, skills.passive_LUK_up);
+	var _has_passive_HP_up = find_array_value(this_player.equipped_skills, skills.passive_HP_up);
+	var _has_passive_DEF_up = find_array_value(this_player.equipped_skills, skills.passive_DEF_up);
+	var _has_passive_ATK_up = find_array_value(this_player.equipped_skills, skills.passive_ATK_up);
+
 
 	this_player.perm_stats[stats.ATK] = stat_level_constant * this_player.level * (player_base_stat + (this_player.perm_attr[attr.ATK_up] - this_player.perm_attr[attr.ATK_down])) + stat_first_level_boost;
 	this_player.perm_stats[stats.DEF] = stat_level_constant * this_player.level * (player_base_stat + (this_player.perm_attr[attr.DEF_up] - this_player.perm_attr[attr.DEF_down])) + stat_first_level_boost;

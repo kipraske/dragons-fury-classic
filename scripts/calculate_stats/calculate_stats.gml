@@ -58,3 +58,9 @@ function calculate_player_stats_and_attr( player_name ){
 function calculate_monster_stats() {
 
 }
+
+// @desc get player level from xp_total. Used for temp battle levels and real perminent levels.
+// The next level requires the level amount of XP to get to the next, hey those are triangular numbers. It is a bit low at the beginning so add our first level boost just to kick it off
+// So xp_total = 0.5 * level * (level + 1) + stat_first_level_boost. But we need to do the opposite: quadratic formula time!
+function calculate_level_from_xp( xp_total ) {
+	return 1; // TODO 

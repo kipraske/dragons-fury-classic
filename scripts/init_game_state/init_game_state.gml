@@ -76,14 +76,7 @@ function init_game_state(){
 					skills.mp_cost_down
 			    ],
 			    swap_skill: skills.tornado,
-			    job_skills: [
-			        [ skills.double_cast, 1 ]
-			    ],
-			    magic_skills: [
-					[ skills.quake, 1 ],
-					[ skills.tornado, 1],
-					[ skills.heal, 1 ],
-			    ]
+				available_skills: fill_array(skills.length, 0), // Value is level of skill
 			},
 			ashley: {
 			    name: "Ashley",
@@ -124,14 +117,7 @@ function init_game_state(){
 			        skills.hp_drain
 			    ],
 			    swap_skill: skills.quake,
-			    job_skills: [
-					[ skills.mimic, 1 ],
-			    ],
-			    magic_skills: [
-					[ skills.flood, 1 ],
-					[ skills.quake, 1],
-					[ skills.heal, 1 ]
-			    ]
+				available_skills: fill_array(skills.length, 0), // Value is level of skill
 			},
 			catherine: {
 			    name: "Catherine",
@@ -172,14 +158,7 @@ function init_game_state(){
 			        skills.gold_up
 			    ],
 			    swap_skill: skills.flood,
-			    job_skills: [
-					[ skills.steal, 1 ]
-			    ],
-			    magic_skills: [
-					[ skills.tornado, 1 ],
-					[ skills.flood, 1 ],
-					[ skills.heal, 1 ]
-			    ]
+				available_skills: fill_array(skills.length, 0) // Value is level of skill
 			},
 			earnest: {
 			    name: "Earnest",
@@ -225,14 +204,7 @@ function init_game_state(){
 			        skills.insight
 			    ],
 			    swap_skill: skills.poison,
-			    job_skills: [
-					[skills.scan, 1]
-			    ],
-			    magic_skills: [
-					[skills.poison, 1],
-					[skills.revive, 1],
-					[skills.sleep, 1]
-			    ]
+				available_skills: fill_array(skills.length, 0) // Value is level of skill
 			},
 			isabelle: {
 			    name: "Isabelle",
@@ -273,14 +245,7 @@ function init_game_state(){
 			        skills.noskill,
 			    ],
 			    swap_skill: skills.flood,
-			    job_skills: [
-					[skills.machine_gun, 1],
-					[skills.potion, 1],
-					[skills.grenade, 1],
-			    ],
-			    magic_skills: [
-					[skills.flood, 1]
-			    ]
+				available_skills: fill_array(skills.length, 0) // Value is level of skill
 			},
 			mary: {
 			    name: "Mary",
@@ -374,6 +339,36 @@ function init_game_state(){
 				]
 			}
 		}
+		
+		// Add starting skill levels
+		global.player.alfred.available_skills[skills.double_cast] = 1;
+		global.player.alfred.available_skills[skills.quake] = 1;
+		global.player.alfred.available_skills[skills.tornado] = 1;
+		global.player.alfred.available_skills[skills.heal] = 1;
+		
+		global.player.ashley.available_skills[skills.mimic] = 1;
+		global.player.ashley.available_skills[skills.flood] = 1;
+		global.player.ashley.available_skills[skills.quake] = 1;
+		global.player.ashley.available_skills[skills.heal] = 1;
+		
+		global.player.catherine.available_skills[skills.steal] = 1;
+		global.player.catherine.available_skills[skills.tornado] = 1;
+		global.player.catherine.available_skills[skills.flood] = 1;
+		global.player.catherine.available_skills[skills.heal] = 1;
+		
+		global.player.earnest.available_skills[skills.scan] = 1;
+		global.player.earnest.available_skills[skills.poison] = 1;
+		global.player.earnest.available_skills[skills.revive] = 1;
+		global.player.earnest.available_skills[skills.sleep] = 1;
+		
+		global.player.isabelle.available_skills[skills.machine_gun] = 1;
+		global.player.isabelle.available_skills[skills.potion] = 1;
+		global.player.isabelle.available_skills[skills.grenade] = 1;
+		global.player.isabelle.available_skills[skills.flood] = 1;
+		
+		global.player.mary.available_skills[skills.flood] = 1;
+		
+		//here
 		
 		calculate_player_stats_and_attr( "alfred" );
 		calculate_player_stats_and_attr( "ashley" );

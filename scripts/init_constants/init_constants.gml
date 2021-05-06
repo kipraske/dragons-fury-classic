@@ -86,6 +86,8 @@ function init_constants(){
 		mp_turbo,
 		staff_up,
 		book_up,
+		sleep_resist,
+		earth_resist,
 		
 		// Druid
 		passive_RES_up,
@@ -94,6 +96,8 @@ function init_constants(){
 		rest_up,
 		bow_up,
 		ax_up,
+		confusion_resist,
+		sea_resist,
 		
 		// Thief
 		passive_SPD_up,
@@ -102,6 +106,8 @@ function init_constants(){
 		gold_up,
 		hammer_up,
 		accessory_up,
+		aggro_resist,
+		pierce_resist,
 		
 		// Oracle
 		passive_LUK_up,
@@ -110,6 +116,8 @@ function init_constants(){
 		xp_up,
 		sword_up,
 		dagger_up,
+		poison_resist,
+		sky_resist,
 		
 		// Inventor
 		passive_HP_up,
@@ -118,6 +126,8 @@ function init_constants(){
 		grenade,
 		spear_up,
 		gun_up,
+		freeze_resist,
+		magic_resist,
 		
 		// Knight
 		passive_DEF_up,
@@ -126,6 +136,8 @@ function init_constants(){
 		auto_revive,
 		heavy_armor_up,
 		shield_up,
+		auto_regen,
+		slash_resist,
 		
 		// Monk
 		passive_ATK_up,
@@ -134,10 +146,11 @@ function init_constants(){
 		mp_drain,
 		unarmored_up,
 		unarmed_up,
+		pain_resist,
+		blunt_resist,
 		
 		// Monster only skills, normally non equippable
 		// TODO
-		
 		length
 	}
 	
@@ -148,7 +161,10 @@ function init_constants(){
 		skills.counter,
 		skills.mp_drain,
 		skills.unarmored_up,
-		skills.unarmed_up
+		skills.unarmed_up,
+		skills.pain_resist,
+		skills.blunt_resist
+
 	];
 	global.job_skills_by_type[jobs.knight] = [
 		skills.passive_DEF_up,
@@ -156,7 +172,10 @@ function init_constants(){
 		skills.last_stand,
 		skills.auto_revive,
 		skills.heavy_armor_up,
-		skills.shield_up
+		skills.shield_up,
+		skills.auto_regen,
+		skills.slash_resist
+
 	];
 	global.job_skills_by_type[jobs.inventor] = [
 		skills.passive_HP_up,
@@ -164,7 +183,9 @@ function init_constants(){
 		skills.potion,
 		skills.grenade,
 		skills.spear_up,
-		skills.gun_up
+		skills.gun_up,
+		skills.freeze_resist,
+		skills.magic_resist
 	];
 	global.job_skills_by_type[jobs.oracle] = [
 		skills.passive_LUK_up,
@@ -172,7 +193,9 @@ function init_constants(){
 		skills.insight,
 		skills.xp_up,
 		skills.sword_up,
-		skills.dagger_up
+		skills.dagger_up,
+		skills.poison_resist,
+		skills.sky_resist
 	];
 	global.job_skills_by_type[jobs.thief] = [
 		skills.passive_SPD_up,
@@ -180,7 +203,9 @@ function init_constants(){
 		skills.loot_up,
 		skills.gold_up,
 		skills.hammer_up,
-		skills.accessory_up
+		skills.accessory_up,
+		skills.aggro_resist,
+		skills.pierce_resist
 	];
 	global.job_skills_by_type[jobs.druid] = [
 		skills.passive_RES_up,
@@ -188,7 +213,9 @@ function init_constants(){
 		skills.hp_drain,
 		skills.rest_up,
 		skills.bow_up,
-		skills.ax_up
+		skills.ax_up,
+		skills.confusion_resist,
+		skills.sea_resist
 	];
 	global.job_skills_by_type[jobs.mage] = [
 		skills.passive_MP_up,
@@ -196,7 +223,9 @@ function init_constants(){
 		skills.mp_cost_down,
 		skills.mp_turbo,
 		skills.staff_up,
-		skills.book_up
+		skills.book_up,
+		skills.sleep_resist,
+		skills.earth_resist
 	];
 
 	// Just the base MP cost, will be multiplied each level

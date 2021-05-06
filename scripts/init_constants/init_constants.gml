@@ -12,8 +12,8 @@ function init_constants(){
 		LUK,
 		current_HP,
 		current_MP,
-		current_battle_temp_level,
-		current_battle_temp_xp,
+		level,
+		total_xp,
 		length
 	}
 

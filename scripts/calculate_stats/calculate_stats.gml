@@ -99,9 +99,26 @@ function calculate_player_stats_and_attr( player_name ){
 	this_player.perm_stats[stats.RES] = (stat_level_constant * this_player.level * (player_base_stat + (this_player.perm_attr[attr.RES_up] - this_player.perm_attr[attr.RES_down])) + stat_first_level_boost) * _passive_RES_multiplier;
 	this_player.perm_stats[stats.SPD] = (stat_level_constant * this_player.level * (player_base_stat + (this_player.perm_attr[attr.SPD_up] - this_player.perm_attr[attr.SPD_down])) + stat_first_level_boost) * _passive_SPD_multiplier;
 	this_player.perm_stats[stats.LUK] = (stat_level_constant * this_player.level * (player_base_stat + (this_player.perm_attr[attr.LUK_up] - this_player.perm_attr[attr.LUK_down])) + stat_first_level_boost) * _passive_LUK_multiplier;
-	
 	this_player.perm_stats[stats.MAX_HP] = (stat_level_constant * this_player.level * (player_base_stat + (this_player.perm_attr[attr.HP_up] - this_player.perm_attr[attr.HP_down])) + stat_first_level_boost) * player_hp_multipler * _passive_HP_multiplier;
 	this_player.perm_stats[stats.MAX_MP] = (stat_level_constant * this_player.level * (player_base_stat + (this_player.perm_attr[attr.MP_up] - this_player.perm_attr[attr.MP_down])) + stat_first_level_boost) * player_mp_multipler * _passive_MP_multiplier;
+	// players are always full health and revived out of battle
+	this_player.perm_stats[stats.current_HP] = this_player.perm_stats[stats.MAX_HP];
+	this_player.perm_stats[stats.current_MP] = this_player.perm_stats[stats.MAX_MP];
+	// note level and total_xp are managed directly and are only applied post-battle
+	
+	// battle stats are the temporary ones used for stat up/down effects, as well as that which is gained in battle but not commited yet
+	this_player.battle_stats[stats.ATK] = this_player.perm_stats[stats.ATK];
+	this_player.battle_stats[stats.DEF] = this_player.perm_stats[stats.DEF];
+	this_player.battle_stats[stats.RES] = this_player.perm_stats[stats.RES];
+	this_player.battle_stats[stats.SPD] = this_player.perm_stats[stats.SPD];
+	this_player.battle_stats[stats.LUK] = this_player.perm_stats[stats.LUK];
+	this_player.battle_stats[stats.MAX_HP] = this_player.perm_stats[stats.MAX_HP];
+	this_player.battle_stats[stats.MAX_HP] = this_player.perm_stats[stats.MAX_MP];
+	
+	this_player.battle_stats[stats.current_HP] = this_player.perm_stats[stats.current_HP];
+	this_player.battle_stats[stats.current_MP] = this_player.perm_stats[stats.current_MP];
+	this_player.battle_stats[stats.level] = this_player.perm_stats[stats.level];
+	this_player.battle_stats[stats.total_xp] = this_player.perm_stats[stats.total_xp];
 }
 
 

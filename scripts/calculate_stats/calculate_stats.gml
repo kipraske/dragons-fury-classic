@@ -104,7 +104,9 @@ function calculate_player_stats_and_attr( player_name ){
 	// players are always full health and revived out of battle
 	this_player.perm_stats[stats.current_HP] = this_player.perm_stats[stats.MAX_HP];
 	this_player.perm_stats[stats.current_MP] = this_player.perm_stats[stats.MAX_MP];
-	// note level and total_xp are managed directly and are only applied post-battle
+	// note level and total_xp are managed directly and are only applied post-battle. We use level so much we have a quick alias here
+	this_player.battle_stats[stats.level] = this_player.level;
+	this_player.battle_stats[stats.total_xp] = this_player.total_xp;
 	
 	// battle stats are the temporary ones used for stat up/down effects, as well as that which is gained in battle but not commited yet
 	this_player.battle_stats[stats.ATK] = this_player.perm_stats[stats.ATK];

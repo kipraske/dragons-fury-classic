@@ -115,7 +115,7 @@ function calculate_player_stats_and_attr( player_name ){
 	this_player.battle_stats[stats.SPD] = this_player.perm_stats[stats.SPD];
 	this_player.battle_stats[stats.LUK] = this_player.perm_stats[stats.LUK];
 	this_player.battle_stats[stats.MAX_HP] = this_player.perm_stats[stats.MAX_HP];
-	this_player.battle_stats[stats.MAX_HP] = this_player.perm_stats[stats.MAX_MP];
+	this_player.battle_stats[stats.MAX_MP] = this_player.perm_stats[stats.MAX_MP];
 	
 	this_player.battle_stats[stats.current_HP] = this_player.perm_stats[stats.current_HP];
 	this_player.battle_stats[stats.current_MP] = this_player.perm_stats[stats.current_MP];

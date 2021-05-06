@@ -11,6 +11,7 @@
     {"id":{"name":"init_labels","path":"scripts/init_labels/init_labels.yy",},"order":2,},
     {"id":{"name":"spr_alfred_nod","path":"sprites/spr_alfred_nod/spr_alfred_nod.yy",},"order":5,},
     {"id":{"name":"spr_mary_right","path":"sprites/spr_mary_right/spr_mary_right.yy",},"order":2,},
+    {"id":{"name":"obj_debug_gui","path":"objects/obj_debug_gui/obj_debug_gui.yy",},"order":2,},
     {"id":{"name":"obj_battle_player_unit","path":"objects/obj_battle_player_unit/obj_battle_player_unit.yy",},"order":5,},
     {"id":{"name":"spr_catherine_surprise","path":"sprites/spr_catherine_surprise/spr_catherine_surprise.yy",},"order":8,},
     {"id":{"name":"spr_mary_surprise","path":"sprites/spr_mary_surprise/spr_mary_surprise.yy",},"order":8,},

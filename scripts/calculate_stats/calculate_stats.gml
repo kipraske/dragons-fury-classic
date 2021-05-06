@@ -48,49 +48,49 @@ function calculate_player_stats_and_attr( player_name ){
 	var _passive_MP_multiplier = 1;
 	var _has_passive_MP_up = find_array_value(this_player.equipped_skills, skills.passive_MP_up);
 	if ( _has_passive_MP_up >= 0 ) {
-		var _passive_MP_level = this.player.available_skills[skills.passive_MP_up];
+		var _passive_MP_level = this_player.available_skills[skills.passive_MP_up];
 		_passive_MP_multiplier = 1 + ( _passive_MP_level + 1 ) * 0.1
 	}
 
 	var _passive_RES_multiplier = 1;
 	var _has_passive_RES_up = find_array_value(this_player.equipped_skills, skills.passive_RES_up);
 	if ( _has_passive_RES_up >= 0 ) {
-		var _passive_RES_level = this.player.available_skills[skills.passive_RES_up];
+		var _passive_RES_level = this_player.available_skills[skills.passive_RES_up];
 		_passive_RES_multiplier = 1 + ( _passive_RES_level + 1 ) * 0.1
 	}
 	
 	var _passive_SPD_multiplier = 1;
 	var _has_passive_SPD_up = find_array_value(this_player.equipped_skills, skills.passive_SPD_up);
 	if ( _has_passive_SPD_up >= 0 ) {
-		var _passive_SPD_level = this.player.available_skills[skills.passive_SPD_up];
+		var _passive_SPD_level = this_player.available_skills[skills.passive_SPD_up];
 		_passive_SPD_multiplier = 1 + ( _passive_SPD_level + 1 ) * 0.1
 	}
 	
 	var _passive_LUK_multiplier = 1;
 	var _has_passive_LUK_up = find_array_value(this_player.equipped_skills, skills.passive_LUK_up);
 	if ( _has_passive_LUK_up >= 0 ) {
-		var _passive_LUK_level = this.player.available_skills[skills.passive_LUK_up];
+		var _passive_LUK_level = this_player.available_skills[skills.passive_LUK_up];
 		_passive_LUK_multiplier = 1 + ( _passive_LUK_level + 1 ) * 0.1
 	}
 	
 	var _passive_HP_multiplier = 1;
 	var _has_passive_HP_up = find_array_value(this_player.equipped_skills, skills.passive_HP_up);
 	if ( _has_passive_HP_up >= 0 ) {
-		var _passive_HP_level = this.player.available_skills[skills.passive_HP_up];
+		var _passive_HP_level = this_player.available_skills[skills.passive_HP_up];
 		_passive_HP_multiplier = 1 + ( _passive_HP_level + 1 ) * 0.1
 	}
 
 	var _passive_DEF_multiplier = 1;
 	var _has_passive_DEF_up = find_array_value(this_player.equipped_skills, skills.passive_DEF_up);
 	if ( _has_passive_DEF_up >= 0 ) {
-		var _passive_DEF_level = this.player.available_skills[skills.passive_DEF_up];
+		var _passive_DEF_level = this_player.available_skills[skills.passive_DEF_up];
 		_passive_DEF_multiplier = 1 + ( _passive_DEF_level + 1 ) * 0.1
 	}
 	
 	var _passive_ATK_multiplier = 1;
 	var _has_passive_ATK_up = find_array_value(this_player.equipped_skills, skills.passive_ATK_up);
 	if ( _has_passive_ATK_up >= 0 ) {
-		var _passive_ATK_level = this.player.available_skills[skills.passive_ATK_up];
+		var _passive_ATK_level = this_player.available_skills[skills.passive_ATK_up];
 		_passive_ATK_multiplier = 1 + ( _passive_ATK_level + 1 ) * 0.1
 	}
 

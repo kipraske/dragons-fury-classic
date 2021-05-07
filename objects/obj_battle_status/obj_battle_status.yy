@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_debug_menu",
+    "path": "sprites/spr_debug_menu/spr_debug_menu.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -25,7 +28,7 @@
     "path": "folders/Objects/battle.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_battle_skill_select_menu",
+  "name": "obj_battle_status",
   "tags": [],
   "resourceType": "GMObject",
 }

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_debug_box",
-    "path": "sprites/spr_debug_box/spr_debug_box.yy",
+    "name": "spr_debug_menu",
+    "path": "sprites/spr_debug_menu/spr_debug_menu.yy",
   },
   "solid": false,
   "visible": true,
@@ -28,7 +28,7 @@
     "path": "folders/Objects/battle.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_battle_pause",
+  "name": "obj_battle_pause_menu",
   "tags": [],
   "resourceType": "GMObject",
 }

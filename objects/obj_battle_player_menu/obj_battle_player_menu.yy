@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_debug_menu",
+    "path": "sprites/spr_debug_menu/spr_debug_menu.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

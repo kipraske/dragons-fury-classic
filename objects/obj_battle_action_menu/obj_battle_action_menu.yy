@@ -28,7 +28,7 @@
     "path": "folders/Objects/battle.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_battle_monster_menu",
+  "name": "obj_battle_action_menu",
   "tags": [],
   "resourceType": "GMObject",
 }

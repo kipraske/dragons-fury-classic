@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_catherine_laugh",
+    "path": "sprites/spr_catherine_laugh/spr_catherine_laugh.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_red_mushroom_right",
+    "path": "sprites/spr_red_mushroom_right/spr_red_mushroom_right.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

@@ -28,7 +28,7 @@
     "path": "folders/Objects/battle.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_battle_menu_manager",
+  "name": "obj_battle_manager",
   "tags": [],
   "resourceType": "GMObject",
 }

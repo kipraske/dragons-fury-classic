@@ -412,8 +412,22 @@ function init_constants(){
 		execute_turn,
 		win,
 		lose,
-		clean_up,
+		clean_up
 	}
+	
+	// the menus in battle, enum used for determining focus
+	enum battle_focus {
+		no_focus,
+		player_select,
+		monster_select,
+		action_select,
+		pause_button,
+		pause_menu,
+		execute_button
+	}
+	
+	// the menus in gui, enum used for determining focus
+	// TODO
 }
 
 ///@function fill_array

@@ -21,7 +21,7 @@
     {"id":{"name":"obj_battle_skill_select_menu","path":"objects/obj_battle_skill_select_menu/obj_battle_skill_select_menu.yy",},"order":3,},
     {"id":{"name":"spr_earnest_face","path":"sprites/spr_earnest_face/spr_earnest_face.yy",},"order":0,},
     {"id":{"name":"obj_battle_execute_button","path":"objects/obj_battle_execute_button/obj_battle_execute_button.yy",},"order":7,},
-    {"id":{"name":"obj_battle_hud","path":"objects/obj_battle_hud/obj_battle_hud.yy",},"order":4,},
+    {"id":{"name":"obj_battle_menu_manager","path":"objects/obj_battle_menu_manager/obj_battle_menu_manager.yy",},"order":4,},
     {"id":{"name":"spr_mary_smh","path":"sprites/spr_mary_smh/spr_mary_smh.yy",},"order":6,},
     {"id":{"name":"spr_thomas_right","path":"sprites/spr_thomas_right/spr_thomas_right.yy",},"order":3,},
     {"id":{"name":"spr_mary_up","path":"sprites/spr_mary_up/spr_mary_up.yy",},"order":4,},

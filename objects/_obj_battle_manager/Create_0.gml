@@ -19,16 +19,16 @@ global.battle_obj_instances = {
 			instance_create_depth(room_width-20, 2*room_height/6, 0, obj_battle_player_unit),
 			instance_create_depth(room_width-20, 3*room_height/6, 0, obj_battle_player_unit),
 			instance_create_depth(room_width-20, 4*room_height/6, 0, obj_battle_player_unit),
-			instance_create_depth(room_width-20, 5*room_height/6, 0, obj_battle_player_unit),
+			instance_create_depth(room_width-20, 5*room_height/6, 0, obj_battle_player_unit)
 		],
 		monster_units: [
-			instance_create_depth(room_width/2, room_height/2, 0, obj_battle_monster_unit),
+			instance_create_depth(room_width/2, room_height/2, 0, obj_battle_monster_unit)
 		],
 		status_bar: 0,
 		player_menu: instance_create_depth(0, 0, 0, obj_battle_player_menu),
 		monster_menu: instance_create_depth(0, room_height/3, 0, obj_battle_monster_menu),
 		action_menu: instance_create_depth(0, room_height/3, 0, obj_battle_action_menu),
 		pause_button: instance_create_depth(room_width-20, 0, 0, obj_battle_pause_button),
-		pause_menu: instance_create_depth(0, 0, 0, 0, obj_battle_pause_menu),
-		execute_button: instance_create_depth(room_width-20, room_height-20, 0, 0, obj_battle_execute_button)
+		pause_menu: instance_create_depth(0, 0, 0, obj_battle_pause_menu),
+		execute_button: instance_create_depth(room_width-20, room_height-20, 0, obj_battle_execute_button)
 }

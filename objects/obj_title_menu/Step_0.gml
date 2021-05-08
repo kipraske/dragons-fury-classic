@@ -26,8 +26,12 @@ if ( max( keyboard_check_pressed(vk_enter), keyboard_check_pressed(vk_space) ) =
 			break;
 		case 1: // open options menu
 			break;
-		case 2: {
+		case 2: { // Quit Game
 			game_end();
+			break;
+		}
+		case 3: {
+			room_goto(battle_screen);
 			break;
 		}
 	}

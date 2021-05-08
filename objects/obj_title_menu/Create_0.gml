@@ -7,5 +7,7 @@ selected_index = 0;
 menu_items = [
 	"Start Game",
 	"Options",
-	"Exit Game"
+	"Exit Game",
+	"Debug Battle 1",
+	"Debug Battle 2"
 ]

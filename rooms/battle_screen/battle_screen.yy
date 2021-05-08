@@ -46,7 +46,7 @@
     "path": "folders/Rooms.yy",
   },
   "resourceVersion": "1.0",
-  "name": "battle",
+  "name": "battle_screen",
   "tags": [],
   "resourceType": "GMRoom",
 }

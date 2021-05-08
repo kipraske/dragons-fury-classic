@@ -91,7 +91,7 @@
     {"id":{"name":"spr_catherine_down","path":"sprites/spr_catherine_down/spr_catherine_down.yy",},"order":1,},
     {"id":{"name":"json_helpers","path":"scripts/json_helpers/json_helpers.yy",},"order":0,},
     {"id":{"name":"spr_thomas_left","path":"sprites/spr_thomas_left/spr_thomas_left.yy",},"order":2,},
-    {"id":{"name":"battle","path":"rooms/battle/battle.yy",},"order":1,},
+    {"id":{"name":"battle_screen","path":"rooms/battle_screen/battle_screen.yy",},"order":1,},
     {"id":{"name":"spr_thomas_laugh","path":"sprites/spr_thomas_laugh/spr_thomas_laugh.yy",},"order":7,},
     {"id":{"name":"spr_alfred_right","path":"sprites/spr_alfred_right/spr_alfred_right.yy",},"order":3,},
     {"id":{"name":"spr_earnest_smh","path":"sprites/spr_earnest_smh/spr_earnest_smh.yy",},"order":6,},
@@ -111,7 +111,7 @@
   },
   "RoomOrderNodes": [
     {"roomId":{"name":"title_screen","path":"rooms/title_screen/title_screen.yy",},},
-    {"roomId":{"name":"battle","path":"rooms/battle/battle.yy",},},
+    {"roomId":{"name":"battle_screen","path":"rooms/battle_screen/battle_screen.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

@@ -16,18 +16,18 @@ global.battle.menu_focus = battle_focus.no_focus;
 // Also think of this as the view "slots" the objects go in, not the objects themselves (the global state)
 global.battle_obj_instances = {
 		player_units: [
-			instance_create_depth(room_width-20, 2*room_height/6, 0, obj_battle_player_unit),
-			instance_create_depth(room_width-20, 3*room_height/6, 0, obj_battle_player_unit),
-			instance_create_depth(room_width-20, 4*room_height/6, 0, obj_battle_player_unit),
-			instance_create_depth(room_width-20, 5*room_height/6, 0, obj_battle_player_unit)
+			instance_create_depth(room_width-40, 2*room_height/9, 0, obj_battle_player_unit),
+			instance_create_depth(room_width-40, 3.5*room_height/9, 0, obj_battle_player_unit),
+			instance_create_depth(room_width-40, 5*room_height/9, 0, obj_battle_player_unit),
+			instance_create_depth(room_width-40, 6.5*room_height/9, 0, obj_battle_player_unit)
 		],
 		monster_units: [
 			instance_create_depth(room_width/2, room_height/2, 0, obj_battle_monster_unit)
 		],
 		status_bar: 0,
 		player_menu: instance_create_depth(0, 0, 0, obj_battle_player_menu),
-		monster_menu: instance_create_depth(0, room_height/3, 0, obj_battle_monster_menu),
-		action_menu: instance_create_depth(0, room_height/3, 0, obj_battle_action_menu),
+		monster_menu: instance_create_depth(0, 2* room_height/3, 0, obj_battle_monster_menu),
+		action_menu: instance_create_depth(0, 2* room_height/3, 0, obj_battle_action_menu),
 		pause_button: instance_create_depth(room_width-20, 0, 0, obj_battle_pause_button),
 		pause_menu: instance_create_depth(0, 0, 0, obj_battle_pause_menu),
 		execute_button: instance_create_depth(room_width-20, room_height-20, 0, obj_battle_execute_button)

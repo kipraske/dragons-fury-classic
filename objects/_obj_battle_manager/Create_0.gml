@@ -2,7 +2,7 @@
 
 global.battle.is_battle = true;
 global.battle.phase = battle_phase.init;
-global.battle.menu_focus = battle_focus.no_focus;
+global.battle.menu_focus = battle_focus.player_select;
 
 // TODO - select monster units based on location and act
 

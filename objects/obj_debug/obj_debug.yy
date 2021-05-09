@@ -28,7 +28,7 @@
     "path": "folders/Objects/start.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_debug_gui",
+  "name": "obj_debug",
   "tags": [],
   "resourceType": "GMObject",
 }

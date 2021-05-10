@@ -384,7 +384,7 @@ function init_game_state(){
 			phase: battle_phase.init,
 			player_frontline: [],
 			player_backline: [],
-			monsters: [],
+			monster_units: [],
 			menu_focus: battle_focus.no_focus,
 		}
 		save_json_file(global.battle,    "battle_state.json");

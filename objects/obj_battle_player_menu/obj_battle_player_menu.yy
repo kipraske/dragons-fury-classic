@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_debug_menu",
-    "path": "sprites/spr_debug_menu/spr_debug_menu.yy",
+    "name": "spr_hand_icon_right",
+    "path": "sprites/spr_hand_icon_right/spr_hand_icon_right.yy",
   },
   "solid": false,
   "visible": true,

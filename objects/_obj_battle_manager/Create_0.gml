@@ -25,7 +25,7 @@ global.battle_obj_instances = {
 			instance_create_depth(room_width/2, room_height/2, 0, obj_battle_monster_unit)
 		],
 		status_bar: 0,
-		player_menu: instance_create_depth(room_width/3, 2*room_height/3, 0, obj_battle_player_menu),
+		player_menu: instance_create_depth(0, 0, 0, obj_battle_player_menu),
 		monster_menu: instance_create_depth(0, 2* room_height/3, 0, obj_battle_monster_menu),
 		action_menu: instance_create_depth(0, 2* room_height/3, 0, obj_battle_action_menu),
 		pause_button: instance_create_depth(room_width-20, 0, 0, obj_battle_pause_button),

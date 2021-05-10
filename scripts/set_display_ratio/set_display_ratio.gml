@@ -3,7 +3,7 @@
 function set_display_ratio(){
 
 	var ideal_width = 0; // 480 would be 16x9
-	var ideal_height = 270;
+	var ideal_height = 360;
 
 	var aspect_radio = display_get_width()/display_get_height();
 	ideal_width = round( ideal_height * aspect_radio );

@@ -17,9 +17,9 @@ global.battle.menu_focus = battle_focus.player_select;
 global.battle_obj_instances = {
 		player_units: [
 			instance_create_depth(room_width-40, 2*room_height/9, 0, obj_battle_player_unit),
-			instance_create_depth(room_width-40, 3.5*room_height/9, 0, obj_battle_player_unit),
-			instance_create_depth(room_width-40, 5*room_height/9, 0, obj_battle_player_unit),
-			instance_create_depth(room_width-40, 6.5*room_height/9, 0, obj_battle_player_unit)
+			instance_create_depth(room_width-40, 3*room_height/9, 0, obj_battle_player_unit),
+			instance_create_depth(room_width-40, 4*room_height/9, 0, obj_battle_player_unit),
+			instance_create_depth(room_width-40, 5*room_height/9, 0, obj_battle_player_unit)
 		],
 		monster_units: [
 			instance_create_depth(room_width/2, room_height/2, 0, obj_battle_monster_unit)

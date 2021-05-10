@@ -3082,7 +3082,7 @@
     "path": "folders/Fonts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "title_highwind",
+  "name": "ft_title_highwind",
   "tags": [],
   "resourceType": "GMFont",
 }

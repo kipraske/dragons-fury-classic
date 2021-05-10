@@ -5,5 +5,5 @@
 function draw_dialog_box( x_start, y_start, x_end, y_end, color ){
 	draw_set_color(c_white);
 	draw_rectangle_colour(x_start, y_start, x_end, y_end, color, color, c_black, c_black, false);
-	draw_rectangle(x_start, y_start, x_end, y_end, true);
+	draw_rectangle(x_start, y_start, x_end - 2, y_end - 2, true);
 }

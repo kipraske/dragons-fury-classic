@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "spr_hand_icon_right",
-    "path": "sprites/spr_hand_icon_right/spr_hand_icon_right.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

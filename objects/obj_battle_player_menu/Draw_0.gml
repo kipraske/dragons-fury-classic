@@ -11,7 +11,9 @@ draw_set_color(c_white);
 
 // Labels Line
 draw_set_font(ft_stat_heading);
-draw_text_shadow( x + menu_sprite_gap, y + 2, "Name");
+draw_text_shadow( x + menu_sprite_gap + menu_width/3, y + 4, "HP");
+draw_text_shadow( x + menu_sprite_gap + menu_width/2, y + 4, "MP");
+draw_text_shadow( x + menu_sprite_gap + 2*menu_width/3, y + 4, "Action");
 
 // Character Stats (actual menu)
 draw_set_font(ft_default);

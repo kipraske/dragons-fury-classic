@@ -12,6 +12,7 @@ draw_set_color(c_white);
 // Character Stats (actual menu)
 for ( var i = 0; i < _frontline_length; i++ ) {
 	draw_set_font(ft_default);
+	draw_set_halign(fa_left);
 	draw_text_shadow( x + menu_sprite_gap, y + menu_item_spacing*i, global.battle.player_frontline[i].name);
 	draw_set_font(ft_stat_heading);
 	draw_text_shadow( x + menu_sprite_gap + 16, y + menu_item_spacing*i + hp_pos, "HP");
@@ -21,12 +22,17 @@ for ( var i = 0; i < _frontline_length; i++ ) {
 	draw_healthbar( x + menu_sprite_gap + 36, y + menu_item_spacing*i + hp_pos + 2, x + menu_width - 16, y + menu_item_spacing*i + hp_pos + 10, _hp_percent, c_grey, c_red, c_green, 0, true, true);
 	var _mp_percent = global.battle.player_frontline[i].battle_stats[stats.current_MP] / global.battle.player_frontline[i].battle_stats[stats.current_MP] * 100;
 	draw_healthbar( x + menu_sprite_gap + 36, y + menu_item_spacing*i + mp_pos + 2, x + menu_width - 16, y + menu_item_spacing*i + mp_pos + 10, _mp_percent, c_grey, c_navy, c_blue, 0, true, true);
+	
+	draw_set_halign(fa_right);
+	draw_text_shadow( x + menu_width - 16, y + menu_item_spacing*i + hp_pos, global.battle.player_frontline[i].battle_stats[stats.current_HP]);
+	draw_text_shadow( x + menu_width - 16, y + menu_item_spacing*i + mp_pos, global.battle.player_frontline[i].battle_stats[stats.current_MP]);
 }
 
 // Backline characters are always at the bottom
 draw_set_color(c_grey);
 for ( var i = 0; i < _backline_length; i++ ) {
 	draw_set_font(ft_default);
+	draw_set_halign(fa_left);
 	draw_text_shadow( x + menu_sprite_gap, y + menu_item_spacing*(i + _frontline_length), global.battle.player_backline[i].name);
 	draw_set_font(ft_stat_heading);
 	draw_text_shadow( x + menu_sprite_gap + 16, y + menu_item_spacing*(i + _frontline_length) + hp_pos, "HP");

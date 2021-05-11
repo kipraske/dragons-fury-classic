@@ -1,5 +1,7 @@
 /// @description Coordinates the menus and sprites in battle
 
+unit_sprite_width = 52;
+
 global.battle.is_battle = true;
 global.battle.phase = battle_phase.init;
 global.battle.menu_focus = battle_focus.player_select;
@@ -16,13 +18,13 @@ global.battle.menu_focus = battle_focus.player_select;
 // Also think of this as the view "slots" the objects go in, not the objects themselves (the global state)
 global.battle_obj_instances = {
 		player_units: [
-			instance_create_depth(room_width-40, 2*room_height/9, 0, obj_battle_player_unit),
-			instance_create_depth(room_width-40, 3*room_height/9, 0, obj_battle_player_unit),
-			instance_create_depth(room_width-40, 4*room_height/9, 0, obj_battle_player_unit),
-			instance_create_depth(room_width-40, 5*room_height/9, 0, obj_battle_player_unit)
+			instance_create_depth(room_width - unit_sprite_width*1.5, room_height/9, 0, obj_battle_player_unit),
+			instance_create_depth(room_width - unit_sprite_width*1.5, 3*room_height/9, 0, obj_battle_player_unit),
+			instance_create_depth(room_width - unit_sprite_width*1.5, 5*room_height/9, 0, obj_battle_player_unit),
+			instance_create_depth(room_width - unit_sprite_width*1.5, 7*room_height/9, 0, obj_battle_player_unit)
 		],
 		monster_units: [
-			instance_create_depth(room_width/2, room_height/2, 0, obj_battle_monster_unit)
+			instance_create_depth(room_width/2, 2*room_height/9, 0, obj_battle_monster_unit)
 		],
 		status_bar: 0,
 		player_menu: instance_create_depth(0, 0, 0, obj_battle_player_menu),

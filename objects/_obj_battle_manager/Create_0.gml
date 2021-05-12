@@ -8,6 +8,11 @@ global.battle.menu_focus = battle_focus.player_select;
 
 // TODO - select monster units based on location and act
 
+// Set background based on location. 
+var background_layer_id = layer_get_id("Background");
+var background_id = layer_background_get_id(background_layer_id);
+layer_background_sprite(background_id, spr_background_forest);
+
 // Note that monster_units/player_units are tied to the menus directly if you select one then you select the other
 // instance_create_depth(x, y, depth, obj);
 

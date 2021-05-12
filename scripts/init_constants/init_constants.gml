@@ -2,6 +2,10 @@
 /// @desc defines all global enum and macros for the application, only call this once!
 function init_constants(){
 
+	// some arrays in global elements have caps, define those array caps here
+	#macro MAX_FRONTEND_UNITS 3
+	#macro MAX_EQUIPPED_SKILLS 5
+
 	enum stats {
 		MAX_HP,
 		MAX_MP,
@@ -426,8 +430,8 @@ function init_constants(){
 		execute_button
 	}
 	
-	// the menus in gui, enum used for determining focus
-	// TODO
+
+
 }
 
 ///@function fill_array

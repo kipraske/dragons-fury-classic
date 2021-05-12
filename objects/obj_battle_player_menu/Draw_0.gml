@@ -37,7 +37,7 @@ draw_set_color(c_grey);
 for ( var i = 0; i < _backline_length; i++ ) {
 	draw_set_font(ft_default);
 	draw_set_halign(fa_left);
-	draw_text_shadow( x + 3*menu_sprite_gap, y + menu_item_spacing*(i + _frontline_length), global.battle.player_backline[i].name);
+	draw_text_shadow( x + 3*menu_sprite_gap -2, y + menu_item_spacing*(i + _frontline_length), global.battle.player_backline[i].name);
 	
 	draw_sprite(spr_alfred_face, 0, x + 2, y + menu_item_spacing*(i + _frontline_length) + sub_menu_spacing - 2);
 	

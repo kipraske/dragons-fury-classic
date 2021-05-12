@@ -23,10 +23,9 @@ layer_background_sprite(background_id, spr_background_forest);
 // Also think of this as the view "slots" the objects go in, not the objects themselves (the global state)
 global.battle_obj_instances = {
 		player_units: [
-			instance_create_depth(room_width - unit_sprite_width*1.5, room_height/9, 0, obj_battle_player_unit),
-			instance_create_depth(room_width - unit_sprite_width*1.5, 3*room_height/9, 0, obj_battle_player_unit),
-			instance_create_depth(room_width - unit_sprite_width*1.5, 5*room_height/9, 0, obj_battle_player_unit),
-			instance_create_depth(room_width - unit_sprite_width*1.5, 7*room_height/9, 0, obj_battle_player_unit)
+			instance_create_depth(room_width - unit_sprite_width*1.5, 2*room_height/9, 0, obj_battle_player_unit),
+			instance_create_depth(room_width - unit_sprite_width*1.5, 4*room_height/9, 0, obj_battle_player_unit),
+			instance_create_depth(room_width - unit_sprite_width*1.5, 6*room_height/9, 0, obj_battle_player_unit),
 		],
 		monster_units: [
 			instance_create_depth(room_width/2, 2*room_height/9, 0, obj_battle_monster_unit)

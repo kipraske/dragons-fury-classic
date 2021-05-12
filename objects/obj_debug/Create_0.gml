@@ -5,11 +5,11 @@ global.battle.player_frontline = [
 	global.player.catherine,
 	global.player.alfred,
 	global.player.mary,
-	global.player.isabelle,
 ]
 
 global.battle.player_backline = [
 	global.player.ashley,
+	global.player.isabelle,
 ]
 
 global.battle.monsters = [];

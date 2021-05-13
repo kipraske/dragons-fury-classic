@@ -9,10 +9,7 @@
 // First we fill the perm_attr array, this will be used for raw resist/weakness + item stat bonuses
 // Next we will loop over the stat attr and add these to the stats on the player
 // Lastly we will add stats from equipped skills
-function calculate_player_stats_and_attr( player_name ){
-
-	var this_player = variable_struct_get( global.player, player_name );
-	this_player.perm_attr = fill_array( attr.length, 0 )
+function calculate_player_stats_and_attr( this_player ){
 
 	// note that an empty hand will be an empty {}
 	if ( variable_struct_exists( this_player.equipment.hand1, "item_bonus" ) ) {

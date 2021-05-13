@@ -56,13 +56,13 @@ function init_game_state(){
 		thomas_available_skills_init();
 		
 		// Populate stats based on equipment/skills
-		calculate_player_stats_and_attr( "alfred" );
-		calculate_player_stats_and_attr( "ashley" );
-		calculate_player_stats_and_attr( "catherine" );
-		calculate_player_stats_and_attr( "earnest" );
-		calculate_player_stats_and_attr( "isabelle" );
-		calculate_player_stats_and_attr( "mary" );
-		calculate_player_stats_and_attr( "thomas" );
+		calculate_player_stats_and_attr( global.player.alfred );
+		calculate_player_stats_and_attr( global.player.ashley );
+		calculate_player_stats_and_attr( global.player.catherine );
+		calculate_player_stats_and_attr( global.player.earnest );
+		calculate_player_stats_and_attr( global.player.isabelle );
+		calculate_player_stats_and_attr( global.player.mary );
+		calculate_player_stats_and_attr( global.player.thomas );
 		
 		save_json_file(global.player.alfred,    "character/alfred.json");
 		save_json_file(global.player.ashley,    "character/ashley.json");

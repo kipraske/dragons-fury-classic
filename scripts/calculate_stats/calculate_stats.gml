@@ -124,7 +124,7 @@ function calculate_player_stats_and_attr( player_name ){
 }
 
 
-function calculate_monster_stats() {
+function calculate_monster_stats( this_monster ) {
 
 }
 

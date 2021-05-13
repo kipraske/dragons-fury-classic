@@ -77,8 +77,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "blue_mushroom",
-    "path": "folders/Sprites/monster/blue_mushroom.yy",
+    "name": "purple_mushroom",
+    "path": "folders/Sprites/monster/purple_mushroom.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_purple_mushroom_down",

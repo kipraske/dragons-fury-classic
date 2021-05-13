@@ -2,18 +2,7 @@
 /// @desc defines all global enum and macros for the application, only call this once!
 function init_constants(){
 
-	#macro MAX_FRONTEND_UNITS 3
-	
-	enum player_list {
-		alfred,
-		ashley,
-		catherine,
-		earnest,
-		isabelle,
-		mary,
-		thomas
-	}
-	
+	#macro MAX_FRONTEND_UNITS 3	
 	#macro MAX_EQUIPPED_SKILLS 5
 
 	enum stats {
@@ -419,6 +408,12 @@ function init_constants(){
 	global.equipment_slot_by_type[equipment_types.pistol] = equipment_slots.main_hand;
 	global.equipment_slot_by_type[equipment_types.unarmed] = equipment_slots.off_hand;
 	
+	// Monster attack pattern types
+	enum attack_pattern {
+		random,
+		linear
+	}
+	
 	//game state enums
 	enum battle_phase {
 		init,
@@ -440,8 +435,22 @@ function init_constants(){
 		execute_button
 	}
 	
-	enum monster_list {
+	enum player_list {
+		alfred,
+		ashley,
+		catherine,
+		earnest,
+		isabelle,
+		mary,
+		thomas
+	}
 	
+	enum monster_list {
+		no_monster,
+		
+		// Forest Monsters
+		blue_mushroom,
+		red_mushroom
 	}
 	
 	enum location_list {

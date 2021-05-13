@@ -17,7 +17,7 @@ function ashley_get_sprites() {
 ///These objects match the schema of the save files so you can use this as a reference
 function ashley_init(){
 	return {
-		 name: "Ashley",
+		name: "Ashley",
 		level: 1,
 		job: jobs.druid,
 		battle_attr: fill_array( attr.length, [0, 0] ), // status effects: 0-level, 1-duration
@@ -60,3 +60,10 @@ function ashley_init(){
 	};
 }
 
+///@desc add the level 1 skills for initialization. This should be called immediately after setting the globals with above function 
+function ashley_available_skills_init() {
+	global.player.ashley.available_skills[skills.mimic] = 1;
+	global.player.ashley.available_skills[skills.flood] = 1;
+	global.player.ashley.available_skills[skills.quake] = 1;
+	global.player.ashley.available_skills[skills.heal] = 1;
+}

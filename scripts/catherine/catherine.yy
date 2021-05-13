@@ -6,7 +6,7 @@
     "path": "folders/Scripts/player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "thomas_init",
+  "name": "catherine",
   "tags": [],
   "resourceType": "GMScript",
 }

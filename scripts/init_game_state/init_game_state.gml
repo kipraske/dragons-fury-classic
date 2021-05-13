@@ -47,40 +47,13 @@ function init_game_state(){
 		}
 		
 		// Add starting skill levels
-		global.player.alfred.available_skills[skills.double_cast] = 1;
-		global.player.alfred.available_skills[skills.quake] = 1;
-		global.player.alfred.available_skills[skills.tornado] = 1;
-		global.player.alfred.available_skills[skills.heal] = 1;
-		
-		global.player.ashley.available_skills[skills.mimic] = 1;
-		global.player.ashley.available_skills[skills.flood] = 1;
-		global.player.ashley.available_skills[skills.quake] = 1;
-		global.player.ashley.available_skills[skills.heal] = 1;
-		
-		global.player.catherine.available_skills[skills.steal] = 1;
-		global.player.catherine.available_skills[skills.tornado] = 1;
-		global.player.catherine.available_skills[skills.flood] = 1;
-		global.player.catherine.available_skills[skills.heal] = 1;
-		
-		global.player.earnest.available_skills[skills.scan] = 1;
-		global.player.earnest.available_skills[skills.poison] = 1;
-		global.player.earnest.available_skills[skills.revive] = 1;
-		global.player.earnest.available_skills[skills.sleep] = 1;
-		
-		global.player.isabelle.available_skills[skills.machine_gun] = 1;
-		global.player.isabelle.available_skills[skills.potion] = 1;
-		global.player.isabelle.available_skills[skills.grenade] = 1;
-		global.player.isabelle.available_skills[skills.flood] = 1;
-		
-		global.player.mary.available_skills[skills.defend] = 1;
-		global.player.mary.available_skills[skills.quake] = 1;
-		global.player.mary.available_skills[skills.flood] = 1;
-		global.player.mary.available_skills[skills.heal] = 1;
-		
-		global.player.thomas.available_skills[skills.flurry] = 1;
-		global.player.thomas.available_skills[skills.tornado] = 1;
-		global.player.thomas.available_skills[skills.quake] = 1;
-		global.player.thomas.available_skills[skills.heal] = 1;
+		alfred_available_skills_init();
+		ashley_available_skills_init();
+		catherine_available_skills_init();
+		earnest_available_skills_init();
+		isabelle_available_skills_init();
+		mary_available_skills_init();
+		thomas_available_skills_init();
 		
 		calculate_player_stats_and_attr( "alfred" );
 		calculate_player_stats_and_attr( "ashley" );

@@ -60,3 +60,10 @@ function catherine_init(){
 	};
 }
 
+///@desc add the level 1 skills for initialization. This should be called immediately after setting the globals with above function 
+function catherine_available_skills_init(){
+	global.player.catherine.available_skills[skills.steal] = 1;
+	global.player.catherine.available_skills[skills.tornado] = 1;
+	global.player.catherine.available_skills[skills.flood] = 1;
+	global.player.catherine.available_skills[skills.heal] = 1;
+}

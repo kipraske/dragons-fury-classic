@@ -65,3 +65,10 @@ function mary_init(){
 	};
 }
 
+///@desc add the level 1 skills for initialization. This should be called immediately after setting the globals with above function 
+function mary_available_skills_init() {
+	global.player.mary.available_skills[skills.defend] = 1;
+	global.player.mary.available_skills[skills.quake] = 1;
+	global.player.mary.available_skills[skills.flood] = 1;
+	global.player.mary.available_skills[skills.heal] = 1;
+}

@@ -60,3 +60,10 @@ function isabelle_init(){
 	};
 }
 
+///@desc add the level 1 skills for initialization. This should be called immediately after setting the globals with above function 
+function isabelle_available_skills_init() {
+	global.player.isabelle.available_skills[skills.machine_gun] = 1;
+	global.player.isabelle.available_skills[skills.potion] = 1;
+	global.player.isabelle.available_skills[skills.grenade] = 1;
+	global.player.isabelle.available_skills[skills.flood] = 1;
+}

@@ -50,3 +50,10 @@ function thomas_init(){
 	};
 }
 
+///@desc add the level 1 skills for initialization. This should be called immediately after setting the globals with above function 
+function thomas_available_skills_init(){
+	global.player.thomas.available_skills[skills.flurry] = 1;
+	global.player.thomas.available_skills[skills.tornado] = 1;
+	global.player.thomas.available_skills[skills.quake] = 1;
+	global.player.thomas.available_skills[skills.heal] = 1;
+}

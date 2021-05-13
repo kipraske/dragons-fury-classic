@@ -6,7 +6,7 @@
     "path": "folders/Scripts/player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "alfred_init",
+  "name": "isabelle",
   "tags": [],
   "resourceType": "GMScript",
 }

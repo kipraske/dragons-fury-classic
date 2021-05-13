@@ -6,7 +6,7 @@
     "path": "folders/Scripts/player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "earnest_init",
+  "name": "alfred",
   "tags": [],
   "resourceType": "GMScript",
 }

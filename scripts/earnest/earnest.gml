@@ -66,3 +66,12 @@ function earnest_init(){
 	};
 }
 
+///@desc add the level 1 skills for initialization. This should be called immediately after setting the globals with above function 
+function earnest_available_skills_init() {
+	global.player.earnest.available_skills[skills.scan] = 1;
+	global.player.earnest.available_skills[skills.poison] = 1;
+	global.player.earnest.available_skills[skills.revive] = 1;
+	global.player.earnest.available_skills[skills.sleep] = 1;
+}
+
+

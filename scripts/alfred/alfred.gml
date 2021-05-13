@@ -60,3 +60,10 @@ function alfred_init(){
 	};
 }
 
+///@desc add the level 1 skills for initialization. This should be called immediately after setting the globals with above function 
+function alfred_available_skills_init(){
+	global.player.alfred.available_skills[skills.double_cast] = 1;
+	global.player.alfred.available_skills[skills.quake] = 1;
+	global.player.alfred.available_skills[skills.tornado] = 1;
+	global.player.alfred.available_skills[skills.heal] = 1;
+}

@@ -39,3 +39,7 @@ global.battle_obj_instances = {
 		pause_menu: instance_create_depth(0, 0, 0, obj_battle_pause_menu),
 		execute_button: instance_create_depth(room_width-20, room_height-20, 0, obj_battle_execute_button)
 }
+
+for (var i = 0; i < array_length(global.battle_obj_instances.player_units); i++) {
+	global.battle_obj_instances.player_units[i].unit_index = i;
+}

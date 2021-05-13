@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "player_init",
-    "path": "folders/Scripts/init/player_init.yy",
+    "name": "player",
+    "path": "folders/Scripts/player.yy",
   },
   "resourceVersion": "1.0",
   "name": "alfred_init",

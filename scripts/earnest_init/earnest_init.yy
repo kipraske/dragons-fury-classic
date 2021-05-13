@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "init",
-    "path": "folders/Scripts/init.yy",
+    "name": "player_init",
+    "path": "folders/Scripts/init/player_init.yy",
   },
   "resourceVersion": "1.0",
-  "name": "init_monster_definitions",
+  "name": "earnest_init",
   "tags": [],
   "resourceType": "GMScript",
 }

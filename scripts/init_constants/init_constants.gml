@@ -2,8 +2,18 @@
 /// @desc defines all global enum and macros for the application, only call this once!
 function init_constants(){
 
-	// some arrays in global elements have caps, define those array caps here
 	#macro MAX_FRONTEND_UNITS 3
+	
+	enum player_list {
+		alfred,
+		ashley,
+		catherine,
+		earnest,
+		isabelle,
+		mary,
+		thomas
+	}
+	
 	#macro MAX_EQUIPPED_SKILLS 5
 
 	enum stats {
@@ -430,7 +440,12 @@ function init_constants(){
 		execute_button
 	}
 	
-
+	enum monster_list {
+	
+	}
+	
+	enum location_list {
+	}
 
 }
 

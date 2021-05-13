@@ -55,6 +55,7 @@ function init_game_state(){
 		mary_available_skills_init();
 		thomas_available_skills_init();
 		
+		// Populate stats based on equipment/skills
 		calculate_player_stats_and_attr( "alfred" );
 		calculate_player_stats_and_attr( "ashley" );
 		calculate_player_stats_and_attr( "catherine" );

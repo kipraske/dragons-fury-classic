@@ -14,12 +14,11 @@ var background_id = layer_background_get_id(background_layer_id);
 layer_background_sprite(background_id, spr_background_forest);
 
 // Note that monster_units/player_units are tied to the menus directly if you select one then you select the other
-// instance_create_depth(x, y, depth, obj);
 
-// TODO 0 player_units come from global not here, but for now just put em in
-// TODO 1 monster_units the same, for now just get em out there.
+// TODO - monsters come out in various slot shapes (three in a triangle (2 shapes), two like a die etc).
+// Figure that out eventually
 
-// Place battle objects, keep ids so we can modify them later
+// Place all of the battle objects, keep ids so we can modify them later
 // Also think of this as the view "slots" the objects go in, not the objects themselves (the global state)
 global.battle_obj_instances = {
 		player_units: [
@@ -41,9 +40,9 @@ global.battle_obj_instances = {
 }
 
 for (var i = 0; i < array_length(global.battle_obj_instances.player_units); i++) {
-	global.battle_obj_instances.player_units[i].unit_index = i;
+	global.battle_obj_instances.player_units[i].sprite_index = global.battle.player_frontline[i].sprites.left;
 }
 
 for (var i = 0; i < array_length(global.battle_obj_instances.monster_units); i++) {
-	global.battle_obj_instances.monster_units[i].unit_index = i;
+	global.battle_obj_instances.monster_units[i].sprite_index = global.battle.monster_units[i].sprites.right;
 }

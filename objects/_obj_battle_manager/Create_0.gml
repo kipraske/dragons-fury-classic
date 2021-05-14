@@ -38,9 +38,7 @@ monster_coord = get_monster_cooridinates(monster_layout_type.five);
 // Also think of this as the view "slots" the objects go in, not the objects themselves (the global state)
 global.battle_obj_instances = {
 		player_units: [], // assigned dynamically below
-		monster_units: [
-			instance_create_depth(room_width/2, 2*room_height/9, 0, obj_battle_monster_unit)
-		],
+		monster_units: [],
 		status_bar: 0,
 		player_menu: instance_create_depth(0, 0, 0, obj_battle_player_menu),
 		// player_menu needed to be 4px taller to fit, so these menus must take those 4px away
@@ -58,7 +56,9 @@ for (var i = 0; i < array_length(global.battle.player_frontline); i++) {
 }
 
 for (var i = 0; i < array_length(global.battle.monster_units); i++) {
+	global.battle_obj_instances.monster_units[i] = instance_create_depth(monster_coord[i][0], monster_coord[i][1], 0, obj_battle_monster_unit);
 	global.battle_obj_instances.monster_units[i].unit_index = i;
 	global.battle_obj_instances.monster_units[i].sprite_index = global.battle.monster_units[i].sprites.right;
 	global.battle.monster_units[i].level = monster_level_avg;
+
 }

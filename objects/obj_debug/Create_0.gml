@@ -16,5 +16,9 @@ global.battle.player_backline = [
 ]
 
 global.battle.monster_units = [
+	get_red_mushroom(),
+	get_red_mushroom(),
+	get_red_mushroom(),
+	get_red_mushroom(),
 	get_red_mushroom()
 ];

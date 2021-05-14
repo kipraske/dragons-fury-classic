@@ -35,14 +35,16 @@ function get_red_mushroom(){
 	monster.base_stats[stats.SPD] = 3
 	monster.base_stats[stats.LUK] = 3
 	
-	// TODO calculate monster attr
-	    //    "earth": 1,
-        //"sea": 1,
-        //"sky": -1,
-        //"slash": -1,
-        //"pierce": 1,
-        //"blunt": 2,
-        //"magic": 0
+	monster.perm_attr[attr.earth_resist] = 1;
+	monster.perm_attr[attr.sea_resist] = 1;
+	monster.perm_attr[attr.sky_weak] = 1;
+	monster.perm_attr[attr.slash_weak] = 1;
+	monster.perm_attr[attr.blunt_resist] = 2;
+	
+	// mushrooms resist stats
+	monster.perm_attr[attr.sleep] = 1;
+	monster.perm_attr[attr.pain] = 2;
+	monster.perm_attr[attr.poison] = 2;
 	
 	calculate_monster_stats(monster);
 	

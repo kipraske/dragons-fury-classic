@@ -7,7 +7,6 @@ global.battle.phase = battle_phase.init;
 global.battle.menu_focus = battle_focus.player_select;
 
 // TODO - select monster units based on location and act
-
 // Set background based on location. 
 var background_layer_id = layer_get_id("Background");
 var background_id = layer_background_get_id(background_layer_id);
@@ -17,6 +16,21 @@ layer_background_sprite(background_id, spr_background_forest);
 
 // TODO - monsters come out in various slot shapes (three in a triangle (2 shapes), two like a die etc).
 // Figure that out eventually
+// TODO different acts/difficulities have different modifiers, for now just do 1
+var monster_level_multiplier = 1;
+
+// Monsters are always around the average of the characters
+var monster_level_avg = 0;
+var monster_level_total = 0;
+for (var i = 0; i < array_length(global.battle.player_frontline); i++) {
+	monster_level_total += global.battle.player_frontline[i].level;
+}
+for (var i = 0; i < array_length(global.battle.player_backline); i++) {
+	monster_level_total += global.battle.player_backline[i].level;
+}
+monster_level_avg = monster_level_total / (array_length(global.battle.player_frontline) + array_length(global.battle.player_backline));
+monster_level_avg *= monster_level_multiplier;
+monster_level_avg = round(monster_level_avg);
 
 // Place all of the battle objects, keep ids so we can modify them later
 // Also think of this as the view "slots" the objects go in, not the objects themselves (the global state)
@@ -44,5 +58,7 @@ for (var i = 0; i < array_length(global.battle_obj_instances.player_units); i++)
 }
 
 for (var i = 0; i < array_length(global.battle_obj_instances.monster_units); i++) {
+	global.battle_obj_instances.monster_units[i].unit_index = i;
 	global.battle_obj_instances.monster_units[i].sprite_index = global.battle.monster_units[i].sprites.right;
+	global.battle.monster_units[i].level = monster_level_avg;
 }

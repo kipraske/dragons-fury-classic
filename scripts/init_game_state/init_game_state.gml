@@ -18,6 +18,15 @@ function init_game_state(){
 			thomas: load_json_file("character/thomas.json")
 		}
 		
+		// Reset player sprites, these may drift on new versions
+		global.player.alfred.sprites    = alfred_get_sprites();
+		global.player.ashley.sprites    = ashley_get_sprites();
+		global.player.catherine.sprites = catherine_get_sprites();
+		global.player.earnest.sprites   = earnest_get_sprites();
+		global.player.isabelle.sprites  = isabelle_get_sprites();
+		global.player.mary.sprites      = mary_get_sprites();
+		global.player.thomas.sprites    = thomas_get_sprites();
+		
 		global.battle = load_json_file("battle_state.json");
 		global.game_tree = load_json_file("game_tree.json");
 		global.inventory = load_json_file("inventory.json");

@@ -3,6 +3,7 @@
 #macro player_base_stat 3
 #macro player_hp_multipler 10
 #macro monster_hp_multipler 25
+#macro monster_mp_multiplier 3
 #macro player_mp_multipler 3
 
 ///@desc takes equipment and skill info of a player to determine player stats
@@ -122,7 +123,30 @@ function calculate_player_stats_and_attr( this_player ){
 
 
 function calculate_monster_stats( this_monster ) {
+	this_monster.perm_stats[stats.ATK] = round(stat_level_constant * this_monster.level * this_monster.base_stats[stats.ATK] + stat_first_level_boost);
+	this_monster.perm_stats[stats.DEF] = round(stat_level_constant * this_monster.level * this_monster.base_stats[stats.DEF] + stat_first_level_boost);
+	this_monster.perm_stats[stats.RES] = round(stat_level_constant * this_monster.level * this_monster.base_stats[stats.RES] + stat_first_level_boost);
+	this_monster.perm_stats[stats.SPD] = round(stat_level_constant * this_monster.level * this_monster.base_stats[stats.SPD] + stat_first_level_boost);
+	this_monster.perm_stats[stats.LUK] = round(stat_level_constant * this_monster.level * this_monster.base_stats[stats.LUK] + stat_first_level_boost);
+	
+	this_monster.perm_stats[stats.MAX_HP] = round((stat_level_constant * this_monster.level * this_monster.base_stats[stats.MAX_HP] + stat_first_level_boost) * monster_hp_multipler);
+	this_monster.perm_stats[stats.MAX_MP] = round((stat_level_constant * this_monster.level * this_monster.base_stats[stats.MAX_MP] + stat_first_level_boost) * monster_mp_multiplier);
 
+	this_monster.perm_stats[stats.current_HP] = this_monster.perm_stats[stats.MAX_HP];
+	this_monster.perm_stats[stats.current_MP] = this_monster.perm_stats[stats.MAX_MP];
+	
+	this_monster.battle_stats[stats.ATK] = this_monster.perm_stats[stats.ATK];
+	this_monster.battle_stats[stats.DEF] = this_monster.perm_stats[stats.DEF];
+	this_monster.battle_stats[stats.RES] = this_monster.perm_stats[stats.RES];
+	this_monster.battle_stats[stats.SPD] = this_monster.perm_stats[stats.SPD];
+	this_monster.battle_stats[stats.LUK] = this_monster.perm_stats[stats.LUK];
+	this_monster.battle_stats[stats.MAX_HP] = this_monster.perm_stats[stats.MAX_HP];
+	this_monster.battle_stats[stats.MAX_MP] = this_monster.perm_stats[stats.MAX_MP];
+	
+	this_monster.battle_stats[stats.current_HP] = this_monster.perm_stats[stats.current_HP];
+	this_monster.battle_stats[stats.current_MP] = this_monster.perm_stats[stats.current_MP];
+	this_monster.battle_stats[stats.level] = this_monster.perm_stats[stats.level];
+	this_monster.battle_stats[stats.total_xp] = this_monster.perm_stats[stats.total_xp];
 }
 
 #macro xp_growth_constant = 7;

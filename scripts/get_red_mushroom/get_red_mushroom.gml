@@ -45,5 +45,4 @@ function get_red_mushroom(){
         //"magic": 0
 	
 	calculate_monster_stats(base_monster);
-	
 }

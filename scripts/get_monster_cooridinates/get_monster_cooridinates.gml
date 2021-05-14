@@ -10,10 +10,10 @@ function get_monster_cooridinates( layout_type ){
 		case monster_layout_type.five:
 			return [
 				[room_width/3 + left_offset, top_offset],
-				[2*room_width/3 + left_offset, top_offset],
-				[room_width/2 + left_offset, 2*room_height/9], // middlish
-				[room_width/3 + left_offset, 2*room_height/3 - top_offset],
-				[2*room_width/3 + left_offset, 2*room_height/3 - top_offset],
+				[2*room_width/3 - left_offset, top_offset],
+				[room_width/2, 2*room_height/9], // middlish
+				[room_width/3 + left_offset, 4*room_height/9 - top_offset],
+				[2*room_width/3 - left_offset, 4*room_height/9 - top_offset],
 			];
 		case monster_layout_type.four:
 			return 0;

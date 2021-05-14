@@ -12,4 +12,6 @@ global.battle.player_backline = [
 	global.player.isabelle,
 ]
 
-global.battle.monsters = [];
+global.battle.monster_units = [
+	get_red_mushroom()
+];

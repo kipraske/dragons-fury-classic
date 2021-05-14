@@ -43,3 +43,7 @@ global.battle_obj_instances = {
 for (var i = 0; i < array_length(global.battle_obj_instances.player_units); i++) {
 	global.battle_obj_instances.player_units[i].unit_index = i;
 }
+
+for (var i = 0; i < array_length(global.battle_obj_instances.monster_units); i++) {
+	global.battle_obj_instances.monster_units[i].unit_index = i;
+}

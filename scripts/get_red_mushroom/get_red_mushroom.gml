@@ -9,7 +9,7 @@ function get_red_mushroom_sprites() {
 
 // @desc provides template for creating this monster
 function get_red_mushroom(){
-	var base_monster =  {
+	var monster =  {
 		name: "Red Mushroom",
 		level: 1,
 		pattern: attack_pattern.random,
@@ -27,13 +27,13 @@ function get_red_mushroom(){
 		sprites: get_red_mushroom_sprites()
 	};
 	
-	base_monster.base_stats[stats.MAX_HP] = 5
-	base_monster.base_stats[stats.MAX_MP] = 5
-	base_monster.base_stats[stats.ATK]    = 4
-	base_monster.base_stats[stats.DEF] = 5
-	base_monster.base_stats[stats.RES] = 5
-	base_monster.base_stats[stats.SPD] = 3
-	base_monster.base_stats[stats.LUK] = 3
+	monster.base_stats[stats.MAX_HP] = 5
+	monster.base_stats[stats.MAX_MP] = 5
+	monster.base_stats[stats.ATK]    = 4
+	monster.base_stats[stats.DEF] = 5
+	monster.base_stats[stats.RES] = 5
+	monster.base_stats[stats.SPD] = 3
+	monster.base_stats[stats.LUK] = 3
 	
 	// TODO calculate monster attr
 	    //    "earth": 1,
@@ -44,5 +44,7 @@ function get_red_mushroom(){
         //"blunt": 2,
         //"magic": 0
 	
-	calculate_monster_stats(base_monster);
+	calculate_monster_stats(monster);
+	
+	return monster;
 }

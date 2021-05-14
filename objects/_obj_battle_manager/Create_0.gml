@@ -32,14 +32,12 @@ monster_level_avg = monster_level_total / (array_length(global.battle.player_fro
 monster_level_avg *= monster_level_multiplier;
 monster_level_avg = round(monster_level_avg);
 
+monster_coord = get_monster_cooridinates(monster_layout_type.five);
+
 // Place all of the battle objects, keep ids so we can modify them later
 // Also think of this as the view "slots" the objects go in, not the objects themselves (the global state)
 global.battle_obj_instances = {
-		player_units: [
-			instance_create_depth(room_width - unit_sprite_width*1.5, 2*room_height/9, 0, obj_battle_player_unit),
-			instance_create_depth(room_width - unit_sprite_width*1.5, 4*room_height/9, 0, obj_battle_player_unit),
-			instance_create_depth(room_width - unit_sprite_width*1.5, 6*room_height/9, 0, obj_battle_player_unit),
-		],
+		player_units: [], // assigned dynamically below
 		monster_units: [
 			instance_create_depth(room_width/2, 2*room_height/9, 0, obj_battle_monster_unit)
 		],
@@ -53,11 +51,13 @@ global.battle_obj_instances = {
 		execute_button: instance_create_depth(room_width-20, room_height-20, 0, obj_battle_execute_button)
 }
 
-for (var i = 0; i < array_length(global.battle_obj_instances.player_units); i++) {
+for (var i = 0; i < array_length(global.battle.player_frontline); i++) {
+	// players placed at 2/9, 4/9 and 6/9
+	global.battle_obj_instances.player_units[i] = instance_create_depth(room_width - unit_sprite_width*1.5, (i+1)*2*room_height/9, 0, obj_battle_player_unit);
 	global.battle_obj_instances.player_units[i].sprite_index = global.battle.player_frontline[i].sprites.left;
 }
 
-for (var i = 0; i < array_length(global.battle_obj_instances.monster_units); i++) {
+for (var i = 0; i < array_length(global.battle.monster_units); i++) {
 	global.battle_obj_instances.monster_units[i].unit_index = i;
 	global.battle_obj_instances.monster_units[i].sprite_index = global.battle.monster_units[i].sprites.right;
 	global.battle.monster_units[i].level = monster_level_avg;

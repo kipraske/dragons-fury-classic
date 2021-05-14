@@ -1,15 +1,31 @@
-///@desc based on layout type returns the list of positions for the monsters
-function get_monster_cooridinates( layout_type ){
 
-		//five,        // die-5 layout
-		//four,        // die-4 layout
-		//three_right, //triangle pointing right
-		//three_left,  //triangle pointing left
-		//two_right,   //top-right closest
-		//two_left,    //bottom-right closest
-		//single,      //one enemy
-		//boss,        // bosses are bigger, single but bigger
-		//boss_and_minions, // triangle left with big boss
-		//two_boss,    // two bosses, may need overlap
-		//three_boss,  // three bosses, overlap like two_right
+///@desc based on layout type returns the list of positions for the monsters
+///@param {enum} layout_type
+///@return {array} of arrays with two elements: first element is x and second is y
+function get_monster_cooridinates( layout_type ){
+	var left_offset = 20;
+	var top_offset = 20;
+
+	switch (layout_type){
+		case monster_layout_type.five:
+			return [
+				[room_width/3 + left_offset, top_offset],
+				[2*room_width/3 + left_offset, top_offset],
+				[room_width/3 + left_offset, 2*room_height/9], // middlish
+				[room_width/3 + left_offset, room_height - top_offset],
+				[2*room_width/3 + left_offset, room_height - top_offset],
+			];
+		case monster_layout_type.four:
+			return 0;
+		case monster_layout_type.three_right:
+			return 0;
+		case monster_layout_type.three_left:
+			return 0;
+		case monster_layout_type.two_right:
+			return 0;
+		case monster_layout_type.two_left:
+			return 0;
+		case monster_layout_type.single:
+			return 0;
+	}
 }

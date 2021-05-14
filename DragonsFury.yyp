@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"get_monster_cooridinates","path":"scripts/get_monster_cooridinates/get_monster_cooridinates.yy",},"order":5,},
     {"id":{"name":"spr_red_mushroom_right","path":"sprites/spr_red_mushroom_right/spr_red_mushroom_right.yy",},"order":1,},
     {"id":{"name":"spr_ashley_right","path":"sprites/spr_ashley_right/spr_ashley_right.yy",},"order":3,},
     {"id":{"name":"thomas","path":"scripts/thomas/thomas.yy",},"order":6,},

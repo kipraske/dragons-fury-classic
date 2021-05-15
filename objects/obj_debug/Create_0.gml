@@ -15,6 +15,8 @@ global.battle.player_backline = [
 	global.player.isabelle,
 ]
 
+global.battle.monster_layout = monster_layout_types.five
+
 global.battle.monster_units = [
 	get_red_mushroom(),
 	get_red_mushroom(),

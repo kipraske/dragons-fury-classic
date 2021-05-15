@@ -7,7 +7,7 @@ function get_monster_cooridinates( layout_type ){
 	var top_offset = 20;
 
 	switch (layout_type){
-		case monster_layout_type.five:
+		case monster_layout_types.five:
 			return [
 				[room_width/3 + left_offset, top_offset],
 				[2*room_width/3 - left_offset, top_offset],
@@ -15,17 +15,17 @@ function get_monster_cooridinates( layout_type ){
 				[room_width/3 + left_offset, 4*room_height/9 - top_offset],
 				[2*room_width/3 - left_offset, 4*room_height/9 - top_offset],
 			];
-		case monster_layout_type.four:
+		case monster_layout_types.four:
 			return 0;
-		case monster_layout_type.three_right:
+		case monster_layout_types.three_right:
 			return 0;
-		case monster_layout_type.three_left:
+		case monster_layout_types.three_left:
 			return 0;
-		case monster_layout_type.two_right:
+		case monster_layout_types.two_right:
 			return 0;
-		case monster_layout_type.two_left:
+		case monster_layout_types.two_left:
 			return 0;
-		case monster_layout_type.single:
+		case monster_layout_types.single:
 			return 0;
 	}
 }

@@ -32,7 +32,7 @@ monster_level_avg = monster_level_total / (array_length(global.battle.player_fro
 monster_level_avg *= monster_level_multiplier;
 monster_level_avg = round(monster_level_avg);
 
-monster_coord = get_monster_cooridinates(monster_layout_type.five);
+monster_coord = get_monster_cooridinates(global.battle.monster_layout);
 
 // Place all of the battle objects, keep ids so we can modify them later
 // Also think of this as the view "slots" the objects go in, not the objects themselves (the global state)

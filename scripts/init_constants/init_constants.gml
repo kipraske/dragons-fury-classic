@@ -445,7 +445,7 @@ function init_constants(){
 		thomas
 	}
 
-	enum monster_layout_type {
+	enum monster_layout_types {
 		five,        // die-5 layout
 		four,        // die-4 layout
 		three_right, //triangle pointing right

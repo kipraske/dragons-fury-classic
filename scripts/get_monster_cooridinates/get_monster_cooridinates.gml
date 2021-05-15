@@ -26,7 +26,7 @@ function get_monster_cooridinates( layout_type ){
 		case monster_layout_types.three_right:
 			return [
 				[room_width/3 + left_offset, top_offset],
-				[room_width/3 - left_offset, 2*room_height/9],
+				[2*room_width/3 - left_offset, 2*room_height/9],
 				[room_width/3 + left_offset, 4*room_height/9 - top_offset],
 				[0, 0],
 				[0, 0],

@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d1cc863b-31b7-43c6-ae92-21e55a335f8a","path":"sprites/spr_hand_icon_right/spr_hand_icon_right.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d1cc863b-31b7-43c6-ae92-21e55a335f8a","path":"sprites/spr_hand_icon_right/spr_hand_icon_right.yy",},"LayerId":{"name":"da6b9b62-1c3a-4d95-bcec-ca116e8126d3","path":"sprites/spr_hand_icon_right/spr_hand_icon_right.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_hand_icon_right","path":"sprites/spr_hand_icon_right/spr_hand_icon_right.yy",},"resourceVersion":"1.0","name":"d1cc863b-31b7-43c6-ae92-21e55a335f8a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"db722899-86e7-4ca9-ba22-77dfffb7605c","path":"sprites/spr_hand_icon_left/spr_hand_icon_left.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"db722899-86e7-4ca9-ba22-77dfffb7605c","path":"sprites/spr_hand_icon_left/spr_hand_icon_left.yy",},"LayerId":{"name":"234072ef-1e39-49b0-a6cf-a2de61ff6db0","path":"sprites/spr_hand_icon_left/spr_hand_icon_left.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_hand_icon_left","path":"sprites/spr_hand_icon_left/spr_hand_icon_left.yy",},"resourceVersion":"1.0","name":"db722899-86e7-4ca9-ba22-77dfffb7605c","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_hand_icon_right","path":"sprites/spr_hand_icon_right/spr_hand_icon_right.yy",},
+    "spriteId": {"name":"spr_hand_icon_left","path":"sprites/spr_hand_icon_left/spr_hand_icon_left.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"e6c95876-5505-4e4d-a48f-8b3f2463419e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d1cc863b-31b7-43c6-ae92-21e55a335f8a","path":"sprites/spr_hand_icon_right/spr_hand_icon_right.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c9ef73a9-492a-4643-a544-78da468c6de8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"db722899-86e7-4ca9-ba22-77dfffb7605c","path":"sprites/spr_hand_icon_left/spr_hand_icon_left.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_hand_icon_right","path":"sprites/spr_hand_icon_right/spr_hand_icon_right.yy",},
+    "parent": {"name":"spr_hand_icon_left","path":"sprites/spr_hand_icon_left/spr_hand_icon_left.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_hand_icon_right",
+    "name": "spr_hand_icon_left",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"da6b9b62-1c3a-4d95-bcec-ca116e8126d3","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"234072ef-1e39-49b0-a6cf-a2de61ff6db0","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/icons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_hand_icon_right",
+  "name": "spr_hand_icon_left",
   "tags": [],
   "resourceType": "GMSprite",
 }

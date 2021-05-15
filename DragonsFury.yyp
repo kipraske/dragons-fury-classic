@@ -111,6 +111,7 @@
     {"id":{"name":"spr_thomas_laugh","path":"sprites/spr_thomas_laugh/spr_thomas_laugh.yy",},"order":7,},
     {"id":{"name":"spr_alfred_right","path":"sprites/spr_alfred_right/spr_alfred_right.yy",},"order":3,},
     {"id":{"name":"spr_earnest_smh","path":"sprites/spr_earnest_smh/spr_earnest_smh.yy",},"order":6,},
+    {"id":{"name":"spr_hand_icon_left","path":"sprites/spr_hand_icon_left/spr_hand_icon_left.yy",},"order":1,},
     {"id":{"name":"spr_purple_mushroom_right","path":"sprites/spr_purple_mushroom_right/spr_purple_mushroom_right.yy",},"order":1,},
     {"id":{"name":"title_screen","path":"rooms/title_screen/title_screen.yy",},"order":0,},
   ],

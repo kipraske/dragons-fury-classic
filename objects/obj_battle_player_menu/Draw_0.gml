@@ -55,3 +55,8 @@ for ( var i = 0; i < _backline_length; i++ ) {
 	draw_text_shadow( xx + menu_width - menu_left_padding, yy + menu_item_spacing*(i + _frontline_length) + 0.5*hp_pos, global.battle.player_backline[i].battle_stats[stats.current_HP]);
 	draw_text_shadow( xx + menu_width - menu_left_padding, yy + menu_item_spacing*(i + _frontline_length) + mp_pos, global.battle.player_backline[i].battle_stats[stats.current_MP]);
 }
+
+// Draw the little hand, the x position is dynamic while xx is static above
+y = yy + menu_item_spacing*selected_index + 0.5*menu_item_spacing;
+x = menu_width - 8;
+draw_self();

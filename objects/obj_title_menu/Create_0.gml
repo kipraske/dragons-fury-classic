@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 menu_spacing = 18;
+sprite_up_adjust = 4;
 selected_index = 0;
 
 menu_items = [

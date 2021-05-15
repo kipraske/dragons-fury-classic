@@ -1,11 +1,11 @@
 /// @description menu up and down
 /// there is only one menu in this room so we don't have to check for focus
 
-if ( keyboard_check_pressed(vk_down) == 1 ) {
+if ( check_down_pressed() ) {
 	selected_index += 1;
 }
 
-if ( keyboard_check_pressed(vk_up) == 1 ) {
+if ( check_up_pressed() ) {
 	selected_index -= 1;
 }
 
@@ -19,7 +19,7 @@ if (selected_index >= array_length(menu_items)) {
 }
 
 // Execute menu item
-if ( max( keyboard_check_pressed(vk_enter), keyboard_check_pressed(vk_space) ) == 1 ) {
+if ( check_select_pressed() ) {
 
 	switch (selected_index) {
 		case 0: // begin playing

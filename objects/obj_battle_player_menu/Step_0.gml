@@ -14,7 +14,7 @@ if ( global.battle.menu_focus == battle_focus.player_select ) {
 	
 	if ( check_select_pressed() ) {
 		// Switch focus to the action select menu
-		global.battle.menu_focus = battle_focus.action_select;
+		global.battle.next_menu_focus = battle_focus.action_select;
 		
 		if (selected_index < array_length(global.battle.player_frontline) ){
 			var _selected_player = global.battle.player_frontline[selected_index];

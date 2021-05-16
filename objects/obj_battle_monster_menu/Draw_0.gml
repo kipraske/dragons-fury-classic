@@ -12,8 +12,10 @@ if (global.battle.menu_focus != battle_focus.action_select ) {
 		draw_text(xx, yy + i*menu_spacing, i);
 	}
 	
-	y = yy + menu_spacing*selected_index + 0.5*menu_spacing - sprite_up_adjust;
-	x = menu_width - 8;
-	draw_self();
+	if ( selected_index != -1 ) {
+		y = yy + menu_spacing*selected_index + 0.5*menu_spacing - sprite_up_adjust;
+		x = menu_width - 8;
+		draw_self();
+	}
 	
 }

@@ -58,6 +58,8 @@ for ( var i = 0; i < _backline_length; i++ ) {
 }
 
 // Draw the little hand, the x position is dynamic while xx is static above
-y = yy + menu_item_spacing*selected_index + 0.5*menu_item_spacing - sprite_up_adjust;
-x = menu_width - 8;
-draw_self();
+if ( selected_index != -1 ) {
+	y = yy + menu_item_spacing*selected_index + 0.5*menu_item_spacing - sprite_up_adjust;
+	x = menu_width - 8;
+	draw_self();
+}

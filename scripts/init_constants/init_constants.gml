@@ -418,7 +418,6 @@ function init_constants(){
 	enum battle_phase {
 		init,				// Set up objects/create events and animations
 		waiting_for_input,  // Objects available for input
-		input_recieved,     // Only one object is allowed to take input per step, so we lock when we recieve
 		execute_turn,       // Play battle animations in order
 		check_win,          // Check for win
 		check_lose,         // Check for lose (if not go back to waiting_for_input)

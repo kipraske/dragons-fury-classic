@@ -5,6 +5,7 @@ unit_sprite_width = 52;
 global.battle.is_battle = true;
 global.battle.phase = battle_phase.init;
 global.battle.menu_focus = battle_focus.player_select;
+global.battle.next_menu_focus = battle_focus.player_select;
 
 // TODO - select monster units based on location and act
 // Set background based on location. 

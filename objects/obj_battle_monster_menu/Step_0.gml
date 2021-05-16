@@ -22,17 +22,17 @@ if ( global.battle.menu_focus == battle_focus.monster_select && global.battle.me
 	if (selected_index < 0 ) {
 		selected_index = -1;
 		global.battle.menu_focus = battle_focus.player_select
-		//with (obj_battle_monster_menu ){
-		//	selected_index = array_length(global.battle.monster_units) - 1;
-		//}
+		with (obj_battle_player_menu){
+			selected_index = array_length(global.battle.monster_units) - 1;
+		}
 	}
 
 	if (selected_index >= menu_length) {
 		selected_index = -1;
 		global.battle.menu_focus = battle_focus.player_select
-		//with (obj_battle_monster_menu ){
-		//	selected_index = 0;
-		//}
+		with (obj_battle_player_menu){
+			selected_index = 0;
+		}
 	}
 
 }

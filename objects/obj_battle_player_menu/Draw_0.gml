@@ -6,6 +6,7 @@ var _backline_length = array_length(global.battle.player_backline);
 var _monster_length = array_length(global.battle.monster_units);
 
 // oops I am off a bit on the player section, give them a bit of room:
+// also the -2 doesn't seem to be built into this menu like the others. Oh well. It works
 draw_dialog_box(xx+1, yy+1, xx + menu_width-2, yy + menu_height-2 + menu_bottom_padding, c_blue);
 draw_set_color(c_white);
 

@@ -78,45 +78,39 @@ function init_labels(){
 
 			["Void", "Damage based on the current HP of the target"],
 		
-		// Mage
-		passive_MP_up,
-		double_cast,
-		mp_cost_down,
-		mp_turbo,
-		staff_up,
-		book_up,
-		sleep_resist,
-		earth_resist,
+			["MP+", "Increases MP stat"],
+			["Double Cast", "Use magic skills multiple times"],
+			["MP Cost-", "MP costs are reduced for skills"],
+			["MP Boost", "MP costs and power are increased"],
+			["Staff+", "Equipped Staves are more effective"],
+			["Book+",  "Equipped Books are more effective"],
+			["Sleep Resist", "Sleep effects are less likely to occur"],
+			["Earth Resist", "Earth damage is reduced"],
 		
-		// Druid
-		passive_RES_up,
-		mimic,
-		hp_drain,
-		rest_up,
-		bow_up,
-		ax_up,
-		confusion_resist,
-		sea_resist,
+			["RES+", "Increases RES stat"],
+			["Mimic", "Copies another ally or monster this turn"],
+			["HP drain", "Skills which do damage also restore HP"],
+			["Rest+", "Gained HP and MP while on backline are increased"],
+			["Bow+", "Equipped Bows are more effective"],
+			["Ax+", "Equipped Axes are more effective"],
+			["Confuse Resist", "Confuse effects are less likely to occur"],
+			["Sea Resist", "Sea damage is reduced"]
 		
-		// Thief
-		passive_SPD_up,
-		steal,
-		loot_up,
-		gold_up,
-		hammer_up,
-		accessory_up,
-		aggro_resist,
-		pierce_resist,
+			["SPD+", "Increases SPD stat"],
+			["Steal", "Gain an item from an enemy"],
+			["Loot+", "Gain better post battle loot"],
+			["Gold+", "Gain more gold post battle"],
+			["Hammer+", "Equipped Hammers are more effective"],
+			["Taunt Resist", "Taunt effects are less likely to occur"],
+			["Pierce Resist", "Pierce damage is reduced"],
+			
+			["LUK+", "Increases LUK stat"],
+			["Scan", "Get information about an enemy"],
+			["Insight", "Backwards skill learning and status effects are more effective"],
+			["Sword+", "Equipped Swords are more effective"],
+			["Poison Resist", "Poison effects are less powerful"],
+			["Sky Resist", "Sky damage is reduced"],
 		
-		// Oracle
-		passive_LUK_up,
-		scan,
-		insight,
-		xp_up,
-		sword_up,
-		dagger_up,
-		poison_resist,
-		sky_resist,
 		
 		// Inventor
 		passive_HP_up,
@@ -147,8 +141,8 @@ function init_labels(){
 		unarmed_up,
 		pain_resist,
 		blunt_resist,
-		],
 		
+		],
 		//attr and equipment slots will have icons not text defined elsewhere
 		
 		// Equipment types have fancier names than "medium" or whatever, these are used for creating item names

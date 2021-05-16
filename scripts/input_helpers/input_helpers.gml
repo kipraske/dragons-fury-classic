@@ -25,13 +25,11 @@ function check_select_pressed() {
 	return (max( keyboard_check_pressed(vk_enter), keyboard_check_pressed(vk_space) ) == 1);
 }
 
-// TODO - add these when you need them
-
 function check_cancel_pressed() {
-	return 0;
+	return keyboard_check_pressed(vk_escape);
 }
 
 function check_pause_pressed() {
-	return 0;
+	return keyboard_check_pressed(vk_escape);;
 }
 

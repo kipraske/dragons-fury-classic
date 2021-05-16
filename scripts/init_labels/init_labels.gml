@@ -1,6 +1,14 @@
 ///@desc creates the maps for menu output and help text. Will use this later for localization
 function init_labels(){
 
+	// TODO as new langugages are created, point to different labels.json files
+	// For now we will just use the internal labels definitions below which is generated if no labels are found
+	// global.labels = load_json_file("labels.json");
+	
+	//if (global.labels){
+	//	return;
+	//}
+	
 	// 0- label
 	// 1- help text
 	global.labels = {
@@ -31,6 +39,10 @@ function init_labels(){
 		// Equipment types have fancier names than "medium" or whatever, these are used for creating item names
 		equipment_types: [],
 		attr_adjectives: [],
+	}
+
+	if ( ! file_exists("labels.json") ) {
+		save_json_file(global.labels, "labels.json");
 	}
 
 }

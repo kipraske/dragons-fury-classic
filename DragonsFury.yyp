@@ -180,7 +180,8 @@
   "IncludedFiles": [
     {"CopyToMask":-1,"filePath":"datafiles/mobs","resourceVersion":"1.0","name":"red_mushroom.json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/mobs","resourceVersion":"1.0","name":"purple_mushroom.json","resourceType":"GMIncludedFile",},
-    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"labels.json","resourceType":"GMIncludedFile",},
+    {"CopyToMask":153157610357391598,"filePath":"datafiles","resourceVersion":"1.0","name":"labels.json","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"localization.md","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2.3.2.560",

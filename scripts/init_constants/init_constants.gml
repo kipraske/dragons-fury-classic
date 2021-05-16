@@ -36,8 +36,10 @@ function init_constants(){
 	#macro JOB_SKILLS_END_INDEX 76 // 42 + 34
 	
 	enum skills {
+		// Basic Skills
 		noskill,
 		attack,
+		swap,
 		
 		// basic magic group
 		heal,

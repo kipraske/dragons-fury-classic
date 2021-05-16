@@ -22,10 +22,10 @@ if ( global.battle.menu_focus == battle_focus.player_select ) {
 			var _selected_player = global.battle.player_backline[selected_index];
 		}
 		
-		//with (obj_battle_action_menu ){
-		//	selected_index = 0;
-		//  selected_player = _selected_player;
-		//}
+		with (obj_battle_action_menu ){
+			selected_index = 0;
+			selected_player = _selected_player;
+		}
 
 	}
 

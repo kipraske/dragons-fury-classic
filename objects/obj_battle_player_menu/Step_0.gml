@@ -19,7 +19,7 @@ if ( global.battle.menu_focus == battle_focus.player_select ) {
 		if (selected_index < array_length(global.battle.player_frontline) ){
 			var _selected_player = global.battle.player_frontline[selected_index];
 		} else {
-			var _selected_player = global.battle.player_backline[selected_index];
+			var _selected_player = global.battle.player_backline[selected_index - array_length(global.battle.player_frontline)];
 		}
 		
 		with (obj_battle_action_menu ){

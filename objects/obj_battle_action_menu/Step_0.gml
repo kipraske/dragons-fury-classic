@@ -34,19 +34,15 @@ if ( global.battle.menu_focus == battle_focus.action_select ) {
 		// Move to select unit phase
 	}
 
+	// Remember to reset the full battle state
 	if (check_cancel_pressed()) {
 		selected_index = -1;
+		sprite_grid_x = 0;
+		sprite_grid_y = 0;
 		global.battle.next_menu_focus = battle_focus.player_select
 		with (obj_battle_player_menu){
 			selected_index = 0;
 		}
 	}
 	
-	if (selected_index < 0 ) {
-		selected_index = 0;
-	}
-
-	if (selected_index >= menu_length - 1) {
-		selected_index = menu_length - 1;
-	}
 }

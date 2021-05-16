@@ -9,7 +9,6 @@ if (global.battle.menu_focus != battle_focus.action_select ) {
 
 	for (var i = 0; i < menu_length; i++){
 		draw_text_shadow(xx + padding, yy + i*menu_spacing + padding, global.battle.monster_units[i].name);
-		draw_text(xx, yy + i*menu_spacing, i);
 	}
 	
 	if ( selected_index != -1 ) {

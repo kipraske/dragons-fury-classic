@@ -11,16 +11,6 @@ if ( global.battle.menu_focus == battle_focus.player_select ) {
 	if ( check_up_pressed() ) {
 		selected_index -= 1;
 	}
-
-
-	// TODO - haven't quite implemented the monster menu yet, so this won't work until that happens
-	if (selected_index < 0 ) {
-		selected_index = -1;
-		global.battle.menu_focus = battle_focus.monster_select
-		//with (obj_battle_monster_menu ){
-		//	selected_index = array_length(global.battle.monster_units) - 1;
-		//}
-	}
 	
 	if ( check_select_pressed() ) {
 		// Switch focus to the action select menu

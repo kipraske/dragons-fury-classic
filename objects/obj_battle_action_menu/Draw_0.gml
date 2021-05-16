@@ -11,6 +11,10 @@ if (global.battle.menu_focus == battle_focus.action_select ) {
 	var menu_skill_list = selected_player.equipped_skills;
 	menu_skill_list[MAX_EQUIPPED_SKILLS] = skills.swap;
 	
+	// We want to draw the sprite on top of the menu, so we wait to draw it until the end
+	var sprite_x = xx;
+	var sprite_y = yy;
+	
 	// Will need to get the players skills in these boxes based on selected player. For now just draw the 6 boxes here
 	for (var i = 0; i < menu_length; i++){
 	
@@ -22,9 +26,8 @@ if (global.battle.menu_focus == battle_focus.action_select ) {
 			
 			// Draw the select hand
 			if ( selected_index == i ){
-				y = yy + 1 + button_height*(_row) + 0.5*button_height - sprite_up_adjust;
-				x = xx + 0.5*menu_width;
-				draw_self();
+				sprite_y = yy + 1 + button_height*(_row) + 0.25*button_height - sprite_up_adjust;
+				sprite_x = xx + 0.5*menu_width;
 			}
 		}
 	
@@ -36,10 +39,15 @@ if (global.battle.menu_focus == battle_focus.action_select ) {
 		
 			// Draw the select hand
 			if (selected_index == i ) {
-				y = yy + 1 + button_height*(_row) + 0.5*button_height - sprite_up_adjust;
-				x = xx + menu_width;
-				draw_self();
+				sprite_y = yy + 1 + button_height*(_row) + 0.25*button_height - sprite_up_adjust;
+				sprite_x = xx + menu_width;
 			}
 		}
+	}
+	
+	if (selected_index != -1 ){
+		x = sprite_x;
+		y = sprite_y;
+		draw_self();
 	}
 }

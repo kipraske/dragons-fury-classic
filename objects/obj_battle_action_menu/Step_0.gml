@@ -29,4 +29,12 @@ if ( global.battle.menu_focus == battle_focus.action_select ) {
 			selected_index = 0;
 		}
 	}
+	
+	if (selected_index < 0 ) {
+		selected_index = 0;
+	}
+
+	if (selected_index >= menu_length - 1) {
+		selected_index = menu_length - 1;
+	}
 }

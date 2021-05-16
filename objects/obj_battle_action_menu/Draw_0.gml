@@ -50,4 +50,9 @@ if (global.battle.menu_focus == battle_focus.action_select ) {
 		y = sprite_y;
 		draw_self();
 	}
+	
+	// Debug:
+	draw_text( menu_width, yy, sprite_grid_x);
+	draw_text( menu_width, yy+18, sprite_grid_y);
+	
 }

@@ -10,7 +10,13 @@ sprite_up_adjust = 4;
 
 // Functionality Variables
 menu_length = MAX_EQUIPPED_SKILLS + 1; // plus one for "swap" skill
-selected_index = -1;
 selected_player = global.battle.player_frontline[0];
+selected_index = -1;
+sprite_grid_x = 0; // Calculate sprite location independent of index above
+sprite_grid_y = 0;
+sprite_grid_min_x = 0;
+sprite_grid_min_y = 0;
+sprite_grid_max_x = 1; // two columns
+sprite_grid_max_y = ceil(menu_length / 2) - 1; // num rows
 xx = xstart;
 yy = ystart;

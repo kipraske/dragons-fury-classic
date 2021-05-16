@@ -37,7 +37,7 @@ function init_labels(){
 		],
 		
 		skills: [
-			["noskill", 0]
+			["noskill", 0],
 			["Attack", "Use your weapon and deal damage"],
 			["Swap", "Change party member between front and back lines"],
 		
@@ -94,7 +94,7 @@ function init_labels(){
 			["Bow+", "Equipped Bows are more effective"],
 			["Ax+", "Equipped Axes are more effective"],
 			["Confuse Resist", "Confuse effects are less likely to occur"],
-			["Sea Resist", "Sea damage is reduced"]
+			["Sea Resist", "Sea damage is reduced"],
 		
 			["SPD+", "Increases SPD stat"],
 			["Steal", "Gain an item from an enemy"],
@@ -111,37 +111,32 @@ function init_labels(){
 			["Poison Resist", "Poison effects are less powerful"],
 			["Sky Resist", "Sky damage is reduced"],
 		
-		
-		// Inventor
-		passive_HP_up,
-		machine_gun,
-		potion,
-		grenade,
-		spear_up,
-		gun_up,
-		freeze_resist,
-		magic_resist,
-		
-		// Knight
-		passive_DEF_up,
-		defend,
-		last_stand,
-		auto_revive,
-		heavy_armor_up,
-		shield_up,
-		auto_regen,
-		slash_resist,
-		
-		// Monk
-		passive_ATK_up,
-		flurry,
-		counter,
-		mp_drain,
-		unarmored_up,
-		unarmed_up,
-		pain_resist,
-		blunt_resist,
-		
+			["HP+", "Increases HP stat"],
+			["Machine Gun", "Attack random enemies multiple times"],
+			["Potion", "Restores HP, gains regen, and removes bad status effects"],
+			["Grenade", "Attack all enemies. Apply one random status"],
+			["Spear+", "Equipped Spears are more effective"],
+			["Gun+", "Equipped pistols and rifles are more effective"],
+			["Freeze Resist", "Freeze effects are less likely to occur"],
+			["Magic Resist", "Magic damage is reduced"],
+			
+			["DEF+", "Increases DEF stat"],
+			["Defend", "Reduces all types of incoming damage"],
+			["Last Stand", "Increses all stats when HP is below 50%"],
+			["Auto-Revive", "Once per battle, will revive automatically"],
+			["Armor+", "Equipped Armor is more effective"],
+			["Shield+", "Equipped Shields are more effective"],
+			["Auto-Regen", "Perminent Regen in battle"],
+			["Slash Resist", "Slash damage is reduced"],
+			
+			["ATK+", "Increases ATK stat"],
+			["Flurry", "Attack multiple times"],
+			["Counter", "Attack when damage is taken"],
+			["MP Drain", "Skills which do damage also restore MP"],
+			["Unarmored+", "Better protection when wearing no armor"],
+			["Unarmed+", "Better attack when wearing no weapons"],
+			["Pain Resist", "Pain effects are less likely to occur"],
+			["Blunt Resist", "Blunt damage is reduced"]
 		],
 		//attr and equipment slots will have icons not text defined elsewhere
 		

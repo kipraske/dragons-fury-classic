@@ -139,7 +139,7 @@ function init_constants(){
 		defend,
 		last_stand,
 		auto_revive,
-		heavy_armor_up,
+		armor_up,
 		shield_up,
 		auto_regen,
 		slash_resist,
@@ -176,7 +176,7 @@ function init_constants(){
 		skills.defend,
 		skills.last_stand,
 		skills.auto_revive,
-		skills.heavy_armor_up,
+		skills.armor_up,
 		skills.shield_up,
 		skills.auto_regen,
 		skills.slash_resist

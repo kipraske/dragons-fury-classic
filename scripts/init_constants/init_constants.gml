@@ -416,12 +416,13 @@ function init_constants(){
 	
 	//game state enums
 	enum battle_phase {
-		init,
-		waiting_for_input,
-		execute_turn,
-		win,
-		lose,
-		clean_up
+		init,				// Set up objects/create events and animations
+		waiting_for_input,  // Objects available for input
+		input_recieved,     // Only one object is allowed to take input per step, so we lock when we recieve
+		execute_turn,       // Play battle animations in order
+		check_win,          // Check for win
+		check_lose,         // Check for lose (if not go back to waiting_for_input)
+		clean_up            // Destroy Battle
 	}
 	
 	// the menus in battle, enum used for determining focus

@@ -1,5 +1,5 @@
 if ( global.battle.menu_focus == battle_focus.player_select ) {
-
+	
 	if (selected_index = -1 ) {
 		selected_index = 0;
 	}

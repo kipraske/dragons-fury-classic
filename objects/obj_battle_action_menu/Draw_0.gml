@@ -27,7 +27,7 @@ if (global.battle.menu_focus == battle_focus.action_select ) {
 			// Draw the select hand
 			if ( selected_index == i ){
 				sprite_y = yy + 1 + button_height*(_row) + 0.25*button_height - sprite_up_adjust;
-				sprite_x = xx + 0.5*menu_width;
+				sprite_x = xx + string_width(global.labels.skills[menu_skill_list[i]][0]) + padding + 4;
 			}
 		}
 	
@@ -40,7 +40,7 @@ if (global.battle.menu_focus == battle_focus.action_select ) {
 			// Draw the select hand
 			if (selected_index == i ) {
 				sprite_y = yy + 1 + button_height*(_row) + 0.25*button_height - sprite_up_adjust;
-				sprite_x = xx + menu_width;
+				sprite_x = xx + 0.5*menu_width + string_width(global.labels.skills[menu_skill_list[i]][0]) + padding + 4;
 			}
 		}
 	}

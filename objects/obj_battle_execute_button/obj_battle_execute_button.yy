@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_debug_box",
-    "path": "sprites/spr_debug_box/spr_debug_box.yy",
+    "name": "spr_hand_icon_right",
+    "path": "sprites/spr_hand_icon_right/spr_hand_icon_right.yy",
   },
   "solid": false,
   "visible": true,
@@ -20,7 +20,10 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {

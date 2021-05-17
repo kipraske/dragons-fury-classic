@@ -387,7 +387,8 @@ function init_constants(){
 		light_armor, // all robes
 		medium_armor, // all leather
 		heavy_armor, // all steel plate
-		ring
+		ring,
+		empty, // For no ring-situations
 	}
 	
 	global.equipment_slot_by_type[equipment_types.ring] = equipment_slots.ring;

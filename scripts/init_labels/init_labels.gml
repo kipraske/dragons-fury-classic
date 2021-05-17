@@ -8,10 +8,15 @@ function init_labels(){
 	//if (global.labels){
 	//	return;
 	//}
+
 	
+
 	// 0- label
 	// 1- help text
 	global.labels = {
+		// TODO - we want the names to be translatable too. For chinese or whatever
+		init_names: [],
+		
 		stats: [
 			["HP",  "Health Points are how much damage you can take until you die"],
 			["MP",  "Mana Points are used to cast magical skills"],
@@ -92,7 +97,7 @@ function init_labels(){
 			["HP drain", "Skills which do damage also restore HP"],
 			["Rest+", "Gained HP and MP while on backline are increased"],
 			["Bow+", "Equipped Bows are more effective"],
-			["Ax+", "Equipped Axes are more effective"],
+			["Axe+", "Equipped Axes are more effective"],
 			["Confuse Resist", "Confuse effects are less likely to occur"],
 			["Sea Resist", "Sea damage is reduced"],
 		
@@ -141,7 +146,29 @@ function init_labels(){
 		//attr and equipment slots will have icons not text defined elsewhere
 		
 		// Equipment types have fancier names than "medium" or whatever, these are used for creating item names
-		equipment_types: [],
+		equipment_types: [
+			["Unarmed", "No weapon equipped. Deals minor blunt damage, but gain an extra attack"],
+			["Pistol", "Single-handed gun with piercing Damage. Ignores target DEF"],
+			["Dagger", "Single-handed weapon with piercing damage. Can go in off-hand"],
+			["Short Sword", "Single-handed sword with slash damage. Can go in off-hand"],
+			["Book", "Single-handed weapon with magic damage"],
+			["Crossbow", "Single-handed bow with piercing damage"],
+			["Rifle", "Two-handed gun with piercing damage. Ignores target DEF"],
+			["Sword", "Single-handed sword with slash damage"],
+			["Mace", "Single-handed hammer with blunt damage"],
+			["Spear", "Two-handed weapon with piercing damage"],
+			["Longbow", "Two-handed bow with piercing damage"],
+			["Staff", "Two-handed weapon with magic damage"],
+			["Axe", "Two-handed weapon with slashing damage"],
+			["Hammer", "Two-handed weapon with blunt damage"],
+			["Sheild", "Armor worn in the off-hand"],
+			["Unarmored", "No armor equipped, but gains an extra attack"],
+			["Robe", "Light armor which offers modest protection"],
+			["Leather Armor", "Medium armor which offers moderate protection"],
+			["Steel Plate", "Heavy armor which offers high protection"],
+			["Ring", "Accessory which offers extra bonuses"],
+			["Empty", "No accessory equipped. There is no bonus for this"]		
+		],
 		attr_adjectives: [],
 	}
 

@@ -2,7 +2,8 @@
 // You can write your code in this editor
 
 draw_set_alpha(0.5);
-draw_circle_color(x + button_radius, y + button_radius, button_radius, $00ff00, c_green, false);
+//draw_circle_color(x + button_radius, y + button_radius, button_radius, $00ff00, c_green, false);
+draw_circle_color(x + button_radius, y + button_radius, button_radius, c_blue, c_black, false);
 draw_set_alpha(1);
 draw_circle(x + button_radius, y + button_radius, button_radius, true);
 draw_set_halign(fa_center);

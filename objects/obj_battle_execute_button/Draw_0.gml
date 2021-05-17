@@ -1,11 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-draw_set_alpha(0.5);
-//draw_circle_color(x + button_radius, y + button_radius, button_radius, $00ff00, c_green, false);
-draw_circle_color(x + button_radius, y + button_radius, button_radius, c_blue, c_black, false);
-draw_set_alpha(1);
-draw_circle(x + button_radius, y + button_radius, button_radius, true);
-draw_set_halign(fa_center);
-draw_text_shadow(x + button_radius, y+button_radius - 6, "Go!"); //-6 is half the font height
-draw_set_halign(fa_left);
+draw_dialog_box(x, y, x + button_width, y + button_width, c_green);
+draw_text_shadow(x + button_radius - 10, y + button_radius - 8, "Go"); // -6 is half the font size
+
+draw_sprite( spr_play_icon, 0, x + button_radius - 4, y + 0.5*button_radius - 4);

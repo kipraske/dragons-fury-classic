@@ -14,6 +14,7 @@
     {"id":{"name":"init_labels","path":"scripts/init_labels/init_labels.yy",},"order":2,},
     {"id":{"name":"spr_alfred_nod","path":"sprites/spr_alfred_nod/spr_alfred_nod.yy",},"order":5,},
     {"id":{"name":"spr_mary_right","path":"sprites/spr_mary_right/spr_mary_right.yy",},"order":2,},
+    {"id":{"name":"spr_play_icon","path":"sprites/spr_play_icon/spr_play_icon.yy",},"order":6,},
     {"id":{"name":"ft_damage","path":"fonts/ft_damage/ft_damage.yy",},"order":3,},
     {"id":{"name":"obj_debug","path":"objects/obj_debug/obj_debug.yy",},"order":2,},
     {"id":{"name":"obj_battle_player_unit","path":"objects/obj_battle_player_unit/obj_battle_player_unit.yy",},"order":4,},

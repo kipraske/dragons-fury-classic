@@ -16,7 +16,15 @@ function init_labels(){
 	// 2- adjective - used for equipment
 	global.labels = {
 		// TODO - we want the names to be translatable too. For chinese or whatever
-		init_names: [],
+		init_names: [
+			"Alfred",
+			"Ashley",
+			"Catherine",
+			"Earnest",
+			"Isabelle",
+			"Mary",
+			"Thomas"
+		],
 		
 		stats: [
 			["HP",  "Health Points are how much damage you can take until you die"],
@@ -208,6 +216,8 @@ function init_labels(){
 			"Cursed"
 			"Cursed"
 		],
+		monster_names: [] // TODO after enum is complete
+		location_names: [] // TODO after all locations are complete
 	}
 
 	if ( ! file_exists("labels.json") ) {

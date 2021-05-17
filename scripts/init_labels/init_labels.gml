@@ -37,7 +37,7 @@ function init_labels(){
 			["Current HP", 0],
 			["Current MP", 0],
 			["Level", "Level increases all of your stats"],
-			["XP", "Experience Points are used to gain levels"],
+			["XP", "Experience Points are used to gain levels"]
 		],
 
 		jobs: [
@@ -51,7 +51,7 @@ function init_labels(){
 		],
 		
 		skills: [
-			["noskill", 0],
+			["", ""],
 			["Attack", "Use your weapon and deal damage"],
 			["Swap", "Change party member between front and back lines"],
 		
@@ -176,7 +176,7 @@ function init_labels(){
 			["Leather Armor", "Medium armor which offers moderate protection"],
 			["Steel Plate", "Heavy armor which offers high protection"],
 			["Ring", "Accessory which offers extra bonuses"],
-			["Empty", "No accessory equipped. There is no bonus for this"]		
+			["Empty", "No accessory equipped. There is no bonus for this"]	
 		],
 		attr_adjectives: [
 			"",
@@ -207,16 +207,16 @@ function init_labels(){
 			"Sturdy",
 			"Strong",
 			"Lucky",
-			"Quick"
-			"Cursed"
-			"Cursed"
-			"Cursed"
-			"Cursed"
-			"Cursed"
-			"Cursed"
+			"Quick",
+			"Cursed",
+			"Cursed",
+			"Cursed",
+			"Cursed",
+			"Cursed",
+			"Cursed",
 			"Cursed"
 		],
-		monster_names: [] // TODO after enum is complete
+		monster_names: [], // TODO after enum is complete
 		location_names: [] // TODO after all locations are complete
 	}
 

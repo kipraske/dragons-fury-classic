@@ -22,7 +22,7 @@ if (global.battle.menu_focus == battle_focus.action_select ) {
 		if (i % 2 == 0) {
 			var _row = i / 2;
 			draw_dialog_box(xx + 1, yy + 1 + button_height*(_row), xx + 0.5*menu_width, yy + button_height*(_row+1), c_blue);
-			draw_text_shadow(xx + padding, yy + button_height*(_row) + padding, menu_skill_list[i]);
+			draw_text_shadow(xx + padding, yy + button_height*(_row) + padding, global.labels.skills[menu_skill_list[i]][0]);
 			
 			// Draw the select hand
 			if ( selected_index == i ){
@@ -35,7 +35,7 @@ if (global.battle.menu_focus == battle_focus.action_select ) {
 		if (i % 2 == 1) {
 			var _row = (i - 1)/2
 			draw_dialog_box(xx + 1 + 0.5*menu_width, yy + 1 + button_height*(_row), xx + menu_width, yy + button_height*(_row+1), c_blue);
-			draw_text_shadow(xx + 0.5*menu_width + padding, yy + button_height*(_row) + padding, menu_skill_list[i]);
+			draw_text_shadow(xx + 0.5*menu_width + padding, yy + button_height*(_row) + padding, global.labels.skills[menu_skill_list[i]][0]);
 		
 			// Draw the select hand
 			if (selected_index == i ) {

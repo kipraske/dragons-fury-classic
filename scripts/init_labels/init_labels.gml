@@ -115,13 +115,16 @@ function init_labels(){
 			["Loot+", "Gain better post battle loot"],
 			["Gold+", "Gain more gold post battle"],
 			["Hammer+", "Equipped Hammers are more effective"],
+			["Rings+", "Equipped Rings are more effective"],
 			["Taunt Resist", "Taunt effects are less likely to occur"],
 			["Pierce Resist", "Pierce damage is reduced"],
 			
 			["LUK+", "Increases LUK stat"],
 			["Scan", "Get information about an enemy"],
 			["Insight", "Backwards skill learning and status effects are more effective"],
+			["XP+", "Gain more XP"],
 			["Sword+", "Equipped Swords are more effective"],
+			["Dagger+", "Equipped Daggers are more effective"],
 			["Poison Resist", "Poison effects are less powerful"],
 			["Sky Resist", "Sky damage is reduced"],
 		

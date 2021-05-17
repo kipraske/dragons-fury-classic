@@ -11,7 +11,7 @@ global.battle.player_frontline = [
 ]
 
 global.battle.player_backline = [
-	global.player.ashley,
+	global.player.thomas,
 	global.player.isabelle,
 ]
 

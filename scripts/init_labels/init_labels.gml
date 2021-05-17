@@ -13,6 +13,7 @@ function init_labels(){
 
 	// 0- label
 	// 1- help text
+	// 2- adjective - used for equipment
 	global.labels = {
 		// TODO - we want the names to be translatable too. For chinese or whatever
 		init_names: [],
@@ -169,7 +170,44 @@ function init_labels(){
 			["Ring", "Accessory which offers extra bonuses"],
 			["Empty", "No accessory equipped. There is no bonus for this"]		
 		],
-		attr_adjectives: [],
+		attr_adjectives: [
+			"",
+			"Vigilant",
+			"Liberating",
+			"Soothing",
+			"Calm",
+			"Sterile",
+			"Regenerating",
+			"Channeling",
+			"Earth",
+			"Sea",
+			"Sky",
+			"Solid",
+			"Linked",
+			"Scaled",
+			"Shielding",
+			"Cursed",
+			"Cursed",
+			"Cursed",
+			"Cursed",
+			"Cursed",
+			"Cursed",
+			"Cursed",
+			"Robust",
+			"Magical",
+			"Heavy",
+			"Sturdy",
+			"Strong",
+			"Lucky",
+			"Quick"
+			"Cursed"
+			"Cursed"
+			"Cursed"
+			"Cursed"
+			"Cursed"
+			"Cursed"
+			"Cursed"
+		],
 	}
 
 	if ( ! file_exists("labels.json") ) {

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_debug_box",
-    "path": "sprites/spr_debug_box/spr_debug_box.yy",
+    "name": "settings",
+    "path": "sprites/settings/settings.yy",
   },
   "solid": false,
   "visible": true,

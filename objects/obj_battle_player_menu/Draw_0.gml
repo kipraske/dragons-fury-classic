@@ -57,9 +57,20 @@ for ( var i = 0; i < _backline_length; i++ ) {
 	draw_text_shadow( xx + menu_width - menu_left_padding, yy + menu_item_spacing*(i + _frontline_length) + mp_pos, global.battle.player_backline[i].battle_stats[stats.current_MP]);
 }
 
+if (global.battle.menu_focus == battle_focus.action_select ) {
+	sprite_index = spr_hand_grab_left;
+	grab_hand_x_adjust = -8;
+	grab_hand_y_adjust = -8;
+} else {
+	sprite_index = spr_hand_icon_left;
+	grab_hand_x_adjust = 0;
+	grab_hand_y_adjust = 0;
+}
+
+
 // Draw the little hand, the x position is dynamic while xx is static above
 if ( selected_index != -1 ) {
-	y = yy + menu_item_spacing*selected_index + 0.5*menu_item_spacing - sprite_up_adjust;
-	x = menu_width - 8;
+	y = yy + menu_item_spacing*selected_index + 0.5*menu_item_spacing - sprite_up_adjust + grab_hand_y_adjust;
+	x = menu_width - 8 + grab_hand_x_adjust;
 	draw_self();
 }

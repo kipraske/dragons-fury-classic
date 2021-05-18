@@ -12,6 +12,8 @@ menu_sprite_gap = 18; // 16 px sprite + gap
 menu_left_padding = 4;
 menu_bottom_padding = 4; // oops I am a bit off - subtract this from the lower area
 sprite_up_adjust = 4;
+grab_hand_y_adjust = 0;
+grab_hand_x_adjust = 0;
 
 // Functionality Variables
 menu_length = array_length(global.battle.player_frontline) + array_length(global.battle.player_backline);

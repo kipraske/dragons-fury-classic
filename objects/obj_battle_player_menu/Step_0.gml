@@ -26,7 +26,13 @@ if ( global.battle.menu_focus == battle_focus.player_select ) {
 			selected_index = 0;
 			selected_player = _selected_player;
 		}
-
+	}
+	
+	if ( check_cancel_pressed() ){
+		global.battle.next_menu_focus = battle_focus.pause_menu;
+		with (obj_battle_pause_menu ){
+			selected_index = 0;
+		}
 	}
 
 	if (selected_index < 0 ) {

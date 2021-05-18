@@ -46,7 +46,7 @@ global.battle_obj_instances = {
 		monster_menu: instance_create_depth(0, 0.7*room_height + 4, 0, obj_battle_monster_menu),
 		action_menu: instance_create_depth(0, 0.7*room_height + 4, 0, obj_battle_action_menu),
 		pause_button: instance_create_depth(room_width-32, 0, 0, obj_battle_pause_button),
-		pause_menu: instance_create_depth(0, 0, 0, obj_battle_pause_menu),
+		pause_menu: instance_create_depth(0, 0, -1, obj_battle_pause_menu), // full screen overlay
 		execute_button: instance_create_depth(room_width/3 - 48 - 32, 0.7*room_height + 32, 0, obj_battle_execute_button)
 }
 

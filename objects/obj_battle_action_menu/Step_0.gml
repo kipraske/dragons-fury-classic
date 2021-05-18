@@ -40,9 +40,6 @@ if ( global.battle.menu_focus == battle_focus.action_select ) {
 		sprite_grid_x = 0;
 		sprite_grid_y = 0;
 		global.battle.next_menu_focus = battle_focus.player_select
-		with (obj_battle_player_menu){
-			selected_index = 0;
-		}
 	}
 	
 }

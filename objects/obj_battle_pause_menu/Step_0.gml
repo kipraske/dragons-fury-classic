@@ -23,11 +23,16 @@ if (global.battle.menu_focus == battle_focus.pause_menu ) {
 	if ( check_select_pressed() ) {
 
 		switch (selected_index) {
-			case 0: // Save State -- TODO later
+			case 0: // Continue -- same as cancel below
+				global.battle.next_menu_focus = battle_focus.player_select;
+				with (obj_battle_player_menu ){
+					selected_index = 0;
+				}
+			case 1: // Save State -- TODO later
 				break;
-			case 1: // Options
+			case 2: // Options
 				break;
-			case 2: { // Abandon Battle -- TODO go back to map and undo temp
+			case 3: { // Abandon Battle -- TODO go back to map and undo temp
 				game_end();
 				break;
 			}

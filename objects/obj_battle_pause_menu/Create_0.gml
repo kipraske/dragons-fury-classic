@@ -8,6 +8,7 @@ padding = 8
 
 // Functionality Variables
 menu_items = [
+	"Continue",
 	"Save State",
 	"Options",
 	"Abandon Battle"

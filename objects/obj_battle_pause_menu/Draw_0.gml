@@ -16,7 +16,7 @@ if (global.battle.menu_focus == battle_focus.pause_menu ) {
 		draw_text_shadow(room_width/2 + 0.5*sprite_width - box_offset_width, room_height/2 + i*menu_spacing - box_offset_height, menu_items[i]);	
 	}
 
-	y = yy + menu_spacing*selected_index - sprite_up_adjust;
-
+	y = room_height/2 + selected_index*menu_spacing - box_offset_height - sprite_up_adjust;
+	x = room_width/2 - box_offset_width - 0.5*sprite_width - 4;
 	draw_self();
 }

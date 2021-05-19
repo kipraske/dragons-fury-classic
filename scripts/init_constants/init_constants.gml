@@ -427,12 +427,14 @@ function init_constants(){
 		clean_up            // Destroy Battle
 	}
 	
-	// the menus in battle, enum used for determining focus
+	// the menus in battle, enum used for determining focus/active while entering input
 	enum battle_focus {
 		no_focus,
 		player_select,
 		monster_select,
 		action_select,
+		target_player_select,
+		target_monster_select,
 		pause_button,
 		pause_menu,
 		execute_button

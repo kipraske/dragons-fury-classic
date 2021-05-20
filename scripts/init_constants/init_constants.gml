@@ -2,7 +2,8 @@
 /// @desc defines all global enum and macros for the application, only call this once!
 function init_constants(){
 
-	#macro MAX_FRONTEND_UNITS 3	
+	#macro MAX_FRONTEND_UNITS 3
+	#macro MAX_TOTAL_UNITS 5
 	#macro MAX_EQUIPPED_SKILLS 5
 
 	enum stats {

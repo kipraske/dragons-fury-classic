@@ -88,8 +88,8 @@ function init_game_state(){
 			player_frontline: [],
 			player_backline: [],
 			monster_units: [],
-			selected_actions: [], // parallel with player_frontline
-			selected_targets: [], // "
+			selected_actions: fill_array(MAX_TOTAL_UNITS, skills.noskill), // parallel with player_frontline + player_backline
+			selected_targets: fill_array(MAX_TOTAL_UNITS, 0), // "
 			monster_layout: 0,
 			menu_focus: battle_focus.no_focus,
 			next_menu_focus: battle_focus.no_focus

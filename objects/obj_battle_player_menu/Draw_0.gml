@@ -10,7 +10,7 @@ var _monster_length = array_length(global.battle.monster_units);
 draw_dialog_box(xx+1, yy+1, xx + menu_width-2, yy + menu_height-2 + menu_bottom_padding, c_blue);
 draw_set_color(c_white);
 
-// Character Stats (actual menu)
+// Character Stats and actions (actual menu)
 for ( var i = 0; i < _frontline_length; i++ ) {
 	draw_set_font(ft_default);
 	draw_set_halign(fa_left);
@@ -18,6 +18,7 @@ for ( var i = 0; i < _frontline_length; i++ ) {
 
 	draw_sprite(global.battle.player_frontline[i].sprites.face, 0, xx + 2, yy + menu_item_spacing*i + sub_menu_spacing - 2);
 
+	// HP and MP
 	var _hp_percent = global.battle.player_frontline[i].battle_stats[stats.current_HP] / global.battle.player_frontline[i].battle_stats[stats.current_HP] * 100;
 	draw_healthbar( xx + 3*menu_sprite_gap, yy + menu_item_spacing*i + hp_pos + 2, xx + menu_width - menu_left_padding, yy + menu_item_spacing*i + hp_pos + 10, _hp_percent, c_grey, c_red, c_green, 0, true, true);
 	var _mp_percent = global.battle.player_frontline[i].battle_stats[stats.current_MP] / global.battle.player_frontline[i].battle_stats[stats.current_MP] * 100;
@@ -31,6 +32,13 @@ for ( var i = 0; i < _frontline_length; i++ ) {
 	draw_set_font(ft_damage);
 	draw_text_shadow( xx + menu_width - menu_left_padding, yy + menu_item_spacing*i + 0.5*hp_pos, global.battle.player_frontline[i].battle_stats[stats.current_HP]);
 	draw_text_shadow( xx + menu_width - menu_left_padding, yy + menu_item_spacing*i + mp_pos, global.battle.player_frontline[i].battle_stats[stats.current_MP]);
+
+	// The selected skills
+	draw_dialog_box(xx + menu_width + 1, yy + menu_item_spacing*i + 4*sub_menu_spacing, xx + menu_width + 0.5*menu_width -2, yy + menu_item_spacing*(i+1) - 0*sub_menu_spacing - 2, c_blue);
+	draw_set_halign(fa_left);
+	draw_set_font(ft_default);
+	draw_text( xx + menu_width + menu_left_padding, yy + menu_item_spacing*i + 0.5*menu_item_spacing, global.battle.selected_actions[i]);
+
 }
 
 // Backline characters are always at the bottom

@@ -14,6 +14,8 @@ menu_bottom_padding = 4; // oops I am a bit off - subtract this from the lower a
 sprite_up_adjust = 4;
 grab_hand_y_adjust = 0;
 grab_hand_x_adjust = 0;
+action_text_spacing = 18;
+action_top_padding = 12
 
 // Functionality Variables
 menu_length = array_length(global.battle.player_frontline) + array_length(global.battle.player_backline);

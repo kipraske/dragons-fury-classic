@@ -32,7 +32,11 @@ if ( global.battle.menu_focus == battle_focus.action_select ) {
 	
 	if ( check_select_pressed() ) {
 		var _selected_player_index = selected_player_index; // local copy for scoping
-		global.battle.selected_actions[_selected_player_index] = selected_player.equipped_skills[selected_index];
+		if (selected_index < MAX_EQUIPPED_SKILLS ) {
+			global.battle.selected_actions[_selected_player_index] = selected_player.equipped_skills[selected_index];
+		} else { // It's swap
+			global.battle.selected_actions[_selected_player_index] = skills.swap;
+		}
 		selected_index = -1;
 		sprite_grid_x = 0;
 		sprite_grid_y = 0;

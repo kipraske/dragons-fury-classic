@@ -11,7 +11,7 @@ if (global.battle.menu_focus != battle_focus.action_select ) {
 		draw_text_shadow(xx + padding, yy + i*menu_spacing + padding, global.battle.monster_units[i].name);
 	}
 	
-	if ( selected_index != -1 ) {
+	if ( selected_index != -1 && ( global.battle.menu_focus == battle_focus.monster_select || global.battle.menu_focus == battle_focus.target_monster_select )) {
 		y = yy + menu_spacing*selected_index + 0.5*menu_spacing - sprite_up_adjust;
 		x = string_width(global.battle.monster_units[selected_index].name) + padding + 4;
 		draw_self();

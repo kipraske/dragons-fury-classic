@@ -58,8 +58,15 @@ if ( global.battle.menu_focus == battle_focus.target_monster_select && global.ba
 		selected_index -= 1;
 	}
 	
+	var _actor_index = selected_actor_index; // local for scoping back into player menu (if needed)
+	
 	if ( check_select_pressed() ) {
-		// TODO - target selected monster
+		global.battle.selected_targets[selected_actor_index] = global.battle.monster_units[selected_index];
+		global.battle.next_menu_focus = battle_focus.player_select;
+		with (obj_battle_player_menu){
+			selected_index = _actor_index; // send you right back where you were
+		}
+		selected_actor_index = -1;
 	}
 	
 	if ( check_cancel_pressed() ){
@@ -71,6 +78,7 @@ if ( global.battle.menu_focus == battle_focus.target_monster_select && global.ba
 		global.battle.next_menu_focus = battle_focus.target_player_select
 		with (obj_battle_player_menu){
 			selected_index = array_length(global.battle.monster_units) - 1;
+			selected_actor_index = _actor_index;
 		}
 	}
 
@@ -79,6 +87,7 @@ if ( global.battle.menu_focus == battle_focus.target_monster_select && global.ba
 		global.battle.next_menu_focus = battle_focus.target_player_select
 		with (obj_battle_player_menu){
 			selected_index = 0;
+			selected_actor_index = _actor_index;
 		}
 	}
 

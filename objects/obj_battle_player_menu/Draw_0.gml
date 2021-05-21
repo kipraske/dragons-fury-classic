@@ -39,7 +39,7 @@ for ( var i = 0; i < _frontline_length; i++ ) {
 		draw_set_halign(fa_left);
 		draw_set_font(ft_default);
 		draw_text( xx + menu_width + menu_left_padding, yy + menu_item_spacing*i + action_top_padding, global.labels.skills[global.battle.selected_actions[i]][0]);
-		draw_text( xx + menu_width + menu_left_padding, yy + menu_item_spacing*i + action_top_padding + action_text_spacing, global.battle.monster_units[i].name);
+		// draw_text( xx + menu_width + menu_left_padding, yy + menu_item_spacing*i + action_top_padding + action_text_spacing, global.battle.selected_targets[i].name);
 	}
 }
 
@@ -73,7 +73,7 @@ for ( var i = 0; i < _backline_length; i++ ) {
 		draw_set_halign(fa_left);
 		draw_set_font(ft_default);
 		draw_text( xx + menu_width + menu_left_padding, yy + menu_item_spacing*(i + _frontline_length) + action_top_padding, global.labels.skills[global.battle.selected_actions[i + _frontline_length]][0]);
-		draw_text( xx + menu_width + menu_left_padding, yy + menu_item_spacing*(i + _frontline_length) + action_top_padding + action_text_spacing, global.battle.monster_units[i + _frontline_length].name);
+		// draw_text( xx + menu_width + menu_left_padding, yy + menu_item_spacing*(i + _frontline_length) + action_top_padding + action_text_spacing, global.battle.selected_targets[i + _frontline_length].name);
 	}
 }
 

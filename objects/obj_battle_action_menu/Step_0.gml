@@ -31,13 +31,15 @@ if ( global.battle.menu_focus == battle_focus.action_select ) {
 	}
 	
 	if ( check_select_pressed() ) {
-		global.battle.selected_actions[selected_player_index] = selected_player.equipped_skills[selected_index];
+		var _selected_player_index = selected_player_index; // local copy for scoping
+		global.battle.selected_actions[_selected_player_index] = selected_player.equipped_skills[selected_index];
 		selected_index = -1;
 		sprite_grid_x = 0;
 		sprite_grid_y = 0;
 		global.battle.next_menu_focus = battle_focus.target_player_select;
 		with( obj_battle_player_menu ) {
 			selected_index = 0;
+			selected_actor_index = _selected_player_index; // when selected they are the action actor
 		}
 	}
 

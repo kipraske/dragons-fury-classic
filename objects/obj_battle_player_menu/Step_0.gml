@@ -21,7 +21,7 @@ if ( global.battle.menu_focus == battle_focus.player_select ) {
 		
 		if (selected_index < array_length(global.battle.player_frontline) ){
 			var _selected_player = global.battle.player_frontline[_selected_player_index];
-			var _selected_player_is_frontend = true;;
+			var _selected_player_is_frontend = true;
 		} else {
 			var _selected_player = global.battle.player_backline[_selected_player_index - array_length(global.battle.player_frontline)];
 			var _selected_player_is_backend = true;
@@ -75,9 +75,6 @@ if ( global.battle.menu_focus == battle_focus.target_player_select ) {
 	}
 	
 	if ( check_select_pressed() ) {
-		// Switch focus to the action select menu
-		// TODO - testing
-
 		var _selected_player_index = selected_index;
 		var _selected_player_is_frontend = false;
 		var _selected_player_is_backend = false;
@@ -90,9 +87,9 @@ if ( global.battle.menu_focus == battle_focus.target_player_select ) {
 			var _selected_player_is_backend = true;
 		}
 
-		global.battle.selected_targets[selected_index] = _selected_player;
-		
+		global.battle.selected_targets[selected_actor_index] = _selected_player;
 		global.battle.next_menu_focus = battle_focus.player_select;
+		selected_actor_index = -1;
 		
 		// Here - hook up display back and other thing but let it have a solid default for if none use noone
 		

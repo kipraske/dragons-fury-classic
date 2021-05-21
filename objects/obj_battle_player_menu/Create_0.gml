@@ -20,6 +20,7 @@ action_top_padding = 12
 
 // Functionality Variables
 menu_length = array_length(global.battle.player_frontline) + array_length(global.battle.player_backline);
-selected_index = -1;
+selected_index = -1; // The menu target selection
 xx = xstart;
 yy = ystart;
+selected_actor_index = -1; // Selected previously, this is just used for targeting

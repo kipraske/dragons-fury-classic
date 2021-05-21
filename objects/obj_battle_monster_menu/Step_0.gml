@@ -18,6 +18,13 @@ if ( global.battle.menu_focus == battle_focus.monster_select && global.battle.me
 	if ( check_select_pressed() ) {
 		// Open known monster stats
 	}
+	
+	if ( check_cancel_pressed() ){
+		global.battle.next_menu_focus = battle_focus.pause_menu;
+		with (obj_battle_pause_menu ){
+			selected_index = 0;
+		}
+	}
 
 	if (selected_index < 0 ) {
 		selected_index = -1;
@@ -53,6 +60,10 @@ if ( global.battle.menu_focus == battle_focus.target_monster_select && global.ba
 	
 	if ( check_select_pressed() ) {
 		// TODO - target selected monster
+	}
+	
+	if ( check_cancel_pressed() ){
+		global.battle.next_menu_focus = battle_focus.action_select;
 	}
 
 	if (selected_index < 0 ) {

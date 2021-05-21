@@ -44,8 +44,8 @@ for ( var i = 0; i < _frontline_length; i++ ) {
 }
 
 // Backline characters are always at the bottom
-draw_set_color(c_grey);
 for ( var i = 0; i < _backline_length; i++ ) {
+	draw_set_color(c_grey);
 	draw_set_font(ft_default);
 	draw_set_halign(fa_left);
 	draw_text_shadow( xx + 3*menu_sprite_gap -2, yy + menu_item_spacing*(i + _frontline_length), global.battle.player_backline[i].name);

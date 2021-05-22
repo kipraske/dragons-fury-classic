@@ -9,8 +9,15 @@ if (global.battle.menu_focus != battle_focus.action_select ) {
 
 	for (var i = 0; i < menu_length; i++){
 		draw_text_shadow(xx + padding, yy + i*menu_spacing + padding, global.battle.monster_units[i].name);
+		
+		// Draw targeting icon with this monster selected
+		if (global.battle.menu_focus == battle_focus.target_monster_select && i = selected_index){
+			var _monst_coord = get_monster_cooridinates(global.battle.monster_layout);
+			draw_sprite(spr_exclamation_bubble, 0, _monst_coord[i][0], _monst_coord[i][1]);
+		}
 	}
 	
+	// Draw the little hand
 	if ( selected_index != -1 && ( global.battle.menu_focus == battle_focus.monster_select || global.battle.menu_focus == battle_focus.target_monster_select )) {
 		y = yy + menu_spacing*selected_index + 0.5*menu_spacing - sprite_up_adjust;
 		x = string_width(global.battle.monster_units[selected_index].name) + padding + 4;

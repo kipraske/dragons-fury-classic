@@ -13,7 +13,9 @@ if (global.battle.menu_focus != battle_focus.action_select ) {
 		// Draw targeting icon with this monster selected
 		if (global.battle.menu_focus == battle_focus.target_monster_select && i = selected_index){
 			var _monst_coord = get_monster_cooridinates(global.battle.monster_layout);
-			draw_sprite(spr_exclamation_bubble, 0, _monst_coord[i][0], _monst_coord[i][1]);
+			var _select_offset_x = global.battle.monster_units[i].select_coord[0];
+			var _select_offset_y = global.battle.monster_units[i].select_coord[1];
+			draw_sprite(spr_exclamation_bubble, 0, _monst_coord[i][0] + _select_offset_x, _monst_coord[i][1] + _select_offset_y);
 		}
 	}
 	

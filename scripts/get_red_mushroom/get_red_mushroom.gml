@@ -13,6 +13,7 @@ function get_red_mushroom(){
 		name: "Red Mushroom",
 		level: 1,
 		pattern: attack_pattern.random,
+		select_coord: [64, 44],							// Offset from top right to display select target
 		battle_attr: fill_array( attr.length, [0, 0] ), // status effects: 0-level, 1-duration
 		perm_attr: fill_array( attr.length, 0 ),        // perminent effects: level
 		base_stats: fill_array( stats.length, 0 ),      // monsters don't have skills/equipment. They have base stats

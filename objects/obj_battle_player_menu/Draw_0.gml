@@ -43,7 +43,7 @@ for ( var i = 0; i < _frontline_length; i++ ) {
 	}
 	
 	// Draw targeting icon with player unit selected Remember 2/9/4/9 settings. See object manager for positions
-	if (global.battle.menu_focus == battle_focus.target_player_select){
+	if (global.battle.menu_focus == battle_focus.target_player_select && i = selected_index){
 		draw_sprite(spr_exclamation_bubble, 0, room_width - 85, (i+1)*2*room_height/9 - 16)
 	}
 }

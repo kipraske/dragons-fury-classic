@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "settings",
-    "path": "sprites/settings/settings.yy",
+    "name": "spr_settings_icon",
+    "path": "sprites/spr_settings_icon/spr_settings_icon.yy",
   },
   "solid": false,
   "visible": true,

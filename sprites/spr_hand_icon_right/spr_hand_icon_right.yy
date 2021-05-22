@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "icons",
-    "path": "folders/Sprites/icons.yy",
+    "name": "menus",
+    "path": "folders/Sprites/icons/menus.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_hand_icon_right",

@@ -1,0 +1,3 @@
+menu_width = 2*room_width/3;
+menu_height = room_height/12;
+padding = 10;

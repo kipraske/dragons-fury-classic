@@ -1,5 +1,15 @@
 {
-    "boy_names": [
+    "main_characters": [
+        "Alfred",
+        "Ashley",
+        "Catherine",
+        "Earnest",
+        "Isabelle",
+        "Mary",
+        "Thomas"
+    ],
+    "bosses": [],
+    "npc_male": [
         "Liam",
         "Noah",
         "Levi",
@@ -163,6 +173,7 @@
         "Silas",
         "Simon",
         "Soren",
+        "Steve",
         "Sylas",
         "Tadeo",
         "Terry",
@@ -175,7 +186,7 @@
         "Wayne",
         "Yosef"
     ],
-    "girl_names": [
+    "npc_female": [
         "Emma",
         "Luna",
         "Ella",

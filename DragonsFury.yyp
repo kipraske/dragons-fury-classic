@@ -82,6 +82,7 @@
     {"id":{"name":"spr_catherine_up","path":"sprites/spr_catherine_up/spr_catherine_up.yy",},"order":4,},
     {"id":{"name":"obj_battle_pause_menu","path":"objects/obj_battle_pause_menu/obj_battle_pause_menu.yy",},"order":9,},
     {"id":{"name":"get_blue_mushroom","path":"scripts/get_blue_mushroom/get_blue_mushroom.yy",},"order":0,},
+    {"id":{"name":"name_helpers","path":"scripts/name_helpers/name_helpers.yy",},"order":7,},
     {"id":{"name":"spr_thomas_up","path":"sprites/spr_thomas_up/spr_thomas_up.yy",},"order":4,},
     {"id":{"name":"spr_mary_laugh","path":"sprites/spr_mary_laugh/spr_mary_laugh.yy",},"order":7,},
     {"id":{"name":"spr_earnest_up","path":"sprites/spr_earnest_up/spr_earnest_up.yy",},"order":4,},
@@ -94,6 +95,7 @@
     {"id":{"name":"spr_thomas_surprise","path":"sprites/spr_thomas_surprise/spr_thomas_surprise.yy",},"order":8,},
     {"id":{"name":"earnest","path":"scripts/earnest/earnest.yy",},"order":3,},
     {"id":{"name":"spr_earnest_surprise","path":"sprites/spr_earnest_surprise/spr_earnest_surprise.yy",},"order":8,},
+    {"id":{"name":"init_names","path":"scripts/init_names/init_names.yy",},"order":4,},
     {"id":{"name":"alfred","path":"scripts/alfred/alfred.yy",},"order":0,},
     {"id":{"name":"spr_ashley_left","path":"sprites/spr_ashley_left/spr_ashley_left.yy",},"order":2,},
     {"id":{"name":"spr_mary_left","path":"sprites/spr_mary_left/spr_mary_left.yy",},"order":3,},
@@ -190,6 +192,7 @@
     {"CopyToMask":-1,"filePath":"datafiles/mobs","resourceVersion":"1.0","name":"purple_mushroom.json","resourceType":"GMIncludedFile",},
     {"CopyToMask":153157610357391598,"filePath":"datafiles","resourceVersion":"1.0","name":"labels.json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"localization.md","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"names.json","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2.3.2.560",

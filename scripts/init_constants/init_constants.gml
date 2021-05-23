@@ -441,6 +441,13 @@ function init_constants(){
 		execute_button
 	}
 	
+	enum name_types {
+		player,
+		boss,
+		npc_male,
+		npc_female
+	}
+	
 	enum player_list {
 		alfred,
 		ashley,

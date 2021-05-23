@@ -1,6 +1,7 @@
 /// @function init_game_state
 //  @desc Loads Save Data if it exists, otherwise creates global initial values. Note saving happens piecemeal during transitions
 function init_game_state(){
+	randomize();
 
 	global.history = load_json_file("history.json");
 	

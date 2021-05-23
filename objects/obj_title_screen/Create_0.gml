@@ -7,3 +7,4 @@ set_display_ratio();
 init_constants();
 init_game_state();
 init_labels();
+init_names();

@@ -18,9 +18,9 @@ global.battle.player_backline = [
 global.battle.monster_layout = monster_layout_types.five
 
 global.battle.monster_units = [
-	get_red_mushroom(),
-	get_red_mushroom(),
-	get_red_mushroom(),
-	get_red_mushroom(),
-	get_red_mushroom()
+	get_red_mushroom( "Fred" ),
+	get_red_mushroom( "Rod" ),
+	get_red_mushroom( "Emily" ),
+	get_red_mushroom( "Funk" ),
+	get_red_mushroom( "Steve" )
 ];

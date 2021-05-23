@@ -7,3 +7,8 @@ To best create the localization files we will do the following steps on a new la
 For each new localization we will add a switch statement in the labels_init script which determines which labels.json file to use and which plot_tree folder to use. Use the standard localization suffixes. So
 
 labels_ES.json and plot_tree_ES will be for spanish
+
+Next, the other files are directly used from here, so make your localization from these
+* plot_tree
+* npc_names
+* main_names

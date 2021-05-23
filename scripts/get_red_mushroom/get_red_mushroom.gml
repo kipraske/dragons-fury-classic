@@ -8,9 +8,11 @@ function get_red_mushroom_sprites() {
 }
 
 // @desc provides template for creating this monster
-function get_red_mushroom(){
+// @param {string} label - extra data to differentiate this monster
+function get_red_mushroom( label ){
 	var monster =  {
-		name: "Red Mushroom",
+		full_name: "Red Mushroom",
+		name: "Red Mush" + " " + label,
 		level: 1,
 		pattern: attack_pattern.random,
 		select_coord: [64, 44],							// Offset from top right to display select target

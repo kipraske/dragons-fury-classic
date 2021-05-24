@@ -14,10 +14,14 @@ if (global.battle.menu_focus == battle_focus.action_select ) {
 	// We want to draw the sprite on top of the menu, so we wait to draw it until the end
 	var sprite_x = xx;
 	var sprite_y = yy;
-	
-	// Will need to get the players skills in these boxes based on selected player. For now just draw the 6 boxes here
+
 	for (var i = 0; i < menu_length; i++){
-	
+		
+		var _is_unselectable = (global.skill_targets_by_type[menu_skill_list[i]] == skill_target_types.passive); // passives and bound
+		if (_is_unselectable) {
+			draw_set_color(c_grey);
+		}
+
 		// Left Column
 		if (i % 2 == 0) {
 			var _row = i / 2;
@@ -43,6 +47,8 @@ if (global.battle.menu_focus == battle_focus.action_select ) {
 				sprite_x = xx + 0.5*menu_width + string_width(global.labels.skills[menu_skill_list[i]][0]) + padding + 4;
 			}
 		}
+		
+		draw_set_color(c_white); // reset for next loop
 	}
 	
 	if (selected_index != -1 ){

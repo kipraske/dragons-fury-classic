@@ -112,7 +112,7 @@ function init_constants(){
 		gold_up,
 		hammer_up,
 		accessory_up,
-		aggro_resist,
+		auto_aggro,
 		pierce_resist,
 		
 		// Oracle
@@ -210,7 +210,7 @@ function init_constants(){
 		skills.gold_up,
 		skills.hammer_up,
 		skills.accessory_up,
-		skills.aggro_resist,
+		skills.auto_aggro,
 		skills.pierce_resist
 	];
 	global.job_skills_by_type[jobs.druid] = [
@@ -282,7 +282,7 @@ function init_constants(){
 	global.skill_targets_by_type[skills.gold_up] = skill_target_types.passive;
 	global.skill_targets_by_type[skills.hammer_up] = skill_target_types.passive;
 	global.skill_targets_by_type[skills.accessory_up] = skill_target_types.passive;
-	global.skill_targets_by_type[skills.aggro_resist] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.auto_aggro] = skill_target_types.passive;
 	global.skill_targets_by_type[skills.pierce_resist] = skill_target_types.passive;
 	global.skill_targets_by_type[skills.passive_RES_up] = skill_target_types.passive;
 	global.skill_targets_by_type[skills.mimic] = skill_target_types.attack;

@@ -116,7 +116,7 @@ function init_labels(){
 			["Gold+", "Gain more gold post battle"],
 			["Hammer+", "Equipped Hammers are more effective"],
 			["Rings+", "Equipped Rings are more effective"],
-			["Taunt Resist", "Taunt effects are less likely to occur"],
+			["Auto Taunt", "Begin Battle with Taunt status effect"],
 			["Pierce Resist", "Pierce damage is reduced"],
 			
 			["LUK+", "Increases LUK stat"],

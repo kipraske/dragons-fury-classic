@@ -26,6 +26,8 @@ function get_red_mushroom( label ){
 			skills.attack,
 			skills.sleep,
 			skills.quake,
+			skills.noskill,
+			skills.noskill,
 		],
 		sprites: get_red_mushroom_sprites()
 	};

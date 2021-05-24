@@ -234,6 +234,113 @@ function init_constants(){
 		skills.earth_resist
 	];
 
+	// 
+	enum skill_target_types {
+		passive,
+		attack,
+		defense,
+		aoe_attack,
+		aoe_defense
+	}
+
+	// The skill
+	global.skill_targets_by_type[skills.length] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.flurry] = skill_target_types.attack;
+	global.skill_targets_by_type[skills.counter] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.mp_drain] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.unarmored_up] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.unarmed_up] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.pain_resist] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.blunt_resist] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.passive_DEF_up] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.defend] = skill_target_types.defense;
+	global.skill_targets_by_type[skills.last_stand] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.auto_revive] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.armor_up] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.shield_up] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.auto_regen] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.slash_resist] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.passive_HP_up] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.machine_gun] = skill_target_types.attack;
+	global.skill_targets_by_type[skills.potion] = skill_target_types.defense;
+	global.skill_targets_by_type[skills.grenade] = skill_target_types.aoe_attack;
+	global.skill_targets_by_type[skills.spear_up] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.gun_up] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.freeze_resist] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.magic_resist] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.passive_LUK_up] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.scan] = skill_target_types.attack;
+	global.skill_targets_by_type[skills.insight] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.xp_up] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.sword_up] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.dagger_up] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.poison_resist] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.sky_resist] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.passive_SPD_up] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.steal] = skill_target_types.attack;
+	global.skill_targets_by_type[skills.loot_up] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.gold_up] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.hammer_up] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.accessory_up] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.aggro_resist] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.pierce_resist] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.passive_RES_up] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.mimic] = skill_target_types.attack;
+	global.skill_targets_by_type[skills.hp_drain] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.rest_up] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.bow_up] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.ax_up] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.confusion_resist] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.sea_resist] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.passive_MP_up] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.double_cast] = skill_target_types.attack; // sort of, this one is weird
+	global.skill_targets_by_type[skills.mp_cost_down] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.mp_turbo] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.staff_up] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.book_up] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.sleep_resist] = skill_target_types.passive;
+	global.skill_targets_by_type[skills.earth_resist] = skill_target_types.passive;
+	
+	global.skill_targets_by_type[skills.void] = skill_target_types.attack;
+	
+	global.skill_targets_by_type[skills.sleep] = skill_target_types.attack;
+	global.skill_targets_by_type[skills.freeze] = skill_target_types.attack;
+	global.skill_targets_by_type[skills.confuse] = skill_target_types.attack;
+	global.skill_targets_by_type[skills.pain] = skill_target_types.attack;
+	global.skill_targets_by_type[skills.purify] = skill_target_types.attack;
+	
+	global.skill_targets_by_type[skills.flash] = skill_target_types.attack;
+	global.skill_targets_by_type[skills.plague] = skill_target_types.attack;
+	global.skill_targets_by_type[skills.ATK_down] = skill_target_types.attack;
+	global.skill_targets_by_type[skills.LUK_down] = skill_target_types.attack;
+	global.skill_targets_by_type[skills.SPD_down] = skill_target_types.attack;
+	global.skill_targets_by_type[skills.aggro] = skill_target_types.defense;
+	global.skill_targets_by_type[skills.RES_down] = skill_target_types.attack;
+	global.skill_targets_by_type[skills.DEF_down] = skill_target_types.attack;
+	
+	global.skill_targets_by_type[skills.mp_regen] = skill_target_types.defense;
+	global.skill_targets_by_type[skills.revive] = skill_target_types.defense;
+	global.skill_targets_by_type[skills.ATK_up] = skill_target_types.defense;
+	global.skill_targets_by_type[skills.LUK_up] = skill_target_types.defense;
+	global.skill_targets_by_type[skills.SPD_up] = skill_target_types.defense;
+	global.skill_targets_by_type[skills.regen] = skill_target_types.defense;
+	global.skill_targets_by_type[skills.RES_up] = skill_target_types.defense;
+	global.skill_targets_by_type[skills.DEF_up] = skill_target_types.defense;
+	
+	global.skill_targets_by_type[skills.smite] = skill_target_types.attack;
+	global.skill_targets_by_type[skills.meteor] = skill_target_types.attack;
+	global.skill_targets_by_type[skills.ice] = skill_target_types.attack;
+	global.skill_targets_by_type[skills.thunder] = skill_target_types.attack;
+	global.skill_targets_by_type[skills.flood] = skill_target_types.attack;
+	global.skill_targets_by_type[skills.tornado] = skill_target_types.attack;
+	global.skill_targets_by_type[skills.quake] = skill_target_types.attack;
+	global.skill_targets_by_type[skills.poison] = skill_target_types.attack;
+	global.skill_targets_by_type[skills.heal] = skill_target_types.defense;
+	
+	global.skill_targets_by_type[skills.swap] = skill_target_types.defense;
+	global.skill_targets_by_type[skills.attack] = skill_target_types.attack;
+	global.skill_targets_by_type[skills.noskill] = skill_target_types.passive;
+	
 	// Just the base MP cost, will be multiplied each level
 	global.magic_base_mp_cost[skills.void] = 15;
 	
@@ -310,7 +417,7 @@ function init_constants(){
 	global.magic_learning_tree[skills.quake]    = [1, [skills.quake]];
 	global.magic_learning_tree[skills.poison]   = [1, [skills.poison]];
 	global.magic_learning_tree[skills.heal]     = [1, [skills.heal]];
-
+	
 	// Node level thresholds for learning new skill
 	#macro MAGIC_LEARN_THRESHOLD_2 4
 	#macro MAGIC_LEARN_THRESHOLD_3 10

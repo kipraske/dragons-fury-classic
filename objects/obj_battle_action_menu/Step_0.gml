@@ -9,6 +9,10 @@ if ( global.battle.menu_focus == battle_focus.action_select ) {
 	if (selected_index = -1 ) {
 		selected_index = 0;
 	}
+	
+	// Gotta make sure swap is in our equipped skills list
+	var menu_skill_list = selected_player.equipped_skills;
+	menu_skill_list[MAX_EQUIPPED_SKILLS] = skills.swap;
 
 	// If the input is not valid, keep going until you find one
 	 do {
@@ -53,15 +57,11 @@ if ( global.battle.menu_focus == battle_focus.action_select ) {
 			selected_index = 1 + 2*sprite_grid_y;
 		}
 	 }
-	 until  ( global.skill_targets_by_type[selected_player.equipped_skills[selected_index]] != skill_target_types.passive);
+	 until  ( global.skill_targets_by_type[menu_skill_list[selected_index]] != skill_target_types.passive);
 	
 	if ( check_select_pressed() ) {
 		var _selected_player_index = selected_player_index; // local copy for scoping
-		if (selected_index < MAX_EQUIPPED_SKILLS ) {
-			global.battle.selected_actions[_selected_player_index] = selected_player.equipped_skills[selected_index];
-		} else { // It's swap
-			global.battle.selected_actions[_selected_player_index] = skills.swap;
-		}
+		global.battle.selected_actions[_selected_player_index] = menu_skill_list[selected_index];
 		selected_index = -1;
 		sprite_grid_x = 0;
 		sprite_grid_y = 0;

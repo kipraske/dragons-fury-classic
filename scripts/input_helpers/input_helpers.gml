@@ -26,10 +26,10 @@ function check_select_pressed() {
 }
 
 function check_cancel_pressed() {
-	return keyboard_check_pressed(vk_escape);
+	return keyboard_check_pressed(vk_escape) == 1;
 }
 
 function check_pause_pressed() {
-	return keyboard_check_pressed(vk_escape);;
+	return keyboard_check_pressed(vk_escape) == 1;
 }
 

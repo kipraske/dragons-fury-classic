@@ -10,8 +10,8 @@ if ( global.battle.menu_focus == battle_focus.action_select ) {
 		selected_index = 0;
 	}
 
-	// Skip to the next input if we land somewhere not valid
-	// do {
+	// If the input is not valid, keep going until you find one
+	 do {
 		if ( check_down_pressed() ) {
 			selected_index += 2;
 			sprite_grid_y++;
@@ -52,8 +52,8 @@ if ( global.battle.menu_focus == battle_focus.action_select ) {
 			sprite_grid_x = sprite_grid_max_x;
 			selected_index = 1 + 2*sprite_grid_y;
 		}
-	// }
-	// until  ( global.skill_targets_by_type[selected_player.equipped_skills[selected_index]] != skill_target_types.passive);
+	 }
+	 until  ( global.skill_targets_by_type[selected_player.equipped_skills[selected_index]] != skill_target_types.passive);
 	
 	if ( check_select_pressed() ) {
 		var _selected_player_index = selected_player_index; // local copy for scoping

@@ -55,4 +55,10 @@ if ( global.battle.menu_focus == battle_focus.action_select ) {
 		global.battle.next_menu_focus = battle_focus.player_select
 	}
 	
+	// Whatever is selected gets the status description regardless of what you do here
+	var _status_text = global.labels.skills[selected_player.equipped_skills[selected_index]][1];
+	with (obj_battle_status){
+		status_text = _status_text;
+	}
+	
 }

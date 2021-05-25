@@ -18,22 +18,30 @@ if ( global.battle.menu_focus == battle_focus.action_select ) {
 	 do {
 		if ( check_down_pressed() ) {
 			selected_index += 2;
-			sprite_grid_y++;
+			//sprite_grid_y++;
 		}
 
 		if ( check_up_pressed() ) {
 			selected_index -= 2;
-			sprite_grid_y--;
+			//sprite_grid_y--;
 		}
 	
 		if ( check_right_pressed() ) {
 			selected_index += 1;
-			sprite_grid_x++;
+			//sprite_grid_x++;
 		}
 
 		if ( check_left_pressed() ) {
 			selected_index -= 1;
-			sprite_grid_x--;
+			//sprite_grid_x--;
+		}
+		
+		if ( selected_index > MAX_EQUIPPED_SKILLS ) {
+			selected_index = selected_index % (MAX_EQUIPPED_SKILLS + 1);
+		}
+		
+		if ( selected_index < 0 ) {
+			selected_index = (selected_index + MAX_EQUIPPED_SKILLS + 1) % (MAX_EQUIPPED_SKILLS + 1)
 		}
 		
 		// Loop around if we are past these, setting index to appropriate value

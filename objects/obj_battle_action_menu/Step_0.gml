@@ -18,10 +18,24 @@ if ( global.battle.menu_focus == battle_focus.action_select ) {
 	 do {
 		if ( check_down_pressed() ) {
 			selected_index += 2;
+			// swap columns if needed
+			if (selected_index > MAX_EQUIPPED_SKILLS && selected_index % 2 == 0){
+				selected_index = 1;
+			}
+			else if (selected_index > MAX_EQUIPPED_SKILLS && selected_index % 2 == 1) {
+				selected_index = 0;
+			}
 		}
 
 		if ( check_up_pressed() ) {
 			selected_index -= 2;
+			// swap columns if needed
+			if (selected_index < 0 && abs(selected_index) % 2 == 0){
+				selected_index = MAX_EQUIPPED_SKILLS;
+			}
+			else if (selected_index < 0 && abs(selected_index) % 2 == 1) {
+				selected_index = MAX_EQUIPPED_SKILLS - 1;	
+			}
 		}
 	
 		if ( check_right_pressed() ) {

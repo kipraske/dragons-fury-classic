@@ -27,7 +27,7 @@ if ( global.battle.menu_focus == battle_focus.action_select ) {
 	}
 
 	// If the input is not valid, keep going until you find one
-	 do {
+	do {
 		if ( check_down_pressed() ) {
 			selected_index += 2;
 			// swap columns if needed
@@ -65,8 +65,14 @@ if ( global.battle.menu_focus == battle_focus.action_select ) {
 		if ( selected_index < 0 ) {
 			selected_index = (selected_index + MAX_EQUIPPED_SKILLS + 1) % (MAX_EQUIPPED_SKILLS + 1)
 		}	
-	 }
-	 until  ( global.skill_targets_by_type[menu_skill_list[selected_index]] != skill_target_types.passive);
+	}
+	until  ( global.skill_targets_by_type[menu_skill_list[selected_index]] != skill_target_types.passive);
+	
+	// Whatever is selected gets the status description regardless of what you do here
+	var _status_text = global.labels.skills[menu_skill_list[selected_index]][1];
+	with (obj_battle_status){
+		status_text = _status_text;
+	}
 	
 	if ( check_select_pressed() ) {
 		var _selected_player_index = selected_player_index; // local copy for scoping
@@ -87,12 +93,6 @@ if ( global.battle.menu_focus == battle_focus.action_select ) {
 		sprite_grid_x = 0;
 		sprite_grid_y = 0;
 		global.battle.next_menu_focus = battle_focus.player_select
-	}
-	
-	// Whatever is selected gets the status description regardless of what you do here
-	var _status_text = global.labels.skills[selected_player.equipped_skills[selected_index]][1];
-	with (obj_battle_status){
-		status_text = _status_text;
 	}
 	
 }

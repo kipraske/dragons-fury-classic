@@ -53,7 +53,7 @@ function init_labels(){
 		skills: [
 			["", ""],
 			["Attack", "Use your weapon and deal damage"],
-			["Swap", "Change party member between front and back lines"],
+			["Swap", "Exchange party member with front line. Select self to just move"],
 		
 			["Heal", "Restores HP"],
 			["Poison", "Deals damage over time"],

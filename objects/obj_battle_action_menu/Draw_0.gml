@@ -7,9 +7,15 @@ if (global.battle.menu_focus == battle_focus.action_select ) {
 	draw_set_font(ft_default);
 	draw_set_halign(fa_left);
 	
-	// Tack on swap skill to any player in the last slot
-	var menu_skill_list = selected_player.equipped_skills;
+	// ONLY swap available for backend units
+	var menu_skill_list = fill_array(MAX_EQUIPPED_SKILLS + 1, skills.noskill);
 	menu_skill_list[MAX_EQUIPPED_SKILLS] = skills.swap;
+	
+	// For frontend we have the unit skills + swap
+	if (selected_player_index < array_length(global.battle.player_frontline) ) {
+		menu_skill_list = selected_player.equipped_skills;
+		menu_skill_list[MAX_EQUIPPED_SKILLS] = skills.swap;
+	}
 	
 	// We want to draw the sprite on top of the menu, so we wait to draw it until the end
 	var sprite_x = xx;

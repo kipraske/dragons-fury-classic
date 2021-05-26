@@ -55,7 +55,7 @@ for ( var i = 0; i < _backline_length; i++ ) {
 	draw_set_halign(fa_left);
 	draw_text_shadow( xx + 3*menu_sprite_gap -2, yy + menu_item_spacing*(i + _frontline_length), global.battle.player_backline[i].name);
 	
-	draw_sprite(global.battle.player_backline[i].sprites.face, 0, xx + 2, yy + menu_item_spacing*(i + _frontline_length) + sub_menu_spacing - 2);
+	draw_sprite_ext(global.battle.player_backline[i].sprites.face, 0, xx + 2, yy + menu_item_spacing*(i + _frontline_length) + sub_menu_spacing - 2, 1, 1, 0, $888888, 1);
 	
 	// HP and MP Bars
 	var _hp_percent = global.battle.player_backline[i].battle_stats[stats.current_HP] / global.battle.player_backline[i].battle_stats[stats.current_HP] * 100;

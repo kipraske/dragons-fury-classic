@@ -45,6 +45,7 @@
     {"id":{"name":"spr_ashley_surprise","path":"sprites/spr_ashley_surprise/spr_ashley_surprise.yy",},"order":8,},
     {"id":{"name":"spr_ashley_nod","path":"sprites/spr_ashley_nod/spr_ashley_nod.yy",},"order":5,},
     {"id":{"name":"spr_alfred_up","path":"sprites/spr_alfred_up/spr_alfred_up.yy",},"order":4,},
+    {"id":{"name":"spr_skull_icon","path":"sprites/spr_skull_icon/spr_skull_icon.yy",},"order":0,},
     {"id":{"name":"spr_earnest_laugh","path":"sprites/spr_earnest_laugh/spr_earnest_laugh.yy",},"order":7,},
     {"id":{"name":"obj_battle_monster_unit","path":"objects/obj_battle_monster_unit/obj_battle_monster_unit.yy",},"order":5,},
     {"id":{"name":"spr_exclamation_bubble","path":"sprites/spr_exclamation_bubble/spr_exclamation_bubble.yy",},"order":6,},

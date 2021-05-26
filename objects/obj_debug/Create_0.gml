@@ -1,9 +1,6 @@
 /// @description set temporary state for testing code
 // You can write your code in this editor
 
-global.player.catherine.level = 20; // some extreme testing
-calculate_player_stats_and_attr( global.player.catherine );
-
 global.battle.player_frontline = [
 	global.player.catherine,
 	global.player.alfred,
@@ -24,3 +21,10 @@ global.battle.monster_units = [
 	get_red_mushroom( get_random_npc_name() ),
 	get_red_mushroom( get_random_npc_name() )
 ];
+
+// Level Catherine Way up to test ranges
+global.player.catherine.level = 9999; // some extreme testing
+calculate_player_stats_and_attr( global.player.catherine );
+
+// Make alfred dead
+global.player.alfred.battle_stats[stats.current_HP] = 0;

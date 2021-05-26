@@ -54,6 +54,7 @@ global.battle_obj_instances = {
 for (var i = 0; i < array_length(global.battle.player_frontline); i++) {
 	// players placed at 2/9, 4/9 and 6/9
 	global.battle_obj_instances.player_units[i] = instance_create_depth(room_width - unit_sprite_width*1.5, (i+1)*2*room_height/9, 0, obj_battle_player_unit);
+	global.battle_obj_instances.player_units[i].unit_index = i;
 	global.battle_obj_instances.player_units[i].sprite_index = global.battle.player_frontline[i].sprites.left;
 }
 

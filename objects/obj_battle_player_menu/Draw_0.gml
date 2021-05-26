@@ -12,11 +12,24 @@ draw_set_color(c_white);
 
 // Character Stats and actions (actual menu)
 for ( var i = 0; i < _frontline_length; i++ ) {
+	var _is_unit_dead = false;
+	var _is_unit_disabled = false;
+	var _sprite_shading = c_white;
+	if (global.battle.player_frontline[i].battle_stats[stats.current_HP] == 0) { // dead status
+		_is_unit_dead = true;
+		_sprite_shading = $888888;
+	}
+	
 	draw_set_font(ft_default);
 	draw_set_halign(fa_left);
 	draw_text_shadow( xx + 3*menu_sprite_gap -2, yy + menu_item_spacing*i, global.battle.player_frontline[i].name);
 
-	draw_sprite(global.battle.player_frontline[i].sprites.face, 0, xx + 2, yy + menu_item_spacing*i + sub_menu_spacing - 2);
+	draw_sprite_ext(global.battle.player_frontline[i].sprites.face, 0, xx + 2, yy + menu_item_spacing*i + sub_menu_spacing - 2, 1, 1, 0, _sprite_shading, 1);
+
+	// Draw status icons on portrait
+	if (_is_unit_dead) {
+		draw_sprite(spr_skull_icon, 0, xx + 22, yy + 24 + menu_item_spacing*i);
+	}
 
 	// HP and MP Bars
 	var _hp_percent = global.battle.player_frontline[i].battle_stats[stats.current_HP] / global.battle.player_frontline[i].battle_stats[stats.current_HP] * 100;

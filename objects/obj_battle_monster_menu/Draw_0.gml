@@ -8,6 +8,11 @@ if (global.battle.menu_focus != battle_focus.action_select ) {
 	draw_dialog_box(xx+1, yy+1, xx + menu_width, yy + menu_height-2, c_blue);
 
 	for (var i = 0; i < menu_length; i++){
+		
+		if ( global.battle.monster_units[i].battle_stats[stats.current_HP] == 0) { // dead
+			draw_set_color(c_grey);
+		}
+		
 		draw_text_shadow(xx + padding, yy + i*menu_spacing + padding, global.battle.monster_units[i].name);
 		
 		// Draw targeting icon with this monster selected
@@ -17,6 +22,8 @@ if (global.battle.menu_focus != battle_focus.action_select ) {
 			var _select_offset_y = global.battle.monster_units[i].select_coord[1];
 			draw_sprite(spr_exclamation_bubble, 0, _monst_coord[i][0] + _select_offset_x, _monst_coord[i][1] + _select_offset_y);
 		}
+		
+		draw_set_color(c_white);
 	}
 	
 	// Draw the little hand

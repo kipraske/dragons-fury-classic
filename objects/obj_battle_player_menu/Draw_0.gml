@@ -63,12 +63,24 @@ for ( var i = 0; i < _frontline_length; i++ ) {
 
 // Backline characters are always at the bottom
 for ( var i = 0; i < _backline_length; i++ ) {
+	var _is_unit_dead = false;
+	var _is_unit_disabled = false;
+	var _sprite_shading = $888888;
+	if (global.battle.player_backline[i].battle_stats[stats.current_HP] == 0) { // dead status
+		_is_unit_dead = true;
+	}
+	
 	draw_set_color(c_grey);
 	draw_set_font(ft_default);
 	draw_set_halign(fa_left);
 	draw_text_shadow( xx + 3*menu_sprite_gap -2, yy + menu_item_spacing*(i + _frontline_length), global.battle.player_backline[i].name);
 	
-	draw_sprite_ext(global.battle.player_backline[i].sprites.face, 0, xx + 2, yy + menu_item_spacing*(i + _frontline_length) + sub_menu_spacing - 2, 1, 1, 0, $888888, 1);
+	draw_sprite_ext(global.battle.player_backline[i].sprites.face, 0, xx + 2, yy + menu_item_spacing*(i + _frontline_length) + sub_menu_spacing - 2, 1, 1, 0, _sprite_shading, 1);
+	
+	// Draw status icons on portrait
+	if (_is_unit_dead) {
+		draw_sprite(spr_skull_icon, 0, xx + 22, yy + 24 + menu_item_spacing*(i + _frontline_length));
+	}
 	
 	// HP and MP Bars
 	var _hp_percent = global.battle.player_backline[i].battle_stats[stats.current_HP] / global.battle.player_backline[i].battle_stats[stats.current_HP] * 100;

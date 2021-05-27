@@ -29,3 +29,6 @@ calculate_player_stats_and_attr( global.player.catherine );
 // Make alfred dead
 global.player.alfred.battle_stats[stats.current_HP] = 0;
 global.player.thomas.battle_stats[stats.current_HP] = 0;
+
+// Make a monster dead
+global.battle.monster_units[1].battle_stats[stats.current_HP] = 0;

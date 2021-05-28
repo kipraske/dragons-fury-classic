@@ -15,8 +15,12 @@ if ( global.battle.menu_focus == battle_focus.monster_select && global.battle.me
 		selected_index -= 1;
 	}
 	
+	if ( check_right_pressed() || check_left_pressed() ) {
+		global.battle.next_menu_focus = battle_focus.execute_button;
+	}
+	
 	if ( check_select_pressed() ) {
-		// Open known monster stats
+		// ??? Originally it was for known monster stats, not sure if it will be anything
 	}
 	
 	if ( check_cancel_pressed() ){

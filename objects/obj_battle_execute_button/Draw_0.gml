@@ -5,4 +5,8 @@ if (global.battle.menu_focus != battle_focus.action_select &&  global.battle.men
 	draw_dialog_box(x, y, x + button_width, y + button_width, c_yellow);
 	draw_text_shadow(x + button_radius - 10, y + button_radius - 8, "Go"); // -6 is half the font size
 	draw_sprite( spr_play_icon, 0, x + button_radius - 4, y + 0.5*button_radius - 4);
+	
+	if (global.battle.menu_focus == battle_focus.execute_button ) {
+		draw_sprite(spr_hand_icon_left, 0, x + 2*button_radius - 4, y + 0.5*button_radius);
+	}
 }

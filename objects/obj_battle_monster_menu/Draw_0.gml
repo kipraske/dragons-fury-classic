@@ -15,12 +15,16 @@ if (global.battle.menu_focus != battle_focus.action_select ) {
 		
 		draw_text_shadow(xx + padding, yy + i*menu_spacing + padding, global.battle.monster_units[i].name);
 		
-		// Draw targeting icon with this monster selected
-		if (global.battle.menu_focus == battle_focus.target_monster_select && i = selected_index){
+		// Draw targeting icon with this monster selected wehther targeting or standard
+		if (i = selected_index){
 			var _monst_coord = get_monster_cooridinates(global.battle.monster_layout);
 			var _select_offset_x = global.battle.monster_units[i].select_coord[0];
 			var _select_offset_y = global.battle.monster_units[i].select_coord[1];
-			draw_sprite(spr_exclamation_bubble, 0, _monst_coord[i][0] + _select_offset_x, _monst_coord[i][1] + _select_offset_y);
+			if ( global.battle.menu_focus = battle_focus.target_monster_select ) {
+				draw_sprite(spr_exclamation_bubble, 0, _monst_coord[i][0] + _select_offset_x, _monst_coord[i][1] + _select_offset_y);
+			} else if (global.battle.menu_focus = battle_focus.monster_select) {
+				draw_sprite(spr_question_bubble, 0, _monst_coord[i][0] + _select_offset_x, _monst_coord[i][1] + _select_offset_y);
+			}
 		}
 		
 		draw_set_color(c_white);

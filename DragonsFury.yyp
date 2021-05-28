@@ -110,6 +110,7 @@
     {"id":{"name":"spr_background_plains","path":"sprites/spr_background_plains/spr_background_plains.yy",},"order":1,},
     {"id":{"name":"obj_battle_pause_button","path":"objects/obj_battle_pause_button/obj_battle_pause_button.yy",},"order":0,},
     {"id":{"name":"draw_helpers","path":"scripts/draw_helpers/draw_helpers.yy",},"order":3,},
+    {"id":{"name":"spr_question_bubble","path":"sprites/spr_question_bubble/spr_question_bubble.yy",},"order":7,},
     {"id":{"name":"spr_isabelle_laugh","path":"sprites/spr_isabelle_laugh/spr_isabelle_laugh.yy",},"order":7,},
     {"id":{"name":"spr_isabelle_nod","path":"sprites/spr_isabelle_nod/spr_isabelle_nod.yy",},"order":5,},
     {"id":{"name":"spr_catherine_down","path":"sprites/spr_catherine_down/spr_catherine_down.yy",},"order":1,},

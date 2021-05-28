@@ -57,7 +57,9 @@ if (global.battle.menu_focus == battle_focus.action_select ) {
 		draw_set_color(c_white); // reset for next loop
 	}
 	
-	if (selected_index != -1 ){
+	if (selected_index != -1 
+		&& global.skill_targets_by_type[menu_skill_list[selected_index]] != skill_target_types.passive // no hand for passives (in case it is first)
+	){
 		x = sprite_x;
 		y = sprite_y;
 		draw_self();

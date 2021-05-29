@@ -122,8 +122,10 @@ if (global.battle.menu_focus == battle_focus.action_select ) {
 
 
 // Draw the little hand, the x position is dynamic while xx is static above
-if ( selected_index != -1 ) {
+if (global.battle.menu_focus == battle_focus.player_select || global.battle.menu_focus = battle_focus.target_player_select ) {
+	if ( selected_index != -1 ) {
 	y = yy + menu_item_spacing*selected_index + 0.5*menu_item_spacing - sprite_up_adjust + grab_hand_y_adjust;
 	x = menu_width - 8 + grab_hand_x_adjust;
 	draw_self();
+	}
 }

@@ -22,13 +22,23 @@ function check_left_pressed(){
 }
 
 function check_select_pressed() {
-	return (max( keyboard_check_pressed(vk_enter), keyboard_check_pressed(vk_space) ) == 1);
+	return (max( 
+		keyboard_check_pressed(vk_enter),
+		keyboard_check_pressed(vk_space),
+		gamepad_button_check_pressed(0, gp_face2),
+		gamepad_button_check_pressed(0, gp_face3)
+		) == 1);
 }
 
 function check_cancel_pressed() {
-	return keyboard_check_pressed(vk_escape) == 1;
+	return (max( 
+		keyboard_check_pressed(vk_escape), 
+		gamepad_button_check_pressed(0, gp_face1),
+		gamepad_button_check_pressed(0, gp_face4),
+		) == 1);
 }
 
+// TODO - do we need start/stop buttons?
 function check_pause_pressed() {
 	return keyboard_check_pressed(vk_escape) == 1;
 }

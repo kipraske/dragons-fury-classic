@@ -5,6 +5,24 @@
 
 // To make things easy, and since it is a single player game. ALL game pad inputs will register input
 
+function init_gamepad_axis_pressed() {
+	global.axis_pressed = {
+		lv: 0,
+		lh: 0
+	}
+}
+
+function gamepad_axis_pressed( device, axis ) {
+	switch (axis) {
+		case gp_axislv:
+			global.axis_pressed.lv = sign(gamepad_axis_value(device, gp_axislv))
+			break;
+		case gp_axislh:
+			global.axis_pressed.lh = sign(gamepad_axis_value(device, gp_axislh))
+			break;
+	}
+}
+
 function check_up_pressed(){
 	var _axis_up = 0;
 	if ( gamepad_axis_value(0, gp_axislv) < 0) {

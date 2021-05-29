@@ -5,21 +5,17 @@
 
 // To make things easy, and since it is a single player game. ALL game pad inputs will register input
 
-// @desc returns connected controller index if it is connected, and -1 if there isn't one
-function get_connected_controller_index() {
-	var gp_num = gamepad_get_device_count();
-	var button_pressed = 0;
-	for ( var i = 0; i < gp_num; i++ ) {
-		if gamepad_is_connected(i) {
-			return i;
-		} else { 
-			return -1;
-		}
-	}
-}
-
 function check_up_pressed(){
-	return (keyboard_check_pressed(vk_up) == 1);
+	var _axis_up = 0;
+	if ( gamepad_axis_value(0, gp_axislv) < 0) {
+		_axis_up = 1;
+	}
+
+	return (max(
+		keyboard_check_pressed(vk_up),
+		gamepad_button_check_pressed(0, gp_padu), 
+		_axis_up
+		) == 1);
 }
 
 function check_right_pressed(){
@@ -34,19 +30,12 @@ function check_left_pressed(){
 	return (keyboard_check_pressed(vk_left) == 1);
 }
 
-function check_select_pressed() {
-	var gamepad_button_index = get_connected_controller_index();
-	var is_gamepad_button = 0;
-	if ( gamepad_button_index > 0 ) {
-		is_gamepad_button = max(gamepad_button_check_pressed(gamepad_button_index, gp_face2), gamepad_button_check_pressed(gamepad_button_index, gp_face3));
-	}
-	
-	show_debug_message(gamepad_button_index);
-	
+function check_select_pressed() {	
 	return (max(
 		keyboard_check_pressed(vk_enter),
 		keyboard_check_pressed(vk_space),
-		is_gamepad_button,
+		gamepad_button_check_pressed(0, gp_face2), 
+		gamepad_button_check_pressed(0, gp_face3)
 		) == 1);
 }
 

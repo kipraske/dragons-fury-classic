@@ -1,8 +1,11 @@
 /// @function init_game_state
 //  @desc Loads Save Data if it exists, otherwise creates global initial values. Note saving happens piecemeal during transitions
 function init_game_state(){
+	// Things that we just want to do at the beginning of the game
 	randomize();
+	gamepad_set_axis_deadzone(0, 0.7);
 
+	// Start loading globals
 	global.history = load_json_file("history.json");
 	
 	// Debugging line to reinitialize every time

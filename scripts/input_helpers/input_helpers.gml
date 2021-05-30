@@ -7,6 +7,7 @@
 
 function init_gamepad_axis_pressed_as_button() {
 	global.last_axis_as_button = 0;
+	global.axis_frame_hold = false;
 }
 
 // @desc making the analog sticks work like gamepad_button_check_pressed
@@ -14,44 +15,49 @@ function init_gamepad_axis_pressed_as_button() {
 function gamepad_axis_pressed_as_button( device, button_equivalent) {
 	if (gamepad_axis_value(device, gp_axislv) == 0 && gamepad_axis_value(device, gp_axislh) == 0) {
 		global.last_axis_as_button = 0;
+		global.axis_frame_hold = false;
+	}
+	
+	if ( global.axis_frame_hold ) {
+		return 0;
 	}
 	
 	switch (button_equivalent) {
 		case gp_padu:
-			if (gamepad_axis_value(device, gp_axislv) < 0 
-				&& gamepad_axis_value(device, gp_axislh) == 0
-				&& global.last_axis_as_button != gp_padu)
+			if (gamepad_axis_value(device, gp_axislv) < 0)
 			{
 				global.last_axis_as_button = gp_padu;
+				global.axis_frame_hold = true;
 				return 1;
 			}
+			break;
 		case gp_padr:
-			if (gamepad_axis_value(device, gp_axislh) > 0
-				&& gamepad_axis_value(device, gp_axislv) == 0
-				&& global.last_axis_as_button != gp_padr) 
+			if (gamepad_axis_value(device, gp_axislh) > 0) 
 			{
 				global.last_axis_as_button = gp_padr;
+				global.axis_frame_hold = true;
 				return 1;
 			}
+			break;
 		case gp_padd:
-			if (gamepad_axis_value(device, gp_axislv) > 0
-				&& gamepad_axis_value(device, gp_axislh) == 0
-				&& global.last_axis_as_button != gp_padd) 
+			if (gamepad_axis_value(device, gp_axislv) > 0) 
 			{
 				global.last_axis_as_button = gp_padd;
+				global.axis_frame_hold = true;
 				return 1;
 			}
+			break;
 		case gp_padl:
-			if (gamepad_axis_value(device, gp_axislh) < 0
-				&& gamepad_axis_value(device, gp_axislv) == 0
-				&& global.last_axis_as_button != gp_padl) 
+			if (gamepad_axis_value(device, gp_axislh) < 0) 
 			{
 				global.last_axis_as_button = gp_padl;
+				global.axis_frame_hold = true;
 				return 1;
 			}
-		default: 
-			return 0;
+			break;
 	}
+	
+	return 0; // if nothing applies than we don't have input
 }
 
 function check_up_pressed(){

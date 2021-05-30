@@ -20,6 +20,12 @@ if ( global.battle.menu_focus == battle_focus.action_select ) {
 		menu_skill_list[MAX_EQUIPPED_SKILLS] = skills.swap;
 	}
 
+	// Lock in this frame's input so it doesn't change while we are looping for valid below
+	var _down = check_down_pressed();
+	var _up = check_up_pressed();
+	var _right = check_right_pressed();
+	var _left = check_left_pressed();
+
 	// If the first element is not valid we need to seek the first valid one. We ALWAYS have swap
 	// available so we should get to that at least
 	while ( global.skill_targets_by_type[menu_skill_list[selected_index]] == skill_target_types.passive ) {
@@ -28,7 +34,7 @@ if ( global.battle.menu_focus == battle_focus.action_select ) {
 
 	// If the input is not valid, keep going until you find one
 	do {
-		if ( check_down_pressed() ) {
+		if ( _down ) {
 			selected_index += 2;
 			// swap columns if needed
 			if (selected_index > MAX_EQUIPPED_SKILLS && selected_index % 2 == 0){
@@ -39,7 +45,7 @@ if ( global.battle.menu_focus == battle_focus.action_select ) {
 			}
 		}
 
-		if ( check_up_pressed() ) {
+		if ( _up ) {
 			selected_index -= 2;
 			// swap columns if needed
 			if (selected_index < 0 && abs(selected_index) % 2 == 0){
@@ -50,11 +56,11 @@ if ( global.battle.menu_focus == battle_focus.action_select ) {
 			}
 		}
 	
-		if ( check_right_pressed() ) {
+		if ( _right ) {
 			selected_index += 1;
 		}
 
-		if ( check_left_pressed() ) {
+		if ( _left ) {
 			selected_index -= 1;
 		}
 		

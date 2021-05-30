@@ -3,7 +3,7 @@
 function init_game_state(){
 	// Things that we just want to do at the beginning of the game
 	randomize();
-	init_gamepad_axis_pressed();
+	init_gamepad_axis_pressed_as_button();
 	gamepad_set_axis_deadzone(0, 0.7);
 
 	// Start loading globals

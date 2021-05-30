@@ -20,19 +20,19 @@ function gamepad_axis_pressed( device, axis ) {
 	switch (axis) {
 		case gp_axislv:
 			global.axis_pressed.lv = sign(gamepad_axis_value(device, gp_axislv))
-			if ( global.axis_pressed.lv == global.last_axis_pressed.lv ) {
-				return 0;
-			} else {
+			if ( global.axis_pressed.lv != global.last_axis_pressed.lv ) {
 				global.last_axis_pressed.lv = global.axis_pressed.lv;
 				return global.axis_pressed.lv;
+			} else {
+				return 0;
 			}
 		case gp_axislh:
 			global.axis_pressed.lh = sign(gamepad_axis_value(device, gp_axislh))
-			if ( global.axis_pressed.lh == global.last_axis_pressed.lh ) {
-				return 0;
-			} else {
+			if ( global.axis_pressed.lh != global.last_axis_pressed.lh ) {
 				global.last_axis_pressed.lh = global.axis_pressed.lh;
 				return global.axis_pressed.lh;
+			} else {
+				return 0;
 			}
 	}
 }

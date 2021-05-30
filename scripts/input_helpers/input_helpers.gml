@@ -50,16 +50,43 @@ function check_up_pressed(){
 		) == 1);
 }
 
-function check_right_pressed(){
-	return (keyboard_check_pressed(vk_right) == 1);
+function check_right_pressed(){	
+	var _axis_right = 0;
+	if ( gamepad_axis_pressed(0, gp_axislh) > 0) {
+		_axis_right = 1;
+	}
+
+	return (max(
+		keyboard_check_pressed(vk_right),
+		gamepad_button_check_pressed(0, gp_padr), 
+		_axis_right
+		) == 1);
 }
 
-function check_down_pressed(){
-	return (keyboard_check_pressed(vk_down) == 1);
+function check_down_pressed(){	
+	var _axis_down = 0;
+	if ( gamepad_axis_pressed(0, gp_axislv) > 0) {
+		_axis_down = 1;
+	}
+
+	return (max(
+		keyboard_check_pressed(vk_down),
+		gamepad_button_check_pressed(0, gp_padd), 
+		_axis_down
+		) == 1);
 }
 
 function check_left_pressed(){
-	return (keyboard_check_pressed(vk_left) == 1);
+	var _axis_left = 0;
+	if ( gamepad_axis_pressed(0, gp_axislh) < 0) {
+		_axis_left = 1;
+	}
+
+	return (max(
+		keyboard_check_pressed(vk_left),
+		gamepad_button_check_pressed(0, gp_padl), 
+		_axis_left
+		) == 1);
 }
 
 function check_select_pressed() {	

@@ -21,3 +21,5 @@ menu_items = [
 draw_set_font(ft_default);
 image_xscale = hand_width + 4 + string_width("Debug Battle 2");
 image_yscale = menu_spacing*array_length(menu_items);
+
+is_clicked = false;

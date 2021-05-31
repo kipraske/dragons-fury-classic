@@ -19,7 +19,8 @@ if (selected_index >= array_length(menu_items)) {
 }
 
 // Execute menu item
-if ( check_select_pressed() ) {
+if ( check_select_pressed() || is_clicked ) {
+	is_clicked = false;
 
 	switch (selected_index) {
 		case 0: // begin playing

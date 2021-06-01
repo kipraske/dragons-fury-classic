@@ -23,4 +23,7 @@ menu_length = array_length(global.battle.player_frontline) + array_length(global
 selected_index = -1; // The menu target selection
 xx = xstart;
 yy = ystart;
+hand_x = x;
+hand_y = y;
+hand_sprite = spr_hand_grab_left;
 selected_actor_index = -1; // Selected previously, this is just used for targeting

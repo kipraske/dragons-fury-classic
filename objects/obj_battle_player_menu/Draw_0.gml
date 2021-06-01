@@ -111,21 +111,21 @@ for ( var i = 0; i < _backline_length; i++ ) {
 }
 
 if (global.battle.menu_focus == battle_focus.action_select ) {
-	sprite_index = spr_hand_grab_left;
+	hand_sprite = spr_hand_grab_left;
 	grab_hand_x_adjust = -8;
 	grab_hand_y_adjust = -8;
 } else {
-	sprite_index = spr_hand_icon_left;
+	hand_sprite = spr_hand_icon_left;
 	grab_hand_x_adjust = 0;
 	grab_hand_y_adjust = 0;
 }
 
 
 // Draw the little hand, the x position is dynamic while xx is static above
-if (global.battle.menu_focus == battle_focus.player_select || global.battle.menu_focus = battle_focus.target_player_select ) {
+if (global.battle.menu_focus == battle_focus.player_select || global.battle.menu_focus = battle_focus.target_player_select || global.battle.menu_focus == battle_focus.action_select ) {
 	if ( selected_index != -1 ) {
-	y = yy + menu_item_spacing*selected_index + 0.5*menu_item_spacing - sprite_up_adjust + grab_hand_y_adjust;
-	x = menu_width - 8 + grab_hand_x_adjust;
-	draw_self();
+		hand_y = yy + menu_item_spacing*selected_index + 0.5*menu_item_spacing - sprite_up_adjust + grab_hand_y_adjust;
+		hand_x = menu_width - 8 + grab_hand_x_adjust;
+		draw_sprite(hand_sprite, 0, hand_x, hand_y);
 	}
 }

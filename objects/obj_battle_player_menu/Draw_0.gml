@@ -129,3 +129,6 @@ if (global.battle.menu_focus == battle_focus.player_select || global.battle.menu
 		draw_sprite(hand_sprite, 0, hand_x, hand_y);
 	}
 }
+
+// Mask for mouse
+draw_self();

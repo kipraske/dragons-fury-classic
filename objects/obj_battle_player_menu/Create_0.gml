@@ -27,3 +27,8 @@ hand_x = x;
 hand_y = y;
 hand_sprite = spr_hand_grab_left;
 selected_actor_index = -1; // Selected previously, this is just used for targeting
+
+// Scale Sprite Mask
+is_clicked = false;
+image_xscale = menu_width;
+image_yscale = menu_height;

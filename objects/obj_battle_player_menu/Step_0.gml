@@ -12,7 +12,8 @@ if ( global.battle.menu_focus == battle_focus.player_select ) {
 		selected_index -= 1;
 	}
 	
-	if ( check_select_pressed() ) {
+	if ( check_select_pressed() || is_clicked ) {
+		is_clicked = false;
 		var _selected_player_index = selected_index;
 		var _selected_player_is_frontend = false;
 		var _selected_player_is_backend = false;
@@ -39,7 +40,7 @@ if ( global.battle.menu_focus == battle_focus.player_select ) {
 		}
 	}
 	
-	if ( check_cancel_pressed() ){
+	if ( check_cancel_pressed() ) {
 		global.battle.next_menu_focus = battle_focus.pause_menu;
 		with (obj_battle_pause_menu ){
 			selected_index = 0;

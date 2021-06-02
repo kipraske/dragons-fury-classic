@@ -36,4 +36,7 @@ if (global.battle.menu_focus != battle_focus.action_select ) {
 		hand_x = string_width(global.battle.monster_units[selected_index].name) + padding + 4;
 		draw_sprite(spr_hand_icon_left, 0, hand_x, hand_y);
 	}
+	
+	// Draw mouse target mask
+	draw_self();
 }

@@ -19,9 +19,10 @@ if ( global.battle.menu_focus == battle_focus.monster_select && global.battle.me
 		global.battle.next_menu_focus = battle_focus.execute_button;
 	}
 	
-	if ( check_select_pressed() ) {
-		// ??? Originally it was for known monster stats, not sure if it will be anything
-	}
+	//if ( check_select_pressed() || is_clicked ) {
+	//  is_clicked = false
+	//	// ??? Originally it was for known monster stats, not sure if it will be anything
+	//}
 	
 	if ( check_cancel_pressed() ){
 		global.battle.next_menu_focus = battle_focus.pause_menu;
@@ -64,7 +65,8 @@ if ( global.battle.menu_focus == battle_focus.target_monster_select && global.ba
 	
 	var _actor_index = selected_actor_index; // local for scoping back into player menu (if needed)
 	
-	if ( check_select_pressed() ) {
+	if ( check_select_pressed() || is_clicked) {
+		is_clicked = false;
 		global.battle.selected_targets[selected_actor_index] = global.battle.monster_units[selected_index];
 		global.battle.next_menu_focus = battle_focus.player_select;
 		with (obj_battle_player_menu){

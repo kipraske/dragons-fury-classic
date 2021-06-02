@@ -32,9 +32,8 @@ if (global.battle.menu_focus != battle_focus.action_select ) {
 	
 	// Draw the little hand
 	if ( selected_index != -1 && ( global.battle.menu_focus == battle_focus.monster_select || global.battle.menu_focus == battle_focus.target_monster_select )) {
-		y = yy + menu_spacing*selected_index + 0.5*menu_spacing - sprite_up_adjust;
-		x = string_width(global.battle.monster_units[selected_index].name) + padding + 4;
-		draw_self();
+		hand_y = yy + menu_spacing*selected_index + 0.5*menu_spacing - sprite_up_adjust;
+		hand_x = string_width(global.battle.monster_units[selected_index].name) + padding + 4;
+		draw_sprite(spr_hand_icon_left, 0, hand_x, hand_y);
 	}
-	
 }

@@ -13,3 +13,5 @@ menu_length = array_length(global.battle.monster_units);
 selected_index = -1;
 xx = xstart;
 yy = ystart;
+hand_x = x;
+hand_y = y;

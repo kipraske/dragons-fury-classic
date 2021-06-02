@@ -1,4 +1,5 @@
 /// @description select item
-if ( global.battle.menu_focus = battle_focus.monster_select ) {
+if ( global.battle.menu_focus == battle_focus.monster_select || global.battle.menu_focus == battle_focus.target_monster_select ) {
 	is_clicked = true;
+	show_debug_message("select")
 }

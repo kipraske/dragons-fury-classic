@@ -78,7 +78,8 @@ if ( global.battle.menu_focus == battle_focus.target_player_select ) {
 		selected_index -= 1;
 	}
 	
-	if ( check_select_pressed() ) {
+	if ( check_select_pressed() || is_clicked) {
+		is_clicked = false;
 		var _selected_player_index = selected_index;
 		var _selected_player_is_frontend = false;
 		var _selected_player_is_backend = false;

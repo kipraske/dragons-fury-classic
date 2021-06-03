@@ -2,18 +2,14 @@
 
 // mouse_x and mouse_y are more complicated here because of the two columns:
 
-// left_column
+// left_column (even indexes)
 if ( mouse_x < 0.5*menu_width && mouse_x > 1 ) {
-	// mouse_y = yy + 1 + button_height*(1 + i/2)
-	selected_index = floor(2*(mouse_y - yy - 1 - button_height)/button_height);
-	show_debug_message("left col!");
+	selected_index = 2*floor((mouse_y - yy )/button_height);
 }
 
-// right_column
+// right_column (odd indexes)
 if ( mouse_x < menu_width && mouse_x > 0.5*menu_width ) {
-	// mouse_y = yy + 1 + button_height*(1 + (i-1)/2)
-	selected_index = floor((2*(mouse_y - yy - 1)/button_height) - 1);
-	show_debug_message("right col!");
+	selected_index = 2*floor((mouse_y - yy)/button_height) + 1;
 }
 
 show_debug_message(selected_index)

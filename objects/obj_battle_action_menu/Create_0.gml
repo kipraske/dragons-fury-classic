@@ -21,4 +21,4 @@ yy = ystart;
 // Scale Sprite Mask
 is_clicked = false;
 image_xscale = menu_width;
-image_yscale = menu_height;
+image_yscale = menu_height - 4; // don't go off the bottom!

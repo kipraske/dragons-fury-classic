@@ -17,3 +17,8 @@ selected_player_is_frontend = false;
 selected_player_is_backend = false;
 xx = xstart;
 yy = ystart;
+
+// Scale Sprite Mask
+is_clicked = false;
+image_xscale = menu_width;
+image_yscale = menu_height;

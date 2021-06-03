@@ -3,10 +3,10 @@
 if ( global.battle.menu_focus != battle_focus.action_select ) {
 	i = floor((mouse_y - yy - padding) / menu_spacing );
 	selected_index = i;
-}
-
-if ( global.battle.menu_focus == battle_focus.target_monster_select || global.battle.menu_focus == battle_focus.target_player_select ) {
+	
+	if ( global.battle.menu_focus == battle_focus.target_monster_select || global.battle.menu_focus == battle_focus.target_player_select ) {
 	global.battle.next_menu_focus = battle_focus.target_monster_select;
-} else {
-	global.battle.next_menu_focus = battle_focus.monster_select;
+	} else {
+		global.battle.next_menu_focus = battle_focus.monster_select;
+	}
 }

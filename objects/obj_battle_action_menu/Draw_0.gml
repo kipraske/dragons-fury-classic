@@ -18,8 +18,8 @@ if (global.battle.menu_focus == battle_focus.action_select ) {
 	}
 	
 	// We want to draw the sprite on top of the menu, so we wait to draw it until the end
-	var sprite_x = xx;
-	var sprite_y = yy;
+	var hand_x = xx;
+	var hand_y = yy;
 
 	for (var i = 0; i < menu_length; i++){
 		
@@ -36,8 +36,8 @@ if (global.battle.menu_focus == battle_focus.action_select ) {
 			
 			// Draw the select hand
 			if ( selected_index == i ){
-				sprite_y = yy + 1 + button_height*(_row) + 0.25*button_height - sprite_up_adjust;
-				sprite_x = xx + string_width(global.labels.skills[menu_skill_list[i]][0]) + padding + 4;
+				hand_y = yy + 1 + button_height*(_row) + 0.25*button_height - sprite_up_adjust;
+				hand_x = xx + string_width(global.labels.skills[menu_skill_list[i]][0]) + padding + 4;
 			}
 		}
 	
@@ -49,8 +49,8 @@ if (global.battle.menu_focus == battle_focus.action_select ) {
 		
 			// Draw the select hand
 			if (selected_index == i ) {
-				sprite_y = yy + 1 + button_height*(_row) + 0.25*button_height - sprite_up_adjust;
-				sprite_x = xx + 0.5*menu_width + string_width(global.labels.skills[menu_skill_list[i]][0]) + padding + 4;
+				hand_y = yy + 1 + button_height*(_row) + 0.25*button_height - sprite_up_adjust;
+				hand_x = xx + 0.5*menu_width + string_width(global.labels.skills[menu_skill_list[i]][0]) + padding + 4;
 			}
 		}
 		
@@ -60,12 +60,9 @@ if (global.battle.menu_focus == battle_focus.action_select ) {
 	if (selected_index != -1 
 		&& global.skill_targets_by_type[menu_skill_list[selected_index]] != skill_target_types.passive // no hand for passives (in case it is first)
 	){
-		x = sprite_x;
-		y = sprite_y;
-		draw_self();
+		draw_sprite(spr_hand_icon_left, 0, hand_x, hand_y);
 	}
 	
-	// Debugging where the menu is
-	// draw_text(menu_width+16, yy+32, selected_index);
-	
+	// Draw mouse target mask
+	draw_self();
 }

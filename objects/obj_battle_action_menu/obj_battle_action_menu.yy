@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_hand_icon_left",
-    "path": "sprites/spr_hand_icon_left/spr_hand_icon_left.yy",
+    "name": "spr_1px_mask_debug",
+    "path": "sprites/spr_1px_mask_debug/spr_1px_mask_debug.yy",
   },
   "solid": false,
   "visible": true,

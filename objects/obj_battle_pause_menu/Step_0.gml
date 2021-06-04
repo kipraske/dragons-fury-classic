@@ -2,6 +2,10 @@
 
 if (global.battle.menu_focus == battle_focus.pause_menu ) {
 
+	if (selected_index < 0) {
+		selected_index = 0;
+	}
+
 	if ( check_down_pressed() ) {
 		selected_index += 1;
 	}
@@ -20,8 +24,8 @@ if (global.battle.menu_focus == battle_focus.pause_menu ) {
 	}
 
 	// Execute menu item
-	if ( check_select_pressed() ) {
-
+	if ( check_select_pressed() || is_clicked ) {
+		is_clicked = false;
 		switch (selected_index) {
 			case 0: // Continue -- same as cancel below
 				global.battle.next_menu_focus = battle_focus.player_select;

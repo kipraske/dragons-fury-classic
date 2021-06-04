@@ -13,10 +13,13 @@ if (global.battle.menu_focus == battle_focus.pause_menu ) {
 	
 	// Text
 	for (var i = 0; i < array_length(menu_items); i++){
-		draw_text_shadow(room_width/2 + 0.5*sprite_width - box_offset_width, room_height/2 + i*menu_spacing - box_offset_height, menu_items[i]);	
+		draw_text_shadow(room_width/2 + 0.5*hand_width - box_offset_width, room_height/2 + i*menu_spacing - box_offset_height, menu_items[i]);	
 	}
 
-	y = room_height/2 + selected_index*menu_spacing - box_offset_height - sprite_up_adjust;
-	x = room_width/2 - box_offset_width - 0.5*sprite_width - 4;
+	hand_y = room_height/2 + selected_index*menu_spacing - box_offset_height - sprite_up_adjust;
+	hand_x = room_width/2 - box_offset_width - 0.5*hand_width - 4;
+	draw_sprite(spr_hand_icon_right, 0, hand_x, hand_y);
+	
+	// draw sprite mask
 	draw_self();
 }

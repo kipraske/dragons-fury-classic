@@ -5,5 +5,6 @@ spacing = 18;
 draw_set_font(ft_default);
 draw_set_color(c_white);
 
-draw_text( 240, 12, "Menu Focus" );
-draw_text( 240, 24, global.battle.menu_focus );
+with(obj_battle_pause_menu) {
+	draw_text( 240, 20, selected_index );
+}

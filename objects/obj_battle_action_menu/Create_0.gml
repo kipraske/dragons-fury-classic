@@ -17,6 +17,7 @@ selected_player_is_frontend = false;
 selected_player_is_backend = false;
 xx = xstart;
 yy = ystart;
+menu_skill_list = fill_array(MAX_EQUIPPED_SKILLS + 1, skills.noskill);
 
 // Scale Sprite Mask
 is_clicked = false;

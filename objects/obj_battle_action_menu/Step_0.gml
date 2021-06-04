@@ -11,7 +11,7 @@ if ( global.battle.menu_focus == battle_focus.action_select ) {
 	}
 	
 	// ONLY swap available for backend units
-	var menu_skill_list = fill_array(MAX_EQUIPPED_SKILLS + 1, skills.noskill);
+	menu_skill_list = fill_array(MAX_EQUIPPED_SKILLS + 1, skills.noskill);
 	menu_skill_list[MAX_EQUIPPED_SKILLS] = skills.swap;
 	
 	// For frontend we have the unit skills + swap
@@ -82,8 +82,8 @@ if ( global.battle.menu_focus == battle_focus.action_select ) {
 	
 	if ( check_select_pressed() || is_clicked ) {
 		is_clicked = false;
-		var _selected_player_index = selected_player_index; // local copy for scoping
-		if ( global.skill_targets_by_type[menu_skill_list[selected_index]] != skill_target_types.passive ) {
+		if (global.skill_targets_by_type[menu_skill_list[selected_index]] != skill_target_types.passive) {
+			var _selected_player_index = selected_player_index; // local copy for scoping
 			global.battle.selected_actions[_selected_player_index] = menu_skill_list[selected_index];
 		
 			with( obj_battle_player_menu ) {
@@ -96,7 +96,7 @@ if ( global.battle.menu_focus == battle_focus.action_select ) {
 			}
 			if ( global.skill_targets_by_type[menu_skill_list[selected_index]] == skill_target_types.defense ) {
 				global.battle.next_menu_focus = battle_focus.target_player_select;
-			} else { // it is an attack
+			} else { // it is an attack (can't be passive because we looped off those above)
 				global.battle.next_menu_focus = battle_focus.target_monster_select;
 			}
 		

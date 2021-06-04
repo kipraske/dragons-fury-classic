@@ -21,5 +21,6 @@ menu_skill_list = fill_array(MAX_EQUIPPED_SKILLS + 1, skills.noskill);
 
 // Scale Sprite Mask
 is_clicked = false;
+click_down_lock = false; // don't trigger click if on invalid item
 image_xscale = menu_width;
 image_yscale = menu_height - 4; // don't go off the bottom!

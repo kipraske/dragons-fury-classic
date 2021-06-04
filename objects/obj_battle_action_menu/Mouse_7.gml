@@ -1,3 +1,5 @@
 /// @description select item
 
-is_clicked = true;
+if ( global.battle.menu_focus == battle_focus.action_select ) {
+	is_clicked = true;
+}

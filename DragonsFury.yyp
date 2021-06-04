@@ -104,6 +104,7 @@
     {"id":{"name":"spr_isabelle_up","path":"sprites/spr_isabelle_up/spr_isabelle_up.yy",},"order":4,},
     {"id":{"name":"spr_isabelle_face","path":"sprites/spr_isabelle_face/spr_isabelle_face.yy",},"order":0,},
     {"id":{"name":"spr_ashley_up","path":"sprites/spr_ashley_up/spr_ashley_up.yy",},"order":4,},
+    {"id":{"name":"spr_1px_mask_debug_2","path":"sprites/spr_1px_mask_debug_2/spr_1px_mask_debug_2.yy",},"order":4,},
     {"id":{"name":"spr_mary_down","path":"sprites/spr_mary_down/spr_mary_down.yy",},"order":1,},
     {"id":{"name":"spr_purple_mushroom_down","path":"sprites/spr_purple_mushroom_down/spr_purple_mushroom_down.yy",},"order":0,},
     {"id":{"name":"spr_catherine_laugh","path":"sprites/spr_catherine_laugh/spr_catherine_laugh.yy",},"order":7,},

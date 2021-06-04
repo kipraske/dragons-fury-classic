@@ -1,6 +1,4 @@
-
-
-// mouse_x and mouse_y are more complicated here because of the two columns:
+// Note that the click box is only drawn for battle_focus.action_menu so we don't need to check for that here
 
 // left_column (even indexes)
 if ( mouse_x < 0.5*menu_width && mouse_x > 1 ) {
@@ -11,17 +9,3 @@ if ( mouse_x < 0.5*menu_width && mouse_x > 1 ) {
 if ( mouse_x < menu_width && mouse_x > 0.5*menu_width ) {
 	selected_index = 2*floor((mouse_y - yy)/button_height) + 1;
 }
-
-show_debug_message(selected_index)
-
-
-//if ( global.battle.menu_focus != battle_focus.action_select ) {
-//	i = floor((mouse_y - yy - padding) / menu_spacing );
-//	selected_index = i;
-	
-//	if ( global.battle.menu_focus == battle_focus.target_monster_select || global.battle.menu_focus == battle_focus.target_player_select ) {
-//	global.battle.next_menu_focus = battle_focus.target_monster_select;
-//	} else {
-//		global.battle.next_menu_focus = battle_focus.monster_select;
-//	}
-//}

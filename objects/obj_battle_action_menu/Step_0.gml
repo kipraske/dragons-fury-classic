@@ -80,25 +80,28 @@ if ( global.battle.menu_focus == battle_focus.action_select ) {
 		status_text = _status_text;
 	}
 	
-	if ( check_select_pressed() ) {
+	if ( check_select_pressed() || is_clicked ) {
+		is_clicked = false;
 		var _selected_player_index = selected_player_index; // local copy for scoping
-		global.battle.selected_actions[_selected_player_index] = menu_skill_list[selected_index];
+		if ( global.skill_targets_by_type[menu_skill_list[selected_index]] != skill_target_types.passive ) {
+			global.battle.selected_actions[_selected_player_index] = menu_skill_list[selected_index];
 		
-		with( obj_battle_player_menu ) {
-			selected_index = 0;
-			selected_actor_index = _selected_player_index; // when selected they are the action actor
-		}
-		with( obj_battle_monster_menu ) {
-			selected_index = 0;
-			selected_actor_index = _selected_player_index; // when selected they are the action actor
-		}
-		if ( global.skill_targets_by_type[menu_skill_list[selected_index]] == skill_target_types.defense ) {
-			global.battle.next_menu_focus = battle_focus.target_player_select;
-		} else {
-			global.battle.next_menu_focus = battle_focus.target_monster_select;
-		}
+			with( obj_battle_player_menu ) {
+				selected_index = 0;
+				selected_actor_index = _selected_player_index; // when selected they are the action actor
+			}
+			with( obj_battle_monster_menu ) {
+				selected_index = 0;
+				selected_actor_index = _selected_player_index; // when selected they are the action actor
+			}
+			if ( global.skill_targets_by_type[menu_skill_list[selected_index]] == skill_target_types.defense ) {
+				global.battle.next_menu_focus = battle_focus.target_player_select;
+			} else { // it is an attack
+				global.battle.next_menu_focus = battle_focus.target_monster_select;
+			}
 		
-		selected_index = -1;
+			selected_index = -1;
+		}
 	}
 
 	// Remember to reset the full battle state

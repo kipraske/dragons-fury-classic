@@ -19,6 +19,6 @@ hand_y = y;
 
 // Scale Sprite Mask (shift a bit down so we don't go off the edge too)
 is_clicked = false;
-image_xscale = menu_width;
+image_xscale = menu_width * 0.6; // leave room for execute button
 image_yscale = menu_height - padding;
 y = y + 0.5*padding;

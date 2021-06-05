@@ -11,7 +11,8 @@ if ( global.battle.menu_focus == battle_focus.execute_button ) {
 		global.battle.next_menu_focus = battle_focus.monster_select;
 	}
 	
-	if ( check_select_pressed() ) {
+	if ( check_select_pressed() || is_clicked ) {
+		is_clicked = false;
 		show_debug_message("move to execute phase");
 	}
 }

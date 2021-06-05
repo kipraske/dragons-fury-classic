@@ -48,7 +48,7 @@ global.battle_obj_instances = {
 		pause_button: instance_create_depth(room_width-32, 0, 0, obj_battle_pause_button),
 		pause_menu: instance_create_depth(0, 0, -1, obj_battle_pause_menu), // full screen overlay
 		status_menu: instance_create_depth(0, 0, 0, obj_battle_status),
-		execute_button: instance_create_depth(room_width/3 - 48 - 32, 0.7*room_height + 32, 0, obj_battle_execute_button)
+		execute_button: instance_create_depth(room_width/3 - 48 - 32, 0.7*room_height + 32, -1, obj_battle_execute_button)
 }
 
 for (var i = 0; i < array_length(global.battle.player_frontline); i++) {

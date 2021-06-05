@@ -9,4 +9,7 @@ if (global.battle.menu_focus != battle_focus.action_select &&  global.battle.men
 	if (global.battle.menu_focus == battle_focus.execute_button ) {
 		draw_sprite(spr_hand_icon_left, 0, x + 2*button_radius - 4, y + 0.5*button_radius);
 	}
+	
+	// Mouse click mask
+	draw_self();
 }

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_1px_mask_debug_2",
-    "path": "sprites/spr_1px_mask_debug_2/spr_1px_mask_debug_2.yy",
+    "name": "spr_1px_mask",
+    "path": "sprites/spr_1px_mask/spr_1px_mask.yy",
   },
   "solid": false,
   "visible": true,

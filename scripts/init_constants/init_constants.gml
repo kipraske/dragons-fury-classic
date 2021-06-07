@@ -525,15 +525,14 @@ function init_constants(){
 		linear
 	}
 	
-	//game state enums
+	//battle state enum (see obj_battle_manager)
 	enum battle_phase {
 		init,				// Set up objects/create events and animations
 		waiting_for_input,  // Objects available for input
-		execute_turn,       // Play battle animations in order
+		execute_turn,       // Play battle animations and skills in order, check for win/lose
 		backend_rest,       // Heal backend characters, move the dead to the backend
-		check_win,          // Check for win
-		check_lose,         // Check for lose (if not go back to waiting_for_input)
-		clean_up            // Destroy Battle
+		win,				// Win animations and transition to rewards
+		lose,				// Lose animations and transition to game over
 	}
 	
 	// the menus in battle, enum used for determining focus/active while entering input

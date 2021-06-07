@@ -5,9 +5,15 @@
 
 switch (global.battle.phase) {
 	case battle_phase.init:
-		// Set up objects/create events and animations
+		// Set up objects/create events and animations 
+		
+		global.battle.phase = battle_phase.waiting_for_input;
 		break;
 	case battle_phase.waiting_for_input:
+		if ( global.battle.menu_focus == battle_focus.no_focus ) {
+			global.battle.next_menu_focus = battle_focus.player_select;
+		}
+	
 		// This is what we have now. Menus are active and you can input stuff.
 		break;
 	case battle_phase.execute_turn:

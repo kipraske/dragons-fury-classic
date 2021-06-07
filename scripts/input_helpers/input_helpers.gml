@@ -104,7 +104,7 @@ function check_cancel_pressed() {
 }
 
 // TODO - do we need start/stop buttons?
+// What is the "start button on keybaord do?"
 function check_pause_pressed() {
 	return keyboard_check_pressed(vk_escape) == 1;
 }
-

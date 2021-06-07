@@ -5,4 +5,3 @@ if ( global.battle.player_frontline[unit_index].battle_stats[stats.current_HP] >
 	draw_self();
 }
 
-// Attack Animation Case

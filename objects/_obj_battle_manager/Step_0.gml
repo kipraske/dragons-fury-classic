@@ -7,7 +7,7 @@ switch (global.battle.phase) {
 	case battle_phase.init:
 		// Set up objects/create events and animations 
 		
-		global.battle.phase = battle_phase.waiting_for_input;
+		// global.battle.phase = battle_phase.waiting_for_input;
 		break;
 	case battle_phase.waiting_for_input:
 		if ( global.battle.menu_focus == battle_focus.no_focus ) {

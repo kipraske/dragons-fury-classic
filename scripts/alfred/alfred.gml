@@ -31,6 +31,7 @@ function alfred_init(){
 			hand1: {
 				item_name: "Magic Staff",
 				item_type: equipment_types.staff,
+				item_tier: equipment_tiers.common,
 				item_level: 1,
 				item_bonus: [attr.MP_up, attr.RES_up]
 			},
@@ -38,14 +39,16 @@ function alfred_init(){
 			body: {
 				item_name: "Magic Robe",
 				item_type: equipment_types.light_armor,
+				item_tier: equipment_tiers.common,
 				item_level: 1,
 				item_bonus: [attr.MP_up]
 			},
 			accessory: {
-				item_name: "Magic Ring",
-				item_type: equipment_types.ring,
+				item_name: "Magic Belt",
+				item_tier: equipment_tiers.common,
+				item_type: equipment_types.belt,
 				item_level: 1,
-				item_bonus: [attr.MP_up, attr.RES_up]
+				item_bonus: [attr.MP_up]
 			}
 		},
 		equipped_skills: [

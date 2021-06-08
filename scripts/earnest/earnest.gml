@@ -32,26 +32,30 @@ function earnest_init(){
 			hand1: {
 			    item_name: "Magic Sword",
 			    item_type: equipment_types.sword,
+				item_tier: equipment_tiers.common,
 			    item_level: 1,
 			    item_bonus: [attr.MP_up]
 			},
 			hand2: {
 			    item_name: "Robust Dagger",
 			    item_type: equipment_types.short_sword,
+				item_tier: equipment_tiers.common,
 			    item_level: 1,
 			    item_bonus: [attr.HP_up]
 			},
 			body: {
 			    item_name: "Heavy Leather Armor",
 			    item_type: equipment_types.medium_armor,
+				item_tier: equipment_tiers.common,
 			    item_level: 1,
 			    item_bonus: [attr.RES_up]
 			},
 			accessory: {
-			    item_name: "Lucky Ring",
-			    item_type: equipment_types.ring,
+			    item_name: "Lucky Cloak",
+			    item_type: equipment_types.cloak,
+				item_tier: equipment_tiers.common,
 			    item_level: 1,
-			    item_bonus: [attr.LUK_up, attr.DEF_up]
+			    item_bonus: [attr.LUK_up]
 			}
 		},
 		equipped_skills: [

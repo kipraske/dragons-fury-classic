@@ -32,10 +32,11 @@ function thomas_init(){
 			hand2: {},
 			body: {},
 			accessory: {
-			    item_name: "Strong Ring+",
-			    item_type: equipment_types.ring,
+			    item_name: "Strong Belt",
+			    item_type: equipment_types.belt,
+				item_tier: equipment_tiers.rare,
 			    item_level: 1,
-			    item_bonus: [attr.ATK_up, attr.HP_up, attr.SPD_up]
+			    item_bonus: [attr.ATK_up, attr.HP_up]
 			}
 		},
 		equipped_skills: [

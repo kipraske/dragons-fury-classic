@@ -31,6 +31,7 @@ function isabelle_init(){
 			hand1: {
 			    item_name: "Quick Rifle",
 			    item_type: equipment_types.rifle,
+				item_tier: equipment_tiers.common,
 			    item_level: 1,
 			    item_bonus: [attr.SPD_up]
 			},
@@ -38,14 +39,16 @@ function isabelle_init(){
 			body: {
 			    item_name: "Sturdy Leather Armor",
 			    item_type: equipment_types.medium_armor,
+				item_tier: equipment_tiers.common,
 			    item_level: 1,
 			    item_bonus: [attr.DEF_up]
 			},
 			accessory: {
-			    item_name: "Quick Ring",
-			    item_type: equipment_types.ring,
+			    item_name: "Robust Shoes",
+			    item_type: equipment_types.shoes,
+				item_tier: equipment_tiers.common,
 			    item_level: 1,
-			    item_bonus: [attr.SPD_up, attr.HP_up]
+			    item_bonus: [attr.HP_up]
 			}
 		},
 		equipped_skills: [

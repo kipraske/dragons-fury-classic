@@ -31,26 +31,30 @@ function mary_init(){
 			hand1: {
 			    item_name: "Sturdy Sword",
 			    item_type: equipment_types.sword,
+				item_tier: equipment_tiers.common,
 			    item_level: 1,
 			    item_bonus: [attr.DEF_up]
 			},
 			hand2: {
 			    item_name: "Robust Shield",
 			    item_type: equipment_types.shield,
+				item_tier: equipment_tiers.common,
 			    item_level: 1,
 			    item_bonus: [attr.HP_up]
 			},
 			body: {
 			    item_name: "Heavy Steel Plate",
 			    item_type: equipment_types.heavy_armor,
+				item_tier: equipment_tiers.common,
 			    item_level: 1,
 			    item_bonus: [attr.RES_up, attr.ATK_down]
 			},
 			accessory: {
-			    item_name: "Sturdy Ring",
-			    item_type: equipment_types.ring,
+			    item_name: "Sturdy Bracers",
+			    item_type: equipment_types.bracers,
+				item_tier: equipment_tiers.common,
 			    item_level: 1,
-			    item_bonus: [attr.DEF_up, attr.HP_up]
+			    item_bonus: [attr.DEF_up]
 			}
 		},
 		equipped_skills: [

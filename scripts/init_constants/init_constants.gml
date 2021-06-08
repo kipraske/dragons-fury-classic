@@ -472,7 +472,7 @@ function init_constants(){
 		off_hand,
 		two_hand,
 		armor,
-		ring
+		accessory,
 	}
 	
 	enum equipment_types {
@@ -495,11 +495,27 @@ function init_constants(){
 		light_armor, // all robes
 		medium_armor, // all leather
 		heavy_armor, // all steel plate
-		ring,
+		shoes,
+		necklace,
+		cloak,
+		bracers,
+		belt,
 		empty, // For no ring-situations
 	}
 	
-	global.equipment_slot_by_type[equipment_types.ring] = equipment_slots.ring;
+	enum equipment_tiers {
+		common,
+		rare,
+		legendary,
+		personal,
+		void
+	}
+	
+	global.equipment_slot_by_type[equipment_types.belt] = equipment_slots.accessory;
+	global.equipment_slot_by_type[equipment_types.bracers] = equipment_slots.accessory;
+	global.equipment_slot_by_type[equipment_types.cloak] = equipment_slots.accessory;
+	global.equipment_slot_by_type[equipment_types.necklace] = equipment_slots.accessory;
+	global.equipment_slot_by_type[equipment_types.shoes] = equipment_slots.accessory;
 	global.equipment_slot_by_type[equipment_types.heavy_armor] = equipment_slots.armor;
 	global.equipment_slot_by_type[equipment_types.medium_armor] = equipment_slots.armor;
 	global.equipment_slot_by_type[equipment_types.light_armor] = equipment_slots.armor;

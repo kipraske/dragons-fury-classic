@@ -31,6 +31,7 @@ function catherine_init(){
 			hand1: {
 			    item_name: "Lucky Hammer",
 			    item_type: equipment_types.hammer,
+				item_tier: equipment_tiers.common,
 			    item_level: 1,
 			    item_bonus: [attr.LUK_up,attr.HP_up]
 			},
@@ -38,14 +39,16 @@ function catherine_init(){
 			body: {
 			    item_name: "Agile Leather Armor",
 			    item_type: equipment_types.medium_armor,
+				item_tier: equipment_tiers.common,
 			    item_level: 1,
 			    item_bonus: [attr.SPD_up]
 			},
 			accessory: {
-			    item_name: "Lucky Ring",
-			    item_type: equipment_types.ring,
+			    item_name: "Lucky Necklace",
+			    item_type: equipment_types.necklace,
+				item_tier: equipment_tiers.common,
 			    item_level: 1,
-			    item_bonus: [attr.LUK_up, attr.SPD_up]
+			    item_bonus: [attr.LUK_up]
 			}
 		},
 		equipped_skills: [

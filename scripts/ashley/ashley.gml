@@ -31,6 +31,7 @@ function ashley_init(){
 			hand1: {
 			    item_name: "Robust Bow",
 			    item_type: equipment_types.bow,
+				item_tier: equipment_tiers.common,
 			    item_level: 1,
 			    item_bonus: [attr.HP_up, attr.DEF_up]
 			},
@@ -38,14 +39,16 @@ function ashley_init(){
 			body: {
 			    item_name: "Lucky Leather Armor",
 			    item_type: equipment_types.medium_armor,
+				item_tier: equipment_tiers.common,
 			    item_level: 1,
 			    item_bonus: [attr.LUK_up]
 			},
 			accessory: {
-			    item_name: "Heavy Ring",
-			    item_type: equipment_types.ring,
+			    item_name: "Heavy Shoes",
+			    item_type: equipment_types.shoes,
+				item_tier: equipment_tiers.common,
 			    item_level: 1,
-			    item_bonus: [attr.RES_up, attr.SPD_up]
+			    item_bonus: [attr.RES_up]
 			}
 		},
 		equipped_skills: [

@@ -8,7 +8,8 @@ if ( global.battle.phase == battle_phase.init && start_intro_animation ) {
 	//Start just off edge of screen (on lefT)
 	x = xstart - room_width/3;
 	direction = 0;
-	speed = 10;
+	var time = 30*1; // fps * animation time
+	speed = room_width/(3*time);
 }
 
 // Stop intro animation

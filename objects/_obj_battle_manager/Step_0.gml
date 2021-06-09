@@ -5,9 +5,13 @@
 
 switch (global.battle.phase) {
 	case battle_phase.init:
-		// Set up objects/create events and animations 
-		
-		// global.battle.phase = battle_phase.waiting_for_input;
+		// Intro Animation lasts 1 second, then move to the next phase (see player_unit/monster_unit)
+		if ( intro_animation_counter < intro_animation_end ) {
+			intro_animation_counter++
+		} else {
+			intro_animation_counter = 0;
+			global.battle.phase = battle_phase.waiting_for_input;
+		}
 		break;
 	case battle_phase.waiting_for_input:
 		if ( global.battle.menu_focus == battle_focus.no_focus ) {

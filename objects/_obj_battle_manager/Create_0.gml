@@ -1,5 +1,10 @@
 /// @description Coordinates the menus and sprites in battle
 
+// Animation timers
+intro_animation_counter = 0;
+intro_animation_end = game_get_speed(gamespeed_fps); // 1 sec
+
+// Object instance set upd
 unit_sprite_width = 52;
 
 global.battle.is_battle = true;

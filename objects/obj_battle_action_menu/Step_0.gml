@@ -84,6 +84,14 @@ if ( global.battle.menu_focus == battle_focus.action_select ) {
 		is_clicked = false;
 		if (global.skill_targets_by_type[menu_skill_list[selected_index]] != skill_target_types.passive) {
 			var _selected_player_index = selected_player_index; // local copy for scoping
+			
+			if ( selected_player_is_frontend ) {
+				global.battle.player_frontline[_selected_player_index].selected_action = menu_skill_list[selected_index]
+			} else if ( selected_player_is_backend ) {
+				global.battle.player_backline[_selected_player_index - array_length(global.battle.player_frontline)].selected_action = menu_skill_list[selected_index]
+			}
+			
+			// TODO - remove when removing it doesn't crash things
 			global.battle.selected_actions[_selected_player_index] = menu_skill_list[selected_index];
 		
 			with( obj_battle_player_menu ) {

@@ -7,11 +7,11 @@ global.battle.player_frontline = [
 	global.player.mary,
 ]
 
+array_delete(global.battle.player_frontline, 1, 1);
+
 global.battle.player_backline = [
 	global.player.thomas,
 	global.player.isabelle,
-	noone,
-	noone,
 ]
 
 global.battle.monster_layout = monster_layout_types.five

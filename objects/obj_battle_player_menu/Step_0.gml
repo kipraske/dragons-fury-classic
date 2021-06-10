@@ -87,11 +87,14 @@ if ( global.battle.menu_focus == battle_focus.target_player_select ) {
 		if (selected_index < array_length(global.battle.player_frontline) ){
 			var _selected_player = global.battle.player_frontline[_selected_player_index];
 			var _selected_player_is_frontend = true;
+			global.battle.player_frontline[_selected_player_index].selected_target = _selected_player;
 		} else {
 			var _selected_player = global.battle.player_backline[_selected_player_index - array_length(global.battle.player_frontline)];
 			var _selected_player_is_backend = true;
+			global.battle.player_backline[_selected_player_index - array_length(global.battle.player_frontline)].selected_target = _selected_player;
 		}
-
+		
+		// TODO - REmove this too soon
 		global.battle.selected_targets[selected_actor_index] = _selected_player;
 		global.battle.next_menu_focus = battle_focus.player_select;
 		selected_actor_index = -1;

@@ -80,13 +80,18 @@ if ( global.battle.menu_focus == battle_focus.target_player_select ) {
 	
 	if ( check_select_pressed() || is_clicked) {
 		is_clicked = false;
-		var _selected_player_index = selected_index;
 		
-		if (selected_index < array_length(global.battle.player_frontline) ){
-			var _selected_player = global.battle.player_frontline[_selected_player_index];
+		// Figure out target front vs back and get that object
+		if ( selected_index < array_length(global.battle.player_frontline) ) {
+			var _selected_player = global.battle.player_frontline[selected_index];
+		} else {
+			var _selected_player = global.battle.player_backline[selected_index - array_length(global.battle.player_frontline)];
+		}
+		
+		// Figure out actor front vs back and assign the target found above
+		if (selected_actor_index < array_length(global.battle.player_frontline) ){
 			global.battle.player_frontline[selected_actor_index].selected_target = _selected_player;
 		} else {
-			var _selected_player = global.battle.player_backline[_selected_player_index - array_length(global.battle.player_frontline)];
 			global.battle.player_backline[selected_actor_index - array_length(global.battle.player_frontline)].selected_target = _selected_player;
 		}
 		

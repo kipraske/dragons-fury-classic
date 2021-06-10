@@ -13,6 +13,7 @@ function get_red_mushroom( label ){
 	var monster =  {
 		full_name: "Red Mushroom",
 		name: "Red Mush" + " " + label,
+		unit_type: unit_types.monster,
 		level: 1,
 		pattern: attack_pattern.random,
 		select_coord: [64, 44],							// Offset from top right to display select target
@@ -21,13 +22,15 @@ function get_red_mushroom( label ){
 		base_stats: fill_array( stats.length, 0 ),      // monsters don't have skills/equipment. They have base stats
 		battle_stats: fill_array( stats.length, 0),     // stats adjusted from battle_attr
 		perm_stats: fill_array( stats.length, 0 ),      // calculated stats
+		selected_action: skills.noskill,
+		selected_target: noone,
 		total_xp: 0,
 		equipped_skills: [
 			skills.attack,
+			skills.attack,
 			skills.sleep,
 			skills.quake,
-			skills.noskill,
-			skills.noskill,
+			skills.quake,
 		],
 		sprites: get_red_mushroom_sprites()
 	};

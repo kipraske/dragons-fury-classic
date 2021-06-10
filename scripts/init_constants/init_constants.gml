@@ -587,6 +587,12 @@ function init_constants(){
 		npc_female
 	}
 	
+	enum unit_types {
+		player,
+		monster,
+		boss
+	}
+	
 	enum player_list {
 		alfred,
 		ashley,

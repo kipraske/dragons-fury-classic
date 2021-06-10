@@ -19,6 +19,7 @@ function earnest_get_sprites() {
 function earnest_init(){
 	return {
 		name: "Earnest",
+		unit_type: unit_types.player,
 		level: 1,
 		job: jobs.oracle,
 		battle_attr: fill_array( attr.length, [0, 0] ), // status effects: 0-level, 1-duration

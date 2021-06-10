@@ -19,6 +19,7 @@ function thomas_get_sprites() {
 function thomas_init(){
 	return {
 		name: "Thomas",
+		unit_type: unit_types.player,
 		level: 1,
 		job: jobs.monk,
 		battle_attr: fill_array( attr.length, [0, 0] ), // status effects: 0-level, 1-duration

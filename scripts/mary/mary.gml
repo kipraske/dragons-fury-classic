@@ -19,6 +19,7 @@ function mary_get_sprites() {
 function mary_init(){
 	return {
 		name: "Mary",
+		unit_type: unit_types.player,
 		level: 1,
 		job: jobs.knight,
 		battle_attr: fill_array( attr.length, [0, 0] ), // status effects: 0-level, 1-duration

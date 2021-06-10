@@ -19,6 +19,7 @@ function alfred_get_sprites() {
 function alfred_init(){
 	return {
 		name: "Alfred",
+		unit_type: unit_types.player,
 		level: 1,
 		job: jobs.mage,
 		battle_attr: fill_array( attr.length, [0, 0] ), // status effects: 0-level, 1-duration

@@ -1,6 +1,21 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function execute_unit_action( unit ){
-	show_debug_message( unit.name );
-	show_debug_message( unit.battle_stats[stats.SPD] );
+	
+	if ( unit.unit_type == unit_types.player ) {
+		// apply action based on selected_action/type
+		show_debug_message( unit.name );
+		show_debug_message( unit.selected_action );
+		if (unit.selected_target != noone ) {
+			show_debug_message (unit.selected_target.name);
+		}
+	} else { // monster and boss
+		if (unit.pattern = attack_pattern.random ) {
+			// Just pick something from list to apply
+		} else {
+			// Pick the next thing in the skill queue (create an index in the monster for next item).
+		}
+	}
+	
+
 }

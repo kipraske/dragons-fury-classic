@@ -19,6 +19,7 @@ function catherine_get_sprites() {
 function catherine_init(){
 	return {
 		name: "Catherine",
+		unit_type: unit_types.player,
 		level: 1,
 		job: jobs.thief,
 		battle_attr: fill_array( attr.length, [0, 0] ), // status effects: 0-level, 1-duration

@@ -19,6 +19,7 @@ function isabelle_get_sprites() {
 function isabelle_init(){
 	return {
 		name: "Isabelle",
+		unit_type: unit_types.player,
 		level: 1,
 		job: jobs.inventor,
 		battle_attr: fill_array( attr.length, [0, 0] ), // status effects: 0-level, 1-duration

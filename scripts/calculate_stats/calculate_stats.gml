@@ -1,11 +1,3 @@
-#macro stat_level_constant 0.7
-#macro stat_first_level_boost 7
-#macro player_base_stat 3
-#macro player_hp_multipler 10
-#macro monster_hp_multipler 25
-#macro monster_mp_multiplier 3
-#macro player_mp_multipler 3
-
 ///@desc takes equipment and skill info of a player to determine player stats
 // First we fill the perm_attr array, this will be used for raw resist/weakness + item stat bonuses
 // Next we will loop over the stat attr and add these to the stats on the player

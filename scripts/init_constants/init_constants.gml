@@ -2,10 +2,25 @@
 /// @desc defines all global enum and macros for the application, only call this once!
 function init_constants(){
 
+	// Stats and Battle Levers
+	#macro stat_level_constant 0.7
+	#macro stat_first_level_boost 7
+	#macro player_base_stat 3
+	#macro player_hp_multipler 10
+	#macro monster_hp_multipler 25
+	#macro monster_mp_multiplier 3
+	#macro player_mp_multipler 3
+	#macro speed_varience 0.2
+	#macro damage_varience 0.2
+
+	#macro player_damage_multiplier 3
+	#macro monster_damage_multipler 2
+
 	#macro MAX_FRONTEND_UNITS 3
 	#macro MAX_TOTAL_UNITS 5
 	#macro MAX_EQUIPPED_SKILLS 5
 
+	// Lots of Enums
 	enum stats {
 		MAX_HP,
 		MAX_MP,

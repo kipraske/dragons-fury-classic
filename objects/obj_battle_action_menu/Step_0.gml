@@ -90,9 +90,6 @@ if ( global.battle.menu_focus == battle_focus.action_select ) {
 			} else if ( selected_player_is_backend ) {
 				global.battle.player_backline[_selected_player_index - array_length(global.battle.player_frontline)].selected_action = menu_skill_list[selected_index]
 			}
-			
-			// TODO - remove when removing it doesn't crash things
-			global.battle.selected_actions[_selected_player_index] = menu_skill_list[selected_index];
 		
 			with( obj_battle_player_menu ) {
 				selected_index = 0;

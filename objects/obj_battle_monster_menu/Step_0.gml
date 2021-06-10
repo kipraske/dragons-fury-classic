@@ -73,10 +73,6 @@ if ( global.battle.menu_focus == battle_focus.target_monster_select && global.ba
 			global.battle.player_backline[selected_actor_index - array_length(global.battle.player_frontline)].selected_target = global.battle.monster_units[selected_index];
 		}
 		
-		// TODO - another place to remove
-		global.battle.selected_targets[selected_actor_index] = global.battle.monster_units[selected_index];
-		
-		
 		global.battle.next_menu_focus = battle_focus.player_select;
 		with (obj_battle_player_menu){
 			selected_index = _actor_index; // send you right back where you were

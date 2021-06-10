@@ -90,8 +90,8 @@ function init_game_state(){
 		global.battle = {
 			is_battle: false,
 			phase: battle_phase.init,
-			player_frontline: [],
-			player_backline: [],
+			player_frontline: [noone, noone, noone], // up to MAX_FRONTEND_UNITS
+			player_backline: [noone, noone, noone, noone], // up to MAX_TOTAL_UNITS - 1
 			monster_units: [],
 			monster_layout: 0,
 			menu_focus: battle_focus.no_focus,

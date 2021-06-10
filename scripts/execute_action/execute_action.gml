@@ -16,6 +16,4 @@ function execute_unit_action( unit ){
 			// Pick the next thing in the skill queue (create an index in the monster for next item).
 		}
 	}
-	
-
 }

@@ -3,13 +3,15 @@
 
 global.battle.player_frontline = [
 	global.player.catherine,
-	global.player.alfred,
+	noone,
 	global.player.mary,
 ]
 
 global.battle.player_backline = [
 	global.player.thomas,
 	global.player.isabelle,
+	noone,
+	noone,
 ]
 
 global.battle.monster_layout = monster_layout_types.five

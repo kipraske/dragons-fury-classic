@@ -25,6 +25,8 @@ function earnest_init(){
 		perm_attr: fill_array( attr.length, 0 ),        // perminent effects: level
 		battle_stats: fill_array( stats.length, 0),     // stats adjusted from battle_attr
 		perm_stats: fill_array( stats.length, 0 ),      // calculated stats
+		selected_action: skills.noskill,
+		selected_target: noone,
 		total_xp: 0,
 		total_xp: 0,
 		xp_pool: 0,

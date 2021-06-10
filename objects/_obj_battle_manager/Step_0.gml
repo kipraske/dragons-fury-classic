@@ -20,7 +20,34 @@ switch (global.battle.phase) {
 	
 		// This is what we have now. Menus are active and you can input stuff.
 		break;
+	case battle_phase.set_up_turn_order: {
+		// Set up turn order
+		for ( var i = 0; i < array_length(global.battle.player_frontline); i++ ) {
+			var player_speed = global.battle.player_frontline[i].battle_stats[stats.SPD];
+			// TODO - randomize +/- 20%
+			ds_priority_add( turn_order, global.battle.player_frontline[i], player_speed);
+		}
+		
+		for ( var i = 0; i < array_length(global.battle.player_backline); i++ ) {
+			var player_speed = global.battle.player_backline[i].battle_stats[stats.SPD];
+			// TODO - randomize +/- 20%
+			ds_priority_add( turn_order, global.battle.player_backline[i], player_speed);
+		}
+		
+		for ( var i = 0; i < array_length(global.battle.monster_units); i++ ) {
+			var monster_speed = global.battle.monster_units[i].battle_stats[stats.SPD];
+			// TODO - randomize +/- 20%
+			ds_priority_add( turn_order, global.battle.monster_units[i], monster_speed);
+		}
+		global.battle.phase = battle_phase.execute_turn;
+		break;
+	}
 	case battle_phase.execute_turn:
+		execute_unit_action( ds_priority_delete_max( turn_order ) );
+		
+		if ( ds_priority_empty( turn_order ) ) {
+			game_end();
+		}
 		// When you hit the "go" button this is what happens
 		// Create a priority queue based on unit speed and execute in order
 		// Check for Win/Lose happens after EVERY attack so we don't play the whole animation sequence

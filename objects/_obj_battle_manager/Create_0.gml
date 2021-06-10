@@ -1,4 +1,4 @@
-/// @description Coordinates the menus and sprites in battle
+// @description Coordinates the menus and sprites in battle
 
 // Animation timers
 intro_animation_counter = 0;
@@ -68,5 +68,6 @@ for (var i = 0; i < array_length(global.battle.monster_units); i++) {
 	global.battle_obj_instances.monster_units[i].unit_index = i;
 	global.battle_obj_instances.monster_units[i].sprite_index = global.battle.monster_units[i].sprites.right;
 	global.battle.monster_units[i].level = monster_level_avg;
-
 }
+
+turn_order = ds_priority_create();

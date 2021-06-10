@@ -13,6 +13,6 @@ if ( global.battle.menu_focus == battle_focus.execute_button ) {
 	
 	if ( check_select_pressed() || is_clicked ) {
 		is_clicked = false;
-		show_debug_message("move to execute phase");
+		global.battle.phase = battle_phase.set_up_turn_order;
 	}
 }

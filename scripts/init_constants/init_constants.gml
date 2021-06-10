@@ -545,6 +545,7 @@ function init_constants(){
 	enum battle_phase {
 		init,				// Set up objects/create events and animations
 		waiting_for_input,  // Objects available for input
+		set_up_turn_order,  // Prepare for execute turn phase
 		execute_turn,       // Play battle animations and skills in order, check for win/lose
 		backend_rest,       // Heal backend characters, move the dead to the backend
 		win,				// Win animations and transition to rewards

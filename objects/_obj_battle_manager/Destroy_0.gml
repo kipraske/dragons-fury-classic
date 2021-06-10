@@ -37,3 +37,4 @@ with(obj_battle_status){
 }
 
 delete global.battle_obj_instances;
+ds_priority_destroy(turn_order);

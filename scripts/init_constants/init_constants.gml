@@ -623,6 +623,18 @@ function init_constants(){
 	
 	enum location_list {
 	}
+	
+	enum government_types {
+		monarchy,     // default
+		plutocracy,   // catherine
+		technocracy,  // isabelle (communism)
+		dictatorship, // mary (military)
+		noocracy,     // alfred (beuracracy)
+		theocracy,    // thomas
+		federalism,   // earnest
+		anarchy,      // ashley
+		small         // everyone dies endings
+	}
 
 }
 

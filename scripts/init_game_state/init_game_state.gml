@@ -112,7 +112,7 @@ function init_game_state(){
 		    focus_character: noone,
 		    branch_phase: 0,
 		    epilogue_available: false,
-		    city_government: "monarchy"
+		    city_government: government_types.monarchy
 		}
 		save_json_file(global.game_tree,    "game_tree.json");
 		

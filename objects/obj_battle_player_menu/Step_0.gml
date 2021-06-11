@@ -26,7 +26,7 @@ if ( global.battle.menu_focus == battle_focus.player_select ) {
 			var _selected_player_is_backend = true;
 		}
 
-		if (_selected_player.battle_stats[stats.current_HP] > 0 ) { // only execute if they are not dead
+		if (_selected_player._battle_stats[stats.current_HP] > 0 ) { // only execute if they are not dead
 			// Switch focus to the action select menu
 			global.battle.next_menu_focus = battle_focus.action_select;
 
@@ -90,9 +90,9 @@ if ( global.battle.menu_focus == battle_focus.target_player_select ) {
 		
 		// Figure out actor front vs back and assign the target found above
 		if (selected_actor_index < array_length(global.battle.player_frontline) ){
-			global.battle.player_frontline[selected_actor_index].selected_target = _selected_player;
+			global.battle.player_frontline[selected_actor_index]._selected_target = _selected_player;
 		} else {
-			global.battle.player_backline[selected_actor_index - array_length(global.battle.player_frontline)].selected_target = _selected_player;
+			global.battle.player_backline[selected_actor_index - array_length(global.battle.player_frontline)]._selected_target = _selected_player;
 		}
 		
 		global.battle.next_menu_focus = battle_focus.player_select;

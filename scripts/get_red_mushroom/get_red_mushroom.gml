@@ -17,13 +17,13 @@ function get_red_mushroom( label ){
 		level: 1,
 		pattern: attack_pattern.random,
 		select_coord: [64, 44],							// Offset from top right to display select target
-		battle_attr: fill_array( attr.length, [0, 0] ), // status effects: 0-level, 1-duration
+		_battle_attr: fill_array( attr.length, [0, 0] ), // status effects: 0-level, 1-duration
 		perm_attr: fill_array( attr.length, 0 ),        // perminent effects: level
 		base_stats: fill_array( stats.length, 0 ),      // monsters don't have skills/equipment. They have base stats
-		battle_stats: fill_array( stats.length, 0),     // stats adjusted from battle_attr
+		_battle_stats: fill_array( stats.length, 0),     // stats adjusted from _battle_attr
 		perm_stats: fill_array( stats.length, 0 ),      // calculated stats
-		selected_action: skills.noskill,
-		selected_target: noone,
+		_selected_action: skills.noskill,
+		_selected_target: noone,
 		total_xp: 0,
 		equipped_skills: [
 			skills.attack,

@@ -68,9 +68,9 @@ if ( global.battle.menu_focus == battle_focus.target_monster_select && global.ba
 	if ( check_select_pressed() || is_clicked) {
 		is_clicked = false;
 		if (selected_actor_index < array_length(global.battle.player_frontline) ){
-			global.battle.player_frontline[selected_actor_index].selected_target = global.battle.monster_units[selected_index];
+			global.battle.player_frontline[selected_actor_index]._selected_target = global.battle.monster_units[selected_index];
 		} else { //backend
-			global.battle.player_backline[selected_actor_index - array_length(global.battle.player_frontline)].selected_target = global.battle.monster_units[selected_index];
+			global.battle.player_backline[selected_actor_index - array_length(global.battle.player_frontline)]._selected_target = global.battle.monster_units[selected_index];
 		}
 		
 		global.battle.next_menu_focus = battle_focus.player_select;

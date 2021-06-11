@@ -22,12 +22,14 @@ function isabelle_init(){
 		unit_type: unit_types.player,
 		level: 1,
 		job: jobs.inventor,
-		battle_attr: fill_array( attr.length, [0, 0] ), // status effects: 0-level, 1-duration
+		_battle_attr: fill_array( attr.length, [0, 0] ), // status effects: 0-level, 1-duration
 		perm_attr: fill_array( attr.length, 0 ),        // perminent effects: level
-		battle_stats: fill_array( stats.length, 0),     // stats adjusted from battle_attr
+		_battle_stats: fill_array( stats.length, 0),     // stats adjusted from _battle_attr
 		perm_stats: fill_array( stats.length, 0 ),      // calculated stats
-		selected_action: skills.noskill,
-		selected_target: noone,
+		_selected_action: skills.noskill,
+		_selected_target: noone,
+		_menu_position: 0,
+		_unit_position: 0,
 		total_xp: 0,
 		xp_pool: 0,
 		equipment: {

@@ -23,19 +23,19 @@ switch (global.battle.phase) {
 	case battle_phase.set_up_turn_order: {
 		// Set up turn order
 		for ( var i = 0; i < array_length(global.battle.player_frontline); i++ ) {
-			var player_speed = global.battle.player_frontline[i].battle_stats[stats.SPD];
+			var player_speed = global.battle.player_frontline[i]._battle_stats[stats.SPD];
 			var player_speed_varience = random_range( -player_speed*speed_varience, player_speed*speed_varience );
 			ds_priority_add( turn_order, global.battle.player_frontline[i], player_speed + player_speed_varience);
 		}
 		
 		for ( var i = 0; i < array_length(global.battle.player_backline); i++ ) {
-			var player_speed = global.battle.player_backline[i].battle_stats[stats.SPD];
+			var player_speed = global.battle.player_backline[i]._battle_stats[stats.SPD];
 			var player_speed_varience = random_range( -player_speed*speed_varience, player_speed*speed_varience );
 			ds_priority_add( turn_order, global.battle.player_backline[i], player_speed + player_speed_varience);
 		}
 		
 		for ( var i = 0; i < array_length(global.battle.monster_units); i++ ) {
-			var monster_speed = global.battle.monster_units[i].battle_stats[stats.SPD];
+			var monster_speed = global.battle.monster_units[i]._battle_stats[stats.SPD];
 			var monster_speed_varience = random_range( -monster_speed*speed_varience, monster_speed*speed_varience );
 			ds_priority_add( turn_order, global.battle.monster_units[i], monster_speed + monster_speed_varience);
 		}

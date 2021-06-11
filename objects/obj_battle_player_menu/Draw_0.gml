@@ -15,7 +15,7 @@ for ( var i = 0; i < _frontline_length; i++ ) {
 	var _is_unit_dead = false;
 	var _is_unit_disabled = false;
 	var _sprite_shading = c_white;
-	if (global.battle.player_frontline[i].battle_stats[stats.current_HP] == 0) { // dead status
+	if (global.battle.player_frontline[i]._battle_stats[stats.current_HP] == 0) { // dead status
 		_is_unit_dead = true;
 		_sprite_shading = $888888;
 	}
@@ -32,9 +32,9 @@ for ( var i = 0; i < _frontline_length; i++ ) {
 	}
 
 	// HP and MP Bars
-	var _hp_percent = global.battle.player_frontline[i].battle_stats[stats.current_HP] / global.battle.player_frontline[i].battle_stats[stats.current_HP] * 100;
+	var _hp_percent = global.battle.player_frontline[i]._battle_stats[stats.current_HP] / global.battle.player_frontline[i]._battle_stats[stats.current_HP] * 100;
 	draw_healthbar( xx + 3*menu_sprite_gap, yy + menu_item_spacing*i + hp_pos + 2, xx + menu_width - menu_left_padding, yy + menu_item_spacing*i + hp_pos + 10, _hp_percent, c_grey, c_red, c_green, 0, true, true);
-	var _mp_percent = global.battle.player_frontline[i].battle_stats[stats.current_MP] / global.battle.player_frontline[i].battle_stats[stats.current_MP] * 100;
+	var _mp_percent = global.battle.player_frontline[i]._battle_stats[stats.current_MP] / global.battle.player_frontline[i]._battle_stats[stats.current_MP] * 100;
 	draw_healthbar( xx + 3*menu_sprite_gap, yy + menu_item_spacing*i + mp_pos + 2, xx + menu_width - menu_left_padding, yy + menu_item_spacing*i + mp_pos + 10, _mp_percent, c_grey, c_navy, c_blue, 0, true, true);
 	
 	draw_set_font(ft_stat_heading);
@@ -43,16 +43,16 @@ for ( var i = 0; i < _frontline_length; i++ ) {
 	
 	draw_set_halign(fa_right);
 	draw_set_font(ft_damage);
-	draw_text_shadow( xx + menu_width - menu_left_padding, yy + menu_item_spacing*i + 0.5*hp_pos, global.battle.player_frontline[i].battle_stats[stats.current_HP]);
-	draw_text_shadow( xx + menu_width - menu_left_padding, yy + menu_item_spacing*i + mp_pos, global.battle.player_frontline[i].battle_stats[stats.current_MP]);
+	draw_text_shadow( xx + menu_width - menu_left_padding, yy + menu_item_spacing*i + 0.5*hp_pos, global.battle.player_frontline[i]._battle_stats[stats.current_HP]);
+	draw_text_shadow( xx + menu_width - menu_left_padding, yy + menu_item_spacing*i + mp_pos, global.battle.player_frontline[i]._battle_stats[stats.current_MP]);
 
 	// The selected skills
-	if ( global.battle.player_frontline[i].selected_action != skills.noskill && global.battle.player_frontline[i].selected_target != noone) {
+	if ( global.battle.player_frontline[i]._selected_action != skills.noskill && global.battle.player_frontline[i]._selected_target != noone) {
 		draw_dialog_box(xx + menu_width -1, yy + menu_item_spacing*i + 2*sub_menu_spacing, xx + menu_width + 0.5*menu_width + 0.5*action_arrow_width -2, yy + menu_item_spacing*(i+1) - 0*sub_menu_spacing - 2, c_blue);
 		draw_set_halign(fa_left);
 		draw_set_font(ft_default);
-		draw_text( xx + menu_width + menu_left_padding, yy + menu_item_spacing*i + action_top_padding, global.labels.skills[global.battle.player_frontline[i].selected_action][0]);
-		draw_text( xx + menu_width + menu_left_padding, yy + menu_item_spacing*i + action_top_padding + action_text_spacing, global.battle.player_frontline[i].selected_target.name);
+		draw_text( xx + menu_width + menu_left_padding, yy + menu_item_spacing*i + action_top_padding, global.labels.skills[global.battle.player_frontline[i]._selected_action][0]);
+		draw_text( xx + menu_width + menu_left_padding, yy + menu_item_spacing*i + action_top_padding + action_text_spacing, global.battle.player_frontline[i]._selected_target.name);
 	}
 	
 	// Draw targeting icon with player unit selected Remember 2/9/4/9 settings. See object manager for positions
@@ -68,7 +68,7 @@ for ( var i = 0; i < _backline_length; i++ ) {
 	var _is_unit_dead = false;
 	var _is_unit_disabled = false;
 	var _sprite_shading = $888888;
-	if (global.battle.player_backline[i].battle_stats[stats.current_HP] == 0) { // dead status
+	if (global.battle.player_backline[i]._battle_stats[stats.current_HP] == 0) { // dead status
 		_is_unit_dead = true;
 	}
 	
@@ -85,9 +85,9 @@ for ( var i = 0; i < _backline_length; i++ ) {
 	}
 	
 	// HP and MP Bars
-	var _hp_percent = global.battle.player_backline[i].battle_stats[stats.current_HP] / global.battle.player_backline[i].battle_stats[stats.current_HP] * 100;
+	var _hp_percent = global.battle.player_backline[i]._battle_stats[stats.current_HP] / global.battle.player_backline[i]._battle_stats[stats.current_HP] * 100;
 	draw_healthbar( xx + 3*menu_sprite_gap, yy + menu_item_spacing*(i + _frontline_length) + hp_pos + 2, xx + menu_width - menu_left_padding, yy + menu_item_spacing*(i + _frontline_length) + hp_pos + 10, _hp_percent, c_grey, c_red, c_green, 0, true, true);
-	var _mp_percent = global.battle.player_backline[i].battle_stats[stats.current_MP] / global.battle.player_backline[i].battle_stats[stats.current_MP] * 100;
+	var _mp_percent = global.battle.player_backline[i]._battle_stats[stats.current_MP] / global.battle.player_backline[i]._battle_stats[stats.current_MP] * 100;
 	draw_healthbar( xx + 3*menu_sprite_gap, yy + menu_item_spacing*(i + _frontline_length) + mp_pos + 2, xx + menu_width - menu_left_padding, yy + menu_item_spacing*(i + _frontline_length) + mp_pos + 10, _mp_percent, c_grey, c_navy, c_blue, 0, true, true);
 
 	draw_set_font(ft_stat_heading);
@@ -96,17 +96,17 @@ for ( var i = 0; i < _backline_length; i++ ) {
 
 	draw_set_halign(fa_right);
 	draw_set_font(ft_damage);
-	draw_text_shadow( xx + menu_width - menu_left_padding, yy + menu_item_spacing*(i + _frontline_length) + 0.5*hp_pos, global.battle.player_backline[i].battle_stats[stats.current_HP]);
-	draw_text_shadow( xx + menu_width - menu_left_padding, yy + menu_item_spacing*(i + _frontline_length) + mp_pos, global.battle.player_backline[i].battle_stats[stats.current_MP]);
+	draw_text_shadow( xx + menu_width - menu_left_padding, yy + menu_item_spacing*(i + _frontline_length) + 0.5*hp_pos, global.battle.player_backline[i]._battle_stats[stats.current_HP]);
+	draw_text_shadow( xx + menu_width - menu_left_padding, yy + menu_item_spacing*(i + _frontline_length) + mp_pos, global.battle.player_backline[i]._battle_stats[stats.current_MP]);
 
 	// The selected skills
 	draw_set_color(c_white);
-	if ( global.battle.player_backline[i].selected_action != skills.noskill && global.battle.player_backline[i].selected_target != noone ) {
+	if ( global.battle.player_backline[i]._selected_action != skills.noskill && global.battle.player_backline[i]._selected_target != noone ) {
 		draw_dialog_box(xx + menu_width -1, yy + menu_item_spacing*(i + _frontline_length ) + 2*sub_menu_spacing, xx + menu_width + 0.5*menu_width + 0.5*action_arrow_width -2, yy + menu_item_spacing*(i + _frontline_length +1) - 0*sub_menu_spacing - 2, c_blue);
 		draw_set_halign(fa_left);
 		draw_set_font(ft_default);
-		draw_text( xx + menu_width + menu_left_padding, yy + menu_item_spacing*(i + _frontline_length) + action_top_padding, global.labels.skills[global.battle.player_backline[i].selected_action][0]);
-		draw_text( xx + menu_width + menu_left_padding, yy + menu_item_spacing*(i + _frontline_length) + action_top_padding + action_text_spacing, global.battle.player_backline[i].selected_target.name);
+		draw_text( xx + menu_width + menu_left_padding, yy + menu_item_spacing*(i + _frontline_length) + action_top_padding, global.labels.skills[global.battle.player_backline[i]._selected_action][0]);
+		draw_text( xx + menu_width + menu_left_padding, yy + menu_item_spacing*(i + _frontline_length) + action_top_padding + action_text_spacing, global.battle.player_backline[i]._selected_target.name);
 	}
 }
 

@@ -3,11 +3,11 @@
 function execute_unit_action( unit ){
 	
 	if ( unit.unit_type == unit_types.player ) {
-		// apply action based on selected_action/type
+		// apply action based on _selected_action/type
 		show_debug_message( unit.name );
-		show_debug_message( unit.selected_action );
-		if (unit.selected_target != noone ) {
-			show_debug_message (unit.selected_target.name);
+		show_debug_message( unit._selected_action );
+		if (unit._selected_target != noone ) {
+			show_debug_message (unit._selected_target.name);
 		}
 	} else { // monster and boss
 		if (unit.pattern = attack_pattern.random ) {

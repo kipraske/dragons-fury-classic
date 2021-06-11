@@ -3,11 +3,9 @@
 
 global.battle.player_frontline = [
 	global.player.catherine,
-	noone,
+	global.player.thomas,
 	global.player.mary,
 ]
-
-array_delete(global.battle.player_frontline, 1, 1);
 
 global.battle.player_backline = [
 	global.player.thomas,

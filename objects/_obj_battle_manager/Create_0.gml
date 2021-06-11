@@ -56,17 +56,19 @@ global.battle_obj_instances = {
 		execute_button: instance_create_depth(room_width/3 - 48 - 32, 0.7*room_height + 32, -1, obj_battle_execute_button)
 }
 
-for (var i = 0; i < array_length(global.battle.player_frontline); i++) {
+for (var i = 0; i < MAX_FRONTEND_UNITS; i++) {
 	// players placed at 2/9, 4/9 and 6/9
 	global.battle_obj_instances.player_units[i] = instance_create_depth(room_width - unit_sprite_width*1.5, (i+1)*2*room_height/9, 0, obj_battle_player_unit);
 	global.battle_obj_instances.player_units[i].unit_index = i;
 	if ( global.battle.player_frontline[i] != noone ) {
+		global.battle.player_frontline[i]._unit_position = i;
 		global.battle_obj_instances.player_units[i].sprite_index = global.battle.player_frontline[i]._sprites.left;
 	} else {
-		global.battle_obj_instances.player_units[i].sprite_index = noone;
-	}
-	
+		global.battle_obj_instances.player_units[i].sprite_index = noone; // would happen with < MAX_FRONTEND frontline
+	}	
 }
+
+
 
 for (var i = 0; i < array_length(global.battle.monster_units); i++) {
 	global.battle_obj_instances.monster_units[i] = instance_create_depth(monster_coord[i][0], monster_coord[i][1], 0, obj_battle_monster_unit);

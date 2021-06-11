@@ -561,7 +561,9 @@ function init_constants(){
 		init,				// Set up objects/create events and animations
 		waiting_for_input,  // Objects available for input
 		set_up_turn_order,  // Prepare for execute turn phase
-		execute_turn,       // Play battle animations and skills in order, check for win/lose
+		check_win_lose,     // Determine if we keep going or if we need to go to win/lose
+		execute_turn,       // Fire off the skills in order, check for win/lose
+		execute_unit_action,// Play single unit animation, and pass back when done
 		backend_rest,       // Heal backend characters, move the dead to the backend
 		win,				// Win animations and transition to rewards
 		lose,				// Lose animations and transition to game over

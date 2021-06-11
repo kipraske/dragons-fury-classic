@@ -5,6 +5,8 @@
     {"id":{"name":"spr_red_mushroom_right","path":"sprites/spr_red_mushroom_right/spr_red_mushroom_right.yy",},"order":1,},
     {"id":{"name":"spr_ashley_right","path":"sprites/spr_ashley_right/spr_ashley_right.yy",},"order":3,},
     {"id":{"name":"thomas","path":"scripts/thomas/thomas.yy",},"order":6,},
+    {"id":{"name":"unit_battle_player_intro_animation","path":"scripts/unit_battle_player_intro_animation/unit_battle_player_intro_animation.yy",},"order":1,},
+    {"id":{"name":"unit_battle_monster_intro_animation","path":"scripts/unit_battle_monster_intro_animation/unit_battle_monster_intro_animation.yy",},"order":0,},
     {"id":{"name":"spr_isabelle_left","path":"sprites/spr_isabelle_left/spr_isabelle_left.yy",},"order":3,},
     {"id":{"name":"set_display_ratio","path":"scripts/set_display_ratio/set_display_ratio.yy",},"order":3,},
     {"id":{"name":"spr_catherine_left","path":"sprites/spr_catherine_left/spr_catherine_left.yy",},"order":2,},
@@ -187,6 +189,7 @@
     {"folderPath":"folders/Sprites/icons/menus.yy","order":0,"resourceVersion":"1.0","name":"menus","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/icons/status.yy","order":1,"resourceVersion":"1.0","name":"status","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/masks.yy","order":10,"resourceVersion":"1.0","name":"masks","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts/battle_animations.yy","order":7,"resourceVersion":"1.0","name":"battle_animations","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

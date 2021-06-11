@@ -6,6 +6,7 @@
 switch (global.battle.phase) {
 	case battle_phase.init:
 		// Intro Animation lasts 1 second, then move to the next phase (see player_unit/monster_unit)
+		// Managed here because they are all doing it at the same time, other animations are handled at the unit level
 		if ( intro_animation_counter < intro_animation_end ) {
 			intro_animation_counter++
 		} else {
@@ -42,24 +43,25 @@ switch (global.battle.phase) {
 		global.battle.phase = battle_phase.execute_turn;
 		break;
 	}
-	case battle_phase.execute_turn:
+	case battle_phase.check_win_lose:
+		// TODO - actually check for win/lose
 	
-		if ( skill_animation_counter < skill_animation_end ) {
-			skill_animation_counter++;
-		} else {
-			skill_animation_counter = 0;
-			if ( ds_priority_empty(turn_order) ) {
-				game_end(); // game end is async lol, ok
-				break;
-			}
-			execute_unit_action( ds_priority_delete_max( turn_order ) );
+		global.battle.phase = battle_phase.execute_turn;
+		break;
+	
+	case battle_phase.execute_turn:
+		if ( ds_priority_empty(turn_order) ) {
+			global.battle.phase = battle_phase.backend_rest;
+			break;
 		}
-
-		// When you hit the "go" button this is what happens
-		// Create a priority queue based on unit speed and execute in order
-		// Check for Win/Lose happens after EVERY attack so we don't play the whole animation sequence
+		execute_unit_action( ds_priority_delete_max( turn_order ) );
+		global.battle.phase = battle_phase.execute_unit_action; // passing flow control to unit
+		break;
+	case battle_phase.execute_unit_action:
+		// Flow is now managed by the unit, they will pass back to execute_turn when done with animations/calculations
 		break;
 	case battle_phase.backend_rest:
+		game_end(); // game end is async lol, ok
 		// Heal backend characters, move the dead to the backend
 		// But only if we didn't win/lose
 		break;

@@ -13,6 +13,8 @@ function init_game_state(){
 	global.history = false;
 
 	if ( global.history ){
+		
+		// Note in these player saves the _underscore variables denote those that will be overwritten by me or the engine. So changing them in the save makes no difference.
 		global.player = {
 			alfred: load_json_file("character/alfred.json"),
 			ashley: load_json_file("character/ashley.json"),

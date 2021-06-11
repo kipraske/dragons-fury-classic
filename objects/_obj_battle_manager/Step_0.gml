@@ -58,7 +58,7 @@ switch (global.battle.phase) {
 		global.battle.phase = battle_phase.execute_unit_action; // passing flow control to unit
 		break;
 	case battle_phase.execute_unit_action:
-		// Flow is now managed by the unit, they will pass back to execute_turn when done with animations/calculations
+		// Flow is now managed by the unit via execute_unit_action, they will pass back to execute_turn when done with animations/calculations
 		break;
 	case battle_phase.backend_rest:
 		game_end(); // game end is async lol, ok

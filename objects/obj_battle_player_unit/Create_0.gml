@@ -7,10 +7,18 @@ unit_index = -1;
 start_intro_animation = true; // Kicking off the intro animation right away
 is_intro_animation = false;
 
+// We need to know who is going to get targeted, what spirtes to use etc.
+animation_actor = noone;
+animation_target = noone;
+animation_skill = skills.noskill;
+
+// Attack animations
 start_attack_animation = false;
 attack_animation_counter = 0;
 is_attack_animation = false;
+attack_damage_data = [0, 0];
 
+// Swap Animations
 start_swap_animation = false;
 swap_animation_counter = 0;
 is_swap_animation = false;

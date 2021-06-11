@@ -5,3 +5,6 @@ if ( global.battle.player_frontline[unit_index]._battle_stats[stats.current_HP] 
 	draw_self();
 }
 
+if ( attack_animation_counter > 0 ) {
+	draw_text(x, y, "test damage");
+}

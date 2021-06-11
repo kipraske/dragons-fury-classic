@@ -589,6 +589,19 @@ function init_constants(){
 		npc_female
 	}
 	
+	enum damage_types {
+		normal, // white
+		weak,   // cyan
+		crit,   // yellow
+		weak_crit,   // magenta
+		resist,      // grey
+		resist_crit, // dark-yellow - goldish
+		heal,      // green
+		mp_heal,   // blue
+		mp_damage, // purple (void color)
+		xp_gained  // red
+	}
+	
 	enum unit_types {
 		player,
 		monster,

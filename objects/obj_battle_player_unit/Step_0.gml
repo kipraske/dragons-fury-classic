@@ -25,20 +25,23 @@ if ( is_intro_animation ) {
 
 if ( global.battle.phase = battle_phase.execute_unit_action && start_attack_animation ) {
 	// Initialize attack animation
+	direction = 180;
+	speed = 5; // todo calculate based on below
 	start_attack_animation = false;
 	is_attack_animation = true;
+	show_debug_message("Attack Animation Start");
 	
 	// TODO - make sure we start the animation on the right sprite frame so we end in the right place
 }
 
 if ( is_attack_animation ) {
-
 	if ( attack_animation_counter < game_speed * 1 ) {
-		// Walk forward a bit
+		
 	}
 	
 	if ( attack_animation_counter >= game_speed * 1 && attack_animation_counter < game_speed * 1.5 ) {
 		// Swing Weapon attack
+		speed = 0;
 	}
 	
 	if ( attack_animation_counter >= game_speed * 1.2 && attack_animation_counter < game_speed * 1.7 ) {
@@ -49,14 +52,18 @@ if ( is_attack_animation ) {
 		// Display Damage Numbers
 	}
 	
+	// TODO - apply damage numbers gradually in this animation here
+	
 	if ( attack_animation_counter >= game_speed * 2 && attack_animation_counter < game_speed * 2.5 ) {
 		// Walk back to spot
 	}
 	
 	if ( attack_animation_counter > game_speed * 3 ) {
+		show_debug_message("Attack Animation End")
 		is_intro_animation = false;
 		attack_animation_counter = 0;
-		global.battle.phase = battle_phase.execute_turn;
+		attack_damage_data = [0, 0]
+		global.battle.phase = battle_phase.check_win_lose;
 	} else {	
 		attack_animation_counter++
 	}

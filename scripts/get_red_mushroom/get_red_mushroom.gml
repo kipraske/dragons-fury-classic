@@ -24,6 +24,8 @@ function get_red_mushroom( label ){
 		perm_stats: fill_array( stats.length, 0 ),      // calculated stats
 		_selected_action: skills.noskill,
 		_selected_target: noone,
+		_menu_position: 0,
+		_unit_position: 0,
 		total_xp: 0,
 		equipped_skills: [
 			skills.attack,

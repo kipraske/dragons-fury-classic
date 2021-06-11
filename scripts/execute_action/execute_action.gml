@@ -7,13 +7,29 @@ function apply_skill( actor, target, skill ) {
 		return;
 	}
 	
+	if ( actor.unit_type = unit_types.player ) {
+		var actor_unit = global.battle_obj_instances.player_units[actor._unit_position];
+	} else { // monster or boss
+		var actor_unit = global.battle_obj_instances.monster_units[actor._unit_position];
+	}
+
+	// Pass everything to the instance just so we have it.
+	actor_unit.animation_actor = actor;
+	actor_unit.animation_target = target;
+	actor_unit.animation_skill = skill;
+
 	show_debug_message( actor.name );
 	show_debug_message( skill );
 	show_debug_message (target.name);
 	
+	// TODO - we may want to juse do the skill types attacks are pretty similar after all
+	
 	switch ( skill ) {
 		case skills.attack:
-			calculate_damage();
+			var attack_damage_data = calculate_damage_data(actor, target, skill);
+			// This is a stupid way to pass variables in, but whatever it works
+			actor_unit.start_attack_animation = true;
+			actor_unit.attack_damage_data = attack_damage_data;
 			break;
 		case skills.swap: 
 			break;

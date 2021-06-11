@@ -76,6 +76,7 @@ for (var i = 0; i < MAX_FRONTEND_UNITS; i++) {
 for (var i = 0; i < array_length(global.battle.monster_units); i++) {
 	global.battle_obj_instances.monster_units[i] = instance_create_depth(monster_coord[i][0], monster_coord[i][1], 0, obj_battle_monster_unit);
 	global.battle_obj_instances.monster_units[i].unit_index = i;
+	global.battle.monster_units[i]._unit_position = i;
 	global.battle_obj_instances.monster_units[i].sprite_index = global.battle.monster_units[i]._sprites.right;
 	global.battle.monster_units[i].level = monster_level_avg;
 }

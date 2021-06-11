@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "system_math_helpers",
-    "path": "folders/Scripts/helpers/system_math_helpers.yy",
+    "name": "battle_system",
+    "path": "folders/Scripts/battle_system.yy",
   },
   "resourceVersion": "1.0",
   "name": "calculate_damage",

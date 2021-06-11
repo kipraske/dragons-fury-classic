@@ -43,11 +43,18 @@ switch (global.battle.phase) {
 		break;
 	}
 	case battle_phase.execute_turn:
-		execute_unit_action( ds_priority_delete_max( turn_order ) );
-		
-		if ( ds_priority_empty( turn_order ) ) {
-			game_end();
+	
+		if ( skill_animation_counter < skill_animation_end ) {
+			skill_animation_counter++;
+		} else {
+			skill_animation_counter = 0;
+			if ( ds_priority_empty(turn_order) ) {
+				game_end(); // game end is async lol, ok
+				break;
+			}
+			execute_unit_action( ds_priority_delete_max( turn_order ) );
 		}
+
 		// When you hit the "go" button this is what happens
 		// Create a priority queue based on unit speed and execute in order
 		// Check for Win/Lose happens after EVERY attack so we don't play the whole animation sequence

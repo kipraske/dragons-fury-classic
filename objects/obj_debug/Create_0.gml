@@ -3,7 +3,7 @@
 
 global.battle.player_frontline = [
 	global.player.catherine,
-	global.player.thomas,
+	global.player.alfred,
 	global.player.mary,
 ]
 

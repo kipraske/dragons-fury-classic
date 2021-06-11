@@ -4,6 +4,9 @@
 intro_animation_counter = 0;
 intro_animation_end = game_get_speed(gamespeed_fps); // 1 sec
 
+skill_animation_counter = 0;
+skill_animation_end = 0;
+
 // Object instance set upd
 unit_sprite_width = 52;
 

@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "battle_actions",
-    "path": "folders/Scripts/battle_actions.yy",
+    "name": "battle_system",
+    "path": "folders/Scripts/battle_system.yy",
   },
   "resourceVersion": "1.0",
   "name": "execute_action",

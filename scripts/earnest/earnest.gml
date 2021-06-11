@@ -72,7 +72,7 @@ function earnest_init(){
 		],
 		swap_skill: skills.poison,
 		available_skills: fill_array(skills.length, 0), // Value is level of skill
-		sprites: earnest_get_sprites()
+		_sprites: earnest_get_sprites()
 	};
 }
 

@@ -65,7 +65,7 @@ function alfred_init(){
 		],
 		swap_skill: skills.tornado,
 		available_skills: fill_array(skills.length, 0), // Value is level of skill
-		sprites: alfred_get_sprites()
+		_sprites: alfred_get_sprites()
 	};
 }
 

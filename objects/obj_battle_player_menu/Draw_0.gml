@@ -24,7 +24,7 @@ for ( var i = 0; i < _frontline_length; i++ ) {
 	draw_set_halign(fa_left);
 	draw_text_shadow( xx + 3*menu_sprite_gap -2, yy + menu_item_spacing*i, global.battle.player_frontline[i].name);
 
-	draw_sprite_ext(global.battle.player_frontline[i].sprites.face, 0, xx + 2, yy + menu_item_spacing*i + sub_menu_spacing - 2, 1, 1, 0, _sprite_shading, 1);
+	draw_sprite_ext(global.battle.player_frontline[i]._sprites.face, 0, xx + 2, yy + menu_item_spacing*i + sub_menu_spacing - 2, 1, 1, 0, _sprite_shading, 1);
 
 	// Draw status icons on portrait
 	if (_is_unit_dead) {
@@ -77,7 +77,7 @@ for ( var i = 0; i < _backline_length; i++ ) {
 	draw_set_halign(fa_left);
 	draw_text_shadow( xx + 3*menu_sprite_gap -2, yy + menu_item_spacing*(i + _frontline_length), global.battle.player_backline[i].name);
 	
-	draw_sprite_ext(global.battle.player_backline[i].sprites.face, 0, xx + 2, yy + menu_item_spacing*(i + _frontline_length) + sub_menu_spacing - 2, 1, 1, 0, _sprite_shading, 1);
+	draw_sprite_ext(global.battle.player_backline[i]._sprites.face, 0, xx + 2, yy + menu_item_spacing*(i + _frontline_length) + sub_menu_spacing - 2, 1, 1, 0, _sprite_shading, 1);
 	
 	// Draw status icons on portrait
 	if (_is_unit_dead) {

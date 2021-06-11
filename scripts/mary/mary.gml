@@ -71,7 +71,7 @@ function mary_init(){
 		],
 		swap_skill: skills.flood,
 		available_skills: fill_array(skills.length, 0), // Value is level of skill
-		sprites: mary_get_sprites()
+		_sprites: mary_get_sprites()
 	};
 }
 

@@ -65,7 +65,7 @@ function ashley_init(){
 		],
 		swap_skill: skills.quake,
 		available_skills: fill_array(skills.length, 0), // Value is level of skill
-		sprites: ashley_get_sprites()
+		_sprites: ashley_get_sprites()
 	};
 }
 

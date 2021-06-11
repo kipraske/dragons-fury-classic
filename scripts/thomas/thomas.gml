@@ -53,7 +53,7 @@ function thomas_init(){
 		],
 		swap_skill: skills.tornado,
 		available_skills: fill_array(skills.length, 0), // Value is level of skill
-		sprites: thomas_get_sprites()
+		_sprites: thomas_get_sprites()
 	};
 }
 

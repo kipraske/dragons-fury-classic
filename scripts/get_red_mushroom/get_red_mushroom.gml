@@ -32,7 +32,7 @@ function get_red_mushroom( label ){
 			skills.quake,
 			skills.quake,
 		],
-		sprites: get_red_mushroom_sprites()
+		_sprites: get_red_mushroom_sprites()
 	};
 	
 	monster.base_stats[stats.MAX_HP] = 5

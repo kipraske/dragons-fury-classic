@@ -65,7 +65,7 @@ function isabelle_init(){
 		],
 		swap_skill: skills.flood,
 		available_skills: fill_array(skills.length, 0), // Value is level of skill
-		sprites: isabelle_get_sprites()
+		_sprites: isabelle_get_sprites()
 	};
 }
 

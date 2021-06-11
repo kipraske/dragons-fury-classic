@@ -61,7 +61,7 @@ for (var i = 0; i < array_length(global.battle.player_frontline); i++) {
 	global.battle_obj_instances.player_units[i] = instance_create_depth(room_width - unit_sprite_width*1.5, (i+1)*2*room_height/9, 0, obj_battle_player_unit);
 	global.battle_obj_instances.player_units[i].unit_index = i;
 	if ( global.battle.player_frontline[i] != noone ) {
-		global.battle_obj_instances.player_units[i].sprite_index = global.battle.player_frontline[i].sprites.left;
+		global.battle_obj_instances.player_units[i].sprite_index = global.battle.player_frontline[i]._sprites.left;
 	} else {
 		global.battle_obj_instances.player_units[i].sprite_index = noone;
 	}
@@ -71,7 +71,7 @@ for (var i = 0; i < array_length(global.battle.player_frontline); i++) {
 for (var i = 0; i < array_length(global.battle.monster_units); i++) {
 	global.battle_obj_instances.monster_units[i] = instance_create_depth(monster_coord[i][0], monster_coord[i][1], 0, obj_battle_monster_unit);
 	global.battle_obj_instances.monster_units[i].unit_index = i;
-	global.battle_obj_instances.monster_units[i].sprite_index = global.battle.monster_units[i].sprites.right;
+	global.battle_obj_instances.monster_units[i].sprite_index = global.battle.monster_units[i]._sprites.right;
 	global.battle.monster_units[i].level = monster_level_avg;
 }
 

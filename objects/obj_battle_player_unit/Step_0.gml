@@ -25,8 +25,7 @@ if ( is_intro_animation ) {
 
 if ( global.battle.phase = battle_phase.execute_unit_action && start_attack_animation ) {
 	// Initialize attack animation
-	direction = 180;
-	speed = 5; // todo calculate based on below
+
 	start_attack_animation = false;
 	is_attack_animation = true;
 	show_debug_message("Attack Animation Start");
@@ -35,35 +34,48 @@ if ( global.battle.phase = battle_phase.execute_unit_action && start_attack_anim
 }
 
 if ( is_attack_animation ) {
-	if ( attack_animation_counter < game_speed * 1 ) {
-		
+	// Move forward a bit
+	if ( attack_animation_counter < game_speed * 0.5 ) {
+		direction = 180;
+		var distance_to_move = sprite_width;
+		speed = sprite_width/(game_speed*0.5);
+		if ( x < xstart - distance_to_move ) { // sometimes rounding issues
+			speed = 0;
+		}
 	}
 	
-	if ( attack_animation_counter >= game_speed * 1 && attack_animation_counter < game_speed * 1.5 ) {
+	if ( attack_animation_counter >= game_speed * 0.5 && attack_animation_counter < game_speed * 0.75 ) {
 		// Swing Weapon attack
 		speed = 0;
 	}
 	
-	if ( attack_animation_counter >= game_speed * 1.2 && attack_animation_counter < game_speed * 1.7 ) {
+	if ( attack_animation_counter >= game_speed * 0.6 && attack_animation_counter < game_speed * 0.85 ) {
 		// Target Animation VS
 	}
 	
-	if ( attack_animation_counter >= game_speed * 1.7 && attack_animation_counter < game_speed * 3 ) {
+	if ( attack_animation_counter >= game_speed * 0.85 && attack_animation_counter < game_speed * 1.5 ) {
 		// Display Damage Numbers
 	}
 	
 	// TODO - apply damage numbers gradually in this animation here
 	
-	if ( attack_animation_counter >= game_speed * 2 && attack_animation_counter < game_speed * 2.5 ) {
-		// Walk back to spot
+	if ( attack_animation_counter >= game_speed * 1.25 && attack_animation_counter < game_speed * 1.5 ) {
+		direction = 0;
+		var distance_to_move = sprite_width;
+		speed = sprite_width/(game_speed*0.5);
+		if ( x > xstart ) { // sometimes rounding issues
+			speed = 0;
+		}
 	}
 	
-	if ( attack_animation_counter > game_speed * 3 ) {
+	if ( attack_animation_counter > game_speed * 1.5 ) {
 		show_debug_message("Attack Animation End")
-		is_intro_animation = false;
+		x = xstart;
+		speed = 0;
+		is_attack_animation = false;
 		attack_animation_counter = 0;
 		attack_damage_data = [0, 0]
-		global.battle.phase = battle_phase.check_win_lose;
+		global.battle.phase = battle_phase.check_win_lose; // we check at tthe end of EVERY turn
 	} else {	
 		attack_animation_counter++
 	}

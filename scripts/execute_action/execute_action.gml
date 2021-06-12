@@ -2,10 +2,18 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
 function apply_skill( actor, target, skill ) {
+
+	show_debug_message( actor.name );
 	
+	// If we don't have everything we need skip em!
 	if (target == noone || actor == noone || skill == skills.noskill ) {
+		show_debug_message ("skipped");
+		global.battle.phase = battle_phase.execute_turn;
 		return;
 	}
+	
+	show_debug_message (target.name);
+	show_debug_message( skill );
 	
 	if ( actor.unit_type = unit_types.player ) {
 		var actor_unit = global.battle_obj_instances.player_units[actor._unit_position];
@@ -17,10 +25,6 @@ function apply_skill( actor, target, skill ) {
 	actor_unit.animation_actor = actor;
 	actor_unit.animation_target = target;
 	actor_unit.animation_skill = skill;
-
-	show_debug_message( actor.name );
-	show_debug_message( skill );
-	show_debug_message (target.name);
 	
 	// TODO - we may want to juse do the skill types attacks are pretty similar after all
 	
@@ -157,6 +161,9 @@ function apply_skill( actor, target, skill ) {
 
 
 function execute_unit_action( unit ){
+	show_debug_message("moving to unit");
+	global.battle.phase = battle_phase.execute_unit_action; // passing flow control to unit
+	
 	if ( unit.unit_type == unit_types.player ) {
 		apply_skill( unit, unit._selected_target, unit._selected_action);
 	} else { // monster and boss
@@ -165,5 +172,10 @@ function execute_unit_action( unit ){
 		} else {
 			// Pick the next thing in the skill queue (create an index in the monster for next item).
 		}
+		
+		// TODO - this is temporary, but for now we lose the flowunless we skip the monsters
+		show_debug_message ("monster skipped");
+		global.battle.phase = battle_phase.execute_turn
+		return;
 	}
 }

@@ -540,6 +540,7 @@ function init_constants(){
 	global.equipment_slot_by_type[equipment_types.shield] = equipment_slots.off_hand;
 	global.equipment_slot_by_type[equipment_types.hammer] = equipment_slots.two_hand;
 	global.equipment_slot_by_type[equipment_types.axe] = equipment_slots.two_hand;
+	global.equipment_slot_by_type[equipment_types.axe] = equipment_slots.two_hand;
 	global.equipment_slot_by_type[equipment_types.bow] = equipment_slots.two_hand;
 	global.equipment_slot_by_type[equipment_types.spear] = equipment_slots.two_hand;
 	global.equipment_slot_by_type[equipment_types.mace] = equipment_slots.main_hand;

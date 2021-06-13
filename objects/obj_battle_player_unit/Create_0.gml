@@ -17,6 +17,13 @@ start_attack_animation = false;
 attack_animation_counter = 0;
 is_attack_animation = false;
 attack_damage_data = [0, 0];
+show_weapon = false;
+equipment = {
+	hand1: {},
+	hand2: {},
+	armor: {},
+	accessory: {}
+}
 
 // Swap Animations
 start_swap_animation = false;

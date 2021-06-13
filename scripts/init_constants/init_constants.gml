@@ -254,6 +254,8 @@ function init_constants(){
 		passive,
 		attack,
 		defense,
+		attack_only,
+		defense_only,
 		aoe_attack,
 		aoe_defense
 	}

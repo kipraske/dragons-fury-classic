@@ -44,17 +44,25 @@ if ( is_attack_animation ) {
 		}
 	}
 	
+	// Show the weapon and swing it (or poke it etc, depending on type)
 	if ( attack_animation_counter >= game_speed * 0.5 && attack_animation_counter < game_speed * 0.75 ) {
-		// Swing Weapon attack
+		show_weapon = true;
 		speed = 0;
 	}
 	
+	// And then the hand2 weapon
+	if ( attack_animation_counter >= game_speed * 0.5 && attack_animation_counter < game_speed * 0.75 ) {
+		show_weapon = true;
+		speed = 0;
+	}
+	
+	// Target Animation effect animation
 	if ( attack_animation_counter >= game_speed * 0.6 && attack_animation_counter < game_speed * 0.85 ) {
-		// Target Animation VS
+		
 	}
 	
 	if ( attack_animation_counter >= game_speed * 0.75 && attack_animation_counter < game_speed * 1.5 ) {
-		// Display Damage Numbers
+		// Display Damage Numbers - for each attack
 	}
 	
 	// TODO - apply damage numbers gradually in this animation here

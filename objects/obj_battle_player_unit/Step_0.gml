@@ -53,13 +53,13 @@ if ( is_attack_animation ) {
 		// Target Animation VS
 	}
 	
-	if ( attack_animation_counter >= game_speed * 0.85 && attack_animation_counter < game_speed * 1.5 ) {
+	if ( attack_animation_counter >= game_speed * 0.75 && attack_animation_counter < game_speed * 1.5 ) {
 		// Display Damage Numbers
 	}
 	
 	// TODO - apply damage numbers gradually in this animation here
 	
-	if ( attack_animation_counter >= game_speed * 1.25 && attack_animation_counter < game_speed * 1.5 ) {
+	if ( attack_animation_counter >= game_speed * 1.0 && attack_animation_counter < game_speed * 1.5 ) {
 		direction = 0;
 		var distance_to_move = sprite_width;
 		speed = sprite_width/(game_speed*0.5);

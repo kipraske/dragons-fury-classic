@@ -48,6 +48,7 @@ if ( is_attack_animation ) {
 	// Show the weapon and swing it (or poke it etc, depending on type)
 	if ( attack_animation_counter >= game_speed * 0.5 && attack_animation_counter < game_speed * 0.75 ) {
 		show_weapon = true;
+		image_index = 3;
 		image_speed = 0;
 		speed = 0;
 	}

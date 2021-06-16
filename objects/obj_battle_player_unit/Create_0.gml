@@ -19,8 +19,8 @@ start_attack_animation = false;
 attack_animation_counter = 0;
 is_attack_animation = false;
 attack_damage_data = [0, 0];
-show_weapon_hand_1 = false;
-show_weapon_hand_2 = false;
+show_weapon = 0; // 1 for hand 1, 2 for hand 2
+show_weapon_start = 0; // counter for weapon animation
 equipment = {
 	hand1: {},
 	hand2: {},

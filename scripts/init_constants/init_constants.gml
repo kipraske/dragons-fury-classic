@@ -493,7 +493,7 @@ function init_constants(){
 	}
 	
 	enum equipment_types {
-		unarmed,
+		unarmed, // for empty hand slots
 		pistol,
 		dagger,
 		short_sword, //counts as a "sword" for bonus
@@ -508,7 +508,7 @@ function init_constants(){
 		axe,
 		hammer,
 		shield,
-		unarmored,
+		unarmored,   // For armor or accessories
 		light_armor, // all robes
 		medium_armor, // all leather
 		heavy_armor, // all steel plate
@@ -517,7 +517,7 @@ function init_constants(){
 		cloak,
 		bracers,
 		belt,
-		empty, // For no ring-situations
+		length,
 	}
 	
 	enum equipment_tiers {
@@ -526,6 +526,20 @@ function init_constants(){
 		legendary,
 		personal,
 		void
+	}
+	
+	enum equipment_animation_types {
+		none, // things that are not weapons
+		slash, // swords, short swords
+		smash, // hammers, blunt items
+		stab,  // spears and daggers
+		shoot_bow, // bows and xbows
+		shoot_gun, // guns and rifles
+		magic, // books and staves
+		fist,  // unarmed
+		claw,  // monster
+		bite,  // monster
+		impact // monster
 	}
 	
 	global.equipment_slot_by_type[equipment_types.belt] = equipment_slots.accessory;

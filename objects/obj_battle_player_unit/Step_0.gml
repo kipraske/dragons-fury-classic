@@ -23,6 +23,7 @@ if ( is_intro_animation ) {
 	}
 }
 
+// Initialize the attack animation
 if ( global.battle.phase = battle_phase.execute_unit_action && start_attack_animation ) {
 	// Initialize attack animation
 
@@ -47,7 +48,7 @@ if ( is_attack_animation ) {
 	
 	// Show the weapon and swing it (or poke it etc, depending on type)
 	if ( attack_animation_counter >= game_speed * 0.5 && attack_animation_counter < game_speed * 0.75 ) {
-		show_weapon = true;
+		show_weapon_hand_1 = true;
 		image_index = 3;
 		image_speed = 0;
 		speed = 0;
@@ -55,7 +56,8 @@ if ( is_attack_animation ) {
 	
 	// And then the hand2 weapon
 	if ( attack_animation_counter >= game_speed * 0.5 && attack_animation_counter < game_speed * 0.75 ) {
-		show_weapon = true;
+		show_weapon_hand_1 = false;
+		show_weapon_hand_2 = true;
 		speed = 0;
 	}
 	
@@ -66,6 +68,8 @@ if ( is_attack_animation ) {
 	
 	if ( attack_animation_counter >= game_speed * 0.75 && attack_animation_counter < game_speed * 1.5 ) {
 		// Display Damage Numbers - for each attack
+		
+		show_weapon_hand_2 = false;
 	}
 	
 	// TODO - apply damage numbers gradually in this animation here

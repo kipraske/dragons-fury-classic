@@ -19,7 +19,8 @@ start_attack_animation = false;
 attack_animation_counter = 0;
 is_attack_animation = false;
 attack_damage_data = [0, 0];
-show_weapon = false;
+show_weapon_hand_1 = false;
+show_weapon_hand_2 = false;
 equipment = {
 	hand1: {},
 	hand2: {},

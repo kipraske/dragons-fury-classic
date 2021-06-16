@@ -517,6 +517,8 @@ function init_constants(){
 		cloak,
 		bracers,
 		belt,
+		claw, // monster "weapon"
+		bite, // monster "weapon"
 		length,
 	}
 	

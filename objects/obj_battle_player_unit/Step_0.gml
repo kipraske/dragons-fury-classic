@@ -28,6 +28,7 @@ if ( global.battle.phase = battle_phase.execute_unit_action && start_attack_anim
 
 	start_attack_animation = false;
 	is_attack_animation = true;
+	
 	show_debug_message("Attack Animation Start");
 	
 	// TODO - make sure we start the animation on the right sprite frame so we end in the right place
@@ -47,6 +48,7 @@ if ( is_attack_animation ) {
 	// Show the weapon and swing it (or poke it etc, depending on type)
 	if ( attack_animation_counter >= game_speed * 0.5 && attack_animation_counter < game_speed * 0.75 ) {
 		show_weapon = true;
+		image_speed = 0;
 		speed = 0;
 	}
 	
@@ -66,9 +68,9 @@ if ( is_attack_animation ) {
 	}
 	
 	// TODO - apply damage numbers gradually in this animation here
-	
 	if ( attack_animation_counter >= game_speed * 1.0 && attack_animation_counter < game_speed * 1.5 ) {
 		direction = 0;
+		image_speed = start_animation_speed;
 		var distance_to_move = sprite_width;
 		speed = sprite_width/(game_speed*0.5);
 		if ( x > xstart ) { // sometimes rounding issues

@@ -42,6 +42,7 @@
     {"id":{"name":"shield_personal","path":"sprites/shield_personal/shield_personal.yy",},"order":3,},
     {"id":{"name":"obj_battle_player_unit","path":"objects/obj_battle_player_unit/obj_battle_player_unit.yy",},"order":4,},
     {"id":{"name":"hammer_rare","path":"sprites/hammer_rare/hammer_rare.yy",},"order":63,},
+    {"id":{"name":"animation_helpers","path":"scripts/animation_helpers/animation_helpers.yy",},"order":8,},
     {"id":{"name":"spr_catherine_surprise","path":"sprites/spr_catherine_surprise/spr_catherine_surprise.yy",},"order":8,},
     {"id":{"name":"get_monster","path":"scripts/get_monster/get_monster.yy",},"order":0,},
     {"id":{"name":"spr_debug_box","path":"sprites/spr_debug_box/spr_debug_box.yy",},"order":2,},

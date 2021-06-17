@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-var game_speed = game_get_speed(gamespeed_fps); // ideal fps
+
 
 // Kick off intro animation if we are in init phase
 if ( global.battle.phase == battle_phase.init && start_intro_animation ) {
@@ -26,13 +26,9 @@ if ( is_intro_animation ) {
 // Initialize the attack animation
 if ( global.battle.phase = battle_phase.execute_unit_action && start_attack_animation ) {
 	// Initialize attack animation
-
 	start_attack_animation = false;
 	is_attack_animation = true;
-	
 	show_debug_message("Attack Animation Start");
-	
-	// TODO - make sure we start the animation on the right sprite frame so we end in the right place
 }
 
 if ( is_attack_animation ) {
@@ -45,7 +41,7 @@ if ( is_attack_animation ) {
 			speed = 0;
 		}
 	}
-	
+
 	// Show the weapon and swing it (or poke it etc, depending on type)
 	if ( attack_animation_counter >= game_speed * 0.5 && attack_animation_counter < game_speed * 0.75 ) {
 		show_weapon = 1;
@@ -55,13 +51,18 @@ if ( is_attack_animation ) {
 	}
 	
 	// And then the hand2 weapon
-	if ( attack_animation_counter >= game_speed * 0.5 && attack_animation_counter < game_speed * 0.75 ) {
+	if ( attack_animation_counter >= game_speed * 0.75 && attack_animation_counter < game_speed * 1.0 ) {
 		show_weapon = 2;
 		speed = 0;
 	}
 	
-	// Target Animation effect animation
+	// Target Animation effect animation hand 1
 	if ( attack_animation_counter >= game_speed * 0.6 && attack_animation_counter < game_speed * 0.85 ) {
+		
+	}
+	
+	// Target Animation effect animation hand 2
+	if ( attack_animation_counter >= game_speed * 0.85 && attack_animation_counter < game_speed * 1.1 ) {
 		
 	}
 	

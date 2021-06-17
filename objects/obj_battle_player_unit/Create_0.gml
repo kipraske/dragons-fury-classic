@@ -5,6 +5,7 @@ unit_index = -1;
 
 // Animation Starts and Stops
 start_animation_speed = image_speed;
+game_speed = game_get_speed(gamespeed_fps); // ideal fps
 
 start_intro_animation = true; // Kicking off the intro animation right away
 is_intro_animation = false;

@@ -97,7 +97,10 @@ function init_game_state(){
 			monster_units: [],    // Up to 5 at the moment
 			monster_layout: 0,
 			menu_focus: battle_focus.no_focus,
-			next_menu_focus: battle_focus.no_focus
+			next_menu_focus: battle_focus.no_focus,
+			combo: 0,
+			weak_display: 0,
+			crit_display: 0
 		}
 		save_json_file(global.battle,    "battle_state.json");
 		

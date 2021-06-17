@@ -31,6 +31,7 @@ if ( global.battle.phase = battle_phase.execute_unit_action && start_attack_anim
 	show_debug_message("Attack Animation Start");
 }
 
+// Play attack animation
 if ( is_attack_animation ) {
 	// Move forward a bit
 	if ( attack_animation_counter < game_speed * 0.5 ) {

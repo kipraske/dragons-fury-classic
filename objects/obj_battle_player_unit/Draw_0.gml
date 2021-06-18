@@ -7,18 +7,26 @@ if ( global.battle.player_frontline[unit_index]._battle_stats[stats.current_HP] 
 
 if ( show_weapon > 0 ) {
 	// draw_sprite_ext( get_weapon_sprite( equipment.hand1 ), 0, x, y, 1, 1, 0, c_white, 1 );
-	draw_sprite_ext( sword_rare, 0, x, y, 1, 1, 0, c_white, 1 );
+	
 }
 
 if ( is_attack_animation ) {
 	// Show the hand 1 weapon and swing it (or poke it etc, depending on type)
 	if ( attack_animation_counter >= game_speed * 0.5 && attack_animation_counter < game_speed * 0.75 ) {
-		animate_weapon_attack( unit.equipment.hand1, attack_animation_counter - game_speed * 0.5);
+		if (variable_struct_get(unit.equipment.hand1, "item_type")) {
+			animate_weapon_attack( unit.equipment.hand1, attack_animation_counter - game_speed * 0.5);
+		} else {
+			// unarmed attack
+		}
 	}
 	
 	// And then the hand2 weapon
 	if ( attack_animation_counter >= game_speed * 0.75 && attack_animation_counter < game_speed * 1.0 ) {
-		animate_weapon_attack( unit.equipment.hand1, attack_animation_counter - game_speed * 0.75);
+		if (variable_struct_get(unit.equipment.hand2, "item_type")){
+			animate_weapon_attack( unit.equipment.hand2, attack_animation_counter - game_speed * 0.75);
+		} else {
+			// unarmed attack
+		}
 	}
 	
 	// Target Animation effect animation hand 1

@@ -43,7 +43,7 @@ function earnest_init(){
 			},
 			hand2: {
 			    item_name: "Robust Dagger",
-			    item_type: equipment_types.short_sword,
+			    item_type: equipment_types.dagger,
 				item_tier: equipment_tiers.common,
 			    item_level: 1,
 			    item_bonus: [attr.HP_up]

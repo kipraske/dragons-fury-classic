@@ -7,30 +7,33 @@ function get_weapon_sprites( type, tier ){
 
 	switch (type ) {
 		case equipment_types.axe:
-			case equipment_tiers.common:
-				return [ spr_axe_common, noone, spr_effect_slash ]
-			case equipment_tiers.rare:
-				return [ spr_axe_rare, noone, spr_effect_slash ]
-			case equipment_tiers.legendary:
-				return [ spr_axe_legendary, noone, spr_effect_slash ]
-			case equipment_tiers.personal:
-				return [ spr_axe_personal, noone, spr_effect_slash ]
-			case equipment_tiers.void:
-				// TODO - create void effect slash which is purple
-				return [ spr_axe_void, noone, spr_effect_slash ]
-			break;
+			switch ( tier ) {
+				case equipment_tiers.common:
+					return [ spr_axe_common, noone, spr_effect_slash ];
+				case equipment_tiers.rare:
+					return [ spr_axe_rare, noone, spr_effect_slash ];
+				case equipment_tiers.legendary:
+					return [ spr_axe_legendary, noone, spr_effect_slash ];
+				case equipment_tiers.personal:
+					return [ spr_axe_personal, noone, spr_effect_slash ];
+				case equipment_tiers.void:
+					// TODO - create void effect slash which is purple
+					return [ spr_axe_void, noone, spr_effect_slash ];
+			}
 		case equipment_types.book:
-			case equipment_tiers.common:
-				break;
-			case equipment_tiers.rare:
-				break;
-			case equipment_tiers.legendary:
-				break;
-			case equipment_tiers.personal:
-				break;
-			case equipment_tiers.void:
-				break;
-			break;
+			switch ( tier ) {
+				case equipment_tiers.common:
+					return [ spr_book_common_closed, spr_book_common_open, noone ];
+				case equipment_tiers.rare:
+					return [ spr_book_rare_closed, spr_book_rare_open, noone ];
+				case equipment_tiers.legendary:
+					return [ spr_book_legendary_closed, spr_book_legendary_open, noone ];
+				case equipment_tiers.personal:
+					return [ spr_book_personal_closed, spr_book_personal_open, noone ];
+				case equipment_tiers.void:
+					// TODO - create void effect glow which is purple
+					return [ spr_book_void_closed, spr_book_void_open, noone ];
+			}
 		case equipment_types.bow:
 			case equipment_tiers.common:
 				break;

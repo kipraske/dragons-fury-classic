@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"6ac55958-161e-4827-89bb-dbc5b27b0edc","path":"sprites/axe_void/axe_void.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6ac55958-161e-4827-89bb-dbc5b27b0edc","path":"sprites/axe_void/axe_void.yy",},"LayerId":{"name":"f1a652f7-4c58-471b-b6e0-0c8bea2d411e","path":"sprites/axe_void/axe_void.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"axe_void","path":"sprites/axe_void/axe_void.yy",},"resourceVersion":"1.0","name":"6ac55958-161e-4827-89bb-dbc5b27b0edc","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"6ac55958-161e-4827-89bb-dbc5b27b0edc","path":"sprites/spr_axe_void/spr_axe_void.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"6ac55958-161e-4827-89bb-dbc5b27b0edc","path":"sprites/spr_axe_void/spr_axe_void.yy",},"LayerId":{"name":"f1a652f7-4c58-471b-b6e0-0c8bea2d411e","path":"sprites/spr_axe_void/spr_axe_void.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_axe_void","path":"sprites/spr_axe_void/spr_axe_void.yy",},"resourceVersion":"1.0","name":"6ac55958-161e-4827-89bb-dbc5b27b0edc","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"axe_void","path":"sprites/axe_void/axe_void.yy",},
+    "spriteId": {"name":"spr_axe_void","path":"sprites/spr_axe_void/spr_axe_void.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"0b563afb-cdc0-4a99-8a61-04b8f4a64759","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6ac55958-161e-4827-89bb-dbc5b27b0edc","path":"sprites/axe_void/axe_void.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"0b563afb-cdc0-4a99-8a61-04b8f4a64759","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6ac55958-161e-4827-89bb-dbc5b27b0edc","path":"sprites/spr_axe_void/spr_axe_void.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,9 +58,9 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"axe_void","path":"sprites/axe_void/axe_void.yy",},
+    "parent": {"name":"spr_axe_void","path":"sprites/spr_axe_void/spr_axe_void.yy",},
     "resourceVersion": "1.3",
-    "name": "axe_void",
+    "name": "spr_axe_void",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/equipment/weapons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "axe_void",
+  "name": "spr_axe_void",
   "tags": [],
   "resourceType": "GMSprite",
 }

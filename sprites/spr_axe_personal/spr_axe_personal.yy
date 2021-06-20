@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"648d8875-353d-4c54-88f5-0da6c043af2c","path":"sprites/axe_personal/axe_personal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"648d8875-353d-4c54-88f5-0da6c043af2c","path":"sprites/axe_personal/axe_personal.yy",},"LayerId":{"name":"d8db9678-7dff-4c8f-93e8-80f7ab5c02e2","path":"sprites/axe_personal/axe_personal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"axe_personal","path":"sprites/axe_personal/axe_personal.yy",},"resourceVersion":"1.0","name":"648d8875-353d-4c54-88f5-0da6c043af2c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"648d8875-353d-4c54-88f5-0da6c043af2c","path":"sprites/spr_axe_personal/spr_axe_personal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"648d8875-353d-4c54-88f5-0da6c043af2c","path":"sprites/spr_axe_personal/spr_axe_personal.yy",},"LayerId":{"name":"d8db9678-7dff-4c8f-93e8-80f7ab5c02e2","path":"sprites/spr_axe_personal/spr_axe_personal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_axe_personal","path":"sprites/spr_axe_personal/spr_axe_personal.yy",},"resourceVersion":"1.0","name":"648d8875-353d-4c54-88f5-0da6c043af2c","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"axe_personal","path":"sprites/axe_personal/axe_personal.yy",},
+    "spriteId": {"name":"spr_axe_personal","path":"sprites/spr_axe_personal/spr_axe_personal.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"d887cee3-318b-4303-af5f-bd9c95616ec0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"648d8875-353d-4c54-88f5-0da6c043af2c","path":"sprites/axe_personal/axe_personal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d887cee3-318b-4303-af5f-bd9c95616ec0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"648d8875-353d-4c54-88f5-0da6c043af2c","path":"sprites/spr_axe_personal/spr_axe_personal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,9 +58,9 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"axe_personal","path":"sprites/axe_personal/axe_personal.yy",},
+    "parent": {"name":"spr_axe_personal","path":"sprites/spr_axe_personal/spr_axe_personal.yy",},
     "resourceVersion": "1.3",
-    "name": "axe_personal",
+    "name": "spr_axe_personal",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/equipment/weapons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "axe_personal",
+  "name": "spr_axe_personal",
   "tags": [],
   "resourceType": "GMSprite",
 }

@@ -8,15 +8,16 @@ function get_weapon_sprites( type, tier ){
 	switch (type ) {
 		case equipment_types.axe:
 			case equipment_tiers.common:
-				break;
+				return [ spr_axe_common, noone, spr_effect_slash ]
 			case equipment_tiers.rare:
-				break;
+				return [ spr_axe_rare, noone, spr_effect_slash ]
 			case equipment_tiers.legendary:
-				break;
+				return [ spr_axe_legendary, noone, spr_effect_slash ]
 			case equipment_tiers.personal:
-				break;
+				return [ spr_axe_personal, noone, spr_effect_slash ]
 			case equipment_tiers.void:
-				break;
+				// TODO - create void effect slash which is purple
+				return [ spr_axe_void, noone, spr_effect_slash ]
 			break;
 		case equipment_types.book:
 			case equipment_tiers.common:
@@ -162,6 +163,8 @@ function get_weapon_sprites( type, tier ){
 			case equipment_tiers.void:
 				break;
 			break;
+		default: // TODO - gotta deal with shields etc.
+			
 	}
 }
 

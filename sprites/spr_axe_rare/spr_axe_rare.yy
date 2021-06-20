@@ -7,10 +7,10 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 0,
+  "bbox_left": 2,
   "bbox_right": 31,
-  "bbox_top": 0,
-  "bbox_bottom": 31,
+  "bbox_top": 4,
+  "bbox_bottom": 27,
   "HTile": false,
   "VTile": false,
   "For3D": false,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"3999e7fb-11f4-45b9-831d-984f56837be2","path":"sprites/axe_legendary/axe_legendary.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3999e7fb-11f4-45b9-831d-984f56837be2","path":"sprites/axe_legendary/axe_legendary.yy",},"LayerId":{"name":"aa0ff289-4c2c-41df-9fd0-ab9037b860ab","path":"sprites/axe_legendary/axe_legendary.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"axe_legendary","path":"sprites/axe_legendary/axe_legendary.yy",},"resourceVersion":"1.0","name":"3999e7fb-11f4-45b9-831d-984f56837be2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"d0d7b567-1e03-47d6-be80-4c68f3c718c9","path":"sprites/spr_axe_rare/spr_axe_rare.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"d0d7b567-1e03-47d6-be80-4c68f3c718c9","path":"sprites/spr_axe_rare/spr_axe_rare.yy",},"LayerId":{"name":"a4fd6013-86a0-4bdc-ba69-a84a3d73d161","path":"sprites/spr_axe_rare/spr_axe_rare.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_axe_rare","path":"sprites/spr_axe_rare/spr_axe_rare.yy",},"resourceVersion":"1.0","name":"d0d7b567-1e03-47d6-be80-4c68f3c718c9","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"axe_legendary","path":"sprites/axe_legendary/axe_legendary.yy",},
+    "spriteId": {"name":"spr_axe_rare","path":"sprites/spr_axe_rare/spr_axe_rare.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"bc57fcc9-5c0b-4bfe-9a50-5a7b76bdeea1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3999e7fb-11f4-45b9-831d-984f56837be2","path":"sprites/axe_legendary/axe_legendary.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"14ba746d-9c58-40e5-a90c-080587410f27","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d0d7b567-1e03-47d6-be80-4c68f3c718c9","path":"sprites/spr_axe_rare/spr_axe_rare.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"axe_legendary","path":"sprites/axe_legendary/axe_legendary.yy",},
+    "parent": {"name":"spr_axe_rare","path":"sprites/spr_axe_rare/spr_axe_rare.yy",},
     "resourceVersion": "1.3",
-    "name": "axe_legendary",
+    "name": "spr_axe_rare",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"aa0ff289-4c2c-41df-9fd0-ab9037b860ab","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a4fd6013-86a0-4bdc-ba69-a84a3d73d161","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/equipment/weapons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "axe_legendary",
+  "name": "spr_axe_rare",
   "tags": [],
   "resourceType": "GMSprite",
 }

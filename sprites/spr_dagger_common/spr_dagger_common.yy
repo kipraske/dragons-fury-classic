@@ -7,10 +7,10 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 4,
-  "bbox_right": 25,
+  "bbox_left": 6,
+  "bbox_right": 23,
   "bbox_top": 6,
-  "bbox_bottom": 27,
+  "bbox_bottom": 25,
   "HTile": false,
   "VTile": false,
   "For3D": false,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"83207c2b-819f-4dd1-bc22-5c86d0311bbf","path":"sprites/dagger_legendary/dagger_legendary.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"83207c2b-819f-4dd1-bc22-5c86d0311bbf","path":"sprites/dagger_legendary/dagger_legendary.yy",},"LayerId":{"name":"ee27b47f-3f2b-4dc5-b1ca-8379d9829c7e","path":"sprites/dagger_legendary/dagger_legendary.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"dagger_legendary","path":"sprites/dagger_legendary/dagger_legendary.yy",},"resourceVersion":"1.0","name":"83207c2b-819f-4dd1-bc22-5c86d0311bbf","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"952b06ee-0a11-4a38-bafd-8f651890f7e8","path":"sprites/spr_dagger_common/spr_dagger_common.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"952b06ee-0a11-4a38-bafd-8f651890f7e8","path":"sprites/spr_dagger_common/spr_dagger_common.yy",},"LayerId":{"name":"e2c08a84-ec99-4cbf-b2fe-da3a1ea81aab","path":"sprites/spr_dagger_common/spr_dagger_common.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_dagger_common","path":"sprites/spr_dagger_common/spr_dagger_common.yy",},"resourceVersion":"1.0","name":"952b06ee-0a11-4a38-bafd-8f651890f7e8","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"dagger_legendary","path":"sprites/dagger_legendary/dagger_legendary.yy",},
+    "spriteId": {"name":"spr_dagger_common","path":"sprites/spr_dagger_common/spr_dagger_common.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"f4637b6d-5ed9-453a-9cd2-8bfd6f0d6a6a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"83207c2b-819f-4dd1-bc22-5c86d0311bbf","path":"sprites/dagger_legendary/dagger_legendary.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d171a421-79c1-41ef-b8df-4fc87a5920f6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"952b06ee-0a11-4a38-bafd-8f651890f7e8","path":"sprites/spr_dagger_common/spr_dagger_common.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"dagger_legendary","path":"sprites/dagger_legendary/dagger_legendary.yy",},
+    "parent": {"name":"spr_dagger_common","path":"sprites/spr_dagger_common/spr_dagger_common.yy",},
     "resourceVersion": "1.3",
-    "name": "dagger_legendary",
+    "name": "spr_dagger_common",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ee27b47f-3f2b-4dc5-b1ca-8379d9829c7e","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e2c08a84-ec99-4cbf-b2fe-da3a1ea81aab","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/equipment/weapons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "dagger_legendary",
+  "name": "spr_dagger_common",
   "tags": [],
   "resourceType": "GMSprite",
 }

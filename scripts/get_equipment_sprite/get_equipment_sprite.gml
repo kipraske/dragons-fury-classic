@@ -63,17 +63,19 @@ function get_weapon_sprites( type, tier ){
 					return [ spr_xbow_base, spr_arrow_void, spr_effect_arrow_down ];
 			}
 		case equipment_types.dagger:
-			case equipment_tiers.common:
-				break;
-			case equipment_tiers.rare:
-				break;
-			case equipment_tiers.legendary:
-				break;
-			case equipment_tiers.personal:
-				break;
-			case equipment_tiers.void:
-				break;
-			break;
+			switch ( tier ) {
+				case equipment_tiers.common:
+					return [ spr_dagger_common, noone, spr_effect_stab ];
+				case equipment_tiers.rare:
+					return [ spr_dagger_rare, noone, spr_effect_stab ];
+				case equipment_tiers.legendary:
+					return [ spr_dagger_legendary, noone, spr_effect_stab ];
+				case equipment_tiers.personal:
+					return [ spr_dagger_personal, noone, spr_effect_stab ];
+				case equipment_tiers.void:
+					// TODO - create void effect glow which is purple
+					return [ spr_dagger_void, noone, spr_effect_stab ];
+			}
 		case equipment_types.hammer:
 			case equipment_tiers.common:
 				break;

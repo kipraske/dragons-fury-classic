@@ -35,29 +35,33 @@ function get_weapon_sprites( type, tier ){
 					return [ spr_book_void_closed, spr_book_void_open, spr_effect_glow_white ];
 			}
 		case equipment_types.bow:
-			case equipment_tiers.common:
-				break;
-			case equipment_tiers.rare:
-				break;
-			case equipment_tiers.legendary:
-				break;
-			case equipment_tiers.personal:
-				break;
-			case equipment_tiers.void:
-				break;
-			break;
+			switch ( tier ) {
+				case equipment_tiers.common:
+					return [ spr_bow_base, spr_arrow_common, spr_effect_arrow_down ];
+				case equipment_tiers.rare:
+					return [ spr_bow_base, spr_arrow_rare, spr_effect_arrow_down ];
+				case equipment_tiers.legendary:
+					return [ spr_bow_base, spr_arrow_legendary, spr_effect_arrow_down ];
+				case equipment_tiers.personal:
+					return [ spr_bow_base, spr_arrow_personal, spr_effect_arrow_down ];
+				case equipment_tiers.void:
+					// TODO - create void effect glow which is purple
+					return [ spr_bow_base, spr_arrow_void, spr_effect_arrow_down ];
+			}
 		case equipment_types.crossbow:
-			case equipment_tiers.common:
-				break;
-			case equipment_tiers.rare:
-				break;
-			case equipment_tiers.legendary:
-				break;
-			case equipment_tiers.personal:
-				break;
-			case equipment_tiers.void:
-				break;
-			break;
+			switch ( tier ) {
+				case equipment_tiers.common:
+					return [ spr_xbow_base, spr_arrow_common, spr_effect_arrow_down ];
+				case equipment_tiers.rare:
+					return [ spr_xbow_base, spr_arrow_rare, spr_effect_arrow_down ];
+				case equipment_tiers.legendary:
+					return [ spr_xbow_base, spr_arrow_legendary, spr_effect_arrow_down ];
+				case equipment_tiers.personal:
+					return [ spr_xbow_base, spr_arrow_personal, spr_effect_arrow_down ];
+				case equipment_tiers.void:
+					// TODO - create void effect glow which is purple
+					return [ spr_xbow_base, spr_arrow_void, spr_effect_arrow_down ];
+			}
 		case equipment_types.dagger:
 			case equipment_tiers.common:
 				break;

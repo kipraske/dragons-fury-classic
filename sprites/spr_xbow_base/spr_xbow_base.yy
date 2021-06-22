@@ -7,10 +7,10 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 6,
-  "bbox_right": 25,
-  "bbox_top": 8,
-  "bbox_bottom": 25,
+  "bbox_left": 2,
+  "bbox_right": 31,
+  "bbox_top": 0,
+  "bbox_bottom": 29,
   "HTile": false,
   "VTile": false,
   "For3D": false,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4fe6611f-f331-4cfe-bd98-4e04a6554aac","path":"sprites/unarmed_fist/unarmed_fist.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4fe6611f-f331-4cfe-bd98-4e04a6554aac","path":"sprites/unarmed_fist/unarmed_fist.yy",},"LayerId":{"name":"9f061b13-10e2-467a-9574-420e0f9e83be","path":"sprites/unarmed_fist/unarmed_fist.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"unarmed_fist","path":"sprites/unarmed_fist/unarmed_fist.yy",},"resourceVersion":"1.0","name":"4fe6611f-f331-4cfe-bd98-4e04a6554aac","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"e901da43-fa8e-4aa4-b318-057a38b55a1f","path":"sprites/spr_xbow_base/spr_xbow_base.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"e901da43-fa8e-4aa4-b318-057a38b55a1f","path":"sprites/spr_xbow_base/spr_xbow_base.yy",},"LayerId":{"name":"eadf6678-a200-4b06-a45e-c5f13fcbda43","path":"sprites/spr_xbow_base/spr_xbow_base.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_xbow_base","path":"sprites/spr_xbow_base/spr_xbow_base.yy",},"resourceVersion":"1.0","name":"e901da43-fa8e-4aa4-b318-057a38b55a1f","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"unarmed_fist","path":"sprites/unarmed_fist/unarmed_fist.yy",},
+    "spriteId": {"name":"spr_xbow_base","path":"sprites/spr_xbow_base/spr_xbow_base.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"77d7ba5c-4e00-47a4-9e38-b30b9582bccb","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4fe6611f-f331-4cfe-bd98-4e04a6554aac","path":"sprites/unarmed_fist/unarmed_fist.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"45a642cc-880c-43b8-b69a-6e1354d02a63","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e901da43-fa8e-4aa4-b318-057a38b55a1f","path":"sprites/spr_xbow_base/spr_xbow_base.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"unarmed_fist","path":"sprites/unarmed_fist/unarmed_fist.yy",},
+    "parent": {"name":"spr_xbow_base","path":"sprites/spr_xbow_base/spr_xbow_base.yy",},
     "resourceVersion": "1.3",
-    "name": "unarmed_fist",
+    "name": "spr_xbow_base",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"9f061b13-10e2-467a-9574-420e0f9e83be","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"eadf6678-a200-4b06-a45e-c5f13fcbda43","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/equipment/weapons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "unarmed_fist",
+  "name": "spr_xbow_base",
   "tags": [],
   "resourceType": "GMSprite",
 }

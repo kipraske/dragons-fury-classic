@@ -23,7 +23,7 @@ function get_weapon_sprites( type, tier ){
 		case equipment_types.book:
 			switch ( tier ) {
 				case equipment_tiers.common:
-					return [ spr_book_common_closed, spr_book_common_open, spr_effect_glow_blue ];
+					return [ spr_book_common_closed, spr_book_common_open, spr_effect_glow_small ];
 				case equipment_tiers.rare:
 					return [ spr_book_rare_closed, spr_book_rare_open, spr_effect_glow_blue ];
 				case equipment_tiers.legendary:
@@ -77,17 +77,19 @@ function get_weapon_sprites( type, tier ){
 					return [ spr_dagger_void, noone, spr_effect_stab ];
 			}
 		case equipment_types.hammer:
-			case equipment_tiers.common:
-				break;
-			case equipment_tiers.rare:
-				break;
-			case equipment_tiers.legendary:
-				break;
-			case equipment_tiers.personal:
-				break;
-			case equipment_tiers.void:
-				break;
-			break;
+			switch ( tier ) {
+				case equipment_tiers.common:
+					return [ spr_hammer_common, noone, spr_effect_smash ];
+				case equipment_tiers.rare:
+					return [ spr_hammer_rare, noone, spr_effect_smash ];
+				case equipment_tiers.legendary:
+					return [ spr_hammer_legendary, noone, spr_effect_smash ];
+				case equipment_tiers.personal:
+					return [ spr_hammer_personal, noone, spr_effect_smash ];
+				case equipment_tiers.void:
+					// TODO - create void effect glow which is purple
+					return [ spr_hammer_void, noone, spr_effect_smash ];
+			}
 		case equipment_types.mace:
 			case equipment_tiers.common:
 				break;

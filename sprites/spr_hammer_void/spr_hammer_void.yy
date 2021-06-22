@@ -7,10 +7,10 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 4,
-  "bbox_right": 27,
-  "bbox_top": 4,
-  "bbox_bottom": 27,
+  "bbox_left": 0,
+  "bbox_right": 31,
+  "bbox_top": 0,
+  "bbox_bottom": 31,
   "HTile": false,
   "VTile": false,
   "For3D": false,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"5f36dd6d-cc1e-4b66-87b1-d42926dd2aa4","path":"sprites/hammer_common/hammer_common.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5f36dd6d-cc1e-4b66-87b1-d42926dd2aa4","path":"sprites/hammer_common/hammer_common.yy",},"LayerId":{"name":"5416c4bc-d4f8-4463-a192-b8fd5a8f6761","path":"sprites/hammer_common/hammer_common.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"hammer_common","path":"sprites/hammer_common/hammer_common.yy",},"resourceVersion":"1.0","name":"5f36dd6d-cc1e-4b66-87b1-d42926dd2aa4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c5c77cf4-4f1e-4baf-a911-ea779f353d82","path":"sprites/spr_hammer_void/spr_hammer_void.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c5c77cf4-4f1e-4baf-a911-ea779f353d82","path":"sprites/spr_hammer_void/spr_hammer_void.yy",},"LayerId":{"name":"41d1c0bf-9148-42ec-9aa3-a5899f8a3136","path":"sprites/spr_hammer_void/spr_hammer_void.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_hammer_void","path":"sprites/spr_hammer_void/spr_hammer_void.yy",},"resourceVersion":"1.0","name":"c5c77cf4-4f1e-4baf-a911-ea779f353d82","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"hammer_common","path":"sprites/hammer_common/hammer_common.yy",},
+    "spriteId": {"name":"spr_hammer_void","path":"sprites/spr_hammer_void/spr_hammer_void.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"f97e3d3e-2403-4483-8ae2-a7bb7d6e88c3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5f36dd6d-cc1e-4b66-87b1-d42926dd2aa4","path":"sprites/hammer_common/hammer_common.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"769c340a-50a4-481d-841f-dbb8e555193b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c5c77cf4-4f1e-4baf-a911-ea779f353d82","path":"sprites/spr_hammer_void/spr_hammer_void.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"hammer_common","path":"sprites/hammer_common/hammer_common.yy",},
+    "parent": {"name":"spr_hammer_void","path":"sprites/spr_hammer_void/spr_hammer_void.yy",},
     "resourceVersion": "1.3",
-    "name": "hammer_common",
+    "name": "spr_hammer_void",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5416c4bc-d4f8-4463-a192-b8fd5a8f6761","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"41d1c0bf-9148-42ec-9aa3-a5899f8a3136","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/equipment/weapons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "hammer_common",
+  "name": "spr_hammer_void",
   "tags": [],
   "resourceType": "GMSprite",
 }

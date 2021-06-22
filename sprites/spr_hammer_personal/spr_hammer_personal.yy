@@ -9,7 +9,7 @@
   "swfPrecision": 2.525,
   "bbox_left": 0,
   "bbox_right": 31,
-  "bbox_top": 0,
+  "bbox_top": 2,
   "bbox_bottom": 31,
   "HTile": false,
   "VTile": false,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c5c77cf4-4f1e-4baf-a911-ea779f353d82","path":"sprites/hammer_void/hammer_void.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c5c77cf4-4f1e-4baf-a911-ea779f353d82","path":"sprites/hammer_void/hammer_void.yy",},"LayerId":{"name":"41d1c0bf-9148-42ec-9aa3-a5899f8a3136","path":"sprites/hammer_void/hammer_void.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"hammer_void","path":"sprites/hammer_void/hammer_void.yy",},"resourceVersion":"1.0","name":"c5c77cf4-4f1e-4baf-a911-ea779f353d82","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"d862a131-7393-4831-814c-d85ffdb3dae0","path":"sprites/spr_hammer_personal/spr_hammer_personal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"d862a131-7393-4831-814c-d85ffdb3dae0","path":"sprites/spr_hammer_personal/spr_hammer_personal.yy",},"LayerId":{"name":"5779a411-8d50-4e83-bb6f-61bb46c78085","path":"sprites/spr_hammer_personal/spr_hammer_personal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_hammer_personal","path":"sprites/spr_hammer_personal/spr_hammer_personal.yy",},"resourceVersion":"1.0","name":"d862a131-7393-4831-814c-d85ffdb3dae0","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"hammer_void","path":"sprites/hammer_void/hammer_void.yy",},
+    "spriteId": {"name":"spr_hammer_personal","path":"sprites/spr_hammer_personal/spr_hammer_personal.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"769c340a-50a4-481d-841f-dbb8e555193b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c5c77cf4-4f1e-4baf-a911-ea779f353d82","path":"sprites/hammer_void/hammer_void.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6e1509b3-ae34-4e9d-a671-d5aae9a28ff4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d862a131-7393-4831-814c-d85ffdb3dae0","path":"sprites/spr_hammer_personal/spr_hammer_personal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"hammer_void","path":"sprites/hammer_void/hammer_void.yy",},
+    "parent": {"name":"spr_hammer_personal","path":"sprites/spr_hammer_personal/spr_hammer_personal.yy",},
     "resourceVersion": "1.3",
-    "name": "hammer_void",
+    "name": "spr_hammer_personal",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"41d1c0bf-9148-42ec-9aa3-a5899f8a3136","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5779a411-8d50-4e83-bb6f-61bb46c78085","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/equipment/weapons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "hammer_void",
+  "name": "spr_hammer_personal",
   "tags": [],
   "resourceType": "GMSprite",
 }

@@ -7,8 +7,8 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 0,
-  "bbox_right": 29,
+  "bbox_left": 2,
+  "bbox_right": 31,
   "bbox_top": 0,
   "bbox_bottom": 31,
   "HTile": false,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"cfbe220c-22e8-479d-b5ff-90f6f07cec39","path":"sprites/short_sword_legendary/short_sword_legendary.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"cfbe220c-22e8-479d-b5ff-90f6f07cec39","path":"sprites/short_sword_legendary/short_sword_legendary.yy",},"LayerId":{"name":"75b280e0-f91b-413f-a478-551a45cb0332","path":"sprites/short_sword_legendary/short_sword_legendary.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"short_sword_legendary","path":"sprites/short_sword_legendary/short_sword_legendary.yy",},"resourceVersion":"1.0","name":"cfbe220c-22e8-479d-b5ff-90f6f07cec39","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"8090e1b5-0002-4f36-9f6f-f59704b0808a","path":"sprites/spr_short_sword_personal/spr_short_sword_personal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"8090e1b5-0002-4f36-9f6f-f59704b0808a","path":"sprites/spr_short_sword_personal/spr_short_sword_personal.yy",},"LayerId":{"name":"568b860f-2399-483a-b785-382f17b688b0","path":"sprites/spr_short_sword_personal/spr_short_sword_personal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_short_sword_personal","path":"sprites/spr_short_sword_personal/spr_short_sword_personal.yy",},"resourceVersion":"1.0","name":"8090e1b5-0002-4f36-9f6f-f59704b0808a","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"short_sword_legendary","path":"sprites/short_sword_legendary/short_sword_legendary.yy",},
+    "spriteId": {"name":"spr_short_sword_personal","path":"sprites/spr_short_sword_personal/spr_short_sword_personal.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"e8af4fde-c237-40cc-b703-6e88861fde02","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cfbe220c-22e8-479d-b5ff-90f6f07cec39","path":"sprites/short_sword_legendary/short_sword_legendary.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1f92e508-7a28-4c90-8d81-834e02af1de0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8090e1b5-0002-4f36-9f6f-f59704b0808a","path":"sprites/spr_short_sword_personal/spr_short_sword_personal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"short_sword_legendary","path":"sprites/short_sword_legendary/short_sword_legendary.yy",},
+    "parent": {"name":"spr_short_sword_personal","path":"sprites/spr_short_sword_personal/spr_short_sword_personal.yy",},
     "resourceVersion": "1.3",
-    "name": "short_sword_legendary",
+    "name": "spr_short_sword_personal",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"75b280e0-f91b-413f-a478-551a45cb0332","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"568b860f-2399-483a-b785-382f17b688b0","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/equipment/weapons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "short_sword_legendary",
+  "name": "spr_short_sword_personal",
   "tags": [],
   "resourceType": "GMSprite",
 }

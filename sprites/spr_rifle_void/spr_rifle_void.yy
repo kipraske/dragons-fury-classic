@@ -8,9 +8,9 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 29,
+  "bbox_right": 31,
   "bbox_top": 0,
-  "bbox_bottom": 29,
+  "bbox_bottom": 31,
   "HTile": false,
   "VTile": false,
   "For3D": false,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d6ca6041-c742-4a13-9bbc-2a69470426d1","path":"sprites/short_sword_void/short_sword_void.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d6ca6041-c742-4a13-9bbc-2a69470426d1","path":"sprites/short_sword_void/short_sword_void.yy",},"LayerId":{"name":"a7a71cd6-669d-4544-afb1-30d165490729","path":"sprites/short_sword_void/short_sword_void.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"short_sword_void","path":"sprites/short_sword_void/short_sword_void.yy",},"resourceVersion":"1.0","name":"d6ca6041-c742-4a13-9bbc-2a69470426d1","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"9d5f96f5-4cd5-4dba-817f-3e1540476d61","path":"sprites/spr_rifle_void/spr_rifle_void.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"9d5f96f5-4cd5-4dba-817f-3e1540476d61","path":"sprites/spr_rifle_void/spr_rifle_void.yy",},"LayerId":{"name":"7ba90942-c7a2-4289-a34e-528fa1f3ff98","path":"sprites/spr_rifle_void/spr_rifle_void.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_rifle_void","path":"sprites/spr_rifle_void/spr_rifle_void.yy",},"resourceVersion":"1.0","name":"9d5f96f5-4cd5-4dba-817f-3e1540476d61","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"short_sword_void","path":"sprites/short_sword_void/short_sword_void.yy",},
+    "spriteId": {"name":"spr_rifle_void","path":"sprites/spr_rifle_void/spr_rifle_void.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"11a6856a-d178-458d-9338-8a3c8a98c963","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d6ca6041-c742-4a13-9bbc-2a69470426d1","path":"sprites/short_sword_void/short_sword_void.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ce124310-08b8-4db1-970b-255558f8c524","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9d5f96f5-4cd5-4dba-817f-3e1540476d61","path":"sprites/spr_rifle_void/spr_rifle_void.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"short_sword_void","path":"sprites/short_sword_void/short_sword_void.yy",},
+    "parent": {"name":"spr_rifle_void","path":"sprites/spr_rifle_void/spr_rifle_void.yy",},
     "resourceVersion": "1.3",
-    "name": "short_sword_void",
+    "name": "spr_rifle_void",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a7a71cd6-669d-4544-afb1-30d165490729","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7ba90942-c7a2-4289-a34e-528fa1f3ff98","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/equipment/weapons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "short_sword_void",
+  "name": "spr_rifle_void",
   "tags": [],
   "resourceType": "GMSprite",
 }

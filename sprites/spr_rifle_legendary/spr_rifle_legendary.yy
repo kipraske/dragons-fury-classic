@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"9d5f96f5-4cd5-4dba-817f-3e1540476d61","path":"sprites/rifle_void/rifle_void.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9d5f96f5-4cd5-4dba-817f-3e1540476d61","path":"sprites/rifle_void/rifle_void.yy",},"LayerId":{"name":"7ba90942-c7a2-4289-a34e-528fa1f3ff98","path":"sprites/rifle_void/rifle_void.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"rifle_void","path":"sprites/rifle_void/rifle_void.yy",},"resourceVersion":"1.0","name":"9d5f96f5-4cd5-4dba-817f-3e1540476d61","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"5b072914-3a12-4f92-85db-a1bb39349c0d","path":"sprites/spr_rifle_legendary/spr_rifle_legendary.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"5b072914-3a12-4f92-85db-a1bb39349c0d","path":"sprites/spr_rifle_legendary/spr_rifle_legendary.yy",},"LayerId":{"name":"d82e12bf-e41d-4898-aeed-b9ab41b11599","path":"sprites/spr_rifle_legendary/spr_rifle_legendary.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_rifle_legendary","path":"sprites/spr_rifle_legendary/spr_rifle_legendary.yy",},"resourceVersion":"1.0","name":"5b072914-3a12-4f92-85db-a1bb39349c0d","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"rifle_void","path":"sprites/rifle_void/rifle_void.yy",},
+    "spriteId": {"name":"spr_rifle_legendary","path":"sprites/spr_rifle_legendary/spr_rifle_legendary.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"ce124310-08b8-4db1-970b-255558f8c524","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9d5f96f5-4cd5-4dba-817f-3e1540476d61","path":"sprites/rifle_void/rifle_void.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"76a0a2be-caad-4f20-9c2e-704a19b22f6f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5b072914-3a12-4f92-85db-a1bb39349c0d","path":"sprites/spr_rifle_legendary/spr_rifle_legendary.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"rifle_void","path":"sprites/rifle_void/rifle_void.yy",},
+    "parent": {"name":"spr_rifle_legendary","path":"sprites/spr_rifle_legendary/spr_rifle_legendary.yy",},
     "resourceVersion": "1.3",
-    "name": "rifle_void",
+    "name": "spr_rifle_legendary",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7ba90942-c7a2-4289-a34e-528fa1f3ff98","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d82e12bf-e41d-4898-aeed-b9ab41b11599","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/equipment/weapons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "rifle_void",
+  "name": "spr_rifle_legendary",
   "tags": [],
   "resourceType": "GMSprite",
 }

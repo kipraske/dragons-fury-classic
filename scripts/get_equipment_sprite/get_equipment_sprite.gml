@@ -119,29 +119,33 @@ function get_weapon_sprites( type, tier ){
 					return [ spr_pistol_void, spr_effect_shoot_fire, spr_effect_shoot_hit ];
 			}
 		case equipment_types.rifle:
-			case equipment_tiers.common:
-				break;
-			case equipment_tiers.rare:
-				break;
-			case equipment_tiers.legendary:
-				break;
-			case equipment_tiers.personal:
-				break;
-			case equipment_tiers.void:
-				break;
-			break;
+			switch ( tier ) {
+				case equipment_tiers.common:
+					return [ spr_rifle_common, spr_effect_shoot_fire, spr_effect_shoot_hit ];
+				case equipment_tiers.rare:
+					return [ spr_rifle_rare, spr_effect_shoot_fire, spr_effect_shoot_hit ];
+				case equipment_tiers.legendary:
+					return [ spr_rifle_legendary, spr_effect_shoot_fire, spr_effect_shoot_hit ];
+				case equipment_tiers.personal:
+					return [ spr_rifle_personal, spr_effect_shoot_fire, spr_effect_shoot_hit ];
+				case equipment_tiers.void:
+					// TODO - create void effect glow which is purple
+					return [ spr_rifle_void, spr_effect_shoot_fire, spr_effect_shoot_hit ];
+			}
 		case equipment_types.short_sword:
-			case equipment_tiers.common:
-				break;
-			case equipment_tiers.rare:
-				break;
-			case equipment_tiers.legendary:
-				break;
-			case equipment_tiers.personal:
-				break;
-			case equipment_tiers.void:
-				break;
-			break;
+			switch ( tier ) {
+				case equipment_tiers.common:
+					return [ spr_short_sword_common, noone, spr_effect_small_slash ];
+				case equipment_tiers.rare:
+					return [ spr_short_sword_rare, noone, spr_effect_small_slash ];
+				case equipment_tiers.legendary:
+					return [ spr_short_sword_legendary, noone, spr_effect_small_slash ];
+				case equipment_tiers.personal:
+					return [ spr_short_sword_personal, noone, spr_effect_small_slash ];
+				case equipment_tiers.void:
+					// TODO - create void effect glow which is purple
+					return [ spr_short_sword_void, noone, spr_effect_small_slash ];
+			}
 		case equipment_types.spear:
 			case equipment_tiers.common:
 				break;

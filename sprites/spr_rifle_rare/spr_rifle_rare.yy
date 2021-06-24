@@ -8,9 +8,9 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 2,
-  "bbox_right": 29,
+  "bbox_right": 31,
   "bbox_top": 0,
-  "bbox_bottom": 29,
+  "bbox_bottom": 31,
   "HTile": false,
   "VTile": false,
   "For3D": false,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"2a47e6ec-8b95-4400-864f-073bb6f6e097","path":"sprites/rifle_common/rifle_common.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2a47e6ec-8b95-4400-864f-073bb6f6e097","path":"sprites/rifle_common/rifle_common.yy",},"LayerId":{"name":"a0d9916d-f84a-46e2-9bdb-5191bce9d6d9","path":"sprites/rifle_common/rifle_common.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"rifle_common","path":"sprites/rifle_common/rifle_common.yy",},"resourceVersion":"1.0","name":"2a47e6ec-8b95-4400-864f-073bb6f6e097","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"88e804df-f421-4a07-8648-106f7c244097","path":"sprites/spr_rifle_rare/spr_rifle_rare.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"88e804df-f421-4a07-8648-106f7c244097","path":"sprites/spr_rifle_rare/spr_rifle_rare.yy",},"LayerId":{"name":"a6578dd1-8c55-4a57-b664-e2fbae8c475f","path":"sprites/spr_rifle_rare/spr_rifle_rare.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_rifle_rare","path":"sprites/spr_rifle_rare/spr_rifle_rare.yy",},"resourceVersion":"1.0","name":"88e804df-f421-4a07-8648-106f7c244097","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"rifle_common","path":"sprites/rifle_common/rifle_common.yy",},
+    "spriteId": {"name":"spr_rifle_rare","path":"sprites/spr_rifle_rare/spr_rifle_rare.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"88107fe0-735d-4a0a-ae20-60c5b75e1350","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2a47e6ec-8b95-4400-864f-073bb6f6e097","path":"sprites/rifle_common/rifle_common.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"028feff6-7fbc-4b7a-9f5f-0965fa206ba0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"88e804df-f421-4a07-8648-106f7c244097","path":"sprites/spr_rifle_rare/spr_rifle_rare.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"rifle_common","path":"sprites/rifle_common/rifle_common.yy",},
+    "parent": {"name":"spr_rifle_rare","path":"sprites/spr_rifle_rare/spr_rifle_rare.yy",},
     "resourceVersion": "1.3",
-    "name": "rifle_common",
+    "name": "spr_rifle_rare",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a0d9916d-f84a-46e2-9bdb-5191bce9d6d9","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a6578dd1-8c55-4a57-b664-e2fbae8c475f","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/equipment/weapons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "rifle_common",
+  "name": "spr_rifle_rare",
   "tags": [],
   "resourceType": "GMSprite",
 }

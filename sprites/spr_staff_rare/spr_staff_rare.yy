@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"e44b5a4f-c506-47ae-ae49-d3bb0cc3cb14","path":"sprites/staff_rare/staff_rare.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e44b5a4f-c506-47ae-ae49-d3bb0cc3cb14","path":"sprites/staff_rare/staff_rare.yy",},"LayerId":{"name":"74b23921-1024-40f7-ae39-65b1f560b136","path":"sprites/staff_rare/staff_rare.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"staff_rare","path":"sprites/staff_rare/staff_rare.yy",},"resourceVersion":"1.0","name":"e44b5a4f-c506-47ae-ae49-d3bb0cc3cb14","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"e44b5a4f-c506-47ae-ae49-d3bb0cc3cb14","path":"sprites/spr_staff_rare/spr_staff_rare.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"e44b5a4f-c506-47ae-ae49-d3bb0cc3cb14","path":"sprites/spr_staff_rare/spr_staff_rare.yy",},"LayerId":{"name":"74b23921-1024-40f7-ae39-65b1f560b136","path":"sprites/spr_staff_rare/spr_staff_rare.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_staff_rare","path":"sprites/spr_staff_rare/spr_staff_rare.yy",},"resourceVersion":"1.0","name":"e44b5a4f-c506-47ae-ae49-d3bb0cc3cb14","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"staff_rare","path":"sprites/staff_rare/staff_rare.yy",},
+    "spriteId": {"name":"spr_staff_rare","path":"sprites/spr_staff_rare/spr_staff_rare.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"e692efb6-c2bb-4a5a-880e-a1458e6ab136","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e44b5a4f-c506-47ae-ae49-d3bb0cc3cb14","path":"sprites/staff_rare/staff_rare.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e692efb6-c2bb-4a5a-880e-a1458e6ab136","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e44b5a4f-c506-47ae-ae49-d3bb0cc3cb14","path":"sprites/spr_staff_rare/spr_staff_rare.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,9 +58,9 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"staff_rare","path":"sprites/staff_rare/staff_rare.yy",},
+    "parent": {"name":"spr_staff_rare","path":"sprites/spr_staff_rare/spr_staff_rare.yy",},
     "resourceVersion": "1.3",
-    "name": "staff_rare",
+    "name": "spr_staff_rare",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/equipment/weapons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "staff_rare",
+  "name": "spr_staff_rare",
   "tags": [],
   "resourceType": "GMSprite",
 }

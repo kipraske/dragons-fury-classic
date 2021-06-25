@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"e3e8980c-5938-42c3-8482-7610c0ca293a","path":"sprites/spear_void/spear_void.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e3e8980c-5938-42c3-8482-7610c0ca293a","path":"sprites/spear_void/spear_void.yy",},"LayerId":{"name":"8b236d0d-929f-475e-bd6f-73e5dd921b01","path":"sprites/spear_void/spear_void.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spear_void","path":"sprites/spear_void/spear_void.yy",},"resourceVersion":"1.0","name":"e3e8980c-5938-42c3-8482-7610c0ca293a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"6977c5bb-f394-45dd-bb03-9883576baa85","path":"sprites/spr_sword_rare/spr_sword_rare.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"6977c5bb-f394-45dd-bb03-9883576baa85","path":"sprites/spr_sword_rare/spr_sword_rare.yy",},"LayerId":{"name":"4da8631b-2057-421f-a015-4aff633bd692","path":"sprites/spr_sword_rare/spr_sword_rare.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_sword_rare","path":"sprites/spr_sword_rare/spr_sword_rare.yy",},"resourceVersion":"1.0","name":"6977c5bb-f394-45dd-bb03-9883576baa85","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spear_void","path":"sprites/spear_void/spear_void.yy",},
+    "spriteId": {"name":"spr_sword_rare","path":"sprites/spr_sword_rare/spr_sword_rare.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"18cfbe5e-4d19-4da0-b872-cce68ad052da","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e3e8980c-5938-42c3-8482-7610c0ca293a","path":"sprites/spear_void/spear_void.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"53f29e0f-e03b-4404-bda3-4835e4ab9321","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6977c5bb-f394-45dd-bb03-9883576baa85","path":"sprites/spr_sword_rare/spr_sword_rare.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spear_void","path":"sprites/spear_void/spear_void.yy",},
+    "parent": {"name":"spr_sword_rare","path":"sprites/spr_sword_rare/spr_sword_rare.yy",},
     "resourceVersion": "1.3",
-    "name": "spear_void",
+    "name": "spr_sword_rare",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8b236d0d-929f-475e-bd6f-73e5dd921b01","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4da8631b-2057-421f-a015-4aff633bd692","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/equipment/weapons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spear_void",
+  "name": "spr_sword_rare",
   "tags": [],
   "resourceType": "GMSprite",
 }

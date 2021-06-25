@@ -8,8 +8,8 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 31,
-  "bbox_top": 0,
+  "bbox_right": 29,
+  "bbox_top": 2,
   "bbox_bottom": 31,
   "HTile": false,
   "VTile": false,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"cd51608d-ae57-4071-b697-259f3b2869b7","path":"sprites/staff_common/staff_common.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"cd51608d-ae57-4071-b697-259f3b2869b7","path":"sprites/staff_common/staff_common.yy",},"LayerId":{"name":"bb2cf73c-a293-4bb2-a864-e5b7e080a0a8","path":"sprites/staff_common/staff_common.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"staff_common","path":"sprites/staff_common/staff_common.yy",},"resourceVersion":"1.0","name":"cd51608d-ae57-4071-b697-259f3b2869b7","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"96ebb1bc-5be1-4b84-b351-d261720fbfab","path":"sprites/spr_staff_personal/spr_staff_personal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"96ebb1bc-5be1-4b84-b351-d261720fbfab","path":"sprites/spr_staff_personal/spr_staff_personal.yy",},"LayerId":{"name":"38ee1024-23c8-4e9e-9fa6-425d18cd3035","path":"sprites/spr_staff_personal/spr_staff_personal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_staff_personal","path":"sprites/spr_staff_personal/spr_staff_personal.yy",},"resourceVersion":"1.0","name":"96ebb1bc-5be1-4b84-b351-d261720fbfab","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"staff_common","path":"sprites/staff_common/staff_common.yy",},
+    "spriteId": {"name":"spr_staff_personal","path":"sprites/spr_staff_personal/spr_staff_personal.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"51bd5f41-63f4-4bfd-947e-f495eaa95a71","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cd51608d-ae57-4071-b697-259f3b2869b7","path":"sprites/staff_common/staff_common.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a5668952-5018-438b-b548-947ed4e80017","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"96ebb1bc-5be1-4b84-b351-d261720fbfab","path":"sprites/spr_staff_personal/spr_staff_personal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"staff_common","path":"sprites/staff_common/staff_common.yy",},
+    "parent": {"name":"spr_staff_personal","path":"sprites/spr_staff_personal/spr_staff_personal.yy",},
     "resourceVersion": "1.3",
-    "name": "staff_common",
+    "name": "spr_staff_personal",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"bb2cf73c-a293-4bb2-a864-e5b7e080a0a8","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"38ee1024-23c8-4e9e-9fa6-425d18cd3035","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/equipment/weapons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "staff_common",
+  "name": "spr_staff_personal",
   "tags": [],
   "resourceType": "GMSprite",
 }

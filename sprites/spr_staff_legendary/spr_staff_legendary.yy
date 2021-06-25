@@ -8,8 +8,8 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 31,
-  "bbox_top": 0,
+  "bbox_right": 29,
+  "bbox_top": 2,
   "bbox_bottom": 31,
   "HTile": false,
   "VTile": false,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"6977c5bb-f394-45dd-bb03-9883576baa85","path":"sprites/sword_rare/sword_rare.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6977c5bb-f394-45dd-bb03-9883576baa85","path":"sprites/sword_rare/sword_rare.yy",},"LayerId":{"name":"4da8631b-2057-421f-a015-4aff633bd692","path":"sprites/sword_rare/sword_rare.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sword_rare","path":"sprites/sword_rare/sword_rare.yy",},"resourceVersion":"1.0","name":"6977c5bb-f394-45dd-bb03-9883576baa85","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"e05534d3-2b76-440f-95c8-034663b17776","path":"sprites/spr_staff_legendary/spr_staff_legendary.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"e05534d3-2b76-440f-95c8-034663b17776","path":"sprites/spr_staff_legendary/spr_staff_legendary.yy",},"LayerId":{"name":"5ef89962-6223-4238-b9df-517cccf470fe","path":"sprites/spr_staff_legendary/spr_staff_legendary.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_staff_legendary","path":"sprites/spr_staff_legendary/spr_staff_legendary.yy",},"resourceVersion":"1.0","name":"e05534d3-2b76-440f-95c8-034663b17776","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sword_rare","path":"sprites/sword_rare/sword_rare.yy",},
+    "spriteId": {"name":"spr_staff_legendary","path":"sprites/spr_staff_legendary/spr_staff_legendary.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"53f29e0f-e03b-4404-bda3-4835e4ab9321","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6977c5bb-f394-45dd-bb03-9883576baa85","path":"sprites/sword_rare/sword_rare.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"40e8a381-4c61-4def-a9f7-1f7c133cc57b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e05534d3-2b76-440f-95c8-034663b17776","path":"sprites/spr_staff_legendary/spr_staff_legendary.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sword_rare","path":"sprites/sword_rare/sword_rare.yy",},
+    "parent": {"name":"spr_staff_legendary","path":"sprites/spr_staff_legendary/spr_staff_legendary.yy",},
     "resourceVersion": "1.3",
-    "name": "sword_rare",
+    "name": "spr_staff_legendary",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4da8631b-2057-421f-a015-4aff633bd692","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5ef89962-6223-4238-b9df-517cccf470fe","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/equipment/weapons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sword_rare",
+  "name": "spr_staff_legendary",
   "tags": [],
   "resourceType": "GMSprite",
 }

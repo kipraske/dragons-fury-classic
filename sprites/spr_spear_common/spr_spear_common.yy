@@ -7,10 +7,10 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 0,
-  "bbox_right": 31,
-  "bbox_top": 0,
-  "bbox_bottom": 31,
+  "bbox_left": 4,
+  "bbox_right": 29,
+  "bbox_top": 4,
+  "bbox_bottom": 29,
   "HTile": false,
   "VTile": false,
   "For3D": false,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b66c9b62-e1f1-42b2-bee8-16c575a4a3e1","path":"sprites/sword_legendary/sword_legendary.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b66c9b62-e1f1-42b2-bee8-16c575a4a3e1","path":"sprites/sword_legendary/sword_legendary.yy",},"LayerId":{"name":"91e4f385-b21f-4d7e-bbee-d30022eb9d0d","path":"sprites/sword_legendary/sword_legendary.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sword_legendary","path":"sprites/sword_legendary/sword_legendary.yy",},"resourceVersion":"1.0","name":"b66c9b62-e1f1-42b2-bee8-16c575a4a3e1","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"00eb15e0-0b1f-4d3d-af53-1763be182503","path":"sprites/spr_spear_common/spr_spear_common.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"00eb15e0-0b1f-4d3d-af53-1763be182503","path":"sprites/spr_spear_common/spr_spear_common.yy",},"LayerId":{"name":"2a7889ef-5504-4650-bd7b-60c0e17f2fee","path":"sprites/spr_spear_common/spr_spear_common.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_spear_common","path":"sprites/spr_spear_common/spr_spear_common.yy",},"resourceVersion":"1.0","name":"00eb15e0-0b1f-4d3d-af53-1763be182503","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sword_legendary","path":"sprites/sword_legendary/sword_legendary.yy",},
+    "spriteId": {"name":"spr_spear_common","path":"sprites/spr_spear_common/spr_spear_common.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"1ee5c95d-6cfb-4d5e-8cdd-fc974539c916","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b66c9b62-e1f1-42b2-bee8-16c575a4a3e1","path":"sprites/sword_legendary/sword_legendary.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"fea32c74-0c0d-4fcf-a3cf-04b6623e4cdf","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"00eb15e0-0b1f-4d3d-af53-1763be182503","path":"sprites/spr_spear_common/spr_spear_common.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sword_legendary","path":"sprites/sword_legendary/sword_legendary.yy",},
+    "parent": {"name":"spr_spear_common","path":"sprites/spr_spear_common/spr_spear_common.yy",},
     "resourceVersion": "1.3",
-    "name": "sword_legendary",
+    "name": "spr_spear_common",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"91e4f385-b21f-4d7e-bbee-d30022eb9d0d","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2a7889ef-5504-4650-bd7b-60c0e17f2fee","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/equipment/weapons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sword_legendary",
+  "name": "spr_spear_common",
   "tags": [],
   "resourceType": "GMSprite",
 }

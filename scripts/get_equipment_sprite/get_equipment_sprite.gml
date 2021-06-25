@@ -147,29 +147,47 @@ function get_weapon_sprites( type, tier ){
 					return [ spr_short_sword_void, noone, spr_effect_small_slash ];
 			}
 		case equipment_types.spear:
-			case equipment_tiers.common:
-				break;
-			case equipment_tiers.rare:
-				break;
-			case equipment_tiers.legendary:
-				break;
-			case equipment_tiers.personal:
-				break;
-			case equipment_tiers.void:
-				break;
-			break;
+			switch ( tier ) {
+				case equipment_tiers.common:
+					return [ spr_spear_common, noone, spr_effect_stab ];
+				case equipment_tiers.rare:
+					return [ spr_spear_rare, noone, spr_effect_stab ];
+				case equipment_tiers.legendary:
+					return [ spr_spear_legendary, noone, spr_effect_stab ];
+				case equipment_tiers.personal:
+					return [ spr_spear_personal, noone, spr_effect_stab ];
+				case equipment_tiers.void:
+					// TODO - create void effect glow which is purple
+					return [ spr_spear_void, noone, spr_effect_stab ];
+			}
+		case equipment_types.staff:
+			switch ( tier ) {
+				case equipment_tiers.common:
+					return [ spr_staff_common, noone, spr_effect_glow_small ];
+				case equipment_tiers.rare:
+					return [ spr_staff_rare, noone, spr_effect_glow_blue ];
+				case equipment_tiers.legendary:
+					return [ spr_staff_legendary, noone, spr_effect_glow_yellow ];
+				case equipment_tiers.personal:
+					return [ spr_staff_personal, noone, spr_effect_glow_white ];
+				case equipment_tiers.void:
+					// TODO - create void effect glow which is purple
+					return [ spr_staff_void, noone, spr_effect_glow_white ];
+			}
 		case equipment_types.sword:
-			case equipment_tiers.common:
-				break;
-			case equipment_tiers.rare:
-				break;
-			case equipment_tiers.legendary:
-				break;
-			case equipment_tiers.personal:
-				break;
-			case equipment_tiers.void:
-				break;
-			break;
+			switch ( tier ) {
+				case equipment_tiers.common:
+					return [ spr_sword_common, noone, spr_effect_slash ];
+				case equipment_tiers.rare:
+					return [ spr_sword_rare, noone, spr_effect_slash ];
+				case equipment_tiers.legendary:
+					return [ spr_sword_legendary, noone, spr_effect_slash ];
+				case equipment_tiers.personal:
+					return [ spr_sword_personal, noone, spr_effect_slash ];
+				case equipment_tiers.void:
+					// TODO - create void effect slash which is purple
+					return [ spr_sword_void, noone, spr_effect_slash ];
+			}
 		case equipment_types.unarmed:
 			case equipment_tiers.common:
 				break;

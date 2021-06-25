@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d5376120-5c3a-4459-b49c-019c5c1300c5","path":"sprites/sword_common/sword_common.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d5376120-5c3a-4459-b49c-019c5c1300c5","path":"sprites/sword_common/sword_common.yy",},"LayerId":{"name":"004e76b9-c7ad-4771-b54b-b1fc55052253","path":"sprites/sword_common/sword_common.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sword_common","path":"sprites/sword_common/sword_common.yy",},"resourceVersion":"1.0","name":"d5376120-5c3a-4459-b49c-019c5c1300c5","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"e75d3582-e9d0-4fce-8a53-ebbc84b4bb52","path":"sprites/spr_sword_personal/spr_sword_personal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"e75d3582-e9d0-4fce-8a53-ebbc84b4bb52","path":"sprites/spr_sword_personal/spr_sword_personal.yy",},"LayerId":{"name":"6c6ad859-83c0-497d-9b29-bfc46a8d72d5","path":"sprites/spr_sword_personal/spr_sword_personal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_sword_personal","path":"sprites/spr_sword_personal/spr_sword_personal.yy",},"resourceVersion":"1.0","name":"e75d3582-e9d0-4fce-8a53-ebbc84b4bb52","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sword_common","path":"sprites/sword_common/sword_common.yy",},
+    "spriteId": {"name":"spr_sword_personal","path":"sprites/spr_sword_personal/spr_sword_personal.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"227289f0-3dda-4096-b45a-f55a64b606b6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d5376120-5c3a-4459-b49c-019c5c1300c5","path":"sprites/sword_common/sword_common.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"84076dff-4a42-4ac6-9a8a-c4a74680197c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e75d3582-e9d0-4fce-8a53-ebbc84b4bb52","path":"sprites/spr_sword_personal/spr_sword_personal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sword_common","path":"sprites/sword_common/sword_common.yy",},
+    "parent": {"name":"spr_sword_personal","path":"sprites/spr_sword_personal/spr_sword_personal.yy",},
     "resourceVersion": "1.3",
-    "name": "sword_common",
+    "name": "spr_sword_personal",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"004e76b9-c7ad-4771-b54b-b1fc55052253","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6c6ad859-83c0-497d-9b29-bfc46a8d72d5","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/equipment/weapons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sword_common",
+  "name": "spr_sword_personal",
   "tags": [],
   "resourceType": "GMSprite",
 }

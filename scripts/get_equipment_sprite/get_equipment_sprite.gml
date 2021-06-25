@@ -189,19 +189,9 @@ function get_weapon_sprites( type, tier ){
 					return [ spr_sword_void, noone, spr_effect_slash ];
 			}
 		case equipment_types.unarmed:
-			case equipment_tiers.common:
-				break;
-			case equipment_tiers.rare:
-				break;
-			case equipment_tiers.legendary:
-				break;
-			case equipment_tiers.personal:
-				break;
-			case equipment_tiers.void:
-				break;
-			break;
-		default: // TODO - gotta deal with shields etc.
-			
+			return [ spr_unarmed_fist, spr_unarmed_fist_strike, spr_effect_fist_hit ];
+		default:
+			return [ spr_unarmed_fist, spr_unarmed_fist_strike, spr_effect_fist_hit ];
 	}
 }
 

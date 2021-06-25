@@ -91,6 +91,7 @@
     {"id":{"name":"shoes_void","path":"sprites/shoes_void/shoes_void.yy",},"order":9,},
     {"id":{"name":"input_helpers","path":"scripts/input_helpers/input_helpers.yy",},"order":6,},
     {"id":{"name":"spr_xbow_base","path":"sprites/spr_xbow_base/spr_xbow_base.yy",},"order":31,},
+    {"id":{"name":"spr_effect_fist_hit","path":"sprites/spr_effect_fist_hit/spr_effect_fist_hit.yy",},"order":11,},
     {"id":{"name":"calculate_stats","path":"scripts/calculate_stats/calculate_stats.yy",},"order":0,},
     {"id":{"name":"necklace_common","path":"sprites/necklace_common/necklace_common.yy",},"order":15,},
     {"id":{"name":"med_armor_void","path":"sprites/med_armor_void/med_armor_void.yy",},"order":14,},

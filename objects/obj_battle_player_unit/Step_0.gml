@@ -30,7 +30,17 @@ if ( global.battle.phase = battle_phase.execute_unit_action && start_attack_anim
 	is_attack_animation = true;
 	show_debug_message("Attack Animation Start");
 	
-	// Get the number of attacks from unit
+	// Note we ALWAYS combo even if the skill isn't an attack
+	num_hand1_attacks = calculate_num_attacks( unit );
+	hand1_anim_duration = game_speed * 0.2 * num_hand1_attacks;
+
+	if ( variable_struct_get(unit.equipment.hand2, "item_type") ) {
+		num_hand2_attacks = ceil(num_hand1_attacks / 4 );
+		hand2_anim_duration = game_speed * 0.2 * num_hand2_attacks;
+	} else {
+		num_hand2_attacks = 0;
+		hand2_anim_duration = 0;
+	}
 }
 
 // Play attack animation
@@ -46,34 +56,37 @@ if ( is_attack_animation ) {
 	}
 
 	// Show the weapon and swing it (or poke it etc, depending on type)
-	if ( attack_animation_counter >= game_speed * 0.5 && attack_animation_counter < game_speed * 0.75 ) {
+	if ( attack_animation_counter >= game_speed * 0.5 && attack_animation_counter < game_speed * 0.5 + hand1_anim_duration ) {
 		image_index = 3;
 		image_speed = 0;
 		speed = 0;
+		
+		// TODO - modulo on the duration divided by the swings I think we can make it work
 	}
 	
 	// And then the hand2 weapon
-	if ( attack_animation_counter >= game_speed * 0.75 && attack_animation_counter < game_speed * 1.0 ) {
+	if ( attack_animation_counter >= game_speed * 0.5 + hand1_anim_duration && attack_animation_counter < game_speed * 0.5 + hand1_anim_duration + hand2_anim_duration ) {
 		speed = 0;
 	}
 	
-	// Target Animation effect animation hand 1
-	if ( attack_animation_counter >= game_speed * 0.6 && attack_animation_counter < game_speed * 0.85 ) {
+	// Target Animation effect animation hand 1 ( cycles along with above)
+	if ( attack_animation_counter >= game_speed * 0.6 && attack_animation_counter < game_speed * 0.6 + hand1_anim_duration ) {
 		
 	}
 	
 	// Target Animation effect animation hand 2
-	if ( attack_animation_counter >= game_speed * 0.85 && attack_animation_counter < game_speed * 1.1 ) {
+	if ( attack_animation_counter >= game_speed * 0.6 + hand1_anim_duration && attack_animation_counter < game_speed * 0.6 + hand1_anim_duration + hand2_anim_duration ) {
 		
 	}
 	
 	if ( attack_animation_counter >= game_speed * 0.75 && attack_animation_counter < game_speed * 1.5 ) {
 		// Display Damage Numbers - for each attack
-		show_weapon = 0;
+		
+		// TODO we have to time this as well. Push them onto an array and loop through them -- since we are going to be showing like 4-5 at once
+		// show_weapon = 0;
 	}
-	
-	// TODO - apply damage numbers gradually in this animation here
-	if ( attack_animation_counter >= game_speed * 1.0 && attack_animation_counter < game_speed * 1.5 ) {
+
+	if ( attack_animation_counter >= game_speed * 1.0 + hand1_anim_duration + hand2_anim_duration && attack_animation_counter < game_speed * 1.5 + hand1_anim_duration + hand2_anim_duration) {
 		direction = 0;
 		image_speed = start_animation_speed;
 		var distance_to_move = sprite_width;
@@ -83,7 +96,7 @@ if ( is_attack_animation ) {
 		}
 	}
 	
-	if ( attack_animation_counter > game_speed * 1.5 ) {
+	if ( attack_animation_counter > game_speed * 1.5 + hand1_anim_duration + hand2_anim_duration ) {
 		show_debug_message("Attack Animation End")
 		x = xstart;
 		speed = 0;

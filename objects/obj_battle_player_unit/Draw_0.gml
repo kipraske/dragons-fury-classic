@@ -5,11 +5,6 @@ if ( global.battle.player_frontline[unit_index]._battle_stats[stats.current_HP] 
 	draw_self();
 }
 
-if ( show_weapon > 0 ) {
-	// draw_sprite_ext( get_weapon_sprite( equipment.hand1 ), 0, x, y, 1, 1, 0, c_white, 1 );
-	
-}
-
 if ( is_attack_animation ) {
 	// Show the hand 1 weapon and swing it (or poke it etc, depending on type)
 	if ( attack_animation_counter >= game_speed * 0.5 && attack_animation_counter < game_speed * 0.75 ) {

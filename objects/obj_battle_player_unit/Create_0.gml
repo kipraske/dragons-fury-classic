@@ -11,11 +11,12 @@ game_speed = game_get_speed(gamespeed_fps); // ideal fps
 start_intro_animation = true; // Kicking off the intro animation right away
 is_intro_animation = false;
 
-// Attack animations
+// Attack variables
 start_attack_animation = false;
 is_attack_animation = false;
 attack_animation_counter = 0;
-show_weapon = false;
+num_hand1_attacks = 0;
+num_hand2_attacks = 0;
 
 // Swap Animations
 start_swap_animation = false;

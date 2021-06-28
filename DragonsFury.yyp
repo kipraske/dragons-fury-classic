@@ -37,6 +37,7 @@
     {"id":{"name":"spr_effect_glow_small","path":"sprites/spr_effect_glow_small/spr_effect_glow_small.yy",},"order":7,},
     {"id":{"name":"spr_belt_rare","path":"sprites/spr_belt_rare/spr_belt_rare.yy",},"order":21,},
     {"id":{"name":"spr_sword_rare","path":"sprites/spr_sword_rare/spr_sword_rare.yy",},"order":3,},
+    {"id":{"name":"calculate_num_attacks","path":"scripts/calculate_num_attacks/calculate_num_attacks.yy",},"order":3,},
     {"id":{"name":"spr_shield_rare","path":"sprites/spr_shield_rare/spr_shield_rare.yy",},"order":1,},
     {"id":{"name":"spr_play_icon","path":"sprites/spr_play_icon/spr_play_icon.yy",},"order":5,},
     {"id":{"name":"spr_cloak_void","path":"sprites/spr_cloak_void/spr_cloak_void.yy",},"order":4,},

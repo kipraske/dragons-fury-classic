@@ -29,6 +29,8 @@ if ( global.battle.phase = battle_phase.execute_unit_action && start_attack_anim
 	start_attack_animation = false;
 	is_attack_animation = true;
 	show_debug_message("Attack Animation Start");
+	
+	// Get the number of attacks from unit
 }
 
 // Play attack animation
@@ -45,7 +47,6 @@ if ( is_attack_animation ) {
 
 	// Show the weapon and swing it (or poke it etc, depending on type)
 	if ( attack_animation_counter >= game_speed * 0.5 && attack_animation_counter < game_speed * 0.75 ) {
-		show_weapon = 1;
 		image_index = 3;
 		image_speed = 0;
 		speed = 0;
@@ -53,7 +54,6 @@ if ( is_attack_animation ) {
 	
 	// And then the hand2 weapon
 	if ( attack_animation_counter >= game_speed * 0.75 && attack_animation_counter < game_speed * 1.0 ) {
-		show_weapon = 2;
 		speed = 0;
 	}
 	

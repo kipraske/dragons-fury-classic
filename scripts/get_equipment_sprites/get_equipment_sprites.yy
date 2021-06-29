@@ -6,7 +6,7 @@
     "path": "folders/Scripts/helpers.yy",
   },
   "resourceVersion": "1.0",
-  "name": "get_equipment_sprite",
+  "name": "get_equipment_sprites",
   "tags": [],
   "resourceType": "GMScript",
 }

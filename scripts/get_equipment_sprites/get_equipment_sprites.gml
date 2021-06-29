@@ -5,6 +5,9 @@
 // 2 - Enemy Hit Sprite
 function get_weapon_sprites( type, tier ){
 
+	show_debug_message(type);
+	show_debug_message(tier);
+
 	switch (type ) {
 		case equipment_types.axe:
 			switch ( tier ) {

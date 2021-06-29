@@ -116,7 +116,7 @@
     {"id":{"name":"spr_book_void_open","path":"sprites/spr_book_void_open/spr_book_void_open.yy",},"order":46,},
     {"id":{"name":"spr_isabelle_smh","path":"sprites/spr_isabelle_smh/spr_isabelle_smh.yy",},"order":6,},
     {"id":{"name":"spr_sword_personal","path":"sprites/spr_sword_personal/spr_sword_personal.yy",},"order":1,},
-    {"id":{"name":"get_equipment_sprite","path":"scripts/get_equipment_sprite/get_equipment_sprite.yy",},"order":9,},
+    {"id":{"name":"get_equipment_sprites","path":"scripts/get_equipment_sprites/get_equipment_sprites.yy",},"order":9,},
     {"id":{"name":"spr_mace_legendary","path":"sprites/spr_mace_legendary/spr_mace_legendary.yy",},"order":34,},
     {"id":{"name":"spr_earnest_left","path":"sprites/spr_earnest_left/spr_earnest_left.yy",},"order":2,},
     {"id":{"name":"spr_book_personal_open","path":"sprites/spr_book_personal_open/spr_book_personal_open.yy",},"order":45,},

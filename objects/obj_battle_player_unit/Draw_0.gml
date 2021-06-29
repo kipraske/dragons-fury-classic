@@ -6,19 +6,22 @@ if ( global.battle.player_frontline[unit_index]._battle_stats[stats.current_HP] 
 }
 
 if ( is_attack_animation ) {
+	draw_text(x, y-10, num_hand1_attacks);
+	draw_text(x+10, y-10, num_hand2_attacks);
+	
 	// Show the hand 1 weapon and swing it (or poke it etc, depending on type)
-	if ( attack_animation_counter >= game_speed * 0.5 && attack_animation_counter < game_speed * 0.75 ) {
+	if ( attack_animation_counter >= game_speed * 0.5 && attack_animation_counter < game_speed * 0.5 + hand1_anim_duration ) {
 		if (variable_struct_get(unit.equipment.hand1, "item_type")) {
-			animate_weapon_attack( unit.equipment.hand1, attack_animation_counter - game_speed * 0.5);
+			animate_weapon_attack( unit.equipment.hand1, attack_animation_counter - game_speed * 0.5, game_speed * 0.2 ); // using a 0.2 sec animation to start with
 		} else {
 			// unarmed attack
 		}
 	}
 	
 	// And then the hand2 weapon
-	if ( attack_animation_counter >= game_speed * 0.75 && attack_animation_counter < game_speed * 1.0 ) {
+	if ( attack_animation_counter >= game_speed * 0.5 + hand1_anim_duration && attack_animation_counter < game_speed * 0.5 + hand1_anim_duration + hand2_anim_duration ) {
 		if (variable_struct_get(unit.equipment.hand2, "item_type")){
-			animate_weapon_attack( unit.equipment.hand2, attack_animation_counter - game_speed * 0.75);
+			animate_weapon_attack( unit.equipment.hand2, attack_animation_counter - game_speed * 0.5 + hand1_anim_duration, game_speed * 0.2);
 		} else {
 			// unarmed attack
 		}

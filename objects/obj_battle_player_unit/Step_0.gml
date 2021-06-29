@@ -41,6 +41,8 @@ if ( global.battle.phase = battle_phase.execute_unit_action && start_attack_anim
 		num_hand2_attacks = 0;
 		hand2_anim_duration = 0;
 	}
+	
+	// TODO - pre-calculate the damage of the attack here. We apply it later
 }
 
 // Play attack animation

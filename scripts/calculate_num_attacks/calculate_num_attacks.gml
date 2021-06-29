@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 #macro speed_variance 0.2
 #macro speed_bonus_hit_per 25
-#macro max_hit_num 20
+#macro max_hit_num 25
 
 function calculate_num_attacks( actor ){
 	var target = actor._selected_target;
@@ -24,5 +24,5 @@ function calculate_num_attacks( actor ){
 
 	// NOTE the "off hand" is half this number calculated in the player unit
 
-	return max(1 + speed_hits, max_hit_num) ; // TODO - plus the rest of the conditions
+	return min(1 + speed_hits, max_hit_num) ; // TODO - plus the rest of the conditions
 }

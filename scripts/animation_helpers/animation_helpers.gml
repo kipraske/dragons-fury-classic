@@ -3,6 +3,11 @@
 
 function animate_weapon_attack( weapon, counter, repeat_frames ) {
 
+	// Unarmed isn't set
+	if ( ! variable_struct_get(weapon, "item_type") ) {
+		weapon.item_type = equipment_types.unarmed;
+		weapon.item_tier = equipment_tiers.common;
+	}
 
 	var step = counter % repeat_frames;
 	var anim_percent = step/repeat_frames;

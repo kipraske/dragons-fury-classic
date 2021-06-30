@@ -11,20 +11,12 @@ if ( is_attack_animation ) {
 	
 	// Show the hand 1 weapon and swing it (or poke it etc, depending on type)
 	if ( attack_animation_counter >= game_speed * 0.5 && attack_animation_counter < game_speed * 0.5 + hand1_anim_duration ) {
-		if (variable_struct_get(unit.equipment.hand1, "item_type")) {
-			animate_weapon_attack( unit.equipment.hand1, attack_animation_counter - game_speed * 0.5, game_speed * 0.2 ); // using a 0.2 sec animation to start with
-		} else {
-			// unarmed attack
-		}
+		animate_weapon_attack( unit.equipment.hand1, attack_animation_counter - game_speed * 0.5, game_speed * 0.2 ); // using a 0.2 sec animation to start with
 	}
 	
 	// And then the hand2 weapon
 	if ( attack_animation_counter >= game_speed * 0.5 + hand1_anim_duration && attack_animation_counter < game_speed * 0.5 + hand1_anim_duration + hand2_anim_duration ) {
-		if (variable_struct_get(unit.equipment.hand2, "item_type")){
-			animate_weapon_attack( unit.equipment.hand2, attack_animation_counter - game_speed * 0.5 + hand1_anim_duration, game_speed * 0.2);
-		} else {
-			// unarmed attack
-		}
+		animate_weapon_attack( unit.equipment.hand2, attack_animation_counter - game_speed * 0.5 + hand1_anim_duration, game_speed * 0.2);
 	}
 	
 	// Target Animation effect animation hand 1

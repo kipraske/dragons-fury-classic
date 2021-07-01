@@ -25,7 +25,7 @@ global.battle.monster_units = [
 // Level Catherine Way up to test ranges
 global.player.catherine.level = 9999; // some extreme testing
 global.player.catherine.equipment.hand1 = {
-	item_type: equipment_types.spear,
+	item_type: equipment_types.bow,
 	item_tier: equipment_tiers.void,
 	item_level: 100,
 	item_bonus: [attr.HP_up, attr.DEF_up]

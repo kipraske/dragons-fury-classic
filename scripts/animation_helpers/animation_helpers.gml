@@ -26,7 +26,15 @@ function animate_weapon_attack( weapon, counter, repeat_frames ) {
 		var slope_percent = anim_percent*30;
 		draw_sprite_ext( weapon_sprite_set[0], 0, x + 40 - slope_percent, y + 40 + slope_percent, -1, -1, 0, c_white, 1 );
 	} else if ( weapon.item_type == equipment_types.bow || weapon.item_type == equipment_types.crossbow ) {
-		// Bow + Arrow
+		// The Bow
+		draw_sprite_ext( weapon_sprite_set[0], 0, x+18, y+52, -1, 1, 0, c_white, 1 );
+		var slope_percent = anim_percent*60;
+		var arrow_alpha = 1;
+		if ( anim_percent > 0.25 ) {
+			arrow_alpha = 1 - anim_percent;
+		}
+		// The Arrow
+		draw_sprite_ext( weapon_sprite_set[1], 0, x + 18 - slope_percent, y + 52 - slope_percent, -1, 1, 0, c_white, arrow_alpha );
 	} else if ( weapon.item_type == equipment_types.rifle || weapon.item_type == equipment_types.pistol ) {
 		// Gun
 	} else if (	weapon.item_type == equipment_types.book || weapon.item_type == equipment_types.staff ) {

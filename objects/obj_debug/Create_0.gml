@@ -4,12 +4,12 @@
 global.battle.player_frontline = [
 	global.player.catherine,
 	global.player.earnest,
-	global.player.mary,
+	global.player.isabelle,
 ]
 
 global.battle.player_backline = [
 	global.player.thomas,
-	global.player.isabelle,
+	global.player.mary,
 ]
 
 global.battle.monster_layout = monster_layout_types.five
@@ -25,8 +25,8 @@ global.battle.monster_units = [
 // Level Catherine Way up to test ranges
 global.player.catherine.level = 9999; // some extreme testing
 global.player.catherine.equipment.hand1 = {
-	item_type: equipment_types.bow,
-	item_tier: equipment_tiers.void,
+	item_type: equipment_types.rifle,
+	item_tier: equipment_tiers.rare,
 	item_level: 100,
 	item_bonus: [attr.HP_up, attr.DEF_up]
 }

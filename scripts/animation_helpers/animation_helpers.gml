@@ -37,10 +37,10 @@ function animate_weapon_attack( weapon, counter, repeat_frames ) {
 		draw_sprite_ext( weapon_sprite_set[1], 0, x + 18 - slope_percent, y + 52 - slope_percent, -1, 1, 0, c_white, arrow_alpha );
 	} else if ( weapon.item_type == equipment_types.rifle || weapon.item_type == equipment_types.pistol ) {
 		// The Gun
-		draw_sprite_ext( weapon_sprite_set[0], 0, x+18, y+48, -1, 1, 0, c_white, 1 );
+		draw_sprite_ext( weapon_sprite_set[0], 0, x+8, y+28, -1, 1, 0, c_white, 1 );
 		// The Fire
 		var fire_phase = floor(anim_percent * 5);
-		draw_sprite_ext( weapon_sprite_set[1], fire_phase, x-22, y + 2, 1, 1, 0, c_white, 1);
+		draw_sprite_ext( weapon_sprite_set[1], fire_phase, x+8, y + 28, 1, 1, 0, c_white, 1);
 	} else if (	weapon.item_type == equipment_types.book || weapon.item_type == equipment_types.staff ) {
 		// Magic
 	} else {

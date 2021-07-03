@@ -14,7 +14,7 @@ function calculate_player_stats_and_attr( this_player ){
 	
 	if ( variable_struct_exists( this_player.equipment.hand2, "item_bonus" ) ) {
 		var _hand2_bonus = variable_struct_get( this_player.equipment.hand2, "item_bonus" );
-		for ( var i = 0; i < array_length(_hand1_bonus); i++ ) {
+		for ( var i = 0; i < array_length(_hand2_bonus); i++ ) {
 			this_player.perm_attr[_hand2_bonus[i]]++
 		}
 	}

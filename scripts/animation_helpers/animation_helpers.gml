@@ -42,7 +42,15 @@ function animate_weapon_attack( weapon, counter, repeat_frames ) {
 		var fire_phase = floor(anim_percent * 5);
 		draw_sprite_ext( weapon_sprite_set[1], fire_phase, x+8, y + 28, 1, 1, 0, c_white, 1);
 	} else if (	weapon.item_type == equipment_types.book || weapon.item_type == equipment_types.staff ) {
-		// Magic
+		var sprite_frames = 7;
+		
+		if ( weapon_sprite_set[2] = spr_effect_glow_white ) {
+			var sprite_frames = 9;
+		}
+		
+		var glow_phase = floor(anim_percent * sprite_frames);
+		draw_sprite_ext( weapon_sprite_set[2], glow_phase, x+18, y+52, 1, 1, 0, c_white, 1 );
+		draw_sprite_ext( weapon_sprite_set[1], 0, x+18, y+52, 0.5, 0.5, 0, c_white, 1 );
 	} else {
 		// Unarmed
 	}

@@ -25,7 +25,7 @@ global.battle.monster_units = [
 // Level Catherine Way up to test ranges
 global.player.catherine.level = 9999; // some extreme testing
 global.player.catherine.equipment.hand1 = {
-	item_type: equipment_types.pistol,
+	item_type: equipment_types.book,
 	item_tier: equipment_tiers.rare,
 	item_level: 100,
 	item_bonus: [attr.HP_up, attr.DEF_up]
@@ -33,6 +33,12 @@ global.player.catherine.equipment.hand1 = {
 calculate_player_stats_and_attr( global.player.catherine );
 
 global.player.earnest.level = 100; // some extreme testing
+global.player.earnest.equipment.hand1 = {
+	item_type: equipment_types.crossbow,
+	item_tier: equipment_tiers.rare,
+	item_level: 100,
+	item_bonus: [attr.HP_up, attr.DEF_up]
+}
 calculate_player_stats_and_attr( global.player.earnest );
 
 // Make alfred dead

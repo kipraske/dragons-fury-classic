@@ -49,7 +49,7 @@ function animate_weapon_attack( weapon, counter, repeat_frames ) {
 		}
 		
 		var glow_phase = floor(anim_percent * sprite_frames);
-		draw_sprite_ext( weapon_sprite_set[2], glow_phase, x+18, y+52, 1, 1, 0, c_white, 1 );
+		draw_sprite_ext( weapon_sprite_set[2], glow_phase, x+18, y+52, 2, 2, 0, c_white, 0.75 );
 		draw_sprite_ext( weapon_sprite_set[1], 0, x+18, y+52, 0.5, 0.5, 0, c_white, 1 );
 	} else {
 		// Unarmed

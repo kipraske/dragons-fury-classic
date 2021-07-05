@@ -47,10 +47,17 @@ function animate_weapon_attack( weapon, counter, repeat_frames ) {
 		if ( weapon_sprite_set[2] = spr_effect_glow_white ) {
 			var sprite_frames = 9;
 		}
-		
 		var glow_phase = floor(anim_percent * sprite_frames);
-		draw_sprite_ext( weapon_sprite_set[2], glow_phase, x+18, y+52, 2, 2, 0, c_white, 0.75 );
-		draw_sprite_ext( weapon_sprite_set[1], 0, x+18, y+52, 0.5, 0.5, 0, c_white, 1 );
+		
+		if ( weapon.item_type == equipment_types.book ) {
+			draw_sprite_ext( weapon_sprite_set[2], glow_phase, x+18, y+52, 2, 2, 0, c_white, 0.75 ); // the glow
+			draw_sprite_ext( weapon_sprite_set[1], 0, x+18, y+52, 0.5, 0.5, 0, c_white, 1 ); // open book
+		}
+		if ( weapon.item_type == equipment_types.staff ) {
+			draw_sprite_ext( weapon_sprite_set[2], glow_phase, x-4, y+28, 2, 2, 0, c_white, 0.75 ); // the glow
+			draw_sprite_ext( weapon_sprite_set[0], 0, x+32, y+32, -1, 1, 0, c_white, 1 ); // the staff
+		}
+		
 	} else {
 		// Unarmed
 	}

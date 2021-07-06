@@ -60,6 +60,12 @@ function animate_weapon_attack( weapon, counter, repeat_frames ) {
 		
 	} else {
 		// Unarmed
+		var punch_distance = anim_percent*30;
+		if ( punch_distance < 15 ) {
+			draw_sprite_ext( weapon_sprite_set[0], 0, x + 16 - punch_distance, y+52, -0.5, 0.5, 0, c_white, 1 ); // closed fist
+		} else {
+			draw_sprite_ext( weapon_sprite_set[1], 0, x + 16 - punch_distance, y+52, -0.5, 0.5, 0, c_white, 1 ); // speed fist
+		}
 	}
 
 	// TODO - all of the sprite types by weapon type, but for now assume a swing.

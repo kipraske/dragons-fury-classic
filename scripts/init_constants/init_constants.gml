@@ -671,15 +671,3 @@ function init_constants(){
 	}
 
 }
-
-///@function fill_array
-///@desc Creates a new array filled with a default value. Gamemaker doesn't make it easy to copy arrays, so I need to make sure that when I make arrays they are distinct variables. Particularly when I am initializing the characters
-///@param {int} array_length
-///@param {mixed} daga - the thing you are populating the array with.
-function fill_array( array_length, data ){
-	var new_array = [];
-	for (i = array_length -1; i >=0 ; i--){
-		new_array[i] = data;
-	}
-	return new_array;
-}

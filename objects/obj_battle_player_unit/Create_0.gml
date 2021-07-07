@@ -17,7 +17,7 @@ is_attack_animation = false;
 attack_animation_counter = 0;
 num_hand1_attacks = 0;
 num_hand2_attacks = 0;
-attack_num_counter = 0;
+damage_queue = [];
 
 // Swap Animations
 start_swap_animation = false;

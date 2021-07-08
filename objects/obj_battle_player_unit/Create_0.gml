@@ -19,7 +19,7 @@ num_hand1_attacks = 0;
 num_hand2_attacks = 0;
 single_attack_duration = game_speed * 0.2;
 attack_counter = 0;
-last_attack_count = 0;
+last_attack_count = -1;
 damage_queue = [];
 
 // Swap Animations

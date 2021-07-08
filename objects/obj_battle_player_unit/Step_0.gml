@@ -32,12 +32,12 @@ if ( global.battle.phase = battle_phase.execute_unit_action && start_attack_anim
 	
 	// Note we ALWAYS combo even if the skill isn't an attack
 	num_hand1_attacks = calculate_num_attacks( unit );
-	hand1_anim_duration = game_speed * 0.2 * num_hand1_attacks;
+	hand1_anim_duration = single_attack_duration * num_hand1_attacks;
 	
 
 	if ( variable_struct_get(unit.equipment.hand2, "item_type") ) {
 		num_hand2_attacks = ceil(num_hand1_attacks / 4 );
-		hand2_anim_duration = game_speed * 0.2 * num_hand2_attacks;
+		hand2_anim_duration = single_attack_duration * num_hand2_attacks;
 	} else {
 		num_hand2_attacks = 0;
 		hand2_anim_duration = 0;
@@ -76,7 +76,7 @@ if ( is_attack_animation ) {
 		attack_counter = floor( tared_counter / single_attack_duration );
 
 		if (attack_counter > last_attack_count) {	
-			apply_next_damage_data( unit, damage_queue, last_attack_count, num_hand1_attacks );
+			apply_next_damage_data( unit, damage_queue, attack_counter, num_hand1_attacks );
 			// TODO - spawn numbers to target, probably use last_attack count
 			
 			last_attack_count = attack_counter;

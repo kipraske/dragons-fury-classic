@@ -24,10 +24,14 @@ function calculate_damage_data( actor, which_hand ){
 	// TODO - remember we just need the actor since the target is placed on them 
 	// TODO - Redo this so we don't return an array of damage. We calculate damage ONC
 	
+	// TODO - damage type based on weapon/skill, figure out the multiplier here etc.
+	
 	return [99, damage_types.normal, actor];
 }
 
-function apply_next_damage_data( damage_queue, queue_index ) {
+function apply_next_damage_data( actor, damage_queue, queue_index, hits_divisor) {
+
+	show_debug_message(queue_index);
 
 	// Multipler is applied AFTER calculations so we can time it properly
 	if ( actor.unit_type == global.battle.last_unit_type ) {
@@ -35,6 +39,8 @@ function apply_next_damage_data( damage_queue, queue_index ) {
 	} else {
 		global.battle.combo = 1;
 	}
+	
+	// TODO - division by number of hits also goes here as well.
 	
 	//The other status box globals go here then too
 	//global.battle.weak_display = 0;

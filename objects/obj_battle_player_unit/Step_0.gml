@@ -52,8 +52,6 @@ if ( global.battle.phase = battle_phase.execute_unit_action && start_attack_anim
 	for ( var i = num_hand1_attacks; i < num_hand1_attacks + num_hand2_attacks; i++ ) {
 		damage_queue[i] = calculate_damage_data(unit, 2);
 	}
-	
-	// TODO - pre-calculate the damage of the attack here. We apply it later
 }
 
 // Play attack animation
@@ -73,8 +71,20 @@ if ( is_attack_animation ) {
 		image_index = 3;
 		image_speed = 0;
 		speed = 0;
+
+		var tared_counter = attack_animation_counter - game_speed * 0.5	
+		attack_counter = floor( tared_counter / single_attack_duration );
+
+		if (attack_counter > last_attack_count) {	
+			apply_next_damage_data( unit, damage_queue, last_attack_count, num_hand1_attacks );
+			// TODO - spawn numbers to target, probably use last_attack count
+			
+			last_attack_count = attack_counter;
+		}
+
+		// TODO - apply same logic to draw function to animate the numbers
+		// Wait should the numbers just be their own sprite?! That would be way easier
 		
-		// TODO - modulo on the duration divided by the swings I think we can make it work
 	}
 	
 	// And then the hand2 weapon
@@ -86,7 +96,9 @@ if ( is_attack_animation ) {
 	if ( attack_animation_counter >= game_speed * 0.6 && attack_animation_counter < game_speed * 0.6 + hand1_anim_duration ) {
 		
 	}
-	
+
+
+
 	// Target Animation effect animation hand 2
 	if ( attack_animation_counter >= game_speed * 0.6 + hand1_anim_duration && attack_animation_counter < game_speed * 0.6 + hand1_anim_duration + hand2_anim_duration ) {
 		

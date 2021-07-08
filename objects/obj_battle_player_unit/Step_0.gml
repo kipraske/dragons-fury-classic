@@ -46,7 +46,11 @@ if ( global.battle.phase = battle_phase.execute_unit_action && start_attack_anim
 	damage_queue = fill_array( num_hand1_attacks + num_hand2_attacks, 0);
 	
 	for ( var i = 0; i < num_hand1_attacks; i++ ) {
-		damage_queue[i] = calculate_damage_data(unit, weapon, skill);
+		damage_queue[i] = calculate_damage_data(unit, 1);
+	}
+	
+	for ( var i = num_hand1_attacks; i < num_hand1_attacks + num_hand2_attacks; i++ ) {
+		damage_queue[i] = calculate_damage_data(unit, 2);
 	}
 	
 	// TODO - pre-calculate the damage of the attack here. We apply it later

@@ -19,14 +19,37 @@ function calculate_damage_data( actor, which_hand ){
 		}
 	}
 	
+	// TODO - damage formula goes here then
+	
 	// TODO - remember we just need the actor since the target is placed on them 
 	// TODO - Redo this so we don't return an array of damage. We calculate damage ONC
 	
-	// We need these things
-	// Actually the combo needs to happen when the damage is applied, but we still need to use it as a multipler here!
-	//global.battle.combo++
+	return [99, damage_types.normal, actor];
+}
+
+function apply_next_damage_data( damage_queue, queue_index ) {
+
+	// Multipler is applied AFTER calculations so we can time it properly
+	if ( actor.unit_type == global.battle.last_unit_type ) {
+		global.battle.combo++;
+	} else {
+		global.battle.combo = 1;
+	}
+	
+	//The other status box globals go here then too
 	//global.battle.weak_display = 0;
 	//global.battle.crit_display = 0;
+
+	// We may as well just go through the array rather than trying to make a complex data structure.
+	// damage_queue_index -> and we move down the queue.
 	
-	return [99, damage_types.normal];
+
+	// TODO - use the actor variable in the damage data to figure out who to apply the damage to.
+	// TODO - remove damage
+	// Push damage into a damage animation, however we are doing that.
+	// Could technically be the same damage queue with a shifting index:
+	// Show __, __ (+sec), __(+more sec) ...
+	
+	
+
 }

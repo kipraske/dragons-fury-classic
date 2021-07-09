@@ -1,7 +1,7 @@
 ///
 // So because all of our damage is keyed by type I need to pass out the info about the damage AND the info about the type of numbers to show
 // @returns array of arrays 0 - damage amount per attack, 1- damage types
-function calculate_damage_data( actor, which_hand ){
+function calculate_damage_data( actor, which_hand, hits_divisor ){
 	// Actually figure this out based on skill elementals etc.
 	
 	var action = actor._selected_action;
@@ -19,17 +19,20 @@ function calculate_damage_data( actor, which_hand ){
 		}
 	}
 	
-	// TODO - damage formula goes here then
+	var crit_mult = 0;
+	var resist_mult = 0;
+	
+	// TODO - damage formula goes here then (rem divide by # of hits and apply weak/resist)
 	
 	// TODO - remember we just need the actor since the target is placed on them 
 	// TODO - Redo this so we don't return an array of damage. We calculate damage ONC
 	
 	// TODO - damage type based on weapon/skill, figure out the multiplier here etc.
 	
-	return [99, damage_types.normal, actor];
+	return [99, crit_mult, resist_mult, actor];
 }
 
-function apply_next_damage_data( actor, damage_queue, queue_index, hits_divisor) {
+function apply_damage_data( actor, damage_queue, queue_index ) {
 
 	show_debug_message(queue_index);
 
@@ -37,25 +40,16 @@ function apply_next_damage_data( actor, damage_queue, queue_index, hits_divisor)
 	if ( actor.unit_type == global.battle.last_unit_type ) {
 		global.battle.combo++;
 	} else {
+		global.battle.last_unit_type = actor.unit_type;
 		global.battle.combo = 1;
 	}
 	
-	// TODO - division by number of hits also goes here as well.
-	
 	//The other status box globals go here then too
-	//global.battle.weak_display = 0;
-	//global.battle.crit_display = 0;
-
-	// We may as well just go through the array rather than trying to make a complex data structure.
-	// damage_queue_index -> and we move down the queue.
+	global.battle.crit_display = damage_queue[queue_index][1];
+	global.battle.weak_display = damage_queue[queue_index][2];
 	
-
-	// TODO - use the actor variable in the damage data to figure out who to apply the damage to.
-	// TODO - remove damage
-	// Push damage into a damage animation, however we are doing that.
-	// Could technically be the same damage queue with a shifting index:
-	// Show __, __ (+sec), __(+more sec) ...
+	var target_hp = actor._selected_target._battle_stats[stats.current_HP];
+	var new_hp = target_hp - damage_queue[queue_index][0]
 	
-	
-
+	actor._selected_target._battle_stats[stats.current_HP] = new_hp;
 }

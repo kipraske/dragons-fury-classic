@@ -46,11 +46,11 @@ if ( global.battle.phase = battle_phase.execute_unit_action && start_attack_anim
 	damage_queue = fill_array( num_hand1_attacks + num_hand2_attacks, 0);
 	
 	for ( var i = 0; i < num_hand1_attacks; i++ ) {
-		damage_queue[i] = calculate_damage_data(unit, 1);
+		damage_queue[i] = calculate_damage_data(unit, 1, num_hand1_attacks);
 	}
 	
 	for ( var i = num_hand1_attacks; i < num_hand1_attacks + num_hand2_attacks; i++ ) {
-		damage_queue[i] = calculate_damage_data(unit, 2);
+		damage_queue[i] = calculate_damage_data(unit, 2, num_hand2_attacks);
 	}
 }
 
@@ -76,7 +76,7 @@ if ( is_attack_animation ) {
 		attack_counter = floor( tared_counter / single_attack_duration );
 
 		if (attack_counter > last_attack_count) {	
-			apply_next_damage_data( unit, damage_queue, attack_counter, num_hand1_attacks );
+			apply_damage_data( unit, damage_queue, attack_counter );
 			// TODO - spawn numbers to target, probably use last_attack count
 			
 			last_attack_count = attack_counter;

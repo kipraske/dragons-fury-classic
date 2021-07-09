@@ -6,3 +6,6 @@ target_unit_obj = noone;
 damage = 0;
 crit_mult = 0;
 resist_mult = 0;
+
+direction = 90
+speed = 3

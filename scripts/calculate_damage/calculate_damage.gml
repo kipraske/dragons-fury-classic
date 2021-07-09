@@ -96,10 +96,6 @@ function apply_damage_data( actor, damage_queue, queue_index ) {
 		damage_animation_object.crit_mult = crit_mult;
 		damage_animation_object.resist_mult = resist_mult;
 		damage_animation_object.target_unit_obj = target_unit_obj;
-		
-
-		
-		// TODO - spawn the damage numbers here rather than in player unit.
 	}
 
 	if ( dead_targets == array_length(targets) ) {

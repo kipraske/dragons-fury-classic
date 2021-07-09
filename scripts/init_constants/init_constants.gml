@@ -622,6 +622,7 @@ function init_constants(){
 	}
 	
 	enum unit_types {
+		none,
 		player,
 		monster,
 		boss

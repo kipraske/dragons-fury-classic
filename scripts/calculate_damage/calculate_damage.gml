@@ -22,7 +22,13 @@ function calculate_damage_data( actor, which_hand, hits_divisor ){
 	
 	var crit_mult = 0;
 	var resist_mult = 0;
-	var is_aoe = false; // TODO - AOE have a flat 0.5 multiplier here Also we don't stop until they are all dead
+	
+	// TODO based on the skill figure out what the target is:
+	// unit_types.none is NO AOE
+	// unit_types.player is targeting all players (frontline)
+	// The other two (monster/boss) will target the monsters
+	
+	var is_aoe = unit_types.none; // TODO - AOE have a flat 0.5 multiplier here Also we don't stop until they are all dead
 	
 	// TODO - damage formula goes here then (rem divide by # of hits and apply weak/resist)
 	
@@ -55,11 +61,11 @@ function apply_damage_data( actor, damage_queue, queue_index ) {
 	global.battle.crit_display = crit_mult;
 	global.battle.weak_display = resist_mult;
 	
-	if ( is_aoe ) {
-		if ( actor.unit_type == unit_types.player ) {
-			var targets = global.battle.monster_units;
-		} else {
+	if ( is_aoe != unit_types.none ) {
+		if ( is_aoe == unit_types.player ) {
 			var targets = global.battle.player_frontline;
+		} else { // boss or monster
+			var targets = global.battle.monster_units;
 		}
 	} else {
 		var targets = [ actor._selected_target ];
@@ -70,12 +76,12 @@ function apply_damage_data( actor, damage_queue, queue_index ) {
 		var this_target = targets[i];
 		var target_hp = this_target._battle_stats[stats.current_HP];
 		var new_hp = target_hp - damage_queue[queue_index][0]
-		this_target._battle_stats[stats.current_HP] = new_hp;
-		
 		if ( new_hp <= 0 ) {
 			new_hp = 0;
 			dead_targets++;
 		}
+		
+		this_target._battle_stats[stats.current_HP] = new_hp;
 		
 		// TODO - spawn the damage numbers here rather than in player unit.
 	}

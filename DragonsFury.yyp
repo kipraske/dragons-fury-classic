@@ -111,6 +111,7 @@
     {"id":{"name":"spr_exclamation_bubble","path":"sprites/spr_exclamation_bubble/spr_exclamation_bubble.yy",},"order":6,},
     {"id":{"name":"spr_isabelle_surprise","path":"sprites/spr_isabelle_surprise/spr_isabelle_surprise.yy",},"order":8,},
     {"id":{"name":"spr_heavy_armor_rare","path":"sprites/spr_heavy_armor_rare/spr_heavy_armor_rare.yy",},"order":18,},
+    {"id":{"name":"obj_battle_damage","path":"objects/obj_battle_damage/obj_battle_damage.yy",},"order":10,},
     {"id":{"name":"spr_sword_common","path":"sprites/spr_sword_common/spr_sword_common.yy",},"order":4,},
     {"id":{"name":"obj_battle_player_menu","path":"objects/obj_battle_player_menu/obj_battle_player_menu.yy",},"order":8,},
     {"id":{"name":"spr_book_void_open","path":"sprites/spr_book_void_open/spr_book_void_open.yy",},"order":46,},

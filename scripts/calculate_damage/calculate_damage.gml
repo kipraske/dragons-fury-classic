@@ -45,6 +45,7 @@ function calculate_damage_data( actor, which_hand, hits_divisor ){
 function apply_damage_data( actor, damage_queue, queue_index ) {
 
 	var interrupt = false;
+	var damage = damage_queue[queue_index][0];
 	var is_aoe = damage_queue[queue_index][1];
 	var crit_mult = damage_queue[queue_index][2];
 	var resist_mult = damage_queue[queue_index][3];
@@ -75,13 +76,28 @@ function apply_damage_data( actor, damage_queue, queue_index ) {
 	for (var i = 0; i < array_length(targets); i++ ) {
 		var this_target = targets[i];
 		var target_hp = this_target._battle_stats[stats.current_HP];
-		var new_hp = target_hp - damage_queue[queue_index][0]
+		var new_hp = target_hp - damage;
 		if ( new_hp <= 0 ) {
 			new_hp = 0;
 			dead_targets++;
 		}
 		
 		this_target._battle_stats[stats.current_HP] = new_hp;
+		
+		
+		if ( this_target.unit_type == unit_types.player ) {
+			var target_unit_obj = global.battle_obj_instances.player_units[actor._selected_target._unit_position];
+		} else {
+			var target_unit_obj = global.battle_obj_instances.monster_units[actor._selected_target._unit_position];
+		}
+
+		var damage_animation_object = instance_create_depth(target_unit_obj.x, target_unit_obj.y, 0, obj_battle_damage);
+		damage_animation_object.damage = damage;
+		damage_animation_object.crit_mult = crit_mult;
+		damage_animation_object.resist_mult = resist_mult;
+		damage_animation_object.target_unit_obj = target_unit_obj;
+		
+
 		
 		// TODO - spawn the damage numbers here rather than in player unit.
 	}

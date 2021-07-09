@@ -15,7 +15,7 @@ for ( var i = 0; i < _frontline_length; i++ ) {
 	var _is_unit_dead = false;
 	var _is_unit_disabled = false;
 	var _sprite_shading = c_white;
-	if (global.battle.player_frontline[i]._battle_stats[stats.current_HP] == 0) { // dead status
+	if (global.battle.player_frontline[i]._battle_stats[stats.current_HP] <= 0) { // dead status
 		_is_unit_dead = true;
 		_sprite_shading = $888888;
 	}
@@ -32,9 +32,9 @@ for ( var i = 0; i < _frontline_length; i++ ) {
 	}
 
 	// HP and MP Bars
-	var _hp_percent = global.battle.player_frontline[i]._battle_stats[stats.current_HP] / global.battle.player_frontline[i]._battle_stats[stats.current_HP] * 100;
+	var _hp_percent = global.battle.player_frontline[i]._battle_stats[stats.current_HP] / global.battle.player_frontline[i]._battle_stats[stats.MAX_HP] * 100;
 	draw_healthbar( xx + 3*menu_sprite_gap, yy + menu_item_spacing*i + hp_pos + 2, xx + menu_width - menu_left_padding, yy + menu_item_spacing*i + hp_pos + 10, _hp_percent, c_grey, c_red, c_green, 0, true, true);
-	var _mp_percent = global.battle.player_frontline[i]._battle_stats[stats.current_MP] / global.battle.player_frontline[i]._battle_stats[stats.current_MP] * 100;
+	var _mp_percent = global.battle.player_frontline[i]._battle_stats[stats.current_MP] / global.battle.player_frontline[i]._battle_stats[stats.MAX_MP] * 100;
 	draw_healthbar( xx + 3*menu_sprite_gap, yy + menu_item_spacing*i + mp_pos + 2, xx + menu_width - menu_left_padding, yy + menu_item_spacing*i + mp_pos + 10, _mp_percent, c_grey, c_navy, c_blue, 0, true, true);
 	
 	draw_set_font(ft_stat_heading);

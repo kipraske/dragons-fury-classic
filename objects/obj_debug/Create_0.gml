@@ -31,6 +31,7 @@ global.player.catherine.equipment.hand1 = {
 	//item_bonus: [attr.HP_up, attr.DEF_up]
 }
 calculate_player_stats_and_attr( global.player.catherine );
+global.player.catherine._battle_stats[stats.current_HP] = 5000;
 
 global.player.earnest.level = 100; // some extreme testing
 global.player.earnest.equipment.hand1 = {

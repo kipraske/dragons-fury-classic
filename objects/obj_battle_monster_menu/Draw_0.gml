@@ -9,7 +9,7 @@ if (global.battle.menu_focus != battle_focus.action_select ) {
 
 	for (var i = 0; i < menu_length; i++){
 		
-		if ( global.battle.monster_units[i]._battle_stats[stats.current_HP] == 0) { // dead
+		if ( global.battle.monster_units[i]._battle_stats[stats.current_HP] <= 0) { // dead
 			draw_set_color(c_grey);
 		}
 		

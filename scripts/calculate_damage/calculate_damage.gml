@@ -22,6 +22,7 @@ function calculate_damage_data( actor, which_hand, hits_divisor ){
 	
 	var crit_mult = 0;
 	var resist_mult = 0;
+	var is_aoe = false; // TODO - AOE have a flat 0.5 multiplier here Also we don't stop until they are all dead
 	
 	// TODO - damage formula goes here then (rem divide by # of hits and apply weak/resist)
 	
@@ -30,14 +31,17 @@ function calculate_damage_data( actor, which_hand, hits_divisor ){
 	
 	// TODO - damage type based on weapon/skill, figure out the multiplier here etc.
 	
-	return [99, crit_mult, resist_mult, actor];
+	return [99, is_aoe, crit_mult, resist_mult, actor];
 }
 
-///
+/// Apply damage to the unit(s), stop attack if they are dead, and spawn animation sprites
 // @returns interupt. If something happens in the attack that we should stop attacking then we will return true
 function apply_damage_data( actor, damage_queue, queue_index ) {
 
 	var interrupt = false;
+	var is_aoe = damage_queue[queue_index][1];
+	var crit_mult = damage_queue[queue_index][2];
+	var resist_mult = damage_queue[queue_index][3];
 
 	// Multipler is applied AFTER calculations so we can time it properly
 	if ( actor.unit_type == global.battle.last_unit_type ) {
@@ -48,17 +52,37 @@ function apply_damage_data( actor, damage_queue, queue_index ) {
 	}
 	
 	//The other status box globals go here then too
-	global.battle.crit_display = damage_queue[queue_index][1];
-	global.battle.weak_display = damage_queue[queue_index][2];
+	global.battle.crit_display = crit_mult;
+	global.battle.weak_display = resist_mult;
 	
-	var target_hp = actor._selected_target._battle_stats[stats.current_HP];
-	var new_hp = target_hp - damage_queue[queue_index][0]
-	
-	if ( new_hp < 0 ) {
-		new_hp = 0;
+	if ( is_aoe ) {
+		if ( actor.unit_type == unit_types.player ) {
+			var targets = global.battle.monster_units;
+		} else {
+			var targets = global.battle.player_frontline;
+		}
+	} else {
+		var targets = [ actor._selected_target ];
+	}
+
+	var dead_targets = 0;
+	for (var i = 0; i < array_length(targets); i++ ) {
+		var this_target = targets[i];
+		var target_hp = this_target._battle_stats[stats.current_HP];
+		var new_hp = target_hp - damage_queue[queue_index][0]
+		this_target._battle_stats[stats.current_HP] = new_hp;
+		
+		if ( new_hp <= 0 ) {
+			new_hp = 0;
+			dead_targets++;
+		}
+		
+		// TODO - spawn the damage numbers here rather than in player unit.
+	}
+
+	if ( dead_targets == array_length(targets) ) {
 		interrupt = true;
 	}
-	
-	actor._selected_target._battle_stats[stats.current_HP] = new_hp;
+
 	return interrupt;
 }

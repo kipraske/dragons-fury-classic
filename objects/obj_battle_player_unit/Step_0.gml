@@ -75,17 +75,15 @@ if ( is_attack_animation ) {
 		var tared_counter = attack_animation_counter - game_speed * 0.5	
 		attack_counter = floor( tared_counter / single_attack_duration );
 
-		if (attack_counter > last_attack_count) {	
+		if (attack_counter > last_attack_count) {
+			// Note: apply damage data is now doing quite a bit of stuff here so I will note it here too:
+			// Apply damage to the unit(s), stop attack if they are dead, and spawn animation sprites
 			var interrupt_attack = apply_damage_data( unit, damage_queue, attack_counter );
 			if ( interrupt_attack ) {
 				hand1_anim_duration = single_attack_duration; // Finish this animation
 			}
 			last_attack_count = attack_counter;
-		}
-
-		// TODO - apply same logic to draw function to animate the numbers
-		// Wait should the numbers just be their own sprite?! That would be way easier
-		
+		}		
 	}
 	
 	// And then the hand2 weapon

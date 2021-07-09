@@ -76,9 +76,10 @@ if ( is_attack_animation ) {
 		attack_counter = floor( tared_counter / single_attack_duration );
 
 		if (attack_counter > last_attack_count) {	
-			apply_damage_data( unit, damage_queue, attack_counter );
-			// TODO - spawn numbers to target, probably use last_attack count
-			
+			var interrupt_attack = apply_damage_data( unit, damage_queue, attack_counter );
+			if ( interrupt_attack ) {
+				hand1_anim_duration = single_attack_duration; // Finish this animation
+			}
 			last_attack_count = attack_counter;
 		}
 

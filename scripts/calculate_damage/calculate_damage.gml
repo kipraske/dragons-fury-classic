@@ -1,6 +1,7 @@
 ///
 // So because all of our damage is keyed by type I need to pass out the info about the damage AND the info about the type of numbers to show
 // @returns array of arrays 0 - damage amount per attack, 1- damage types
+// TODO - this is totallyw wrong now lol
 function calculate_damage_data( actor, which_hand, hits_divisor ){
 	// Actually figure this out based on skill elementals etc.
 	
@@ -32,9 +33,11 @@ function calculate_damage_data( actor, which_hand, hits_divisor ){
 	return [99, crit_mult, resist_mult, actor];
 }
 
+///
+// @returns interupt. If something happens in the attack that we should stop attacking then we will return true
 function apply_damage_data( actor, damage_queue, queue_index ) {
 
-	show_debug_message(queue_index);
+	var interrupt = false;
 
 	// Multipler is applied AFTER calculations so we can time it properly
 	if ( actor.unit_type == global.battle.last_unit_type ) {
@@ -51,5 +54,11 @@ function apply_damage_data( actor, damage_queue, queue_index ) {
 	var target_hp = actor._selected_target._battle_stats[stats.current_HP];
 	var new_hp = target_hp - damage_queue[queue_index][0]
 	
+	if ( new_hp < 0 ) {
+		new_hp = 0;
+		interrupt = true;
+	}
+	
 	actor._selected_target._battle_stats[stats.current_HP] = new_hp;
+	return interrupt;
 }

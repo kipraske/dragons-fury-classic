@@ -20,8 +20,9 @@ function calculate_damage_data( actor, which_hand, hits_divisor ){
 		}
 	}
 	
-	var crit_mult = 0;
+	var crit_mult = 1;
 	var resist_mult = 0;
+	var is_mp = false;
 	
 	// TODO based on the skill figure out what the target is:
 	// unit_types.none is NO AOE
@@ -37,7 +38,7 @@ function calculate_damage_data( actor, which_hand, hits_divisor ){
 	
 	// TODO - damage type based on weapon/skill, figure out the multiplier here etc.
 	
-	return [99, is_aoe, crit_mult, resist_mult, actor];
+	return [99, is_aoe, crit_mult, resist_mult, is_mp, actor];
 }
 
 /// Apply damage to the unit(s), stop attack if they are dead, and spawn animation sprites
@@ -49,6 +50,8 @@ function apply_damage_data( actor, damage_queue, queue_index ) {
 	var is_aoe = damage_queue[queue_index][1];
 	var crit_mult = damage_queue[queue_index][2];
 	var resist_mult = damage_queue[queue_index][3];
+
+	// TODO - have to deal with mp damage cases. But not for awhile. Wait until it matters
 
 	// Multipler is applied AFTER calculations so we can time it properly
 	if ( actor.unit_type == global.battle.last_unit_type ) {
@@ -90,8 +93,11 @@ function apply_damage_data( actor, damage_queue, queue_index ) {
 		} else {
 			var target_unit_obj = global.battle_obj_instances.monster_units[actor._selected_target._unit_position];
 		}
+		
+		var damage_center_x = 0.5 * target_unit_obj.sprite_width;
+		var damage_start_y = target_unit_obj.sprite_height - 18; // 18 is the font size. Want it on the bottom
 
-		var damage_animation_object = instance_create_depth(target_unit_obj.x, target_unit_obj.y, 0, obj_battle_damage);
+		var damage_animation_object = instance_create_depth(target_unit_obj.x + damage_center_x, target_unit_obj.y + damage_start_y, -2, obj_battle_damage);
 		damage_animation_object.damage = damage;
 		damage_animation_object.crit_mult = crit_mult;
 		damage_animation_object.resist_mult = resist_mult;

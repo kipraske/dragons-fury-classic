@@ -609,16 +609,16 @@ function init_constants(){
 	}
 	
 	enum damage_types {
-		normal, // white
-		weak,   // cyan
-		crit,   // yellow
-		weak_crit,   // magenta
-		resist,      // grey
-		resist_crit, // dark-yellow - goldish
-		heal,      // green
-		mp_heal,   // blue
-		mp_damage, // purple (void color)
-		xp_gained  // red
+		normal, // white - c_white
+		weak,   // cyan - c_aqua
+		crit,   // yellow - c_yellow
+		weak_crit,   // magenta - c_fushia
+		resist,      // grey - c_ltgray
+		resist_crit, // dark-yellow - c_olive
+		heal,      // green - c_green
+		mp_heal,   // blue - c_blue
+		mp_damage, // purple (void color) -- TODO?
+		xp_gained  // red - c_red
 	}
 	
 	enum unit_types {

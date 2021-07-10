@@ -6,8 +6,8 @@ if ( global.battle.player_frontline[unit_index]._battle_stats[stats.current_HP] 
 }
 
 if ( is_attack_animation ) {
-	draw_text(x, y-10, num_hand1_attacks);
-	draw_text(x+25, y-10, num_hand2_attacks);
+	//draw_text(x, y-10, num_hand1_attacks);
+	//draw_text(x+25, y-10, num_hand2_attacks);
 	
 	// Show the hand 1 weapon and swing it (or poke it etc, depending on type)
 	if ( attack_animation_counter >= game_speed * 0.5 && attack_animation_counter < game_speed * 0.5 + hand1_anim_duration ) {

@@ -15,7 +15,7 @@ if ( crit_mult > 0 && resist_mult == 0 ) { // Normal Crit
 	draw_set_color( c_ltgray );
 } else if ( crit_mult > 0 && resist_mult > 0 ) { // Crit + Resist
 	draw_set_color (c_olive);
-}
+} else 
 
 if ( damage < 0 ) { // Healing
 	draw_set_color(c_green);
@@ -25,3 +25,18 @@ if ( damage < 0 ) { // Healing
 // TODO XP gained/Damage
 
 draw_text_shadow(x,y, damage);
+
+var damage_text_width = string_width(damage)
+
+if ( crit_mult > 0 ) {
+	var display_mult = crit_mult + 1;
+	draw_set_font(ft_stat_heading);
+	draw_set_color( c_yellow );
+	draw_text_shadow(x + damage_text_width - 10, y+18, "CRITx" + string(display_mult));
+}
+if ( resist_mult < 0 ) {
+	var display_mult = abs(resist_mult) + 1;
+	draw_set_font(ft_stat_heading);
+	draw_set_color( c_aqua );
+	draw_text_shadow(x+4, y+18, "CRITx" + string(display_mult));
+}

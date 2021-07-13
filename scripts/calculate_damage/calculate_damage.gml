@@ -42,11 +42,18 @@ function calculate_crit_mult( actor ){
 	return min(crit_mult, max_crit_num);
 }
 
+// Returns if the skill is an AOE or not based on the skill used and the actor
+// unit_types.none is NO AOE
+// unit_types.player is targeting all players (frontline)
+// The other two (monster/boss) will target the monsters
+function is_skill_used_aoe( actor ) {
+	return unit_types.none;
+}
 
 // So because all of our damage is keyed by type I need to pass out the info about the damage AND the info about the type of numbers to show
 // @returns array of arrays 0 - damage amount per attack, 1- damage types
 // TODO - this is totallyw wrong now lol
-function calculate_damage_data( actor, which_hand, hits_divisor ){
+function calculate_damage_data( actor, which_hand, hits_divisor, is_aoe ){
 	// Actually figure this out based on skill elementals etc.
 	
 	var action = actor._selected_action;
@@ -72,12 +79,7 @@ function calculate_damage_data( actor, which_hand, hits_divisor ){
 	var resist_mult = 0;
 	var is_mp = false;
 	
-	// TODO based on the skill figure out what the target is:
-	// unit_types.none is NO AOE
-	// unit_types.player is targeting all players (frontline)
-	// The other two (monster/boss) will target the monsters
-	
-	var is_aoe = unit_types.none; // TODO - AOE have a flat 0.5 multiplier here Also we don't stop until they are all dead
+	// TODO - AOE have a flat 0.5 multiplier here Also we don't stop until they are all dead
 	
 	// TODO - damage formula goes here then (rem divide by # of hits and apply weak/resist)
 	
@@ -86,18 +88,15 @@ function calculate_damage_data( actor, which_hand, hits_divisor ){
 	
 	// TODO - damage type based on weapon/skill, figure out the multiplier here etc.
 	
-	return [99, is_aoe, crit_mult, resist_mult, is_mp, actor];
+	return [99, crit_mult, resist_mult, is_mp, actor];
 }
 
 /// Apply damage to the unit(s), stop attack if they are dead, and spawn animation sprites
 // @returns interupt. If something happens in the attack that we should stop attacking then we will return true
-function apply_damage_data( actor, damage_queue, queue_index ) {
+function apply_damage_data( actor, which_hand, num_attacks) {
 
 	var interrupt = false;
-	var damage = damage_queue[queue_index][0];
-	var is_aoe = damage_queue[queue_index][1];
-	var crit_mult = damage_queue[queue_index][2];
-	var resist_mult = damage_queue[queue_index][3];
+	var is_aoe = is_skill_used_aoe(actor);
 
 	// TODO - have to deal with mp damage cases. But not for awhile. Wait until it matters
 
@@ -108,10 +107,6 @@ function apply_damage_data( actor, damage_queue, queue_index ) {
 		global.battle.last_unit_type = actor.unit_type;
 		global.battle.combo = 1;
 	}
-	
-	//The other status box globals go here then too
-	global.battle.crit_display = crit_mult;
-	global.battle.weak_display = resist_mult;
 	
 	if ( is_aoe != unit_types.none ) {
 		if ( is_aoe == unit_types.player ) {
@@ -125,6 +120,12 @@ function apply_damage_data( actor, damage_queue, queue_index ) {
 
 	var dead_targets = 0;
 	for (var i = 0; i < array_length(targets); i++ ) {
+		var damage_data = calculate_damage_data( actor, which_hand, num_attacks, is_aoe);
+		
+		var damage = damage_data[0];
+		var crit_mult = damage_data[1];
+		var resist_mult = damage_data[2];
+		
 		var this_target = targets[i];
 		var target_hp = this_target._battle_stats[stats.current_HP];
 		var new_hp = target_hp - damage;

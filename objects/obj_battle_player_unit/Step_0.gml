@@ -42,16 +42,6 @@ if ( global.battle.phase = battle_phase.execute_unit_action && start_attack_anim
 		num_hand2_attacks = 0;
 		hand2_anim_duration = 0;
 	}
-	
-	damage_queue = fill_array( num_hand1_attacks + num_hand2_attacks, 0);
-	
-	for ( var i = 0; i < num_hand1_attacks; i++ ) {
-		damage_queue[i] = calculate_damage_data(unit, 1, num_hand1_attacks);
-	}
-	
-	for ( var i = num_hand1_attacks; i < num_hand1_attacks + num_hand2_attacks; i++ ) {
-		damage_queue[i] = calculate_damage_data(unit, 2, num_hand2_attacks);
-	}
 }
 
 // Play attack animation
@@ -78,7 +68,7 @@ if ( is_attack_animation ) {
 		if (attack_counter > last_attack_count) {
 			// Note: apply damage data is now doing quite a bit of stuff here so I will note it here too:
 			// Apply damage to the unit(s), stop attack if they are dead, and spawn animation sprites
-			var interrupt_attack = apply_damage_data( unit, damage_queue, attack_counter );
+			var interrupt_attack = apply_damage_data( unit, 1, num_hand1_attacks );
 			if ( interrupt_attack ) {
 				hand1_anim_duration = single_attack_duration; // Finish this animation
 			}

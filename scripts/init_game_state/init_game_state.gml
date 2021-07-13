@@ -99,8 +99,6 @@ function init_game_state(){
 			menu_focus: battle_focus.no_focus,
 			next_menu_focus: battle_focus.no_focus,
 			combo: 0,
-			weak_display: 0,
-			crit_display: 0,
 			last_unit_type: unit_types.player
 		}
 		save_json_file(global.battle,    "battle_state.json");

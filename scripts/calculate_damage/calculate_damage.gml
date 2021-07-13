@@ -1,4 +1,48 @@
-///
+
+// Script assets have changed for v2.3.0 see
+// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+#macro crit_variance 0.2
+#macro crit_bonus_per 25
+#macro max_crit_num 25
+
+function calculate_crit_mult( actor ){
+	var crit_mult = 0;
+	
+	var target = actor._selected_target;
+	var action = actor._selected_action;
+	var actor_base_luck = actor._battle_stats[stats.LUK];
+	var target_base_luck = target._battle_stats[stats.LUK];
+	var actor_luck = random_range(actor_base_luck - actor_base_luck * crit_variance, actor_base_luck + actor_base_luck * speed_varience);
+	var target_luck = random_range(target_base_luck - target_base_luck * crit_variance, target_base_luck + target_base_luck * speed_varience);
+	
+	var raw_crit_percent = actor_luck - target_luck;
+	var crit_coinflips = floor(raw_crit_percent / crit_bonus_per);
+	var coinflip_percent = crit_bonus_per;
+	var leftover_crit_percent = raw_crit_percent % crit_bonus_per;
+	
+	// 0% crit chance
+	if ( raw_crit_percent < 0 ) {
+		return 0;
+	}
+	
+	// For every crit_bonus_per we roll for a crit with that rate. A bit swingy, but that is fun right?
+	for ( var i = 0; i < crit_coinflips; i++){
+		var d100 = irandom(100);
+		if ( d100 <= coinflip_percent ) {
+			crit_mult++;
+		}
+	}
+	
+	// And the leftovers we just do a normal rpg crit check
+	var d100 = irandom(100);
+	if ( d100 < leftover_crit_percent ) {
+		crit_mult++
+	}
+	
+	return min(crit_mult, max_crit_num);
+}
+
+
 // So because all of our damage is keyed by type I need to pass out the info about the damage AND the info about the type of numbers to show
 // @returns array of arrays 0 - damage amount per attack, 1- damage types
 // TODO - this is totallyw wrong now lol
@@ -20,7 +64,11 @@ function calculate_damage_data( actor, which_hand, hits_divisor ){
 		}
 	}
 	
-	var crit_mult = 1;
+	var crit_mult = calculate_crit_mult(actor);
+	// TODO - huh this is assuming single target. Need an AOE check;
+	// Same with speed huh. What is the speed of an AOE?
+	
+	
 	var resist_mult = 0;
 	var is_mp = false;
 	

@@ -42,6 +42,18 @@ function calculate_crit_mult( actor ){
 	return min(crit_mult, max_crit_num);
 }
 
+#macro max_resist_mult 25
+
+function calculate_skill_resist_mult( actor, action, weapon) {
+	
+	var resist_mult = 0;
+	var 
+	
+	return min(resist_mult, max_resist_mult);
+}
+
+
+
 // Returns if the skill is an AOE or not based on the skill used and the actor
 // unit_types.none is NO AOE
 // unit_types.player is targeting all players (frontline)
@@ -76,7 +88,7 @@ function calculate_damage_data( actor, which_hand, hits_divisor, is_aoe ){
 	// Same with speed huh. What is the speed of an AOE?
 	
 	
-	var resist_mult = -25;
+	var resist_mult = calculate_skill_resist_mult(actor, action, weapon);
 	var is_mp = false;
 	
 	// TODO - AOE have a flat 0.5 multiplier here Also we don't stop until they are all dead

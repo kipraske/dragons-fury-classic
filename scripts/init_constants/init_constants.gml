@@ -445,14 +445,19 @@ function init_constants(){
 	// status effect attr are NEVER used for bonuses so these are just the status or resists
 	enum attr {
 		none,
-		sleep,
-        freeze,
-        confuse,
-        pain,
-        aggro,
-        poison,
-        regen,
-		MP_regen,
+		sleep_resist,
+        freeze_resist,
+        confuse_resist,
+        pain_resist,
+		poison_resist,
+		sleep_weak,
+        freeze_weak,
+        confuse_weak,
+        pain_weak,
+		poison_weak,
+        auto_aggro,
+        auto_regen,
+		auto_MP_regen,
 		earth_resist,
 		sea_resist,
 		sky_resist,
@@ -483,6 +488,51 @@ function init_constants(){
         LUK_down,
 		length
 	}
+	
+	// true is a buff, false is a debuff or nothin
+	global.is_attr_buff[attr.length] = false;
+	global.is_attr_buff[attr.LUK_down] = false;
+	global.is_attr_buff[attr.SPD_down] = false;
+	global.is_attr_buff[attr.RES_down] = false;
+	global.is_attr_buff[attr.DEF_down] = false;
+	global.is_attr_buff[attr.ATK_down] = false;
+	global.is_attr_buff[attr.MP_down] = false;
+	global.is_attr_buff[attr.HP_down] = false;
+	global.is_attr_buff[attr.LUK_up] = true;
+	global.is_attr_buff[attr.SPD_up] = true;
+	global.is_attr_buff[attr.RES_up] = true;
+	global.is_attr_buff[attr.DEF_up] = true;
+	global.is_attr_buff[attr.ATK_up] = true;
+	global.is_attr_buff[attr.MP_up] = true;
+	global.is_attr_buff[attr.HP_up] = true;
+	global.is_attr_buff[attr.magic_weak] = false;
+	global.is_attr_buff[attr.blunt_weak] = false;
+	global.is_attr_buff[attr.pierce_weak] = false;
+	global.is_attr_buff[attr.slash_weak] = false;
+	global.is_attr_buff[attr.sky_weak] = false;
+	global.is_attr_buff[attr.sea_weak] = false;
+	global.is_attr_buff[attr.earth_weak] = false;
+	global.is_attr_buff[attr.magic_resist] = true;
+	global.is_attr_buff[attr.blunt_resist] = true;
+	global.is_attr_buff[attr.pierce_resist] = true;
+	global.is_attr_buff[attr.slash_resist] = true;
+	global.is_attr_buff[attr.sky_resist] = true;
+	global.is_attr_buff[attr.sea_resist] = true;
+	global.is_attr_buff[attr.earth_resist] = true;
+	global.is_attr_buff[attr.auto_MP_regen] = true;
+	global.is_attr_buff[attr.auto_regen] = true;
+	global.is_attr_buff[attr.auto_aggro] = true;
+	global.is_attr_buff[attr.poison_weak] = false;
+	global.is_attr_buff[attr.pain_weak] = false;
+	global.is_attr_buff[attr.confuse_weak] = false;
+	global.is_attr_buff[attr.freeze_weak] = false;
+	global.is_attr_buff[attr.sleep_weak] = false;
+	global.is_attr_buff[attr.poison_resist] = true;
+	global.is_attr_buff[attr.pain_resist] = true;
+	global.is_attr_buff[attr.confuse_resist] = true;
+	global.is_attr_buff[attr.freeze_resist] = true;
+	global.is_attr_buff[attr.sleep_resist] = true;
+	global.is_attr_buff[attr.none] = false;
 
 	enum equipment_slots {
 		main_hand,

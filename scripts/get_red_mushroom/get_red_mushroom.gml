@@ -52,9 +52,9 @@ function get_red_mushroom( label ){
 	monster.perm_attr[attr.blunt_resist] = 2;
 	
 	// mushrooms resist stats
-	monster.perm_attr[attr.sleep] = 1;
-	monster.perm_attr[attr.pain] = 2;
-	monster.perm_attr[attr.poison] = 2;
+	monster.perm_attr[attr.sleep_resist] = 1;
+	monster.perm_attr[attr.pain_resist] = 2;
+	monster.perm_attr[attr.poison_resist] = 2;
 	
 	calculate_monster_stats(monster);
 	

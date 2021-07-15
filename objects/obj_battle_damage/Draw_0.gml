@@ -32,11 +32,17 @@ if ( crit_mult > 0 ) {
 	var display_mult = crit_mult + 1;
 	draw_set_font(ft_stat_heading);
 	draw_set_color( c_yellow );
-	draw_text_shadow(x + damage_text_width - 10, y+18, "CRITx" + string(display_mult));
+	draw_text_shadow(x - damage_text_width - 12, y+14, "CRIT x" + string(display_mult));
 }
+
+// TODO - I think I am going to have to move this up in the various cases to make sure that the users
+// can actually see both cases. It isn't ideal but it looks ok
+
 if ( resist_mult < 0 ) {
 	var display_mult = abs(resist_mult) + 1;
 	draw_set_font(ft_stat_heading);
 	draw_set_color( c_aqua );
-	draw_text_shadow(x+4, y+18, "CRITx" + string(display_mult));
+	draw_text_shadow(x+4, y+18, "WEAKx" + string(display_mult));
 }
+
+// TODO -- resist case

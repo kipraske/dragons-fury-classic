@@ -10,4 +10,4 @@ is_mp = false;
 is_xp = false;
 
 direction = 90
-speed = 3
+speed = 5

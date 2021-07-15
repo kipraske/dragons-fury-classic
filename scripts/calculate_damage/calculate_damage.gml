@@ -76,7 +76,7 @@ function calculate_damage_data( actor, which_hand, hits_divisor, is_aoe ){
 	// Same with speed huh. What is the speed of an AOE?
 	
 	
-	var resist_mult = 0;
+	var resist_mult = -25;
 	var is_mp = false;
 	
 	// TODO - AOE have a flat 0.5 multiplier here Also we don't stop until they are all dead

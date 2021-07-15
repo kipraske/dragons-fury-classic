@@ -42,7 +42,14 @@ if ( resist_mult < 0 ) {
 	var display_mult = abs(resist_mult) + 1;
 	draw_set_font(ft_stat_heading);
 	draw_set_color( c_aqua );
-	draw_text_shadow(x+4, y+18, "WEAKx" + string(display_mult));
+	draw_text_shadow(x - damage_text_width - 12, y + 2, "WEAK x" + string(display_mult));
+}
+
+if ( resist_mult > 0 ) {
+	var display_mult = abs(resist_mult) + 1;
+	draw_set_font(ft_stat_heading);
+	draw_set_color( c_ltgray );
+	draw_text_shadow(x - damage_text_width - 16, y + 2, "RESIST x" + string(display_mult));
 }
 
 // TODO -- resist case

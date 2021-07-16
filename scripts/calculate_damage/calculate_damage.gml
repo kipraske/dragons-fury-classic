@@ -67,25 +67,27 @@ function calculate_skill_resist_mult( actor, target, action, weapon) {
 		skill_sea_mult = 1;
 	}
 	
-	if ( ! variable_struct_get( weapon, "item_type") // if empty it is unarmed
+	if ( ! variable_struct_get( weapon, "item_type") // if empty it is unarmed or monster smash
 		|| weapon.item_type == equipment_types.unarmed
 		|| weapon.item_type == equipment_types.mace
 		|| weapon.item_type == equipment_types.hammer ) {
 		skill_blunt_mult = 1;	
 	}
 	
-	if ( weapon.item_type == equipment_types.bite
+	if ( weapon.item_type == equipment_types.pistol
 		|| weapon.item_type == equipment_types.rifle
 		|| weapon.item_type == equipment_types.dagger
 		|| weapon.item_type == equipment_types.crossbow
 		|| weapon.item_type == equipment_types.bow
-		|| weapon.item_type == equipment_types.spear ) {
+		|| weapon.item_type == equipment_types.spear 
+		|| weapon.item_type == equipment_types.bite ) {
 		skill_pierce_mult = 1;
 	}
 	
 	if ( weapon.item_type == equipment_types.short_sword
 		|| weapon.item_type == equipment_types.sword
-		|| weapon.item_type == equipment_types.axe ) {
+		|| weapon.item_type == equipment_types.axe 
+		|| weapon.item_type == equipment_types.claw ) {
 		skill_slash_mult = 1;
 	}
 	

@@ -5,11 +5,9 @@
 #macro crit_bonus_per 25
 #macro max_crit_num 25
 
-function calculate_crit_mult( actor ){
+function calculate_crit_mult( actor, target, action, weapon ){
 	var crit_mult = 0;
 	
-	var target = actor._selected_target;
-	var action = actor._selected_action;
 	var actor_base_luck = actor._battle_stats[stats.LUK];
 	var target_base_luck = target._battle_stats[stats.LUK];
 	var actor_luck = random_range(actor_base_luck - actor_base_luck * crit_variance, actor_base_luck + actor_base_luck * speed_varience);
@@ -44,10 +42,76 @@ function calculate_crit_mult( actor ){
 
 #macro max_resist_mult 25
 
-function calculate_skill_resist_mult( actor, action, weapon) {
+function calculate_skill_resist_mult( actor, target, action, weapon) {
 	
 	var resist_mult = 0;
-	var 
+	
+	// What elements is the damage anyway? Will there be double typed skills, leaving it open?
+	var skill_earth_mult = 0;
+	var skill_sea_mult = 0;
+	var skill_sky_mult = 0;
+	var skill_slash_mult = 0;
+	var skill_pierce_mult = 0;
+	var skill_blunt_mult = 0;
+	var skill_magic_mult = 0;
+	
+	if ( action == skills.quake || action == skills.ice || action == skills.meteor || action == skills.smite ) {
+		skill_earth_mult = 1;	
+	}
+	
+	if ( action == skills.tornado || action == skills.thunder || action == skills.meteor || action == skills.smite ) {
+		skill_sky_mult = 1;
+	}
+	
+	if ( action == skills.flood || action == skills.ice || action == skills.thunder || action == skills.smite ) {
+		skill_sea_mult = 1;
+	}
+	
+	if ( ! variable_struct_get( weapon, "item_type") // if empty it is unarmed
+		|| weapon.item_type == equipment_types.unarmed
+		|| weapon.item_type == equipment_types.mace
+		|| weapon.item_type == equipment_types.hammer ) {
+		skill_blunt_mult = 1;	
+	}
+	
+	if ( weapon.item_type == equipment_types.bite
+		|| weapon.item_type == equipment_types.rifle
+		|| weapon.item_type == equipment_types.dagger
+		|| weapon.item_type == equipment_types.crossbow
+		|| weapon.item_type == equipment_types.bow
+		|| weapon.item_type == equipment_types.spear ) {
+		skill_pierce_mult = 1;
+	}
+	
+	if ( weapon.item_type == equipment_types.short_sword
+		|| weapon.item_type == equipment_types.sword
+		|| weapon.item_type == equipment_types.axe ) {
+		skill_slash_mult = 1;
+	}
+	
+	if ( weapon.item_type == equipment_types.book
+		|| weapon.item_type == equipment_types.staff ) {
+		skill_magic_mult = 1;
+	}
+		
+	if ( target.perm_attr[attr.earth_resist] && skill_earth_mult ) {
+		
+	}
+	
+	//earth_resist,
+	//	sea_resist,
+	//	sky_resist,
+	//	slash_resist,
+	//	pierce_resist,
+	//	blunt_resist,
+	//	magic_resist,
+	//	earth_weak,
+	//	sea_weak,
+	//	sky_weak,
+	//	slash_weak,
+	//	pierce_weak,
+	//	blunt_weak,
+	//	magic_weak,
 	
 	return min(resist_mult, max_resist_mult);
 }
@@ -65,11 +129,10 @@ function is_skill_used_aoe( actor ) {
 // So because all of our damage is keyed by type I need to pass out the info about the damage AND the info about the type of numbers to show
 // @returns array of arrays 0 - damage amount per attack, 1- damage types
 // TODO - this is totallyw wrong now lol
-function calculate_damage_data( actor, which_hand, hits_divisor, is_aoe ){
+function calculate_damage_data( actor, target, which_hand, hits_divisor, is_aoe ){
 	// Actually figure this out based on skill elementals etc.
 	
 	var action = actor._selected_action;
-	var target = actor._selected_target;
 	
 	if ( which_hand = 1 && variable_struct_get(unit.equipment.hand1, "item_type")) {
 		var weapon = actor.equipment.hand1;
@@ -83,12 +146,8 @@ function calculate_damage_data( actor, which_hand, hits_divisor, is_aoe ){
 		}
 	}
 	
-	var crit_mult = calculate_crit_mult(actor);
-	// TODO - huh this is assuming single target. Need an AOE check;
-	// Same with speed huh. What is the speed of an AOE?
-	
-	
-	var resist_mult = calculate_skill_resist_mult(actor, action, weapon);
+	var crit_mult = calculate_crit_mult(actor, target, action, weapon);
+	var resist_mult = calculate_skill_resist_mult(actor, target, action, weapon);
 	var is_mp = false;
 	
 	// TODO - AOE have a flat 0.5 multiplier here Also we don't stop until they are all dead
@@ -100,7 +159,7 @@ function calculate_damage_data( actor, which_hand, hits_divisor, is_aoe ){
 	
 	// TODO - damage type based on weapon/skill, figure out the multiplier here etc.
 	
-	return [99, crit_mult, resist_mult, is_mp, actor];
+	return [99, crit_mult, resist_mult, is_mp];
 }
 
 /// Apply damage to the unit(s), stop attack if they are dead, and spawn animation sprites
@@ -132,13 +191,13 @@ function apply_damage_data( actor, which_hand, num_attacks) {
 
 	var dead_targets = 0;
 	for (var i = 0; i < array_length(targets); i++ ) {
-		var damage_data = calculate_damage_data( actor, which_hand, num_attacks, is_aoe);
+		var this_target = targets[i];
+		var damage_data = calculate_damage_data( actor, this_target, which_hand, num_attacks, is_aoe);
 		
 		var damage = damage_data[0];
 		var crit_mult = damage_data[1];
 		var resist_mult = damage_data[2];
 		
-		var this_target = targets[i];
 		var target_hp = this_target._battle_stats[stats.current_HP];
 		var new_hp = target_hp - damage;
 		if ( new_hp <= 0 ) {

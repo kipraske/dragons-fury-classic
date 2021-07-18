@@ -9,8 +9,8 @@ function calculate_num_attacks( actor ){
 	var action = actor._selected_action;
 	var actor_base_speed = actor._battle_stats[stats.SPD];
 	var target_base_speed = target._battle_stats[stats.SPD];
-	var actor_speed = random_range(actor_base_speed - actor_base_speed * speed_varience, actor_base_speed + actor_base_speed * speed_varience);
-	var target_speed = random_range(target_base_speed - target_base_speed * speed_varience, target_base_speed + target_base_speed * speed_varience);
+	var actor_speed = random_range(actor_base_speed - actor_base_speed * speed_variance, actor_base_speed + actor_base_speed * speed_variance);
+	var target_speed = random_range(target_base_speed - target_base_speed * speed_variance, target_base_speed + target_base_speed * speed_variance);
 	
 	var speed_hits = floor( ( actor_speed - target_speed ) / speed_bonus_hit_per );
 	if (speed_hits < 0 ) {

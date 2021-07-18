@@ -10,11 +10,6 @@ function init_constants(){
 	#macro monster_hp_multipler 25
 	#macro monster_mp_multiplier 3
 	#macro player_mp_multipler 3
-	#macro speed_varience 0.2
-	#macro damage_varience 0.2
-
-	#macro player_damage_multiplier 3
-	#macro monster_damage_multipler 2
 
 	#macro MAX_FRONTEND_UNITS 3
 	#macro MAX_TOTAL_UNITS 5

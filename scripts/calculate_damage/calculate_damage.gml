@@ -10,8 +10,8 @@ function calculate_crit_mult( actor, target, action, weapon ){
 	
 	var actor_base_luck = actor._battle_stats[stats.LUK];
 	var target_base_luck = target._battle_stats[stats.LUK];
-	var actor_luck = random_range(actor_base_luck - actor_base_luck * crit_variance, actor_base_luck + actor_base_luck * speed_varience);
-	var target_luck = random_range(target_base_luck - target_base_luck * crit_variance, target_base_luck + target_base_luck * speed_varience);
+	var actor_luck = random_range(actor_base_luck - actor_base_luck * crit_variance, actor_base_luck + actor_base_luck * crit_variance);
+	var target_luck = random_range(target_base_luck - target_base_luck * crit_variance, target_base_luck + target_base_luck * crit_variance);
 	
 	var raw_crit_percent = actor_luck - target_luck;
 	var crit_coinflips = floor(raw_crit_percent / crit_bonus_per);
@@ -113,6 +113,8 @@ function is_skill_used_aoe( actor ) {
 }
 
 #macro damage_variance 0.2
+#macro player_damage_multiplier 3
+#macro monster_damage_multipler 2
 
 // So because all of our damage is keyed by type I need to pass out the info about the damage AND the info about the type of numbers to show
 // @returns array of arrays 0 - damage amount per attack, 1- damage types
@@ -160,6 +162,12 @@ function calculate_damage_data( actor, target, which_hand, hits_divisor, is_aoe 
 		var resist_mult_apply = 1;
 	}
 	
+	if ( actor.unit_type = unit_types.player ) {
+		var type_mult = player_damage_multiplier;
+	} else {
+		var type_mult = monster_damage_multipler;
+	}
+	
 	// TODO - next hey the weapon needs stats, we need to do that based on the level when it is leveled up or created or whatever
 	// We also need the armor of the target not the weapon, weapon is the attacker's thing
 	weapon.stats[stats.ATK] = 8
@@ -169,7 +177,7 @@ function calculate_damage_data( actor, target, which_hand, hits_divisor, is_aoe 
 	// TODO - guns ignore defense, so that is a thing here too
 	
 	var base_damage = (actor._battle_stats[stats.ATK] + weapon.stats[stats.ATK]) - 0.5*(target._battle_stats[def_stat] + weapon.stats[def_stat]);
-	var gross_damage = aoe_mult * crit_mult_apply * resist_mult_apply * base_damage;
+	var gross_damage = aoe_mult * crit_mult_apply * resist_mult_apply * type_mult * base_damage;
 	var damage = floor( random_range(gross_damage - gross_damage * damage_variance, gross_damage + gross_damage * damage_variance) );
 	// TODO - AOE have a flat 0.5 multiplier here Also we don't stop until they are all dead
 	

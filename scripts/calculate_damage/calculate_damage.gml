@@ -45,35 +45,35 @@ function calculate_crit_mult( actor, target, action, weapon ){
 function calculate_skill_resist_mult( actor, target, action, weapon) {
 	
 	var resist_mult = 0;
-	
-	// What elements is the damage anyway? Will there be double typed skills, leaving it open?
-	var skill_earth_mult = 0;
-	var skill_sea_mult = 0;
-	var skill_sky_mult = 0;
-	var skill_slash_mult = 0;
-	var skill_pierce_mult = 0;
-	var skill_blunt_mult = 0;
-	var skill_magic_mult = 0;
-	
+
+	// Earth
 	if ( action == skills.quake || action == skills.ice || action == skills.meteor || action == skills.smite ) {
-		skill_earth_mult = 1;	
+		resist_mult += target.perm_attr[attr.earth_resist];
+		resist_mult -= target.perm_attr[attr.earth_weak];
 	}
 	
+	// Sky
 	if ( action == skills.tornado || action == skills.thunder || action == skills.meteor || action == skills.smite ) {
-		skill_sky_mult = 1;
+		resist_mult += target.perm_attr[attr.sky_resist];
+		resist_mult -= target.perm_attr[attr.sky_weak];
 	}
 	
+	// Sea
 	if ( action == skills.flood || action == skills.ice || action == skills.thunder || action == skills.smite ) {
-		skill_sea_mult = 1;
+		resist_mult += target.perm_attr[attr.sea_resist];
+		resist_mult -= target.perm_attr[attr.sea_weak];
 	}
 	
+	// Blunt
 	if ( ! variable_struct_get( weapon, "item_type") // if empty it is unarmed or monster smash
 		|| weapon.item_type == equipment_types.unarmed
 		|| weapon.item_type == equipment_types.mace
 		|| weapon.item_type == equipment_types.hammer ) {
-		skill_blunt_mult = 1;	
+		resist_mult += target.perm_attr[attr.blunt_resist];
+		resist_mult -= target.perm_attr[attr.blunt_weak];
 	}
 	
+	// Pierce
 	if ( weapon.item_type == equipment_types.pistol
 		|| weapon.item_type == equipment_types.rifle
 		|| weapon.item_type == equipment_types.dagger
@@ -81,44 +81,28 @@ function calculate_skill_resist_mult( actor, target, action, weapon) {
 		|| weapon.item_type == equipment_types.bow
 		|| weapon.item_type == equipment_types.spear 
 		|| weapon.item_type == equipment_types.bite ) {
-		skill_pierce_mult = 1;
+		resist_mult += target.perm_attr[attr.pierce_resist];
+		resist_mult -= target.perm_attr[attr.pierce_weak];
 	}
 	
+	// Slashing
 	if ( weapon.item_type == equipment_types.short_sword
 		|| weapon.item_type == equipment_types.sword
 		|| weapon.item_type == equipment_types.axe 
 		|| weapon.item_type == equipment_types.claw ) {
-		skill_slash_mult = 1;
+		resist_mult += target.perm_attr[attr.slash_resist];
+		resist_mult -= target.perm_attr[attr.slash_weak];
 	}
 	
+	// Magic
 	if ( weapon.item_type == equipment_types.book
 		|| weapon.item_type == equipment_types.staff ) {
-		skill_magic_mult = 1;
+		resist_mult += target.perm_attr[attr.magic_resist];
+		resist_mult -= target.perm_attr[attr.magic_weak];
 	}
-		
-	if ( target.perm_attr[attr.earth_resist] && skill_earth_mult ) {
-		
-	}
-	
-	//earth_resist,
-	//	sea_resist,
-	//	sky_resist,
-	//	slash_resist,
-	//	pierce_resist,
-	//	blunt_resist,
-	//	magic_resist,
-	//	earth_weak,
-	//	sea_weak,
-	//	sky_weak,
-	//	slash_weak,
-	//	pierce_weak,
-	//	blunt_weak,
-	//	magic_weak,
 	
 	return min(resist_mult, max_resist_mult);
 }
-
-
 
 // Returns if the skill is an AOE or not based on the skill used and the actor
 // unit_types.none is NO AOE

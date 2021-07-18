@@ -112,6 +112,8 @@ function is_skill_used_aoe( actor ) {
 	return unit_types.none;
 }
 
+#macro damage_variance 0.2
+
 // So because all of our damage is keyed by type I need to pass out the info about the damage AND the info about the type of numbers to show
 // @returns array of arrays 0 - damage amount per attack, 1- damage types
 // TODO - this is totallyw wrong now lol
@@ -136,6 +138,39 @@ function calculate_damage_data( actor, target, which_hand, hits_divisor, is_aoe 
 	var resist_mult = calculate_skill_resist_mult(actor, target, action, weapon);
 	var is_mp = false;
 	
+	if ( is_aoe ) {
+		var def_stat = stats.RES;
+		var aoe_mult = 0.5;
+	} else {
+		var def_stat = stats.DEF;
+		var aoe_mult = 1;
+	}
+	
+	if ( crit_mult > 0 ) {
+		var crit_mult_apply = crit_mult + 1;
+	} else {
+		var crit_mult_apply = 1;
+	}
+	
+	if ( resist_mult < 0 ) { // weak
+		var resist_mult_apply = resist_mult + 1;
+	} else if ( crit_mult > 0 ) { // resist
+		var resist_mult_apply = 1/(resist_mult + 1);
+	} else {
+		var resist_mult_apply = 1;
+	}
+	
+	// TODO - next hey the weapon needs stats, we need to do that based on the level when it is leveled up or created or whatever
+	// We also need the armor of the target not the weapon, weapon is the attacker's thing
+	weapon.stats[stats.ATK] = 8
+	weapon.stats[stats.DEF] = 5
+	weapon.stats[stats.RES] =3
+	
+	// TODO - guns ignore defense, so that is a thing here too
+	
+	var base_damage = (actor._battle_stats[stats.ATK] + weapon.stats[stats.ATK]) - 0.5*(target._battle_stats[def_stat] + weapon.stats[def_stat]);
+	var gross_damage = aoe_mult * crit_mult_apply * resist_mult_apply * base_damage;
+	var damage = floor( random_range(gross_damage - gross_damage * damage_variance, gross_damage + gross_damage * damage_variance) );
 	// TODO - AOE have a flat 0.5 multiplier here Also we don't stop until they are all dead
 	
 	// TODO - damage formula goes here then (rem divide by # of hits and apply weak/resist)
@@ -145,7 +180,7 @@ function calculate_damage_data( actor, target, which_hand, hits_divisor, is_aoe 
 	
 	// TODO - damage type based on weapon/skill, figure out the multiplier here etc.
 	
-	return [99, crit_mult, resist_mult, is_mp];
+	return [damage, crit_mult, resist_mult, is_mp];
 }
 
 /// Apply damage to the unit(s), stop attack if they are dead, and spawn animation sprites

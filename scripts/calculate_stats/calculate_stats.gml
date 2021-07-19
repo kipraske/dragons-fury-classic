@@ -151,3 +151,14 @@ function calculate_monster_stats( this_monster ) {
 function calculate_level_from_xp( xp_total ) {
 	return floor(0.5 * (-6 + sqrt(36 + 4*(xp_total+7))));
 }
+
+function calculate_weapon_stats( weapon_type, weapon_tier ) {
+
+			    //item_name: "Lucky Hammer",
+			    //item_type: equipment_types.hammer,
+				//item_tier: equipment_tiers.common,
+				//item_stats: [ ] -- ATK for weapons, DEF/RES for armor, ?? for accessory types
+			    //item_level: 1,
+			    //item_bonus: [attr.LUK_up,attr.HP_up]
+
+}

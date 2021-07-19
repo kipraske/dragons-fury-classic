@@ -529,6 +529,53 @@ function init_constants(){
 	global.is_attr_buff[attr.sleep_resist] = true;
 	global.is_attr_buff[attr.none] = false;
 
+	global.all_buff_list = [
+		attr.LUK_up,
+		attr.SPD_up,
+		attr.RES_up,
+		attr.DEF_up,
+		attr.ATK_up,
+		attr.MP_up,
+		attr.HP_up,
+		attr.magic_resist,
+		attr.blunt_resist,
+		attr.pierce_resist,
+		attr.slash_resist,
+		attr.sky_resist,
+		attr.sea_resist,
+		attr.earth_resist,
+		attr.auto_MP_regen,
+		attr.auto_regen,
+		attr.auto_aggro,
+		attr.poison_resist,
+		attr.pain_resist,
+		attr.confuse_resist,
+		attr.freeze_resist,
+		attr.sleep_resist
+	];
+	
+	global.all_debuff_list = [
+		attr.LUK_down,
+		attr.SPD_down,
+		attr.RES_down,
+		attr.DEF_down,
+		attr.ATK_down,
+		attr.MP_down,
+		attr.HP_down,
+		attr.magic_weak,
+		attr.blunt_weak,
+		attr.pierce_weak,
+		attr.slash_weak,
+		attr.sky_weak,
+		attr.sea_weak,
+		attr.earth_weak,
+		attr.poison_weak,
+		attr.pain_weak,
+		attr.confuse_weak,
+		attr.freeze_weak,
+		attr.sleep_weak
+	];
+
 	enum equipment_slots {
 		main_hand,
 		off_hand,

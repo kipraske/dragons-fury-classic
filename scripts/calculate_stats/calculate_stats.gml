@@ -152,11 +152,39 @@ function calculate_level_from_xp( xp_total ) {
 	return floor(0.5 * (-6 + sqrt(36 + 4*(xp_total+7))));
 }
 
-function calculate_weapon_stats( weapon_type, weapon_tier ) {
+function generate_equipment( equipment_type, equipment_tier, level ) {
+
+	var type_label = global.labels.equipment_types[weapon_type];
+	var basic_attributes = 0;
+	var is_cursed = false;
+	
+	switch (equipment_tier) {
+		case equipment_tiers.common:
+			basic_attributes = 1;
+			break;
+		case equipment_tiers.rare:
+			basic_attributes = 2;
+			break;
+		case equipment_tiers.legendary:
+			basic_attributes = 3;
+			break;
+		case equipment_tiers.personal:
+			basic_attributes = 1; // + personal attribute
+			break;
+		case equipment_tiers.void:
+			basic_attributes = 0;
+			break;
+		break;
+	}
+	
+	//global.all_buff_list;
+	//global.all_debuff_list;
+	
+	
 
 			    //item_name: "Lucky Hammer",
-			    //item_type: equipment_types.hammer,
-				//item_tier: equipment_tiers.common,
+			    //item_type: equipment_types.hammer, -- done lol
+				//item_tier: equipment_tiers.common, -- done lol
 				//item_stats: [ ] -- ATK for weapons, DEF/RES for armor, ?? for accessory types
 			    //item_level: 1,
 			    //item_bonus: [attr.LUK_up,attr.HP_up]

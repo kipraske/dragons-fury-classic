@@ -158,6 +158,8 @@ function generate_equipment( equipment_type, equipment_tier, level ) {
 	var basic_attributes = 0;
 	var is_cursed = false;
 	
+	var item_bonus = [];
+	
 	switch (equipment_tier) {
 		case equipment_tiers.common:
 			basic_attributes = 1;
@@ -178,7 +180,20 @@ function generate_equipment( equipment_type, equipment_tier, level ) {
 	}
 	
 	if ( equipment_tier == equipment_tiers.personal ) {
-		
+		var personal_rand_index = irandom(array_length(global.all_personal_attr_list));
+		array_push(item_bonus, global.all_personal_attr_list[personal_rand_index]);
+	}
+	
+	var basic_attribute_list = ds_list_create();
+	
+	// Create a deck of our basic attributes, randomize, and draw off the top
+	for ( var i = 0; i < array_length(global.all_buff_list); i++ ) {
+		ds_list_add(basic_attribute_list, global.all_buff_list[i]);
+	}
+	ds_list_shuffle(basic_attribute_list);
+	for ( var i = 0; i < basic_attributes; i++) {
+		var top_basic_random_attr = basic_attribute_list[| i];
+		array_push(item_bonus, top_basic_random_attr);
 	}
 	
 	//global.all_buff_list;
@@ -192,5 +207,8 @@ function generate_equipment( equipment_type, equipment_tier, level ) {
 				//item_stats: [ ] -- ATK for weapons, DEF/RES for armor, ?? for accessory types
 			    //item_level: 1,
 			    //item_bonus: [attr.LUK_up,attr.HP_up]
+				
+				
+	ds_list_destroy(basic_attribute_list);
 
 }

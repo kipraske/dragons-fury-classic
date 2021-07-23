@@ -481,11 +481,25 @@ function init_constants(){
         RES_down,
         SPD_down,
         LUK_down,
+		mage_up,
+		druid_up,
+		thief_up,
+		oracle_up,
+		inventor_up,
+		knight_up,
+		monk_up,
 		length
 	}
 	
 	// true is a buff, false is a debuff or nothin
 	global.is_attr_buff[attr.length] = false;
+	global.is_attr_buff[attr.monk_up] = false;
+	global.is_attr_buff[attr.knight_up] = false;
+	global.is_attr_buff[attr.inventor_up] = false;
+	global.is_attr_buff[attr.oracle_up] = false;
+	global.is_attr_buff[attr.thief_up] = false;
+	global.is_attr_buff[attr.druid_up] = false;
+	global.is_attr_buff[attr.mage_up] = false;
 	global.is_attr_buff[attr.LUK_down] = false;
 	global.is_attr_buff[attr.SPD_down] = false;
 	global.is_attr_buff[attr.RES_down] = false;
@@ -575,6 +589,16 @@ function init_constants(){
 		attr.freeze_weak,
 		attr.sleep_weak
 	];
+	
+	global.all_personal_attr_list = [
+		attr.mage_up,
+		attr.druid_up,
+		attr.thief_up,
+		attr.oracle_up,
+		attr.inventor_up,
+		attr.knight_up,
+		attr.monk_up,
+	]
 
 	enum equipment_slots {
 		main_hand,

@@ -177,6 +177,10 @@ function generate_equipment( equipment_type, equipment_tier, level ) {
 		break;
 	}
 	
+	if ( equipment_tier == equipment_tiers.personal ) {
+		
+	}
+	
 	//global.all_buff_list;
 	//global.all_debuff_list;
 	

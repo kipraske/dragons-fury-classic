@@ -155,10 +155,96 @@ function calculate_level_from_xp( xp_total ) {
 function generate_equipment( equipment_type, equipment_tier, level ) {
 
 	var type_label = global.labels.equipment_types[weapon_type];
+	
+	var base_weapon_damage = 0;
 	var basic_attributes = 0;
 	var is_cursed = false;
 	
 	var item_bonus = [];
+	
+	switch (equipment_type) {
+		case equipment_types.unarmed:
+			base_weapon_damage = 2;
+			break;
+		case equipment_types.pistol:
+			base_weapon_damage = 2;
+			break;
+		case equipment_types.dagger:
+			base_weapon_damage = 4;
+			break;
+		case equipment_types.short_sword:
+			base_weapon_damage = 4;
+			break;
+		case equipment_types.book:
+			base_weapon_damage = 4;
+			break;
+		case equipment_types.crossbow: 
+			base_weapon_damage = 4;
+			break;
+		case equipment_types.rifle:
+			base_weapon_damage = 4;
+			break;
+		case equipment_types.sword:
+			base_weapon_damage = 5;
+			break;
+		case equipment_types.mace:
+			base_weapon_damage = 5;
+			break;
+		case equipment_types.spear:
+			base_weapon_damage = 7;
+			break;
+		case equipment_types.bow:
+			base_weapon_damage = 5;
+			break;
+		case equipment_types.staff:
+			base_weapon_damage = 7;
+			break;
+		case equipment_types.axe:
+			base_weapon_damage = 8;
+			break;
+		case equipment_types.hammer:
+			base_weapon_damage = 8;
+			break;
+		case equipment_types.shield:
+			base_weapon_damage = 2;
+			break;
+		case equipment_types.unarmored:
+			base_weapon_damage = 2;
+			break;
+		case equipment_types.light_armor:
+			base_weapon_damage = 2;
+			break;
+		case equipment_types.medium_armor:
+			base_weapon_damage = 2;
+			break;
+		case equipment_types.heavy_armor:
+			base_weapon_damage = 2;
+			break;
+		case equipment_types.shoes:
+			base_weapon_damage = 2;
+			break;
+		case equipment_types.necklace:
+			base_weapon_damage = 2;
+			break;
+		case equipment_types.cloak:
+			base_weapon_damage = 2;
+			break;
+		case equipment_types.bracers:
+			base_weapon_damage = 2;
+			break;
+		case equipment_types.belt:
+			base_weapon_damage = 2;
+			break;
+		case equipment_types.claw:
+			base_weapon_damage = 2;
+			break;
+		case equipment_types.bite:
+			base_weapon_damage = 2;
+			break;
+		default:
+			base_weapon_damage = 2;
+			break;
+	}
 	
 	switch (equipment_tier) {
 		case equipment_tiers.common:
